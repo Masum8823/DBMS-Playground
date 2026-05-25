@@ -619,6 +619,83 @@ Student — enrolls — Course
 <details>
     <summary><b>Schema vs Instance</b></summary>
 
+## Schema vs Instance
+
+Database এ Schema এবং Instance হলো দুইটা important concept, যেগুলো database structure এবং actual data বুঝতে help করে।
+
+👉 সহজভাবে:
+Schema = design/structure  
+Instance = actual data at a moment  
+
+
+### Schema (স্কিমা কী?)
+
+Schema হলো database এর overall structure বা blueprint, যেটা define করে database কীভাবে তৈরি হবে।
+
+এটা সাধারণত rarely change হয়।
+
+📌 এতে যা define থাকে:
+
+- Tables structure  
+- Attributes (columns)  
+- Data types  
+- Relationships  
+
+📌 Example:
+Student(ID, Name, Marks)
+
+👉 এখানে শুধু structure দেখা যাচ্ছে, data না।
+
+---
+
+### Instance (ইনস্ট্যান্স কী?)
+
+Instance হলো database এর actual data at a specific time।
+
+👉 সহজভাবে:
+Instance = real data inside schema  
+
+📌 Example:
+
+| ID | Name  | Marks |
+|----|------|------|
+| 1  | Rahim | 85   |
+| 2  | Karim | 90   |
+
+👉 এই table এর content হলো instance
+
+
+
+## Schema vs Instance Difference
+
+| Schema | Instance |
+|--------|----------|
+| Database structure | Actual data |
+| Rarely changes | Frequently changes |
+| Blueprint of database | Snapshot of database |
+| Defines tables, fields | Contains records |
+
+
+#### Real-life Example:
+
+👉 Schema = House design (map)  
+👉 Instance = built house with furniture  
+
+
+#### Key Points:
+
+- Schema is design time concept  
+- Instance is runtime data  
+- Schema is stable  
+- Instance changes frequently  
+
+
+👉 সহজভাবে:
+Schema = structure  
+Instance = data inside structure  
+
+---
+
 </details>
 
 <details>
