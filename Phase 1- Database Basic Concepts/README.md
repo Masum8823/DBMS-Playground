@@ -81,6 +81,112 @@ DBMS ব্যবহারের যেমন অনেক সুবিধা �
 <details>
     <summary><b>Database vs File System and Types of Database</b></summary>
 
+## Database vs File System
+
+### File System (ফাইল সিস্টেম কী?)
+
+File System হলো traditional method যেখানে data files আকারে OS (Operating System) এ store করা হয়।
+
+📌 Example:
+
+- .txt file  
+- Excel file  
+- Manual folder system  
+
+👉 এখানে data manually manage করতে হয়।
+
+
+### Database System (ডাটাবেস সিস্টেম কী?)
+
+Database System হলো structured way of storing data using DBMS, যেখানে data efficiently store, manage, retrieve করা যায়।
+
+👉 এখানে software (DBMS) সব manage করে।
+
+---
+
+### Difference between Database vs File System
+
+| File System | Database System |
+|------------|----------------|
+| Data files আকারে store হয় | Structured database আকারে store হয় |
+| Data redundancy বেশি | Data redundancy কম |
+| Data sharing কঠিন | Easy data sharing |
+| Security কম | High security |
+| Data inconsistency থাকতে পারে | Data consistency maintain হয় |
+| Manual processing লাগে | DBMS automatically manage করে |
+| Backup difficult | Easy backup & recovery |
+
+👉 সহজভাবে:
+File System = old manual method  
+Database System = modern smart method  
+
+---
+
+## Types of Database
+
+Database বিভিন্ন ধরনের হতে পারে, depending on structure and usage।
+
+
+
+### 1. Centralized Database
+
+সব data এক single central location এ store থাকে।
+
+📌 Example:
+Bank main server database
+
+👉 সুবিধা: easy control  
+👉 সমস্যা: single point failure risk  
+
+
+### 2. Distributed Database
+
+Data multiple locations/servers এ distribute করা থাকে।
+
+📌 Example:
+Multinational company database
+
+👉 সুবিধা: fast access, reliability  
+👉 সমস্যা: complex management  
+
+
+### 3. Relational Database (RDBMS)
+
+Data table (rows & columns) আকারে store করা হয়।
+
+📌 Example:
+MySQL, Oracle
+
+👉 most commonly used database type
+
+
+### 4. NoSQL Database
+
+Non-tabular format (document, key-value, graph) এ data store হয়।
+
+📌 Example:
+MongoDB, Cassandra
+
+👉 Big data & flexible structure এর জন্য use হয়
+
+
+### 5. Object-Oriented Database
+
+Data object আকারে store করা হয় (OOP concept based)।
+
+📌 Example:
+Used in programming systems
+
+
+
+#### সহজভাবে Summary:
+
+- Centralized = one place  
+- Distributed = multiple places  
+- Relational = table format  
+- NoSQL = flexible structure  
+- Object-Oriented = object based  
+
 </details>
 
 <details>
