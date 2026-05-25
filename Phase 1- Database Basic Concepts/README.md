@@ -316,12 +316,303 @@ NoSQL = flexible + big data + non-table structure
 </details>
 
 <details>
-    <summary><b>DBMS Architecture</b></summary>
+    <summary><b>DBMS Architecture, DBMS Users and Roles along with Data Models</b></summary>
 
-</details>
+## DBMS Architecture
 
-<details>
-    <summary><b>DBMS Users and Roles along with Data Models</b></summary>
+DBMS Architecture হলো একটি structure বা design, যেটা দেখায় কীভাবে user, DBMS software এবং database একে অপরের সাথে interact করে।
+
+👉 সহজভাবে:
+DBMS Architecture = System design of how data flows between user and database
+
+### 1-Tier Architecture (Single Tier)
+
+এই architecture এ user, DBMS এবং database একই system এ থাকে।
+
+📌 Example:
+Single PC তে MS Access বা SQLite ব্যবহার
+
+📌 Flow:
+User → DBMS → Database (same machine)
+
+
+#### Features:
+
+- Simple structure  
+- Small scale system এর জন্য ব্যবহার হয়  
+- Direct access to database  
+
+
+#### Disadvantages:
+
+- Security কম  
+- Multi-user support নেই  
+- Large system এর জন্য suitable না  
+
+
+### 2-Tier Architecture (Client-Server)
+
+এখানে system দুই ভাগে থাকে:
+
+- Client (User interface)  
+- Server (Database)  
+
+📌 Example:
+Desktop application + MySQL server
+
+📌 Flow:
+Client → DBMS Server → Database
+
+
+
+#### Features:
+
+- Better security than 1-tier  
+- Multiple users can access  
+- Client directly communicates with server  
+
+
+#### Disadvantages:
+
+- Server load বেশি  
+- Large scale system এ performance issue হতে পারে  
+
+
+### 3-Tier Architecture (Most Important)
+
+এটা most commonly used architecture in real systems।
+
+এখানে 3 layer থাকে:
+
+- Presentation Layer (User interface)  
+- Application Layer (Logic/processing)  
+- Database Layer (Data storage)  
+
+📌 Example:
+Web applications (Facebook, Banking systems)
+
+📌 Flow:
+User → Application Server → Database Server
+
+
+#### Features:
+
+- High security  
+- Scalable system  
+- Easy maintenance  
+- Better performance for large systems  
+
+
+#### Disadvantages:
+
+- Complex design  
+- Costly setup  
+- Maintenance difficult compared to others  
+
+
+### Quick Comparison:
+
+| Type   | Layers | Use Case |
+|--------|--------|----------|
+| 1-Tier | 1 layer | Small/local system |
+| 2-Tier | 2 layers | Desktop + server apps |
+| 3-Tier | 3 layers | Web-based large systems |
+
+
+👉 সহজভাবে:
+
+- 1-tier = single PC  
+- 2-tier = client + server  
+- 3-tier = full web system (most important)
+
+---
+
+## DBMS Users & Roles
+
+DBMS এ বিভিন্ন ধরনের user থাকে, যারা আলাদা আলাদা কাজ করে database system এর মধ্যে।
+
+👉 সহজভাবে:
+DBMS Users = যারা database use করে বা manage করে
+
+
+### 1. Database Administrator (DBA)
+
+DBA হলো সবচেয়ে powerful user, যে পুরো database system control করে।
+
+📌 কাজ:
+
+- Database design & structure manage করা  
+- User permissions দেওয়া/বন্ধ করা  
+- Security maintain করা  
+- Backup & recovery manage করা  
+- Performance monitoring করা  
+
+👉 সহজভাবে: DBA = system boss  
+
+
+### 2. Application Programmers
+
+এরা software develop করে যেগুলো database use করে।
+
+📌 কাজ:
+
+- Application code লেখা (web/app system)  
+- Database query integrate করা  
+- User interface তৈরি করা  
+
+📌 Example:
+Banking app developer  
+
+
+#### 3. End Users
+
+End users হলো সাধারণ users যারা directly system use করে।
+
+📌 Types:
+
+- Casual users (occasional use)  
+- Naive users (simple interface use করে)  
+- Power users (advanced queries use করে)  
+
+📌 Example:
+
+- Student checking result  
+- Customer checking bank balance  
+
+
+### 4. System Analysts
+
+এরা system design এবং requirement analysis করে।
+
+📌 কাজ:
+
+- System requirement collect করা  
+- DBMS structure plan করা  
+- Developers এর সাথে coordination করা  
+
+
+### 5. Database Designers
+
+এরা database structure design করে।
+
+📌 কাজ:
+
+- Tables design করা  
+- Relationships define করা  
+- Schema design করা  
+
+👉 সহজভাবে summary:
+
+- DBA = control  
+- Programmer = software build  
+- End user = system use  
+- Analyst = planning  
+- Designer = database structure  
+
+---
+
+## Data Models
+
+Data Model হলো একটি concept/structure, যেটা define করে database এর data কীভাবে organize, store এবং relate করা হবে।
+
+👉 সহজভাবে:
+Data Model = database design করার method  
+
+
+### 1. Hierarchical Data Model
+
+এখানে data tree structure এ organize করা হয় (parent-child relationship)।
+
+📌 Example:
+Company → Department → Employee  
+
+
+#### Features:
+
+- One-to-many relationship  
+- Tree structure  
+- Fast data access  
+
+
+#### Disadvantages:
+
+- Complex relationship handle করা কঠিন  
+- Flexibility কম  
+
+### 2. Network Data Model
+
+এখানে data graph structure এ থাকে, যেখানে multiple relationships possible।
+
+📌 Example:
+Student ↔ Course ↔ Teacher  
+
+
+#### Features:
+
+- Many-to-many relationship support  
+- Flexible structure  
+- Better than hierarchical model  
+
+
+#### Disadvantages:
+
+- Complex design  
+- Hard to maintain  
+
+
+### 3. Relational Data Model (Most Important)
+
+এখানে data table আকারে store হয় (rows & columns)।
+
+📌 Example:
+Student table, Result table  
+
+
+#### Features:
+
+- Easy to understand  
+- Uses SQL  
+- Data consistency maintain করে  
+
+
+#### Disadvantages:
+
+- Large data systems এ performance issue হতে পারে  
+
+
+### 4. Entity-Relationship (ER) Model
+
+এটা conceptual model, যেখানে entity এবং relationship দেখানো হয় diagram আকারে।
+
+📌 Example:
+Student — enrolls — Course  
+
+
+#### Features:
+
+- Database design সহজ করে  
+- Visual representation দেয়  
+
+
+### Quick Summary:
+
+| Data Model | Structure |
+|------------|----------|
+| Hierarchical | Tree |
+| Network | Graph |
+| Relational | Table |
+| ER Model | Diagram |
+
+
+👉 সহজভাবে:
+
+- Tree = Hierarchical  
+- Graph = Network  
+- Table = Relational  
+- Diagram = ER Model 
+
+---
+
 
 </details>
 
