@@ -1,5 +1,5 @@
 <details>
-  <summary><b>Data, Information, Database</summary>
+  <summary><b>Data, Information, Database</b></summary>
     
 ## What is Data, Information & Database
 
@@ -77,3 +77,34 @@ DBMS ব্যবহারের যেমন অনেক সুবিধা �
 - System fail করলে পুরো database system affect হতে পারে।
 
 </details>
+
+<details>
+    <summary><b>Database vs File System and Types of Database</b></summary>
+
+</details>
+
+<details>
+    <summary><b>Relational Database and NoSQL Database </b></summary>
+
+</details>
+
+<details>
+    <summary><b>DBMS Architecture</b></summary>
+
+</details>
+
+<details>
+    <summary><b>DBMS Users and Roles along with Data Models</b></summary>
+
+</details>
+
+<details>
+    <summary><b>Schema vs Instance</b></summary>
+
+</details>
+
+<details>
+    <summary><b>DBMS Keys</b></summary>
+
+</details>
+
