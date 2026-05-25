@@ -701,5 +701,129 @@ Instance = data inside structure
 <details>
     <summary><b>DBMS Keys</b></summary>
 
+## Keys in DBMS
+
+DBMS এ Key হলো এমন attribute বা set of attributes, যেটা দিয়ে table এর record uniquely identify করা যায় বা relationship maintain করা যায়।
+
+👉 সহজভাবে:
+Key = data uniquely identify করার method  
+
+---
+
+### Super Key
+
+Super Key হলো এমন attribute বা attributes এর set, যেটা table এর প্রতিটা row কে uniquely identify করতে পারে।
+
+📌 Example:
+Student(ID, Name, Email)
+
+👉 Super Key হতে পারে:
+
+- ID  
+- Email  
+- (ID + Name)  
+- (ID + Email)  
+
+👉 এখানে extra attribute থাকলেও unique identify হচ্ছে, তাই এগুলো সবই super key  
+
+---
+
+### Candidate Key
+
+Candidate Key হলো minimal super key, অর্থাৎ যেটা থেকে কোনো extra attribute remove করলে uniqueness নষ্ট হয়ে যাবে।
+
+📌 Example:
+Student(ID, Email)
+
+👉 Candidate Key:
+
+- ID  
+- Email  
+
+👉 দুটাই individually unique, তাই valid candidate key  
+
+
+#### Key Points:
+
+- Super Key = large set (extra attribute থাকতে পারে)  
+- Candidate Key = minimal unique set  
+
+---
+
+### Primary Key
+
+Primary Key হলো candidate key গুলোর মধ্যে থেকে chosen key, যেটা main identity হিসেবে use করা হয়।
+
+📌 Rules:
+
+- Unique হবে  
+- NULL হতে পারবে না  
+- One table এ only one primary key থাকে  
+
+📌 Example:
+Student table এ ID primary key হতে পারে  
+
+👉 সহজভাবে:
+Primary Key = main identity key  
+
+---
+
+### Composite Key
+
+Composite Key হলো এমন key যেটা 2 বা more attributes দিয়ে তৈরি হয় এবং combined ভাবে uniqueness provide করে।
+
+📌 Example:
+Enrollment(StudentID, CourseID)
+
+👉 এখানে:
+
+- StudentID alone unique না  
+- CourseID alone unique না  
+👉 কিন্তু together unique  
+
+---
+
+### Foreign Key
+
+Foreign Key হলো এমন key, যেটা অন্য table এর primary key কে refer করে relationship তৈরি করে।
+
+📌 Example:
+
+Student Table:
+- ID (Primary Key)
+
+Result Table:
+- StudentID (Foreign Key)
+
+👉 এখানে Result table এর StudentID, Student table এর ID কে refer করছে  
+
+
+#### Key Points:
+
+- Foreign Key = relationship creator  
+- It links two tables  
+
+
+## Quick Summary:
+
+| Key Type | Meaning |
+|----------|--------|
+| Super Key | Any attribute set that uniquely identifies |
+| Candidate Key | Minimal super key |
+| Primary Key | Chosen candidate key |
+| Composite Key | Multiple attributes combined key |
+| Foreign Key | Reference to another table’s primary key |
+
+
+👉 সহজভাবে:
+
+- Super = big set  
+- Candidate = minimal unique set  
+- Primary = main selected key  
+- Composite = multiple columns key  
+- Foreign = table linking key  
+
+---
+
 </details>
 
