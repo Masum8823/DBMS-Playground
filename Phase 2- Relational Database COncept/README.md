@@ -492,3 +492,280 @@ DEFAULT = auto value set if empty
 ---
 
 </details>
+
+
+<details>
+    <summary><b>ER Diagram (Entity Relationship Diagram)</b></summary>
+    
+# ER Diagram (Entity Relationship Diagram)
+
+ER Diagram (Entity Relationship Diagram) হলো database design করার graphical representation, যেখানে entities, attributes এবং relationships visually দেখানো হয়।
+
+👉 সহজভাবে:
+ER Diagram = database এর blueprint/visual design  
+
+
+### Why ER Diagram is Used?
+
+Database তৈরি করার আগে system planning করার জন্য ER Diagram ব্যবহার করা হয়।
+
+এটার মাধ্যমে সহজে বোঝা যায়:
+
+- কোন entity থাকবে  
+- কোন attribute থাকবে  
+- কোন entity এর সাথে কোন entity এর relationship আছে  
+
+---
+
+## Main Components of ER Diagram
+
+ER Diagram এর 3টা প্রধান অংশ আছে:
+
+- Entity  
+- Attribute  
+- Relationship  
+
+
+## Entity (এনটিটি কী?)
+
+Entity হলো real-world object বা thing, যেটার data database এ store করা হয়।
+
+👉 সহজভাবে:
+Entity = object about which data is stored  
+
+
+#### Examples:
+
+- Student  
+- Teacher  
+- Course  
+- Department  
+
+#### Representation:
+
+Entity rectangle shape দিয়ে দেখানো হয়।
+
+📌 Example:
+
+[ Student ]
+
+
+### Types of Entity
+
+#### 1. Strong Entity
+
+যে entity নিজের primary key দিয়ে uniquely identify হতে পারে।
+
+📌 Example:
+Student(StudentID, Name)
+
+👉 StudentID দিয়ে student identify করা যায়  
+
+
+#### 2. Weak Entity
+
+যে entity নিজের key ছাড়া uniquely identify হতে পারে না এবং অন্য entity এর উপর depend করে।
+
+📌 Example:
+Dependent entity  
+
+---
+
+## Attribute (অ্যাট্রিবিউট কী?)
+
+Attribute হলো entity এর properties বা characteristics।
+
+👉 সহজভাবে:
+Attribute = entity এর information/details  
+
+
+#### Example:
+
+Student entity এর attributes:
+
+- StudentID  
+- Name  
+- CGPA  
+- Department  
+
+#### Representation:
+
+Attribute oval/ellipse shape দিয়ে দেখানো হয়।
+
+📌 Example:
+
+(Student) — Name  
+
+
+### Types of Attributes
+
+#### 1. Simple Attribute
+
+আর ভাঙা যায় না।
+
+📌 Example:
+Age, Gender  
+
+#### 2. Composite Attribute
+
+ছোট ছোট অংশে ভাগ করা যায়।
+
+📌 Example:
+Name → First Name + Last Name  
+
+#### 3. Single-valued Attribute
+
+এক entity এর জন্য একটাই value থাকে।
+
+📌 Example:
+StudentID  
+
+
+#### 4. Multi-valued Attribute
+
+এক entity এর multiple values থাকতে পারে।
+
+📌 Example:
+Phone Numbers  
+
+
+#### 5. Derived Attribute
+
+অন্য attribute থেকে calculate করা যায়।
+
+📌 Example:
+Age from Date of Birth  
+
+---
+
+## Relationship (রিলেশনশিপ কী?)
+
+Relationship হলো entities এর মধ্যে connection।
+
+👉 সহজভাবে:
+Relationship = entity connection  
+
+#### Example:
+
+Student enrolls in Course  
+
+👉 এখানে:
+Student ↔ Course connected  
+
+#### Representation:
+
+Diamond shape দিয়ে relationship দেখানো হয়।
+
+📌 Example:
+
+[Student] ◇ Enrolls ◇ [Course]
+
+
+### Types of Relationship
+
+#### 1. One-to-One (1:1)
+
+One entity ↔ One entity  
+
+📌 Example:
+Person ↔ Passport  
+
+
+#### 2. One-to-Many (1:M)
+
+One entity ↔ Many entities  
+
+📌 Example:
+Department ↔ Students  
+
+
+#### 3. Many-to-Many (M:N)
+
+Many entities ↔ Many entities  
+
+📌 Example:
+Students ↔ Courses  
+
+---
+
+### Primary Key in ER Diagram
+
+Primary Key entity কে uniquely identify করে।
+
+ER Diagram এ primary key সাধারণত underline করা হয়।
+
+📌 Example:
+StudentID  
+
+---
+
+### Example of Complete ER Concept
+
+Scenario:
+A student enrolls in a course  
+
+
+#### Entities:
+
+- Student  
+- Course  
+
+#### Relationship:
+
+- Enrolls  
+
+#### Attributes:
+
+Student:
+- StudentID  
+- Name  
+
+Course:
+- CourseID  
+- CourseName  
+
+
+### Simple Visualization:
+
+(Student)  
+   |  
+ Enrolls  
+   |  
+(Course)  
+
+---
+
+### Advantages of ER Diagram
+
+- Database planning easy হয়  
+- Relationship clearly বোঝা যায়  
+- Developers এবং designers এর communication easy হয়  
+- Database errors কমে যায়  
+
+
+### Disadvantages of ER Diagram
+
+- Large system এ diagram complex হয়ে যায়  
+- Time consuming  
+- Technical knowledge দরকার হয়  
+
+---
+
+### Quick Summary
+
+| Component | Meaning |
+|----------|--------|
+| Entity | Real-world object |
+| Attribute | Entity information |
+| Relationship | Connection between entities |
+
+
+👉 সহজভাবে:
+
+- Entity = object  
+- Attribute = details  
+- Relationship = connection  
+ 
+---
+
+</details>
