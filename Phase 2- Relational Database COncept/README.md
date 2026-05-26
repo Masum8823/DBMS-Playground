@@ -165,3 +165,177 @@ Table = Rows + Columns
 ---
 
 </details>
+
+
+<details>
+    <summary><b>Relationship Types</b></summary>
+
+# Relationship Types in DBMS
+
+Database এ relationship ব্যবহার করা হয় এক table এর data এর সাথে অন্য table এর data connect করার জন্য।
+
+👉 সহজভাবে:
+Relationship = tables এর মধ্যে connection  
+
+
+### Why Relationship is Important?
+
+Real-world system এ সব data এক table এ রাখা possible না। তাই multiple tables তৈরি করা হয় এবং relationship দিয়ে connect করা হয়।
+
+📌 Example:
+
+- Student table  
+- Course table  
+- Teacher table  
+
+👉 এগুলোর মধ্যে relation তৈরি করতে হয়  
+
+---
+
+## One-to-One Relationship (1:1)
+
+এখানে একটি record শুধুমাত্র অন্য table এর একটি record এর সাথে related থাকে।
+
+👉 সহজভাবে:
+One record ↔ One record  
+
+
+#### Example:
+
+##### Person Table
+
+| PersonID | Name  |
+|----------|------|
+| 1        | Rahim |
+
+##### Passport Table
+
+| PassportID | PersonID |
+|-----------|----------|
+| P101      | 1        |
+
+👉 একজন person এর একটি passport  
+👉 একটি passport শুধুমাত্র একজন person এর  
+
+#### Features:
+
+- Rarely used  
+- High security data আলাদা রাখতে use হয়  
+
+#### Real-life Example:
+
+- Person ↔ Passport  
+- Student ↔ Student ID Card  
+
+---
+
+## One-to-Many Relationship (1:M)
+
+এখানে একটি record অন্য table এর multiple records এর সাথে related থাকে।
+
+👉 সহজভাবে:
+One parent → many children  
+
+
+#### Example:
+
+##### Department Table
+
+| DeptID | Department |
+|--------|-----------|
+| 1      | CSE       |
+
+##### Student Table
+
+| StudentID | Name  | DeptID |
+|----------|------|--------|
+| 101      | Rahim | 1      |
+| 102      | Karim | 1      |
+
+👉 একটি department এ অনেক student থাকতে পারে  
+👉 কিন্তু একজন student শুধুমাত্র একটি department এ belongs করে  
+
+
+#### Features:
+
+- Most common relationship  
+- Foreign key ব্যবহার হয়  
+
+
+#### Real-life Example:
+
+- One teacher → many students  
+- One customer → many orders  
+
+---
+
+## Many-to-Many Relationship (M:N)
+
+এখানে multiple records অন্য table এর multiple records এর সাথে related থাকে।
+
+👉 সহজভাবে:
+Many ↔ Many  
+
+#### Example:
+
+##### Student Table
+
+| StudentID | Name  |
+|----------|------|
+| 101      | Rahim |
+
+##### Course Table
+
+| CourseID | Course |
+|----------|-------|
+| CSE101   | DBMS  |
+
+👉 একজন student অনেক course নিতে পারে  
+👉 একটি course অনেক student নিতে পারে  
+
+#### Important Note:
+
+Many-to-Many relationship directly implement করা যায় না।  
+এটার জন্য extra junction table/use table তৈরি করতে হয়।
+
+📌 Example:
+Enrollment Table(StudentID, CourseID)
+
+
+#### Real-life Example:
+
+- Students ↔ Courses  
+- Actors ↔ Movies  
+
+---
+
+## Quick Comparison
+
+| Relationship | Meaning |
+|-------------|--------|
+| One-to-One | One record ↔ One record |
+| One-to-Many | One record ↔ Many records |
+| Many-to-Many | Many records ↔ Many records |
+
+
+### Visualization
+
+#### One-to-One
+Person → Passport  
+
+#### One-to-Many
+Department → Students  
+
+#### Many-to-Many
+Students ↔ Courses  
+
+
+👉 সহজভাবে:
+
+- 1:1 = one ↔ one  
+- 1:M = one ↔ many  
+- M:N = many ↔ many  
+
+---
+
+</details>
