@@ -769,3 +769,158 @@ Course:
 ---
 
 </details>
+
+
+
+<details>
+    <summary><b>Weak Entity & Strong Entity</b></summary>
+    
+# Strong Entity & Weak Entity
+
+DBMS এ Entity দুই ধরনের হয়: Strong Entity এবং Weak Entity। এগুলো বুঝতে হলে আগে entity identification concept clear হতে হবে।
+
+👉 সহজভাবে:
+
+- Strong Entity = নিজে নিজে identify হতে পারে  
+- Weak Entity = অন্য entity ছাড়া identify হতে পারে না  
+
+---
+
+## Strong Entity (স্ট্রং এনটিটি)
+
+Strong Entity হলো এমন entity যেটা নিজের primary key দিয়ে uniquely identify করা যায়।
+
+👉 সহজভাবে:
+Strong Entity = independent entity (self-sufficient)
+
+
+### Features:
+
+- নিজস্ব Primary Key থাকে  
+- অন্য entity এর উপর depend করে না  
+- Exist করার জন্য অন্য entity দরকার হয় না  
+- ER Diagram এ single rectangle দিয়ে দেখানো হয়  
+
+#### Example:
+
+Student Entity
+
+| StudentID | Name  | CGPA |
+|----------|------|------|
+| 101      | Rahim | 3.90 |
+
+👉 এখানে StudentID নিজেই uniquely identify করে  
+👉 তাই Student = Strong Entity  
+
+
+#### Another Examples:
+
+- Teacher  
+- Course  
+- Department  
+
+👉 সহজভাবে:
+Strong Entity = independent + has primary key  
+
+---
+
+## Weak Entity (উইক এনটিটি)
+
+Weak Entity হলো এমন entity যেটা নিজের কোনো primary key দিয়ে uniquely identify করতে পারে না। এটাকে identify করার জন্য অন্য (Strong Entity) এর primary key লাগে।
+
+👉 সহজভাবে:
+Weak Entity = dependent entity  
+
+
+### Features:
+
+- নিজস্ব primary key থাকে না  
+- Partial key থাকতে পারে  
+- Strong Entity এর উপর depend করে  
+- ER Diagram এ double rectangle দিয়ে দেখানো হয়  
+- Identifying relationship থাকে  
+
+
+#### Example:
+
+### Employee (Strong Entity)
+
+| EmpID | Name  |
+|------|------|
+| 1    | Rahim |
+
+
+### Dependent (Weak Entity)
+
+| DependentName | Age |
+|--------------|-----|
+| Rima         | 10  |
+
+👉 এখানে Dependent নিজে uniquely identify হতে পারে না  
+👉 EmpID লাগবে identify করার জন্য  
+
+📌 Final Key:
+(Employee EmpID + DependentName)
+
+#### Another Examples:
+
+- Order → Order Items  
+- Student → Attendance Record  
+- Room → Seat  
+
+---
+
+### Identifying Relationship
+
+Weak Entity এবং Strong Entity এর মধ্যে যে relationship থাকে তাকে identifying relationship বলে।
+
+👉 ER Diagram এ এটা সাধারণত double diamond দিয়ে দেখানো হয়।
+
+📌 Example:
+[Employee] ◇◇ Has ◇◇ [Dependent]
+
+---
+
+### Partial Key (Discriminator)
+
+Weak Entity এর মধ্যে যে attribute partial uniqueness দেয় তাকে partial key বলে।
+
+📌 Example:
+DependentName  
+(same name multiple employees এ থাকতে পারে)
+
+---
+
+### Strong vs Weak Entity Difference
+
+| Strong Entity | Weak Entity |
+|--------------|------------|
+| Independent entity | Dependent entity |
+| Has primary key | No full primary key |
+| Can exist alone | Cannot exist alone |
+| Single rectangle | Double rectangle |
+| Example: Student | Example: Dependent |
+
+
+#### Real-life Analogy
+
+👉 Strong Entity = Parent (নিজে নিজে exist করতে পারে)  
+👉 Weak Entity = Child (Parent ছাড়া identify করা যায় না)  
+
+---
+
+### Quick Summary
+
+- Strong Entity = self-identifiable entity  
+- Weak Entity = dependent entity  
+- Weak entity needs strong entity’s key  
+- Relationship is identifying relationship  
+
+👉 সহজভাবে:
+
+- Strong = independent  
+- Weak = dependent  
+ 
+---
+
+</details>
