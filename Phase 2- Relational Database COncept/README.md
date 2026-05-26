@@ -339,3 +339,156 @@ Students ↔ Courses
 ---
 
 </details>
+
+
+
+<details>
+    <summary><b>Constraints</b></summary>
+    
+# Constraints in DBMS
+
+Constraints হলো rules, যেগুলো database table এর data control করে যাতে wrong বা invalid data insert না হয়।
+
+👉 সহজভাবে:
+Constraint = data validity rules  
+
+---
+
+## NOT NULL Constraint
+
+NOT NULL মানে কোনো column এ NULL (empty) value রাখা যাবে না।
+
+📌 Example:
+Name column NOT NULL হলে নাম অবশ্যই দিতে হবে  
+
+| ID | Name  |
+|----|------|
+| 1  | Rahim |
+
+❌ Invalid:
+| 2  | NULL |
+
+👉 সহজভাবে:
+NOT NULL = value must be present  
+
+---
+
+## UNIQUE Constraint
+
+UNIQUE মানে একই value column এ repeat হতে পারবে না।
+
+📌 Example:
+Email column UNIQUE  
+
+| ID | Email        |
+|----|-------------|
+| 1  | a@gmail.com |
+| 2  | b@gmail.com |
+
+❌ Invalid:
+Same email দুইবার রাখা যাবে না  
+
+👉 সহজভাবে:
+UNIQUE = no duplicate values  
+
+---
+
+## PRIMARY KEY Constraint
+
+PRIMARY KEY হলো NOT NULL + UNIQUE combination, যেটা table এর প্রতিটা row uniquely identify করে।
+
+📌 Example:
+StudentID primary key  
+
+| StudentID | Name  |
+|----------|------|
+| 101      | Rahim |
+
+
+#### Rules:
+
+- NULL allowed না  
+- Duplicate allowed না  
+- One table এ only one primary key  
+
+👉 সহজভাবে:
+PRIMARY KEY = main unique identifier  
+
+---
+
+## FOREIGN KEY Constraint
+
+FOREIGN KEY হলো এমন key, যেটা অন্য table এর PRIMARY KEY কে reference করে।
+
+📌 Example:
+
+Student Table:
+- StudentID (Primary Key)
+
+Result Table:
+- StudentID (Foreign Key)
+
+👉 সহজভাবে:
+FOREIGN KEY = table linking key  
+
+---
+
+## CHECK Constraint
+
+CHECK মানে কোনো column এ নির্দিষ্ট condition follow করতে হবে।
+
+📌 Example:
+Age >= 18  
+
+| ID | Age |
+|----|----|
+| 1  | 20 |
+
+❌ Invalid:
+Age = 15 (if condition is age >= 18)  
+
+👉 সহজভাবে:
+CHECK = condition-based rule  
+
+---
+
+## DEFAULT Constraint
+
+DEFAULT মানে যদি কোনো value insert না করা হয়, তাহলে automatic predefined value বসে যাবে।
+
+📌 Example:
+City DEFAULT "Dhaka"  
+
+| ID | City  |
+|----|------|
+| 1  | Dhaka |
+
+👉 সহজভাবে:
+DEFAULT = auto value set if empty  
+
+---
+
+### Quick Summary
+
+| Constraint | Meaning |
+|------------|--------|
+| NOT NULL | value must be given |
+| UNIQUE | no duplicate value |
+| PRIMARY KEY | main identity (unique + not null) |
+| FOREIGN KEY | links two tables |
+| CHECK | condition rule |
+| DEFAULT | auto value |
+
+
+👉 সহজভাবে:
+
+- NOT NULL = must fill  
+- UNIQUE = no repeat  
+- PRIMARY KEY = main identity  
+- FOREIGN KEY = relationship  
+- CHECK = condition rule  
+- DEFAULT = auto value  
+
+---
+
+</details>
