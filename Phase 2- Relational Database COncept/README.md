@@ -924,3 +924,143 @@ DependentName
 ---
 
 </details>
+
+
+
+<details>
+    <summary><b>Cardinality & Participation</b></summary>
+    
+# Cardinality & Participation
+
+ER Diagram এ Cardinality এবং Participation খুব important concept, যেগুলো relationship কীভাবে কাজ করবে সেটা define করে।
+
+👉 সহজভাবে:
+
+- Cardinality = “কতগুলো entity related হতে পারে”  
+- Participation = “সব entity বাধ্যতামূলকভাবে participate করবে কিনা”  
+
+---
+
+## Cardinality (কার্ডিনালিটি)
+
+Cardinality বলে দেয় একটি entity কতগুলো অন্য entity এর সাথে relate করতে পারে।
+
+👉 সহজভাবে:
+Cardinality = relationship quantity rule  
+
+
+## Types of Cardinality
+
+### 1. One-to-One (1:1)
+
+একটি entity আরেকটি entity এর শুধু একটি entity এর সাথে related থাকে।
+
+📌 Example:
+Person ↔ Passport  
+
+| Person | Passport |
+|-------|----------|
+| 1     | 1        |
+
+👉 একজন person এর একটি passport  
+
+### 2. One-to-Many (1:M)
+
+একটি entity অনেকগুলো entity এর সাথে related হতে পারে।
+
+📌 Example:
+Department → Students  
+
+| Department | Students |
+|------------|----------|
+| 1          | Many     |
+
+👉 এক department এ অনেক student  
+
+### 3. Many-to-Many (M:N)
+
+একাধিক entity একাধিক entity এর সাথে related হতে পারে।
+
+📌 Example:
+Students ↔ Courses  
+
+| Students | Courses |
+|----------|--------|
+| Many     | Many   |
+
+👉 এক student অনেক course নিতে পারে, আবার এক course এ অনেক student থাকতে পারে  
+
+---
+
+## Participation (পার্টিসিপেশন)
+
+Participation বলে দেয় কোনো entity relationship এ বাধ্যতামূলকভাবে অংশ নেবে কিনা।
+
+👉 সহজভাবে:
+Participation = mandatory participation rule  
+
+
+## Types of Participation
+
+
+### 1. Total Participation (Mandatory)
+
+এখানে প্রতিটি entity অবশ্যই relationship এ অংশ নেবে।
+
+📌 Example:
+Every student must be enrolled in at least one course  
+
+👉 এখানে participation বাধ্যতামূলক  
+
+📌 ER Diagram representation:
+Double line দিয়ে দেখানো হয়  
+
+
+
+### 2. Partial Participation (Optional)
+
+এখানে কিছু entity relationship এ অংশ নাও নিতে পারে।
+
+📌 Example:
+Not all employees manage a department  
+
+👉 কিছু employee participate নাও করতে পারে  
+
+📌 ER Diagram representation:
+Single line দিয়ে দেখানো হয়  
+
+---
+
+## Cardinality vs Participation Difference
+
+| Cardinality | Participation |
+|------------|--------------|
+| কতগুলো relation হবে | অংশগ্রহণ বাধ্যতামূলক কিনা |
+| Quantity define করে | Existence rule define করে |
+| 1:1, 1:M, M:N | Total / Partial |
+
+
+#### Real-life Example
+
+University System:
+
+- Student → Course (M:N cardinality)  
+- Every Student must have ID (Total participation)  
+- Employee may or may not manage department (Partial participation)  
+
+---
+
+### Quick Summary
+
+- Cardinality = “how many”  
+- Participation = “must or optional”  
+
+
+👉 সহজভাবে:
+
+- Cardinality = number rule  
+- Participation = obligation rule  
+ 
+---
+
+</details>
