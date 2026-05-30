@@ -260,7 +260,7 @@ SELECT * FROM Students;
 
 
 <details> 
-    <summary> <b> </b> </summary>
+    <summary> <b>Installing Database Software</b> </summary>
 
 # Installing Database Software
 
@@ -601,9 +601,296 @@ SELECT * FROM Students;
 
 
 <details> 
-    <summary> <b> </b> </summary>
+    <summary> <b>Creating Database and Database Table </b> </summary>
+
+# Creating Database
+
+Database create করা হলো SQL শেখার প্রথম practical step।
+
+👉 সহজভাবে:
+Database = container যেখানে tables এবং data store করা হয়
+
+---
+
+## SQL Syntax for Creating Database
+``` sql
+CREATE DATABASE database_name;
+```
+Example:
+```sql
+CREATE DATABASE UniversityDB;
+```
+👉 এখানে:
+
+- CREATE DATABASE = নতুন database তৈরি করার command  
+- UniversityDB = database এর নাম  
+
+---
+
+## How to Run in SSMS
+
+### Step 1:
+SSMS open করো
+
+### Step 2:
+New Query button এ click করো
+
+### Step 3:
+Query লিখো:
+
+```sql
+CREATE DATABASE UniversityDB;
+```
+
+### Step 4:
+Execute button press করো
+
+---
+
+## Output
+```sql
+Command(s) completed successfully.
+```
+
+👉 Database successfully create হয়েছে
+
+---
+
+## Refresh Database List
+
+Object Explorer → Databases → Refresh
+
+👉 সেখানে UniversityDB দেখতে পাবে
+
+---
+
+## Using a Database
+
+Database create করার পরে সেটাকে use করতে হয়।
+
+### Syntax:
+```sql
+USE database_name;
+```
+Example:
+
+```sql
+USE UniversityDB;
+```
+👉 এখন থেকে সব table এই database এর ভিতরে create হবে
+
+---
+
+# Creating Tables
+
+Table হলো database এর main structure যেখানে actual data store হয়।
+
+👉 সহজভাবে:
+Table = organized data sheet
+
+---
+
+## Table Structure
+
+Table তৈরি করার সময় define করতে হয়:
+
+- Column name  
+- Data type  
+- Constraints  
+
+---
+
+## Basic Syntax
+```sql
+CREATE TABLE table_name (
+    column1 datatype,
+    column2 datatype,
+    column3 datatype
+);
+```
+---
+
+## Example 1: Simple Student Table
+
+```sql
+CREATE TABLE Students (
+    ID INT,
+    Name VARCHAR(50),
+    CGPA FLOAT
+);
+```
+
+### Explanation
+
+| Part | Meaning |
+|------|--------|
+| Students | Table name |
+| ID | Column |
+| INT | Integer data type |
+| Name | Text column |
+| VARCHAR(50) | Maximum 50 characters |
+| CGPA | Decimal value |
+| FLOAT | Floating number |
+
+---
+
+## Data Types in SQL
+
+### INT
+Integer number store করে
+
+📌 Example:
+```sql
+ID INT
+```
+---
+
+### VARCHAR(n)
+Text/string store করে
+
+📌 Example:
+```sql
+Name VARCHAR(50)
+```
+👉 Maximum 50 characters
+
+---
+
+### FLOAT
+Decimal number store করে
+
+📌 Example:
+```sql
+CGPA FLOAT
+```
+---
+
+### DATE
+Date store করে
+
+📌 Example:
+```sql
+BirthDate DATE
+```
+---
+
+## Example 2: Table with Constraints
+```sql
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY,
+    Name VARCHAR(100) NOT NULL,
+    Email VARCHAR(100) UNIQUE,
+    CGPA FLOAT CHECK (CGPA <= 4.00)
+);
+```
+### Explanation
+
+- PRIMARY KEY → StudentID unique হবে এবং NULL হবে না  
+- NOT NULL → Name অবশ্যই দিতে হবে  
+- UNIQUE → Same email repeat করা যাবে না  
+- CHECK → CGPA 4.00 এর বেশি হতে পারবে না  
+
+---
+
+## Example 3: Department Table
+```sql
+CREATE TABLE Departments (
+    DeptID INT PRIMARY KEY,
+    DeptName VARCHAR(50)
+);
+```
+---
+
+## Example 4: Foreign Key Relationship
+```sql
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    DeptID INT,
+    FOREIGN KEY (DeptID) REFERENCES Departments(DeptID)
+);
+```
+### Explanation
+
+👉 এখানে:
+
+- DeptID foreign key  
+- এটা Departments table এর DeptID কে reference করছে  
+
+---
+
+## Viewing Tables in SSMS
+
+Method:
+
+Database → Tables → Refresh
+
+👉 সব created tables দেখা যাবে
+
+---
+
+## Common Errors While Creating Table
+
+### 1. Missing Comma
+❌ Wrong:
+
+```sql
+ID INT
+Name VARCHAR(50)
+```
+✅ Correct:
+
+```sql
+ID INT,
+Name VARCHAR(50)
+```
 
 
+### 2. Missing Parenthesis
+❌ Wrong:
+```sql
+CREATE TABLE Students
+ID INT
+);
+```
+---
+
+## Best Practices
+
+- Meaningful table names use করো  
+- Proper data type choose করো  
+- Primary key use করো  
+- Constraints use করো data validation এর জন্য  
+
+---
+
+## Real-life Example
+
+University Database:
+
+- Students  
+- Teachers  
+- Courses  
+- Departments  
+
+👉 সব table মিলেই complete database system তৈরি হয়  
+
+---
+
+## Quick Summary
+
+| Command | Purpose |
+|----------|--------|
+| CREATE DATABASE | New database তৈরি |
+| USE | Database select |
+| CREATE TABLE | New table তৈরি |
+
+---
+
+👉 সহজভাবে:
+
+Database তৈরি → USE → Table তৈরি  
+Table এ columns + data types define করতে হয়
 ---
 
 </details>
