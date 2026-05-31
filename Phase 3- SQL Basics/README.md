@@ -1236,7 +1236,335 @@ Name VARCHAR(5)
 <details> 
     <summary> <b>INSERT Query</b> </summary>
 
+# INSERT Query in SQL
 
+INSERT query ব্যবহার করা হয় table এর ভিতরে নতুন data/record add করার জন্য।
+
+👉 সহজভাবে:
+
+**INSERT = table এ নতুন data ঢোকানো**
+
+---
+
+## Basic Syntax of INSERT Query
+```sql
+INSERT INTO table_name
+VALUES (value1, value2, value3);
+
+```
+---
+
+## Example 1: Simple Insert
+
+ধরো আমাদের Students নামে table আছে।
+
+```sql
+CREATE TABLE Students (
+    ID INT,
+    Name VARCHAR(50),
+    CGPA FLOAT
+);
+
+```
+### Insert Data
+
+```sql
+INSERT INTO Students
+VALUES (101, 'Rahim', 3.90);
+
+```
+---
+
+## Explanation
+
+| Part | Meaning |
+|--------|--------|
+| INSERT INTO | data insert করার command |
+| Students | table name |
+| VALUES | values provide করা |
+| 101 | ID |
+| 'Rahim' | Name |
+| 3.90 | CGPA |
+
+---
+
+## Viewing Inserted Data
+
+```sql
+SELECT * FROM Students;
+```
+### Output
+
+| ID | Name | CGPA |
+|----|------|------|
+| 101 | Rahim | 3.90 |
+
+---
+
+## Important Rule
+
+String/Text values অবশ্যই single quotation (' ') এর ভিতরে লিখতে হয়।
+
+✅ Correct:
+```sql
+'Rahim'
+```
+❌ Wrong:
+```sql
+Rahim
+```
+---
+
+## Insert Multiple Rows
+
+এক query দিয়েও multiple rows insert করা যায়।
+
+---
+
+## Example 2
+```sql
+INSERT INTO Students
+VALUES
+(101, 'Rahim', 3.90),
+(102, 'Karim', 3.75),
+(103, 'Sakib', 3.80);
+
+```
+### Output
+
+| ID | Name | CGPA |
+|----|------|------|
+| 101 | Rahim | 3.90 |
+| 102 | Karim | 3.75 |
+| 103 | Sakib | 3.80 |
+
+👉 এটা faster এবং professional way
+
+---
+
+## Insert Specific Columns
+
+সব column এ data insert না করে specific columns এও insert করা যায়।
+
+### Syntax
+```sql
+INSERT INTO table_name (column1, column2)
+VALUES (value1, value2);
+
+```
+---
+
+## Example 3
+```sql
+INSERT INTO Students (ID, Name)
+VALUES (104, 'Nayeem');
+
+```
+### What Happens?
+
+CGPA value দেওয়া হয়নি, তাই:
+
+- NULL হবে
+
+or
+
+- DEFAULT value বসবে (if defined)
+
+---
+
+## Example with DEFAULT Constraint
+```sql
+CREATE TABLE Students (
+    ID INT,
+    Name VARCHAR(50),
+    City VARCHAR(30) DEFAULT 'Dhaka'
+);
+
+```
+### Insert Query
+```sql
+INSERT INTO Students (ID, Name)
+VALUES (105, 'Arafat');
+
+```
+### Output
+
+| ID | Name | City |
+|----|------|------|
+| 105 | Arafat | Dhaka |
+
+👉 City automatic "Dhaka" হয়েছে
+
+---
+
+## INSERT with DATE Data Type
+ 
+---
+
+## Example 4
+```sql
+CREATE TABLE Employees (
+    ID INT,
+    Name VARCHAR(50),
+    JoinDate DATE
+);
+
+```
+### Insert Data
+```sql
+INSERT INTO Employees
+VALUES (1, 'Rahim', '2026-05-26');
+
+```
+👉 Date format:
+```sql
+YYYY-MM-DD
+```
+---
+
+## INSERT with Foreign Key
+
+### Parent Table
+```sql
+CREATE TABLE Departments (
+    DeptID INT PRIMARY KEY,
+    DeptName VARCHAR(50)
+);
+
+```
+### Insert Department Data
+```sql
+INSERT INTO Departments
+VALUES
+(1, 'CSE'),
+(2, 'EEE');
+
+```
+### Child Table
+```sql
+CREATE TABLE Students (
+    StudentID INT,
+    Name VARCHAR(50),
+    DeptID INT,
+    FOREIGN KEY (DeptID)
+    REFERENCES Departments(DeptID)
+);
+
+```
+### Insert Student Data
+```sql
+INSERT INTO Students
+VALUES
+(101, 'Rahim', 1),
+(102, 'Karim', 2);
+
+```
+👉 এখানে:
+
+- DeptID = 1 means CSE
+- DeptID = 2 means EEE
+
+---
+
+## INSERT Using NULL
+
+---
+
+## Example 5
+```sql
+INSERT INTO Students
+VALUES (106, 'Sabbir', NULL);
+
+```
+👉 CGPA value এখন empty
+
+---
+
+## Common Errors in INSERT Query
+
+### 1. Column Count Mismatch
+
+❌ Wrong:
+```sql
+INSERT INTO Students
+VALUES (101, 'Rahim');
+
+```
+
+👉 কিন্তু table এ 3টা column আছে
+
+---
+
+### 2. Wrong Data Type
+
+❌ Wrong:
+```sql
+INSERT INTO Students
+VALUES ('ABC', 'Rahim', 3.90
+
+```
+👉 ID INT হওয়ায় error দিবে
+
+---
+
+### 3. Missing Quotes
+
+❌ Wrong:
+```sql
+INSERT INTO Students
+VALUES (101, Rahim, 3.90);
+
+```
+---
+
+## Best Practices
+
+- Column names specify করা ভালো practice
+- Proper data types use করো
+- Multiple insert use করো performance এর জন্য
+- String values quotes এর ভিতরে লিখো
+
+---
+
+## Real-life Example
+
+### Online Shopping System
+
+### Products Table
+```sql
+CREATE TABLE Products (
+    ProductID INT,
+    ProductName VARCHAR(100),
+    Price DECIMAL(10,2)
+);
+
+```
+### Insert Products
+```sql
+INSERT INTO Products
+VALUES
+(1, 'Laptop', 85000.50),
+(2, 'Mouse', 1200.00),
+(3, 'Keyboard', 2500.00);
+
+```
+---
+
+## Quick Summary
+
+| Query | Purpose |
+|---------|---------|
+| INSERT INTO | Data insert |
+| VALUES | Inserted values |
+| Multiple VALUES | Multiple rows insert |
+
+---
+
+👉 সহজভাবে:
+
+- INSERT = new data add
+- VALUES = inserted values
+- Multiple rows একসাথে insert করা যায়
 ---
 
 </details>
