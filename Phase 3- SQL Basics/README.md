@@ -2340,7 +2340,286 @@ WHERE CGPA IS NULL
 <details> 
     <summary> <b>ORDER BY</b> </summary>
 
+# ORDER BY in SQL
 
+ORDER BY clause ব্যবহার করা হয় SQL query এর result কে sort (সাজানো) করার জন্য।
+
+👉 **সহজভাবে:**
+
+**ORDER BY = data কে ascending বা descending order এ সাজানো**
+
+---
+
+## Basic Syntax
+```sql
+SELECT column_name
+FROM table_name
+ORDER BY column_name ASC|DESC;
+
+```
+---
+
+## Example Table (Students)
+
+| StudentID | Name | Department | CGPA | Age |
+|------------|--------|------------|------|-----|
+| 101 | Rahim | CSE | 3.90 | 21 |
+| 102 | Karim | EEE | 3.75 | 22 |
+| 103 | Sakib | CSE | 3.85 | 20 |
+| 104 | Nayeem | BBA | 3.60 | 23 |
+| 105 | Arafat | CSE | 3.95 | 21 |
+
+---
+
+## 1. ORDER BY ASC (Ascending Order)
+
+👉 ছোট থেকে বড় (Low → High)
+
+### Example 1: CGPA Ascending
+```sql
+SELECT *
+FROM Students
+ORDER BY CGPA ASC;
+
+```
+### Output Idea:
+
+| Name | CGPA |
+|------|------|
+| Nayeem | 3.60 |
+| Karim | 3.75 |
+| Sakib | 3.85 |
+| Rahim | 3.90 |
+| Arafat | 3.95 |
+
+👉 lowest CGPA first
+
+---
+
+## 2. ORDER BY DESC (Descending Order)
+
+👉 বড় থেকে ছোট (High → Low)
+
+### Example 2: CGPA Descending
+```sql
+SELECT *
+FROM Students
+ORDER BY CGPA DESC;
+
+```
+### Output Idea:
+
+| Name | CGPA |
+|------|------|
+| Arafat | 3.95 |
+| Rahim | 3.90 |
+| Sakib | 3.85 |
+| Karim | 3.75 |
+| Nayeem | 3.60 |
+
+👉 highest CGPA first
+
+---
+
+## 3. ORDER BY with WHERE
+
+WHERE + ORDER BY একসাথে use করা যায়
+
+### Example 3
+```sql
+SELECT *
+FROM Students
+WHERE Department = 'CSE'
+ORDER BY CGPA DESC;
+
+```
+👉 CSE students কে CGPA অনুযায়ী সাজাবে
+
+### Output:
+
+| Name | CGPA |
+|------|------|
+| Arafat | 3.95 |
+| Rahim | 3.90 |
+| Sakib | 3.85 |
+
+---
+
+## 4. ORDER BY Multiple Columns
+
+একাধিক column দিয়ে sorting করা যায়
+
+### Example 4
+```sql
+SELECT *
+FROM Students
+ORDER BY Department ASC, CGPA DESC;
+
+```
+👉 আগে Department sort হবে
+
+👉 তারপর CGPA sort হবে (each department ভিতরে)
+
+### Output Idea:
+
+**BBA**
+
+- Nayeem
+
+**CSE**
+
+- Arafat (3.95)
+- Rahim (3.90)
+- Sakib (3.85)
+
+**EEE**
+
+- Karim
+
+---
+
+## 5. ORDER BY with Name Sorting
+
+### Example 5: Alphabetical Order
+```sql
+SELECT *
+FROM Students
+ORDER BY Name ASC;
+
+```
+👉 A to Z order
+
+### Output:
+
+- Arafat
+- Karim
+- Nayeem
+- Rahim
+- Sakib
+
+---
+
+## 6. ORDER BY with Numeric Column
+
+### Example 6: Age Sorting
+```sql
+SELECT *
+FROM Students
+ORDER BY Age DESC;
+
+```
+👉 oldest student first
+
+### Output:
+
+| Name | Age |
+|------|-----|
+| Nayeem | 23 |
+| Karim | 22 |
+| Rahim | 21 |
+| Arafat | 21 |
+| Sakib | 20 |
+
+---
+
+## 7. ORDER BY with SELECT Specific Columns
+
+### Example 7
+```sql
+SELECT Name, CGPA
+FROM Students
+ORDER BY CGPA DESC;
+
+```
+👉 শুধু Name + CGPA show করবে sorted order এ
+
+---
+
+## 8. ORDER BY with Expression
+
+### Example 8
+```sql
+SELECT Name, CGPA + 0.5 AS Improved_CGPA
+FROM Students
+ORDER BY Improved_CGPA DESC;
+
+```
+👉 calculated value দিয়ে sorting
+
+---
+
+## 9. ORDER BY with LIMIT (MySQL style)
+
+Top result বের করার জন্য use হয়
+
+### Example 9
+```sql
+SELECT *
+FROM Students
+ORDER BY CGPA DESC
+LIMIT 3;
+
+```
+👉 top 3 highest CGPA student
+
+---
+
+## 10. Real-life Example
+
+### Product Table
+
+| Product | Price |
+|----------|--------|
+| Laptop | 85000 |
+| Mouse | 1200 |
+| Keyboard | 2500 |
+
+### Example Query
+```sql
+SELECT *
+FROM Products
+ORDER BY Price DESC;
+
+```
+👉 expensive product first
+
+---
+
+# Common Mistakes
+
+## 1. Wrong Order Keyword
+
+❌ Wrong:
+```sql
+ORDER BY CGPA HIGH
+```
+✅ Correct:
+```sql
+ORDER BY CGPA DESC
+```
+---
+
+## 2. ASC / DESC Misspelled
+
+❌ Wrong:
+```sql
+ORDER BY Name ASSC
+```
+---
+
+# Quick Summary
+
+| Keyword | Meaning |
+|----------|----------|
+| ORDER BY | Sorting data |
+| ASC | Ascending (low → high) |
+| DESC | Descending (high → low) |
+
+---
+
+👉 **সহজভাবে:**
+
+**ORDER BY = data sorting tool**
 ---
 
 </details>
