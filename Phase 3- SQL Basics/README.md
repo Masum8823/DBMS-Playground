@@ -2950,6 +2950,272 @@ FROM Students;
 <details> 
     <summary> <b>DISTINCT</b> </summary>
 
+# DISTINCT in SQL
+
+DISTINCT keyword ব্যবহার করা হয় duplicate (repeat) data remove করে শুধু unique values দেখানোর জন্য।
+
+👉 **সহজভাবে:**
+
+**DISTINCT = duplicate বাদ দিয়ে unique data show করা**
+
+---
+
+## Basic Syntax
+```sql
+SELECT DISTINCT column_name
+FROM table_name;
+
+```
+---
+
+## Example Table (Students)
+
+| StudentID | Name | Department | CGPA |
+| ---------- | ------ | ---------- | ---- |
+| 101 | Rahim | CSE | 3.90 |
+| 102 | Karim | EEE | 3.75 |
+| 103 | Sakib | CSE | 3.85 |
+| 104 | Nayeem | BBA | 3.60 |
+| 105 | Arafat | CSE | 3.95 |
+
+---
+
+## 1. DISTINCT on Single Column
+
+### Example 1: Department
+```sql
+SELECT DISTINCT Department
+FROM Students;
+
+```
+---
+
+### Output:
+
+| Department |
+| ---------- |
+| CSE |
+| EEE |
+| BBA |
+
+---
+
+👉 duplicate CSE remove হয়ে গেছে
+
+---
+
+## 2. DISTINCT on Name Column
+
+### Example 2
+```sql
+SELECT DISTINCT Name
+FROM Students;
+
+```
+---
+
+👉 সব unique names show করবে
+
+---
+
+## 3. Without DISTINCT (Duplicate Problem)
+```sql
+SELECT Department
+FROM Students;
+
+```
+---
+
+### Output:
+
+| Department |
+| ---------- |
+| CSE |
+| EEE |
+| CSE |
+| BBA |
+| CSE |
+
+---
+
+👉 same value বারবার আসছে
+
+---
+
+## 4. DISTINCT with Multiple Columns
+
+DISTINCT একাধিক column একসাথে কাজ করে combination অনুযায়ী unique value দেয়।
+
+---
+
+### Example 3
+```sql
+SELECT DISTINCT Department, CGPA
+FROM Students;
+
+```
+---
+
+👉 এখানে Department + CGPA combination unique হবে
+
+---
+
+### Output Idea:
+
+| Department | CGPA |
+| ---------- | ---- |
+| CSE | 3.90 |
+| CSE | 3.85 |
+| EEE | 3.75 |
+| BBA | 3.60 |
+| CSE | 3.95 |
+
+---
+
+👉 শুধু পুরো row combination unique হবে
+
+---
+
+## 5. DISTINCT with SELECT *
+```sql
+SELECT DISTINCT *
+FROM Students;
+
+```
+---
+
+👉 পুরো row duplicate হলে remove করবে
+
+---
+
+## 6. DISTINCT with ORDER BY
+```sql
+SELECT DISTINCT Department
+FROM Students
+ORDER BY Department ASC;
+
+```
+---
+
+👉 unique departments sorted order এ show করবে
+
+---
+
+## 7. DISTINCT with COUNT (Very Important)
+
+### Example 4
+```sql
+SELECT COUNT(DISTINCT Department)
+FROM Students;
+
+```
+---
+
+👉 কতগুলো unique department আছে সেটা দেখাবে
+
+---
+
+### Output:
+
+| COUNT |
+| ------ |
+| 3 |
+
+---
+
+## 8. Real-life Example
+
+### Product Table
+
+| ProductID | Category |
+| --------- | -------- |
+| 1 | Electronics |
+| 2 | Electronics |
+| 3 | Fashion |
+| 4 | Home |
+| 5 | Fashion |
+
+---
+
+### Query
+```sql
+SELECT DISTINCT Category
+FROM Products;
+
+```
+---
+
+### Output:
+
+| Category |
+| -------- |
+| Electronics |
+| Fashion |
+| Home |
+
+---
+
+👉 duplicate categories remove
+
+---
+
+## 9. DISTINCT vs GROUP BY (Basic Idea)
+
+| DISTINCT | GROUP BY |
+| -------- | -------- |
+| duplicate remove | grouping data |
+| simple use | aggregation support |
+| faster for unique list | complex operations |
+
+---
+
+## 10. Common Mistakes
+
+### 1. Expecting DISTINCT to sort
+
+❌ Wrong assumption:
+
+DISTINCT automatically sort করে না
+
+👉 Correct way:
+```sql
+SELECT DISTINCT Department
+FROM Students
+ORDER BY Department;
+
+```
+---
+
+### 2. Misunderstanding multiple columns
+
+👉 DISTINCT (A, B) মানে:
+
+A + B combination unique হবে
+
+---
+
+## 11. When to Use DISTINCT
+
+- Duplicate remove করতে
+- Unique list বের করতে
+- Reports generate করতে
+- Category list তৈরি করতে
+
+---
+
+## Quick Summary
+
+| Keyword | Meaning |
+| -------- | ------- |
+| DISTINCT | duplicate remove |
+| Works on | columns / rows |
+| Result | unique values only |
+
+---
+
+👉 **সহজভাবে:**
+
+**DISTINCT = repeat data বাদ দিয়ে clean unique list**
 
 ---
 
