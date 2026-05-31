@@ -2628,7 +2628,320 @@ ORDER BY Name ASSC
 <details> 
     <summary> <b>LIMIT</b> </summary>
 
+# LIMIT in SQL
 
+LIMIT clause ব্যবহার করা হয় query result থেকে নির্দিষ্ট সংখ্যক row return করার জন্য।
+
+👉 **সহজভাবে:**
+
+**LIMIT = কতগুলো data দেখাবে সেটা control করা**
+
+---
+
+## Basic Syntax
+```sql
+SELECT column_name
+FROM table_name
+LIMIT number;
+
+```
+---
+
+## Example Table (Students)
+
+| StudentID | Name   | Department | CGPA |
+| ---------- | ------ | ---------- | ---- |
+| 101 | Rahim  | CSE | 3.90 |
+| 102 | Karim  | EEE | 3.75 |
+| 103 | Sakib  | CSE | 3.85 |
+| 104 | Nayeem | BBA | 3.60 |
+| 105 | Arafat | CSE | 3.95 |
+
+---
+
+## 1. Simple LIMIT
+
+### Example 1
+```sql
+SELECT *
+FROM Students
+LIMIT 3;
+
+```
+---
+
+👉 প্রথম 3টা row দেখাবে
+
+---
+
+### Output:
+
+| StudentID | Name |
+| ---------- | ------ |
+| 101 | Rahim |
+| 102 | Karim |
+| 103 | Sakib |
+
+---
+
+## Important Note
+
+LIMIT সবসময় top rows return করে (default order অনুযায়ী)।
+
+👉 তাই ORDER BY ছাড়া LIMIT use করলে result unpredictable হতে পারে
+
+---
+
+## 2. LIMIT with ORDER BY (Best Practice)
+
+👉 Real-world এ LIMIT সবসময় ORDER BY এর সাথে use করা হয়
+
+---
+
+### Example 2: Top CGPA Students
+```sql
+SELECT *
+FROM Students
+ORDER BY CGPA DESC
+LIMIT 3;
+
+```
+---
+
+👉 highest CGPA এর top 3 students
+
+---
+
+### Output:
+
+| Name | CGPA |
+| ------ | ---- |
+| Arafat | 3.95 |
+| Rahim | 3.90 |
+| Sakib | 3.85 |
+
+---
+
+## 3. LIMIT with WHERE
+
+### Example 3
+```sql
+SELECT *
+FROM Students
+WHERE Department = 'CSE'
+LIMIT 2;
+
+```
+---
+
+👉 CSE department থেকে শুধু 2 জন student দেখাবে
+
+---
+
+## 4. LIMIT with OFFSET
+
+OFFSET মানে শুরুতে কতগুলো row skip করবে
+
+---
+
+### Syntax
+```sql
+SELECT *
+FROM table_name
+LIMIT number OFFSET skip_number;
+
+```
+---
+
+### Example 4
+```sql
+SELECT *
+FROM Students
+ORDER BY CGPA DESC
+LIMIT 2 OFFSET 1;
+
+```
+---
+
+👉 1st row skip করবে, তারপর next 2 rows দেখাবে
+
+---
+
+### Step-by-step:
+
+- Skip: 1 row (highest CGPA student)
+- Then show: next 2 students
+
+---
+
+### Output Idea:
+
+| Name |
+| ------ |
+| Rahim |
+| Sakib |
+
+---
+
+## 5. Pagination Concept (Very Important)
+
+LIMIT + OFFSET ব্যবহার করে pagination করা হয় (page system)
+
+---
+
+### Example:
+
+### Page 1:
+```sql
+SELECT *
+FROM Students
+LIMIT 2 OFFSET 0;
+
+```
+---
+
+### Page 2:
+```sql
+SELECT *
+FROM Students
+LIMIT 2 OFFSET 2;
+
+```
+---
+
+👉 Web apps এ page system এ এটা খুব use হয়
+
+---
+
+## 6. LIMIT for Top 1 (Highest/Lowest)
+
+### Highest CGPA Student
+```sql
+SELECT *
+FROM Students
+ORDER BY CGPA DESC
+LIMIT 1;
+
+```
+---
+
+### Lowest CGPA Student
+```sql
+SELECT *
+FROM Students
+ORDER BY CGPA ASC
+LIMIT 1;
+
+```
+---
+
+👉 Top 1 / Bottom 1 easily বের করা যায়
+
+---
+
+## 7. LIMIT with Multiple Columns
+```sql
+SELECT Name, CGPA
+FROM Students
+ORDER BY Department ASC, CGPA DESC
+LIMIT 3;
+
+```
+---
+
+👉 department-wise sorted top 3 students
+
+---
+
+## 8. Real-life Example
+
+### Product Table
+
+| Product | Price |
+| -------- | ----- |
+| Laptop | 85000 |
+| Mouse | 1200 |
+| Keyboard | 2500 |
+| Monitor | 15000 |
+
+---
+
+### Example Query
+```sql
+SELECT *
+FROM Products
+ORDER BY Price DESC
+LIMIT 2;
+
+```
+---
+
+👉 most expensive 2 products
+
+---
+
+## Common Mistakes
+
+### 1. LIMIT without ORDER BY
+
+❌ Wrong (unreliable result):
+```sql
+SELECT *
+FROM Students
+LIMIT 3;
+
+```
+---
+
+### 2. Wrong OFFSET Usage
+
+❌ Wrong:
+```sql
+LIMIT OFFSET 3;
+```
+---
+
+### 3. Forgetting ORDER BY for Top Results
+
+👉 Always use ORDER BY for meaningful LIMIT result
+
+---
+
+## DBMS Compatibility Note
+
+| DBMS | LIMIT Support |
+| ------ | ------------- |
+| MySQL | LIMIT |
+| PostgreSQL | LIMIT |
+| SQL Server | TOP / OFFSET FETCH |
+| Oracle | ROWNUM / FETCH |
+
+---
+
+## SQL Server Alternative
+
+### TOP keyword
+```sql
+SELECT TOP 3 *
+FROM Students;
+
+```
+---
+
+## Quick Summary
+
+| Keyword | Meaning |
+| -------- | ------- |
+| LIMIT | number of rows control |
+| OFFSET | rows skip |
+| ORDER BY | sorting (recommended with LIMIT) |
+
+---
+
+👉 **সহজভাবে:**
+
+- **LIMIT = কত row দেখাবে**
+- **OFFSET = কত row skip করবে**
 ---
 
 </details>
