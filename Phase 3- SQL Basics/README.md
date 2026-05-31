@@ -2015,7 +2015,323 @@ SELECT Marks FROM Students;
 <details> 
     <summary> <b>WHERE Clause</b> </summary>
 
+# WHERE Clause in SQL
 
+WHERE clause ব্যবহার করা হয় SQL query এর মধ্যে condition দিয়ে data filter করার জন্য।
+
+👉 **সহজভাবে:**
+
+**WHERE = নির্দিষ্ট condition অনুযায়ী data select করা**
+
+---
+
+## Basic Syntax
+```sql
+SELECT column_name
+FROM table_name
+WHERE condition;
+
+```
+---
+
+## Example Table (Students)
+
+| StudentID | Name | Department | CGPA | Age |
+|------------|--------|------------|------|-----|
+| 101 | Rahim | CSE | 3.90 | 21 |
+| 102 | Karim | EEE | 3.75 | 22 |
+| 103 | Sakib | CSE | 3.85 | 20 |
+| 104 | Nayeem | BBA | 3.60 | 23 |
+| 105 | Arafat | CSE | 3.95 | 21 |
+
+---
+
+## 1. Simple WHERE (Equality)
+
+### Example 1
+```sql
+SELECT *
+FROM Students
+WHERE Department = 'CSE';
+
+```
+👉 CSE department এর সব students দেখাবে
+
+---
+
+## 2. WHERE with Number Condition
+
+### Example 2
+```sql
+SELECT *
+FROM Students
+WHERE CGPA > 3.80;
+
+```
+👉 CGPA 3.80 এর বেশি students দেখাবে
+
+### Example 3
+```sql
+SELECT *
+FROM Students
+WHERE Age >= 21;
+
+```
+👉 21 বা তার বেশি বয়সের students
+
+---
+
+## 3. WHERE with NOT EQUAL
+
+### Example 4
+```sql
+SELECT *
+FROM Students
+WHERE Department <> 'EEE';
+
+```
+👉 EEE ছাড়া সব departments
+
+---
+
+## 4. WHERE with AND Operator
+
+AND মানে সব condition true হতে হবে
+
+### Example 5
+```sql
+SELECT *
+FROM Students
+WHERE Department = 'CSE'
+AND CGPA > 3.85;
+
+```
+👉 CSE department + CGPA 3.85 এর বেশি
+
+### Output
+
+- Rahim (3.90)
+- Arafat (3.95)
+
+---
+
+## 5. WHERE with OR Operator
+
+OR মানে যেকোনো এক condition true হলেই data আসবে
+
+### Example 6
+```sql
+SELECT *
+FROM Students
+WHERE Department = 'EEE'
+OR CGPA > 3.90;
+
+```
+👉 EEE students + high CGPA students
+
+---
+
+## 6. WHERE with NOT Operator
+
+NOT মানে condition reverse করা
+
+### Example 7
+```sql
+SELECT *
+FROM Students
+WHERE NOT Department = 'CSE';
+
+```
+👉 CSE ছাড়া সব students
+
+---
+
+## 7. WHERE with BETWEEN
+
+BETWEEN ব্যবহার হয় range check করার জন্য
+
+### Example 8
+```sql
+SELECT *
+FROM Students
+WHERE CGPA BETWEEN 3.70 AND 3.90;
+
+```
+👉 3.70 থেকে 3.90 এর মধ্যে CGPA
+
+---
+
+## 8. WHERE with IN
+
+IN ব্যবহার হয় multiple specific values check করার জন্য
+
+### Example 9
+```sql
+SELECT *
+FROM Students
+WHERE Department IN ('CSE', 'EEE');
+
+```
+👉 শুধু CSE এবং EEE students
+
+---
+
+## 9. WHERE with LIKE (Pattern Matching)
+
+LIKE ব্যবহার হয় text pattern search করার জন্য
+
+### Example 10: Starts with 'R'
+```sql
+SELECT *
+FROM Students
+WHERE Name LIKE 'R%';
+
+```
+👉 R দিয়ে শুরু হওয়া নাম
+
+### Example 11: Ends with 'm'
+```sql
+SELECT *
+FROM Students
+WHERE Name LIKE '%m';
+
+```
+👉 m দিয়ে শেষ হওয়া নাম
+
+### Example 12: Contains 'a'
+```sql
+SELECT *
+FROM Students
+WHERE Name LIKE '%a%';
+
+```
+👉 নামের মধ্যে কোথাও 'a' আছে এমন
+
+---
+
+## 10. WHERE with NULL
+
+NULL মানে কোনো value নাই
+
+### Example 13
+```sql
+SELECT *
+FROM Students
+WHERE CGPA IS NULL;
+
+```
+👉 যাদের CGPA দেওয়া নাই
+
+---
+
+## 11. WHERE with NOT NULL
+
+### Example 14
+```sql
+SELECT *
+FROM Students
+WHERE CGPA IS NOT NULL;
+
+```
+👉 যাদের CGPA আছে
+
+---
+
+## 12. Complex WHERE Condition
+
+### Example 15
+```sql
+SELECT *
+FROM Students
+WHERE Department = 'CSE'
+AND CGPA > 3.80
+AND Age = 21;
+
+```
+👉 CSE + CGPA > 3.80 + Age 21
+
+---
+
+## 13. WHERE with Arithmetic Condition
+
+### Example 16
+```sql
+SELECT *
+FROM Students
+WHERE CGPA + 0.1 > 4.00;
+
+```
+👉 calculated condition use করা যায়
+
+---
+
+## 14. Real-life Example
+
+### Online Shop Table
+
+| ProductID | Name | Price | Stock |
+|------------|--------|--------|--------|
+| 1 | Laptop | 85000 | 10 |
+| 2 | Mouse | 1200 | 0 |
+| 3 | Keyboard | 2500 | 5 |
+
+### Example Query
+```sql
+SELECT *
+FROM Products
+WHERE Price > 2000
+AND Stock > 0;
+
+```
+👉 শুধু available + expensive products
+
+---
+
+# Common Mistakes
+
+## 1. Missing Quotes
+
+❌ Wrong:
+```sql
+WHERE Name = Rahim
+```
+✅ Correct:
+```sql
+WHERE Name = 'Rahim'
+```
+---
+
+## 2. Wrong NULL Check
+
+❌ Wrong:
+```sql
+WHERE CGPA = NULL
+```
+✅ Correct:
+```sql
+WHERE CGPA IS NULL
+```
+---
+
+# Quick Summary
+
+| Operator | Meaning |
+|-----------|---------|
+| = | Equal |
+| > < | Comparison |
+| AND | All true |
+| OR | Any true |
+| NOT | Reverse |
+| BETWEEN | Range |
+| IN | Multiple values |
+| LIKE | Pattern |
+| IS NULL | Empty check |
+
+---
+
+👉 **সহজভাবে:**
+
+**WHERE = data filter system**
 ---
 
 </details>
