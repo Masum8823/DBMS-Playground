@@ -1573,6 +1573,439 @@ VALUES
 <details> 
     <summary> <b>SELECT Query</b> </summary>
 
+# SELECT Query in SQL
+
+SELECT query হলো SQL এর সবচেয়ে important এবং সবচেয়ে বেশি ব্যবহার হওয়া query।
+
+এটা database table থেকে data retrieve/show করার জন্য use করা হয়।
+
+👉 **সহজভাবে:**
+
+**SELECT = database থেকে data দেখা**
+
+---
+
+## Basic Syntax
+```sql
+SELECT column_name
+FROM table_name;
+
+```
+---
+
+## Example Table
+
+ধরো আমাদের Students table আছে:
+
+| StudentID | Name  | Department | CGPA |
+|------------|--------|------------|------|
+| 101 | Rahim | CSE | 3.90 |
+| 102 | Karim | EEE | 3.75 |
+| 103 | Sakib | CSE | 3.85 |
+
+---
+
+## SELECT All Columns
+
+সব data দেখতে * ব্যবহার করা হয়।
+
+### Example 1
+```sql
+SELECT * FROM Students;
+```
+### Output
+
+| StudentID | Name | Department | CGPA |
+|------------|------|------------|------|
+| 101 | Rahim | CSE | 3.90 |
+| 102 | Karim | EEE | 3.75 |
+| 103 | Sakib | CSE | 3.85 |
+
+👉 **\* means all columns**
+
+---
+
+## SELECT Specific Columns
+
+সব column না দেখিয়ে specific columns ও show করা যায়।
+
+### Example 2
+```sql
+SELECT Name, CGPA
+FROM Students;
+
+```
+### Output
+
+| Name | CGPA |
+|------|------|
+| Rahim | 3.90 |
+| Karim | 3.75 |
+| Sakib | 3.85 |
+
+👉 শুধু Name এবং CGPA show হবে
+
+---
+
+## Using WHERE Clause
+
+WHERE condition ব্যবহার করে specific data filter করা হয়।
+
+👉 **সহজভাবে:**
+
+**WHERE = condition based selection**
+
+### Syntax
+```sql
+SELECT column_name
+FROM table_name
+WHERE condition;
+
+```
+### Example 3: Exact Match
+```sql
+SELECT *
+FROM Students
+WHERE Department = 'CSE';
+
+```
+### Output
+
+| StudentID | Name | Department | CGPA |
+|------------|------|------------|------|
+| 101 | Rahim | CSE | 3.90 |
+| 103 | Sakib | CSE | 3.85 |
+
+👉 শুধু CSE students show করবে
+
+---
+
+## Comparison Operators
+
+| Operator | Meaning |
+|-----------|---------|
+| = | Equal |
+| > | Greater than |
+| < | Less than |
+| >= | Greater or equal |
+| <= | Less or equal |
+| <> / != | Not equal |
+
+---
+
+### Example 4: Greater Than
+```sql
+SELECT *
+FROM Students
+WHERE CGPA > 3.80;
+
+```
+### Output
+
+| StudentID | Name | CGPA |
+|------------|------|------|
+| 101 | Rahim | 3.90 |
+| 103 | Sakib | 3.85 |
+
+---
+
+## AND Operator
+
+Multiple conditions একসাথে use করতে AND ব্যবহার হয়।
+
+### Example 5
+```sql
+SELECT *
+FROM Students
+WHERE Department = 'CSE'
+AND CGPA > 3.85;
+
+```
+### Output
+
+| StudentID | Name | Department | CGPA |
+|------------|------|------------|------|
+| 101 | Rahim | CSE | 3.90 |
+
+👉 দুই condition true হতে হবে
+
+---
+
+## OR Operator
+
+একাধিক condition এর যেকোনো একটি true হলেই data show হবে।
+
+### Example 6
+```sql
+SELECT *
+FROM Students
+WHERE Department = 'EEE'
+OR CGPA > 3.85;
+
+```
+---
+
+## NOT Operator
+
+Condition reverse করতে use হয়।
+
+### Example 7
+```sql
+SELECT *
+FROM Students
+WHERE NOT Department = 'CSE';
+
+```
+👉 CSE ছাড়া সব students দেখাবে
+
+---
+
+## ORDER BY
+
+Data sorting করার জন্য use হয়।
+
+### Ascending Order (ASC)
+
+### Example 8
+```sql
+SELECT *
+FROM Students
+ORDER BY CGPA ASC;
+
+```
+👉 ছোট থেকে বড় order
+
+### Descending Order (DESC)
+
+### Example 9
+
+👉 বড় থেকে ছোট order
+```sql
+SELECT *
+FROM Students
+ORDER BY CGPA DESC;
+
+```
+---
+
+## DISTINCT Keyword
+
+Duplicate values remove করে unique values show করে।
+
+### Example 10
+```sql
+SELECT DISTINCT Department
+FROM Students;
+
+```
+### Output
+
+| Department |
+|------------|
+| CSE |
+| EEE |
+
+👉 Duplicate department remove হয়েছে
+
+---
+
+## TOP Keyword (SQL Server)
+
+নির্দিষ্ট সংখ্যক rows show করার জন্য use হয়।
+
+### Example 11
+```sql
+SELECT TOP 2 *
+FROM Students;
+
+```
+👉 প্রথম 2টা row show করবে
+
+---
+
+## LIKE Operator
+
+Pattern matching এর জন্য use হয়।
+
+### Wildcards
+
+| Symbol | Meaning |
+|---------|---------|
+| % | Any characters |
+| _ | Single character |
+
+### Example 12: Name Starts with R
+```sql
+SELECT *
+FROM Students
+WHERE Name LIKE 'R%';
+
+```
+👉 R দিয়ে শুরু হওয়া names show করবে
+
+### Example 13: Ends with m
+
+👉 m দিয়ে শেষ হওয়া names show করবে
+```sql
+SELECT *
+FROM Students
+WHERE Name LIKE '%m';
+
+```
+---
+
+## BETWEEN Operator
+
+Range এর মধ্যে value check করে।
+
+### Example 14
+```sql
+SELECT *
+FROM Students
+WHERE CGPA BETWEEN 3.70 AND 4.00;
+
+```
+👉 3.70 থেকে 4.00 এর মধ্যে CGPA
+
+---
+
+## IN Operator
+
+Multiple values check করার জন্য use হয়।
+
+### Example 15
+```sql
+SELECT *
+FROM Students
+WHERE Department IN ('CSE', 'EEE');
+
+```
+👉 CSE এবং EEE students show করবে
+
+---
+
+## IS NULL
+
+NULL values check করার জন্য use হয়।
+
+### Example 16
+```sql
+SELECT *
+FROM Students
+WHERE CGPA IS NULL;
+
+```
+👉 যাদের CGPA empty তাদের দেখাবে
+
+---
+
+## Aliasing (AS)
+
+Temporary column name দেওয়া যায়।
+
+### Example 17
+```sql
+SELECT Name AS Student_Name
+FROM Students;
+
+```
+---
+
+## Aggregate Functions with SELECT
+
+### COUNT()
+```sql
+SELECT COUNT(*) FROM Students;
+```
+👉 মোট কত student আছে
+
+### AVG()
+```sql
+SELECT AVG(CGPA) FROM Students;
+```
+👉 Average CGPA
+
+### MAX()
+```sql
+SELECT MAX(CGPA) FROM Students;
+```
+👉 Highest CGPA
+
+### MIN()
+```sql
+SELECT MIN(CGPA) FROM Students;
+```
+👉 Lowest CGPA
+
+---
+
+## Real-life Example
+
+### Online Store
+
+### Products Table
+
+| ProductID | ProductName | Price |
+|------------|------------|--------|
+| 1 | Laptop | 85000 |
+| 2 | Mouse | 1200 |
+| 3 | Keyboard | 2500 |
+
+### Query
+```sql
+SELECT ProductName, Price
+FROM Products
+WHERE Price > 2000;
+
+```
+👉 ২০০০ টাকার বেশি products show করবে
+
+---
+
+## Common Errors
+
+### 1. Missing Quotes
+
+❌ Wrong:
+```sql
+WHERE Name = Rahim
+```
+✅ Correct:
+```sql
+WHERE Name = 'Rahim'
+```
+### 2. Wrong Column Name
+
+❌ Wrong:
+```sql
+SELECT Marks FROM Students;
+```
+👉 যদি Marks column না থাকে error দিবে
+
+---
+
+## Quick Summary
+
+| Keyword | Purpose |
+|----------|----------|
+| SELECT | Data retrieve |
+| WHERE | Filtering |
+| ORDER BY | Sorting |
+| DISTINCT | Unique values |
+| LIKE | Pattern matching |
+| BETWEEN | Range check |
+| IN | Multiple values |
+| IS NULL | NULL checking |
+
+---
+
+👉 **সহজভাবে:**
+
+- SELECT = data show
+- WHERE = filter
+- ORDER BY = sort
+- DISTINCT = unique
+- LIKE = pattern search
 
 ---
 
