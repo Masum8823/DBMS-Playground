@@ -897,7 +897,344 @@ Table এ columns + data types define করতে হয়
 
 
 <details> 
-    <summary> <b> </b> </summary>
+    <summary> <b>Data Types in SQL</b> </summary>
+
+# Data Types in SQL
+
+SQL এ data type define করে একটি column এ কী ধরনের data store করা যাবে।
+
+👉 **সহজভাবে:**  
+**Data Type = column এ কোন ধরনের value রাখা যাবে তার rule**
+
+---
+
+## Why Data Types are Important?
+
+Proper data type use করলে:
+
+- Storage save হয়
+- Performance better হয়
+- Invalid data prevent করা যায়
+- Database efficient হয়
+
+---
+
+## Categories of SQL Data Types
+
+Mainly SQL data types কয়েক ভাগে divide করা হয়:
+
+- Numeric Data Types
+- Character/String Data Types
+- Date & Time Data Types
+- Boolean Data Type
+
+---
+
+# 1. Numeric Data Types
+
+এগুলো number store করার জন্য use হয়।
+
+## INT
+
+পূর্ণ সংখ্যা (integer) store করে।
+
+📌 **Example:**
+
+```sql
+Age INT
+```
+
+👉 **Valid Values:**
+- 10
+- 25
+- 100
+
+❌ **Invalid:**
+- 10.5
+
+---
+
+## BIGINT
+
+খুব বড় integer value store করে।
+
+📌 **Example:**
+
+```sql
+Phone BIGINT
+```
+
+👉 বড় large numbers এর জন্য use হয়
+
+---
+
+## FLOAT
+
+Decimal/floating point numbers store করে।
+
+📌 **Example:**
+```sql
+CGPA FLOAT
+```
+👉 **Valid:**
+- 3.75
+- 4.00
+
+---
+
+## DECIMAL(p,s)
+
+Fixed decimal value store করে।
+
+📌 **Example:**
+```sql
+Salary DECIMAL(10,2)
+```
+👉 এখানে:
+
+- 10 = total digits
+- 2 = decimal places
+
+📌 **Example Value:**
+
+- 25000.50
+
+---
+
+### Numeric Data Type Example
+```sql
+CREATE TABLE Students (
+    ID INT,
+    CGPA FLOAT,
+    Salary DECIMAL(10,2)
+);
+
+```
+---
+
+# 2. Character / String Data Types
+
+Text/string store করার জন্য use হয়।
+
+## CHAR(n)
+
+Fixed length string store করে।
+
+📌 **Example:**
+```sql
+Gender CHAR(1)
+```
+👉 যদি value হয়:
+```sql
+'M'
+```
+তাহলে remaining space automatically fill হয়
+
+---
+
+## VARCHAR(n)
+
+Variable length string store করে।
+
+📌 **Example:**
+```sql
+Name VARCHAR(50)
+```
+👉 Maximum 50 characters পর্যন্ত store করতে পারবে
+
+---
+
+## TEXT
+
+Large text store করার জন্য use হয়।
+
+📌 **Example:**
+```sql
+Address TEXT
+```
+---
+
+## CHAR vs VARCHAR
+
+| CHAR | VARCHAR |
+|--------|--------|
+| Fixed length | Variable length |
+| Faster | Storage efficient |
+| Extra space নেয় | Only needed space নেয় |
+
+---
+
+### Example
+```sql
+CREATE TABLE Teachers (
+    Name VARCHAR(100),
+    Gender CHAR(1)
+);
+
+```
+---
+
+# 3. Date & Time Data Types
+
+Date এবং time related data store করার জন্য use হয়।
+
+## DATE
+
+শুধু date store করে।
+
+📌 **Format:**
+```txt
+YYYY-MM-DD
+```
+📌 **Example:**
+```sql
+BirthDate DATE
+```
+---
+
+## TIME
+
+শুধু time store করে।
+
+📌 **Example:**
+```sql
+TIME
+```
+---
+
+## DATETIME
+
+Date + time একসাথে store করে।
+
+📌 **Example:**
+```sql
+JoinDate DATETIME
+```
+---
+
+### Example
+```sql
+CREATE TABLE Employees (
+    JoinDate DATE,
+    LoginTime TIME
+);
+
+```
+---
+
+# 4. Boolean Data Type
+
+True/False values store করার জন্য use হয়।
+📌 **Example:**
+```sql
+IsActive BIT
+```
+
+👉 **Usually:**
+
+- 1 = True
+- 0 = False
+
+---
+
+## Complete Practical Example
+```sql
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Gender CHAR(1),
+    CGPA FLOAT,
+    Salary DECIMAL(10,2),
+    BirthDate DATE
+);
+
+```
+---
+
+## Explanation
+
+| Column | Data Type | Purpose |
+|----------|----------|----------|
+| StudentID | INT | Integer ID |
+| Name | VARCHAR | Student name |
+| Gender | CHAR | Single character |
+| CGPA | FLOAT | Decimal number |
+| Salary | DECIMAL | Exact decimal |
+| BirthDate | DATE | Date |
+
+---
+
+## Choosing Correct Data Type
+
+### Example:
+
+- ID → INT
+- Name → VARCHAR
+- Price → DECIMAL
+- Date → DATE
+- Gender → CHAR(1)
+
+---
+
+## Common Mistakes
+
+### 1. Wrong Data Type
+
+❌ **Example:**
+```sql
+Phone INT
+```
+👉 **Problem:**  
+Phone number বড় হলে issue হতে পারে
+
+✅ **Better:**
+```sql
+Phone BIGINT
+```
+---
+
+### 2. Small VARCHAR Size
+
+❌ **Example:**
+```sql
+Name VARCHAR(5)
+```
+👉 “Rahim Hasan” store হবে না
+
+---
+
+## Quick Summary
+
+| Data Type | Used For |
+|----------|----------|
+| INT | Integer |
+| BIGINT | Large integer |
+| FLOAT | Decimal number |
+| DECIMAL | Exact decimal |
+| CHAR | Fixed text |
+| VARCHAR | Variable text |
+| TEXT | Large text |
+| DATE | Date |
+| TIME | Time |
+| DATETIME | Date & time |
+| BIT | Boolean |
+
+---
+
+👉 **সহজভাবে:**
+
+- Numbers → INT/FLOAT
+- Text → VARCHAR
+- Date → DATE
+- True/False → BIT
+
+---
+
+</details>
+
+
+<details> 
+    <summary> <b>INSERT Query</b> </summary>
 
 
 ---
@@ -906,7 +1243,7 @@ Table এ columns + data types define করতে হয়
 
 
 <details> 
-    <summary> <b> </b> </summary>
+    <summary> <b>SELECT Query</b> </summary>
 
 
 ---
@@ -915,7 +1252,7 @@ Table এ columns + data types define করতে হয়
 
 
 <details> 
-    <summary> <b> </b> </summary>
+    <summary> <b>WHERE Clause</b> </summary>
 
 
 ---
@@ -924,7 +1261,7 @@ Table এ columns + data types define করতে হয়
 
 
 <details> 
-    <summary> <b> </b> </summary>
+    <summary> <b>ORDER BY</b> </summary>
 
 
 ---
@@ -933,7 +1270,7 @@ Table এ columns + data types define করতে হয়
 
 
 <details> 
-    <summary> <b> </b> </summary>
+    <summary> <b>LIMIT</b> </summary>
 
 
 ---
@@ -942,30 +1279,13 @@ Table এ columns + data types define করতে হয়
 
 
 <details> 
-    <summary> <b> </b> </summary>
+    <summary> <b>DISTINCT</b> </summary>
 
 
 ---
 
 </details>
 
-
-<details> 
-    <summary> <b> </b> </summary>
-
-
----
-
-</details>
-
-
-<details> 
-    <summary> <b> </b> </summary>
-
-
----
-
-</details>
 
 
 
