@@ -1441,3 +1441,483 @@ ADD CONSTRAINT → rule add
 ```
 ---
 </details>
+
+<details>
+  <summary><b> DROP & TRUNCATE</b></summary>
+
+# DROP & TRUNCATE in SQL
+
+DROP এবং TRUNCATE দুটোই data remove করার জন্য ব্যবহার হয়, কিন্তু এদের কাজ একদম আলাদা।
+
+অনেক student viva, exam এবং interview তে এই দুইটা command নিয়ে confuse হয়ে যায়।  
+তাই এই topic খুব ভালোভাবে clear থাকা দরকার।
+
+---
+
+## TRUNCATE TABLE
+
+TRUNCATE command ব্যবহার করা হয় table এর সব rows/data delete করার জন্য।  
+কিন্তু table structure (column, datatype, constraints) ঠিক থাকে।
+
+👉 সহজভাবে:
+TRUNCATE = Data remove  
+Table = Remains  
+
+---
+
+## Syntax
+```sql
+TRUNCATE TABLE table_name;
+```
+---
+
+## Example 1
+
+ধরো Students table:
+
+| StudentID | Name  | CGPA |
+|------------|------|------|
+| 101 | Rahim | 3.90 |
+| 102 | Karim | 3.75 |
+| 103 | Sakib | 3.85 |
+
+---
+
+## Query:
+```sql
+TRUNCATE TABLE Students;
+```
+---
+
+## Before
+
+| StudentID | Name  | CGPA |
+|------------|------|------|
+| 101 | Rahim | 3.90 |
+| 102 | Karim | 3.75 |
+| 103 | Sakib | 3.85 |
+
+---
+
+## After
+
+| StudentID | Name  | CGPA |
+|------------|------|------|
+| No Data | No Data | No Data |
+
+---
+
+কিন্তু table এখনও exist করছে।
+
+---
+
+## Verify
+```sql
+SELECT * FROM Students;
+```
+---
+
+## Output:
+```sql
+Empty Set
+```
+---
+
+কিন্তু table delete হয়নি।
+
+---
+
+## Structure Still Exists
+
+নতুন data insert করা যাবে:
+```sql
+INSERT INTO Students
+VALUES (101, 'Rahim', 3.95);
+
+```
+---
+
+👉 কারণ table structure এখনও আছে।
+
+---
+
+## Why TRUNCATE is Faster Than DELETE?
+
+ধরো 10 lakh rows আছে।
+
+### DELETE:
+```sql
+DELETE FROM Students;
+```
+---
+
+একটা একটা row delete করবে।
+
+### TRUNCATE:
+```sql
+TRUNCATE TABLE Students;
+```
+---
+
+Directly entire data pages remove করে।
+
+---
+
+তাই TRUNCATE অনেক faster।
+
+---
+
+## Important Characteristics of TRUNCATE
+
+### Removes All Rows
+```sql
+TRUNCATE TABLE Students;
+```
+---
+
+### Cannot Use WHERE
+
+❌ Wrong
+```sql
+TRUNCATE TABLE Students
+WHERE StudentID = 101;
+
+```
+---
+
+Error হবে।
+
+কারণ TRUNCATE specific row delete করতে পারে না।
+
+---
+
+### Table Structure Remains
+
+Columns, Constraints, Keys সব থাকে।
+
+---
+
+# DROP TABLE
+
+DROP command ব্যবহার করা হয় পুরো table permanently remove করার জন্য।
+
+👉 সহজভাবে:
+DROP = Data + Structure দুটোই remove  
+
+---
+
+## Syntax
+```sql
+DROP TABLE table_name;
+```
+---
+
+## Example 2
+
+Students table:
+
+| StudentID | Name |
+|------------|------|
+| 101 | Rahim |
+| 102 | Karim |
+
+---
+
+## Query:
+```sql
+DROP TABLE Students;
+```
+---
+
+## What Happens?
+
+Data Deleted ✔️  
+Columns Deleted ✔️  
+Constraints Deleted ✔️  
+Entire Table Deleted ✔️  
+
+---
+
+Table completely disappear হয়ে যাবে।
+
+---
+
+## Verify
+```sql
+SELECT * FROM Students;
+```
+---
+
+## Output:
+```sql
+Invalid object name 'Students'
+```
+---
+
+কারণ table আর exist করে না।
+
+---
+
+## To Use Again?
+
+আবার create করতে হবে।
+```sql
+CREATE TABLE Students(
+    StudentID INT,
+    Name VARCHAR(50)
+);
+
+```
+---
+
+👉 DROP এর পরে table recreate করতে হয়।
+
+---
+
+## Real-Life Example
+
+ধরো University Database এ একটি test table আছে।
+```sql
+TestStudents
+```
+Project শেষ।  
+Table আর লাগবে না।
+
+তখন:
+```sql
+DROP TABLE TestStudents;
+```
+---
+
+পুরো table remove হয়ে যাবে।
+
+---
+
+## TRUNCATE vs DELETE
+
+ধরো table:
+
+| ID | Name |
+|----|------|
+| 1 | Rahim |
+| 2 | Karim |
+| 3 | Sakib |
+
+---
+
+### DELETE:
+```sql
+DELETE FROM Students
+WHERE ID = 1;
+
+```
+---
+
+Result:
+
+| ID | Name |
+|----|------|
+| 2 | Karim |
+| 3 | Sakib |
+
+---
+
+Specific row delete হয়েছে।
+
+---
+
+### TRUNCATE:
+```sql
+TRUNCATE TABLE Students;
+```
+---
+
+Result:
+
+| ID | Name |
+|----|------|
+| No Rows |
+
+---
+
+সব rows delete হয়েছে।
+
+---
+
+## DROP vs TRUNCATE
+
+সবচেয়ে important comparison।
+
+---
+
+### Example
+
+TRUNCATE:
+```sql
+TRUNCATE TABLE Students;
+```
+---
+
+After:
+```sql
+INSERT INTO Students
+VALUES (1,'Rahim');
+
+```
+---
+
+✔️ Works  
+কারণ table আছে।
+
+---
+
+DROP:
+```sql
+DROP TABLE Students;
+```
+---
+
+After:
+```sql
+INSERT INTO Students
+VALUES (1,'Rahim');
+
+```
+---
+
+❌ Error  
+কারণ table exist করে না।
+
+---
+
+## Comparison Table
+
+| Feature | DELETE | TRUNCATE | DROP |
+|----------|--------|----------|------|
+| Removes Data | ✅ | ✅ | ✅ |
+| Removes Structure | ❌ | ❌ | ✅ |
+| WHERE Support | ✅ | ❌ | ❌ |
+| Specific Rows Delete | ✅ | ❌ | ❌ |
+| Table Remains | ✅ | ✅ | ❌ |
+| Faster | ❌ | ✅ | ✅ |
+| Reuse Table Immediately | ✅ | ✅ | ❌ |
+
+---
+
+## University Example
+
+### Students Table
+```sql
+Students
+```
+---
+
+## Situation 1
+
+সব student data remove করতে হবে  
+কিন্তু table থাকবে
+```sql
+TRUNCATE TABLE Students;
+```
+---
+
+## Situation 2
+
+পুরো table আর দরকার নেই
+```sql
+DROP TABLE Students;
+```
+---
+
+---
+
+## Common Mistakes
+
+---
+
+### Mistake 1
+
+DROP এর জায়গায় TRUNCATE ব্যবহার করা
+
+---
+
+### Mistake 2
+
+TRUNCATE এর সাথে WHERE ব্যবহার করা
+
+❌
+```sql
+TRUNCATE TABLE Students
+WHERE ID = 1;
+
+```
+---
+
+### Mistake 3
+
+DROP করার পরে table আছে মনে করা
+```sql
+DROP TABLE Students;
+```
+---
+
+তারপর:
+```sql
+SELECT * FROM Students;
+```
+❌ Error
+
+---
+
+## Common Viva Questions
+
+### Q: TRUNCATE কী?
+
+Table এর সব rows delete করে কিন্তু structure রাখে।
+
+---
+
+### Q: DROP কী?
+
+Data + Structure দুটোই permanently delete করে।
+
+---
+
+### Q: TRUNCATE এ WHERE ব্যবহার করা যায়?
+
+না।
+
+---
+
+### Q: DROP করার পরে table থাকে?
+
+না।
+
+---
+
+### Q: DELETE, TRUNCATE, DROP এর মধ্যে সবচেয়ে dangerous কোনটা?
+
+DROP, কারণ পুরো table remove হয়ে যায়।
+
+---
+
+## Quick Summary
+
+• DELETE → Specific rows delete  
+• TRUNCATE → All rows delete, structure থাকে  
+• DROP → Data + Structure দুটোই delete  
+
+---
+
+👉 মনে রাখার Shortcut
+
+```sql
+DELETE = Some Data Remove
+
+TRUNCATE = All Data Remove
+
+DROP = Everything Remove
+
+```
+---
+</details>
