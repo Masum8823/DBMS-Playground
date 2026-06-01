@@ -898,3 +898,546 @@ WHERE → কোন row delete হবে?
 ```
 ---
 </details>
+
+<details>
+  <summary><b> ALTER Table</b></summary>
+
+# ALTER TABLE in SQL
+
+ALTER TABLE command ব্যবহার করা হয় existing table এর structure modify/change করার জন্য।
+
+👉 সহজভাবে:
+CREATE TABLE = নতুন table তৈরি করে  
+ALTER TABLE = existing table এর structure পরিবর্তন করে  
+
+---
+
+## Why ALTER TABLE is Needed?
+
+Real-world projects এ database design সবসময় প্রথমবারেই perfect হয় না।
+
+কিছুদিন পরে প্রয়োজন হতে পারে:
+• নতুন column add করা  
+• Column delete করা  
+• Column name change করা  
+• Data type change করা  
+• Constraint add/remove করা  
+
+এসব কাজ ALTER TABLE দিয়ে করা হয়।
+
+---
+
+## Example Table
+
+ধরি আমাদের Students table আছে:
+```sql
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    CGPA FLOAT
+);
+
+```
+---
+
+## Current Table Structure
+
+| StudentID | Name  | CGPA |
+|------------|------|------|
+| 101 | Rahim | 3.90 |
+| 102 | Karim | 3.75 |
+
+---
+
+## 1. ADD COLUMN
+
+নতুন column যোগ করার জন্য ব্যবহার হয়।
+
+---
+
+## Syntax
+```sql
+ALTER TABLE table_name
+ADD column_name datatype;
+
+```
+---
+
+## Example 1
+
+Students table এ Email column add করবো।
+```sql
+ALTER TABLE Students
+ADD Email VARCHAR(100);
+
+```
+---
+
+### Before
+
+| StudentID | Name  | CGPA |
+|------------|------|------|
+| 101 | Rahim | 3.90 |
+
+---
+
+### After
+
+| StudentID | Name  | CGPA | Email |
+|------------|------|------|------|
+| 101 | Rahim | 3.90 | NULL |
+
+---
+
+👉 Existing rows এ নতুন column এর value initially NULL হয়।
+
+---
+
+## Example 2: Add Multiple Columns
+```sql
+ALTER TABLE Students
+ADD Phone VARCHAR(15),
+    Address VARCHAR(200);
+
+```
+---
+
+### After Structure
+
+| StudentID | Name | CGPA | Phone | Address |
+
+---
+
+👉 একসাথে multiple columns add করা যায়।
+
+---
+
+## 2. DROP COLUMN
+
+Column delete করার জন্য ব্যবহার হয়।
+
+---
+
+## Syntax
+```sql
+ALTER TABLE table_name
+DROP COLUMN column_name;
+
+```
+---
+
+## Example 3
+
+Phone column remove করতে চাই।
+```sql
+ALTER TABLE Students
+DROP COLUMN Phone;
+
+```
+---
+
+### Before
+
+| StudentID | Name  | Phone |
+|------------|------|------|
+| 101 | Rahim | 017xxxxxxx |
+
+---
+
+### After
+
+| StudentID | Name |
+|------------|------|
+| 101 | Rahim |
+
+---
+
+⚠️ Warning:
+DROP COLUMN করলে ওই column এর সব data permanently delete হয়ে যায়।
+
+---
+
+## 3. MODIFY / ALTER COLUMN (Data Type Change)
+
+Column এর data type change করার জন্য ব্যবহার হয়।
+
+---
+
+## MySQL Syntax
+```sql
+ALTER TABLE Students
+MODIFY CGPA DECIMAL(4,2);
+
+```
+---
+
+## SQL Server Syntax
+```sql
+ALTER TABLE Students
+ALTER COLUMN CGPA DECIMAL(4,2);
+
+```
+---
+
+### Before
+```sql
+CGPA FLOAT
+```
+---
+
+### After
+```sql
+CGPA DECIMAL(4,2)
+```
+---
+
+👉 SQL Server এ আমরা সাধারণত ALTER COLUMN ব্যবহার করি।
+
+---
+
+## 4. Increase Column Size
+
+---
+
+## Example 4
+
+আগে Name column ছিল:
+```sql
+Name VARCHAR(50)
+```
+---
+
+এখন 100 character করতে চাই:
+```sql
+ALTER TABLE Students
+ALTER COLUMN Name VARCHAR(100);
+
+```
+---
+
+👉 Larger names store করা যাবে।
+
+---
+
+## 5. Rename Column
+
+SQL Server এ sp_rename ব্যবহার করা হয়।
+
+---
+
+## Example 5
+
+Name column কে StudentName করতে চাই।
+```sql
+EXEC sp_rename
+'Students.Name',
+'StudentName',
+'COLUMN';
+
+```
+---
+
+### Before
+
+Name
+
+---
+
+### After
+
+StudentName
+
+---
+
+## 6. Add DEFAULT Constraint
+
+ধরো নতুন students এর default city হবে Dhaka।
+
+---
+
+## Example 6
+```sql
+ALTER TABLE Students
+ADD CONSTRAINT DF_City
+DEFAULT 'Dhaka' FOR City;
+
+```
+---
+
+👉 City না দিলে automatically Dhaka save হবে।
+
+---
+
+## 7. Add CHECK Constraint
+
+CGPA 4.00 এর বেশি হতে পারবে না।
+
+---
+
+## Example 7
+```sql
+ALTER TABLE Students
+ADD CONSTRAINT CHK_CGPA
+CHECK (CGPA <= 4.00);
+
+```
+---
+
+### Valid
+```sql
+3.85
+```
+---
+
+### Invalid
+```sql
+4.50
+```
+---
+
+❌ Error দিবে।
+
+---
+
+## 8. Add UNIQUE Constraint
+
+Email duplicate হওয়া যাবে না।
+
+---
+
+## Example 8
+```sql
+ALTER TABLE Students
+ADD CONSTRAINT UQ_Email
+UNIQUE (Email);
+
+```
+---
+
+### Valid
+```sql
+rahim@gmail.com
+karim@gmail.com
+
+```
+---
+
+### Invalid
+```sql
+rahim@gmail.com
+rahim@gmail.com
+
+```
+---
+
+❌ Error হবে।
+
+---
+
+## 9. Add PRIMARY KEY
+
+ধরো table create করার সময় primary key দেওয়া হয়নি।
+
+---
+
+## Example 9
+```sql
+ALTER TABLE Students
+ADD CONSTRAINT PK_Student
+PRIMARY KEY (StudentID);
+
+```
+---
+
+👉 StudentID এখন Primary Key।
+
+---
+
+## 10. Add FOREIGN KEY
+
+Departments table:
+```sql
+CREATE TABLE Departments (
+    DeptID INT PRIMARY KEY,
+    DeptName VARCHAR(50)
+);
+
+```
+---
+
+## Students table এ Foreign Key add করবো
+```sql
+ALTER TABLE Students
+ADD CONSTRAINT FK_Dept
+FOREIGN KEY (DeptID)
+REFERENCES Departments(DeptID);
+
+```
+---
+
+👉 Referential Integrity maintain হবে।
+
+---
+
+## 11. Drop Constraint
+
+আগে add করা constraint remove করতে চাই।
+
+---
+
+## Example 10
+```sql
+ALTER TABLE Students
+DROP CONSTRAINT UQ_Email;
+
+```
+---
+
+👉 Email column আর unique থাকবে না।
+
+---
+
+## Real-Life Example
+
+ধরো University Database এ প্রথমে Email column ছিল না।
+
+কিছুদিন পরে university সিদ্ধান্ত নিলো email store করবে।
+
+তখন নতুন table create না করে:
+```sql
+ALTER TABLE Students
+ADD Email VARCHAR(100);
+
+```
+---
+
+👉 এটাই ALTER TABLE এর সবচেয়ে common use case।
+
+---
+
+## Common Errors
+
+---
+
+## Error 1: Duplicate Column Name
+```sql
+ALTER TABLE Students
+ADD Name VARCHAR(50);
+
+```
+---
+
+যদি Name আগে থেকেই থাকে:
+
+❌ Error হবে
+
+---
+
+## Error 2: Data Type Conflict
+```sql
+ALTER TABLE Students
+ALTER COLUMN Name INT;
+
+```
+---
+
+যদি Name column এ text data থাকে:
+
+❌ Error হতে পারে
+
+---
+
+## ALTER TABLE vs UPDATE
+
+| ALTER TABLE | UPDATE |
+|-------------|--------|
+| Structure change করে | Data change করে |
+| Column add/remove করে | Row values modify করে |
+| Table design modify করে | Table data modify করে |
+
+---
+
+## Example
+
+### ALTER TABLE
+```sql
+ALTER TABLE Students
+ADD Email VARCHAR(100);
+
+```
+---
+
+👉 Structure change
+
+---
+
+### UPDATE
+```sql
+UPDATE Students
+SET Email = 'rahim@gmail.com'
+WHERE StudentID = 101;
+
+```
+---
+
+👉 Data change
+
+---
+
+## Common Viva Questions
+
+### Q: ALTER TABLE কী?
+
+Existing table এর structure modify করার command।
+
+---
+
+### Q: ALTER TABLE দিয়ে কী কী করা যায়?
+
+• Add column  
+• Drop column  
+• Change datatype  
+• Add constraint  
+• Remove constraint  
+
+---
+
+### Q: ALTER TABLE কি data modify করে?
+
+না, structure modify করে।
+
+---
+
+### Q: UPDATE এবং ALTER TABLE এর মধ্যে পার্থক্য কী?
+
+UPDATE data change করে, ALTER TABLE structure change করে।
+
+---
+
+## Quick Summary
+
+• ALTER TABLE = table structure modify  
+• ADD = column add  
+• DROP COLUMN = column delete  
+• ALTER COLUMN = datatype change  
+• Constraint add/remove করা যায়  
+• Real-world projects এ খুব frequently use হয়  
+
+---
+
+👉 মনে রাখার Shortcut
+
+```sql
+ALTER TABLE
+
+ADD → নতুন column
+
+DROP → column remove
+
+ALTER COLUMN → datatype change
+
+ADD CONSTRAINT → rule add
+
+```
+---
+</details>
