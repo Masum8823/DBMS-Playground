@@ -1921,3 +1921,634 @@ DROP = Everything Remove
 ```
 ---
 </details>
+
+
+<details>
+  <summary><b> Aggregate Functions</b></summary>
+
+# Aggregate Functions in SQL
+
+Aggregate Functions হলো এমন special SQL functions যেগুলো multiple rows এর data নিয়ে একটি single result return করে।
+
+👉 সহজভাবে:
+অনেক data → Process → 1টা result  
+
+---
+
+## Why Aggregate Functions are Used?
+
+Database এ হাজার হাজার records থাকতে পারে।  
+সব data manually analyse করা সম্ভব না।
+
+তখন Aggregate Functions ব্যবহার করে:
+• মোট কত records আছে  
+• Total কত  
+• Average কত  
+• Highest value কত  
+• Lowest value কত  
+
+খুব সহজে বের করা যায়।
+
+---
+
+## Example Table: Students
+
+| StudentID | Name  | Department | CGPA |
+|------------|------|------------|------|
+| 101 | Rahim | CSE | 3.90 |
+| 102 | Karim | EEE | 3.75 |
+| 103 | Sakib | CSE | 3.85 |
+| 104 | Nayeem | BBA | 3.60 |
+| 105 | Arafat | CSE | 3.95 |
+
+---
+
+## Aggregate Functions List
+
+| Function | Purpose |
+|----------|--------|
+| COUNT() | Records count করে |
+| SUM() | Total বের করে |
+| AVG() | Average বের করে |
+| MAX() | Highest value বের করে |
+| MIN() | Lowest value বের করে |
+
+---
+
+## 1. COUNT()
+
+COUNT() ব্যবহার করা হয় মোট কত rows/records আছে তা বের করার জন্য।
+
+---
+
+## Syntax
+```sql
+SELECT COUNT(column_name)
+FROM table_name;
+
+```
+---
+
+## Example 1
+```sql
+SELECT COUNT(*)
+FROM Students;
+
+```
+---
+
+## Output
+```sql
+5
+```
+👉 Table এ মোট 5 জন student আছে।
+
+---
+
+## COUNT(*)
+
+সব rows count করে।
+```sql
+SELECT COUNT(*)
+FROM Students;
+
+```
+---
+
+COUNT(*) সবচেয়ে বেশি ব্যবহার করা হয়।
+
+---
+
+## COUNT(Column)
+```sql
+SELECT COUNT(CGPA)
+FROM Students;
+
+```
+---
+
+👉 CGPA যেসব row তে NULL না, সেগুলো count করবে।
+
+---
+
+## Example with NULL
+
+| Name  | CGPA |
+|------|------|
+| Rahim | 3.90 |
+| Karim | NULL |
+| Sakib | 3.85 |
+
+---
+```sql
+SELECT COUNT(CGPA)
+FROM Students;
+
+```
+## Output:
+```sql
+2
+```
+---
+
+কারণ NULL count হয় না।
+
+---
+
+## COUNT(DISTINCT)
+
+Unique values count করতে।
+
+---
+
+## Example
+```sql
+SELECT COUNT(DISTINCT Department)
+FROM Students;
+
+```
+---
+
+## Departments:
+```sql
+CSE
+EEE
+CSE
+BBA
+CSE
+
+```
+---
+
+## Output:
+```sql
+3
+```
+---
+
+কারণ Unique Departments:
+
+---
+```sql
+CSE
+EEE
+BBA
+
+```
+---
+
+## 2. SUM()
+
+SUM() ব্যবহার করা হয় numeric values এর total বের করার জন্য।
+
+---
+
+## Syntax
+```sql
+SELECT SUM(column_name)
+FROM table_name;
+
+```
+---
+
+## Example Table
+
+| Product | Price |
+|----------|------|
+| Laptop | 85000 |
+| Monitor | 15000 |
+| Mouse | 1000 |
+
+---
+
+## Example
+```sql
+SELECT SUM(Price)
+FROM Products;
+
+```
+---
+
+## Output:
+```sql
+101000
+```
+---
+
+## Calculation:
+```sql
+85000 + 15000 + 1000
+= 101000
+
+```
+---
+
+👉 Total Price বের হয়েছে।
+
+---
+
+## SUM with WHERE
+```sql
+SELECT SUM(Price)
+FROM Products
+WHERE Price > 5000;
+
+```
+---
+
+Only Laptop + Monitor
+```sql
+100000
+```
+---
+
+## 3. AVG()
+
+AVG() ব্যবহার করা হয় average value বের করার জন্য।
+
+---
+
+## Syntax
+```sql
+SELECT AVG(column_name)
+FROM table_name;
+
+```
+---
+
+## Example
+
+Students Table:
+
+| Name  | CGPA |
+|------|------|
+| Rahim | 3.90 |
+| Karim | 3.75 |
+| Sakib | 3.85 |
+| Nayeem | 3.60 |
+| Arafat | 3.95 |
+
+---
+
+## Query:
+```sql
+SELECT AVG(CGPA)
+FROM Students;
+
+```
+---
+
+## Calculation:
+```sql
+3.90 + 3.75 + 3.85 + 3.60 + 3.95
+= 19.05
+
+19.05 ÷ 5
+= 3.81
+
+```
+---
+
+## Output:
+```sql
+3.81
+```
+---
+
+👉 Average CGPA বের হয়েছে।
+
+---
+
+## AVG with WHERE
+```sql
+SELECT AVG(CGPA)
+FROM Students
+WHERE Department = 'CSE';
+
+```
+---
+
+Only CSE students এর average বের হবে।
+
+---
+
+## 4. MAX()
+
+MAX() ব্যবহার করা হয় highest value বের করার জন্য।
+
+---
+
+## Syntax
+```sql
+SELECT MAX(column_name)
+FROM table_name;
+
+```
+---
+
+## Example
+```sql
+SELECT MAX(CGPA)
+FROM Students;
+
+```
+---
+
+## Output:
+```sql
+3.95
+```
+---
+
+👉 Highest CGPA
+
+---
+
+## Another Example
+```sql
+SELECT MAX(Price)
+FROM Products;
+
+```
+---
+
+## Output:
+```sql
+85000
+```
+---
+
+👉 Most expensive product price
+
+---
+
+## MAX() with Text
+```sql
+SELECT MAX(Name)
+FROM Students;
+
+```
+---
+
+## Output:
+```sql
+Sakib
+```
+---
+
+কারণ alphabetically সবচেয়ে বড় value।
+
+---
+
+## 5. MIN()
+
+MIN() ব্যবহার করা হয় lowest value বের করার জন্য।
+
+---
+
+## Syntax
+```sql
+SELECT MIN(column_name)
+FROM table_name;
+
+```
+---
+
+## Example
+```sql
+SELECT MIN(CGPA)
+FROM Students;
+
+```
+---
+
+## Output:
+```sql
+3.60
+```
+---
+
+👉 Lowest CGPA
+
+---
+
+## Another Example
+```sql
+SELECT MIN(Price)
+FROM Products;
+
+```
+---
+
+## Output:
+```sql
+1000
+```
+---
+
+👉 Cheapest product
+
+---
+
+## Using Multiple Aggregate Functions Together
+
+---
+
+## Example
+```sql
+SELECT
+COUNT(*) AS TotalStudents,
+AVG(CGPA) AS AverageCGPA,
+MAX(CGPA) AS HighestCGPA,
+MIN(CGPA) AS LowestCGPA
+FROM Students;
+
+```
+---
+
+## Output
+
+| TotalStudents | AverageCGPA | HighestCGPA | LowestCGPA |
+|----------------|------------|-------------|------------|
+| 5 | 3.81 | 3.95 | 3.60 |
+
+---
+
+👉 এক query তেই অনেক information পাওয়া যায়।
+
+---
+
+## Real-Life Example (University System)
+
+---
+
+## Total Students
+```sql
+SELECT COUNT(*)
+FROM Students;
+
+```
+---
+
+## Average CGPA
+```sql
+SELECT AVG(CGPA)
+FROM Students;
+
+```
+---
+
+## Highest CGPA
+```sql
+SELECT MAX(CGPA)
+FROM Students;
+
+```
+---
+
+## Lowest CGPA
+```sql
+SELECT MIN(CGPA)
+FROM Students;
+
+```
+---
+
+## Total Scholarship Amount
+```sql
+SELECT SUM(ScholarshipAmount)
+FROM Students;
+
+```
+---
+
+---
+
+## Common Mistakes
+
+---
+
+## Mistake 1
+
+SUM() text column এ ব্যবহার করা
+
+❌
+```sql
+SELECT SUM(Name)
+FROM Students;
+
+```
+---
+
+Error হবে।
+
+---
+
+## Mistake 2
+
+COUNT() এবং COUNT(column) কে একই মনে করা
+```sql
+COUNT(*)
+```
+ 
+
+সব rows count করে
+
+---
+```sql
+COUNT(CGPA)
+```
+ 
+
+NULL ছাড়া rows count করে
+
+---
+
+---
+
+## Aggregate Functions + WHERE
+
+এটা খুব common interview question।
+```sql
+SELECT AVG(CGPA)
+FROM Students
+WHERE Department = 'CSE';
+
+```
+ 
+
+👉 Aggregate function এর আগে WHERE apply হয়।
+
+---
+
+## Common Viva Questions
+
+### Q: Aggregate Function কী?
+
+Multiple rows process করে single result return করে।
+
+---
+
+### Q: COUNT(*) কী করে?
+
+সব rows count করে।
+
+---
+
+### Q: AVG() কী করে?
+
+Average বের করে।
+
+---
+
+### Q: MAX() কী return করে?
+
+Highest value।
+
+---
+
+### Q: MIN() কী return করে?
+
+Lowest value।
+
+---
+
+### Q: SUM() কী return করে?
+
+Total value।
+
+---
+
+### Q: COUNT(column) কি NULL count করে?
+
+না।
+
+---
+
+## Quick Summary
+
+| Function | Returns |
+|----------|--------|
+| COUNT() | Total records |
+| SUM() | Total value |
+| AVG() | Average value |
+| MAX() | Highest value |
+| MIN() | Lowest value |
+
+---
+
+👉 মনে রাখার Shortcut
+```sql
+COUNT = How Many?
+
+SUM = Total?
+
+AVG = Average?
+
+MAX = Highest?
+
+MIN = Lowest?
+
+```
+---
+</details>
