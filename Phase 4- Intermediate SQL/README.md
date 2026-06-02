@@ -3821,3 +3821,148 @@ LIKE '_' → one character
 ```
 ---
 </details>
+
+
+<details>
+  <summary><b>IN </b></summary>
+
+# IN Operator in SQL
+
+IN operator ব্যবহার করা হয় multiple possible values এর মধ্যে match করার জন্য।
+
+👉 সহজভাবে:
+IN = একাধিক value একসাথে check করা (OR এর shortcut)  
+
+---
+
+## Basic Syntax
+```sql
+SELECT column_name
+FROM table_name
+WHERE column_name IN (value1, value2, value3);
+
+```
+---
+
+## Example Table: Students
+
+| StudentID | Name  | Department | CGPA |
+|------------|------|------------|------|
+| 101 | Rahim | CSE | 3.90 |
+| 102 | Karim | EEE | 3.75 |
+| 103 | Sakib | CSE | 3.85 |
+| 104 | Nayeem | BBA | 3.60 |
+| 105 | Arafat | CSE | 3.95 |
+
+---
+
+## 1. IN Operator Basic Example
+
+👉 CSE এবং EEE students দরকার
+```sql
+SELECT *
+FROM Students
+WHERE Department IN ('CSE', 'EEE');
+
+```
+---
+
+## Query
+
+---
+
+## Output:
+
+| Name  | Department |
+|------|------------|
+| Rahim | CSE |
+| Karim | EEE |
+| Sakib | CSE |
+| Arafat | CSE |
+
+---
+
+👉 একই কাজ OR দিয়ে করলে অনেক বড় query হতো
+
+---
+
+## IN vs OR
+```sql
+WHERE Department = 'CSE'
+OR Department = 'EEE'
+
+```
+---
+
+👉 IN সহজ এবং clean
+
+---
+
+## 2. IN with Numbers
+```sql
+SELECT *
+FROM Students
+WHERE StudentID IN (101, 103, 105);
+
+```
+---
+
+👉 specific students select করা
+
+---
+
+## 3. IN with NOT
+```sql
+SELECT *
+FROM Students
+WHERE Department NOT IN ('CSE', 'EEE');
+
+```
+---
+
+## Output:
+
+| Name  | Department |
+|------|------------|
+| Nayeem | BBA |
+
+---
+
+👉 CSE এবং EEE বাদ
+
+---
+
+## 4. IN with Subquery (Important Concept)
+
+👉 অন্য table থেকে value নিয়ে match করা
+
+---
+
+## Example:
+```sql
+SELECT *
+FROM Students
+WHERE Department IN (
+    SELECT Department
+    FROM Departments
+);
+
+```
+---
+
+👉 dynamic matching (advanced use)
+
+---
+
+## Real-Life Example (IN)
+
+👉 scholarship eligible departments
+
+```sql
+SELECT *
+FROM Students
+WHERE Department IN ('CSE', 'SWE', 'EEE');
+
+```
+---
+</details>
