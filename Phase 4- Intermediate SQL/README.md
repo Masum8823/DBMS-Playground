@@ -3402,3 +3402,422 @@ HAVING → After grouping
 ```
 ---
 </details>
+
+<details>
+  <summary><b> LIKE Operator</b></summary>
+
+# LIKE Operator in SQL
+
+LIKE operator ব্যবহার করা হয় pattern matching এর জন্য। অর্থাৎ কোনো column এর ভিতরে নির্দিষ্ট pattern অনুযায়ী data search করতে।
+
+👉 সহজভাবে:
+LIKE = text search / pattern match system  
+
+---
+
+## Why LIKE is Important?
+
+Real database এ আমরা exact value সবসময় জানি না।
+
+Examples:
+• নামের শুরুতে “A” আছে এমন student  
+• email এ “gmail” আছে এমন user  
+• যাদের নামের শেষে “m” আছে  
+• কোনো word এর মধ্যে নির্দিষ্ট letter আছে  
+
+এইসব কাজ LIKE দিয়ে করা হয়।
+
+---
+
+## Basic Syntax
+```sql
+SELECT column_name
+FROM table_name
+WHERE column_name LIKE 'pattern';
+
+```
+---
+
+## Wildcards in LIKE
+
+LIKE operator এর সাথে কিছু special symbol ব্যবহার করা হয়:
+
+| Symbol | Meaning |
+|--------|--------|
+| % | যেকোনো number of characters |
+| _ | single character |
+
+---
+
+## Example Table: Students
+
+| StudentID | Name  | Department | Email |
+|------------|------|------------|------|
+| 101 | Rahim | CSE | rahim@gmail.com |
+| 102 | Karim | EEE | karim@yahoo.com |
+| 103 | Sakib | CSE | sakib@gmail.com |
+| 104 | Nayeem | BBA | nayeem@gmail.com |
+| 105 | Arafat | CSE | arafat@yahoo.com |
+
+---
+
+## 1. Starts With Pattern (%)
+
+👉 কোনো value নির্দিষ্ট letter/word দিয়ে শুরু হলে
+
+---
+
+## Example 1: Name starts with 'R'
+```sql
+SELECT *
+FROM Students
+WHERE Name LIKE 'R%';
+
+```
+---
+
+## Output:
+
+| Name |
+|------|
+| Rahim |
+
+---
+
+👉 R দিয়ে শুরু হওয়া সব name
+
+---
+
+## 2. Ends With Pattern (%)
+
+👉 কোনো value নির্দিষ্ট letter/word দিয়ে শেষ হলে
+
+---
+
+## Example 2: Name ends with 'm'
+```sql
+SELECT *
+FROM Students
+WHERE Name LIKE '%m';
+
+```
+---
+
+## Output:
+
+| Name |
+|------|
+| Rahim |
+| Karim |
+
+---
+
+👉 m দিয়ে শেষ হওয়া names
+
+---
+
+## 3. Contains Pattern (%)
+
+👉 কোনো value এর মধ্যে কোথাও নির্দিষ্ট text থাকলে
+
+---
+
+## Example 3: Name contains 'ai'
+```sql
+SELECT *
+FROM Students
+WHERE Name LIKE '%ai%';
+
+```
+---
+
+## Output:
+
+| Name |
+|------|
+| Rahim |
+
+---
+
+👉 “ai” নামের মধ্যে আছে
+
+---
+
+## 4. Email Search Example
+
+👉 gmail users বের করা
+
+---
+
+## Example 4
+```sql
+SELECT *
+FROM Students
+WHERE Email LIKE '%gmail%';
+
+```
+---
+
+## Output:
+
+| Email |
+|------|
+| rahim@gmail.com |
+| sakib@gmail.com |
+| nayeem@gmail.com |
+
+---
+
+👉 gmail থাকা সব email
+
+---
+
+## 5. Specific Starting Pattern (Department)
+
+---
+
+## Example 5
+```sql
+SELECT *
+FROM Students
+WHERE Department LIKE 'C%';
+
+```
+---
+
+👉 C দিয়ে শুরু হওয়া department (CSE)
+
+---
+
+## 6. Single Character Match (_)
+
+👉 ঠিক 1টা character match করে
+
+---
+
+## Example 6
+```sql
+SELECT *
+FROM Students
+WHERE Name LIKE '_a%';
+
+```
+---
+
+👉 দ্বিতীয় letter “a” এমন name
+
+---
+
+## Possible Match:
+
+| Name |
+|------|
+| Karim |
+| Sakib |
+
+---
+
+## 7. Fixed Length Pattern
+
+---
+
+## Example 7
+```sql
+SELECT *
+FROM Students
+WHERE Name LIKE '_____';
+
+```
+---
+
+👉 ঠিক 5 character এর নাম
+
+---
+
+## 8. LIKE with NOT
+
+👉 pattern ছাড়া data বের করতে
+
+---
+
+## Example 8
+```sql
+SELECT *
+FROM Students
+WHERE Name NOT LIKE 'R%';
+
+```
+---
+
+👉 R দিয়ে শুরু না হওয়া names
+
+---
+
+## 9. Case Sensitivity Note
+
+| DBMS | Case Sensitive |
+|------|----------------|
+| MySQL | Usually NO |
+| PostgreSQL | YES |
+| SQL Server | Depends |
+
+---
+
+👉 তাই “rahim” এবং “Rahim” আলাদা হতে পারে (DB অনুযায়ী)
+
+---
+
+## 10. Real-Life Example
+
+---
+
+## University Email Filter
+```sql
+SELECT *
+FROM Students
+WHERE Email LIKE '%@gmail.com';
+
+```
+---
+
+👉 শুধুমাত্র Gmail users
+
+---
+
+## Result:
+
+| Email |
+|------|
+| rahim@gmail.com |
+| sakib@gmail.com |
+| nayeem@gmail.com |
+
+---
+
+## 11. Product Search Example
+
+| ProductID | ProductName |
+|------------|-------------|
+| 1 | Laptop HP |
+| 2 | Dell Mouse |
+| 3 | HP Monitor |
+
+---
+
+## Query
+```sql
+SELECT *
+FROM Products
+WHERE ProductName LIKE '%HP%';
+
+```
+---
+
+👉 HP related products
+
+---
+
+## 12. LIKE with ORDER BY
+```sql
+SELECT *
+FROM Students
+WHERE Name LIKE 'A%'
+ORDER BY Name ASC;
+
+```
+---
+
+---
+
+👉 A দিয়ে শুরু হওয়া names sorted order এ
+
+---
+
+## Common Mistakes
+
+---
+
+## Mistake 1: Wrong wildcard usage
+
+❌
+```sql
+WHERE Name LIKE 'R'
+```
+---
+
+👉 শুধু exact “R” খুঁজবে
+
+---
+
+## Mistake 2: Forgetting %
+
+❌
+```sql
+WHERE Name LIKE 'Rah'
+```
+---
+
+👉 partial match হবে না
+
+---
+
+## Correct:
+```sql
+WHERE Name LIKE 'Rah%'
+```
+---
+
+---
+
+## Viva Questions
+
+### Q: LIKE operator কী?
+
+Pattern matching এর জন্য ব্যবহার হয়।
+
+---
+
+### Q: % এবং _ এর পার্থক্য?
+
+| Symbol | Meaning |
+|--------|--------|
+| % | multiple characters |
+| _ | single character |
+
+---
+
+### Q: LIKE case sensitive?
+
+DBMS অনুযায়ী vary করে।
+
+---
+
+### Q: LIKE কেন ব্যবহার করা হয়?
+
+Partial search করার জন্য।
+
+---
+
+## Quick Summary
+
+• LIKE = pattern matching  
+• % = many characters  
+• _ = single character  
+• Starts, ends, contains search করা যায়  
+• Text filtering এর জন্য খুব important  
+
+---
+
+👉 মনে রাখার Shortcut
+```sql
+LIKE 'A%' → starts with A
+
+LIKE '%A' → ends with A
+
+LIKE '%A%' → contains A
+
+LIKE '_' → one character
+
+```
+---
+</details>
