@@ -2552,3 +2552,447 @@ MIN = Lowest?
 ```
 ---
 </details>
+
+
+<details>
+  <summary><b>GROUP BY </b></summary>
+
+# GROUP BY in SQL
+
+GROUP BY ব্যবহার করা হয় একই ধরনের data গুলোকে group করে তাদের উপর aggregate function (COUNT, SUM, AVG, MAX, MIN) apply করার জন্য।
+
+👉 সহজভাবে:
+GROUP BY = একই category অনুযায়ী data group করা + তারপর calculation করা  
+
+---
+
+## Why GROUP BY is Important?
+
+Real-world database এ আমরা শুধু full table analysis করি না, বরং category-wise analysis করি।
+
+Examples:
+• প্রতি department এ কত student আছে  
+• প্রতি department এর average CGPA  
+• প্রতি product category এর total sales  
+• প্রতি city তে কত customer  
+
+এই সব কিছু GROUP BY ছাড়া সম্ভব না।
+
+---
+
+## Basic Syntax
+```sql
+SELECT column_name, AGGREGATE_FUNCTION(column_name)
+FROM table_name
+GROUP BY column_name;
+
+```
+---
+
+## Example Table: Students
+
+| StudentID | Name  | Department | CGPA |
+|------------|------|------------|------|
+| 101 | Rahim | CSE | 3.90 |
+| 102 | Karim | EEE | 3.75 |
+| 103 | Sakib | CSE | 3.85 |
+| 104 | Nayeem | BBA | 3.60 |
+| 105 | Arafat | CSE | 3.95 |
+
+---
+
+## 1. GROUP BY with COUNT()
+
+👉 প্রতি department এ কত student আছে
+
+---
+
+## Query
+```sql
+SELECT Department, COUNT(*) AS TotalStudents
+FROM Students
+GROUP BY Department;
+
+```
+---
+
+## Output
+
+| Department | TotalStudents |
+|------------|--------------|
+| CSE | 3 |
+| EEE | 1 |
+| BBA | 1 |
+
+---
+
+👉 একই department একসাথে group হয়ে গেছে
+
+---
+
+## 2. GROUP BY with AVG()
+
+👉 প্রতি department এর average CGPA
+
+---
+
+## Query
+```sql
+SELECT Department, AVG(CGPA) AS AverageCGPA
+FROM Students
+GROUP BY Department;
+
+```
+---
+
+## Output
+
+| Department | AverageCGPA |
+|------------|------------|
+| CSE | 3.90 |
+| EEE | 3.75 |
+| BBA | 3.60 |
+
+---
+
+CSE calculation:
+```sql
+(3.90 + 3.85 + 3.95) / 3 = 3.90
+```
+---
+
+## 3. GROUP BY with SUM()
+
+👉 department wise total CGPA
+
+---
+
+## Query
+```sql
+SELECT Department, SUM(CGPA) AS TotalCGPA
+FROM Students
+GROUP BY Department;
+
+```
+---
+
+## Output
+
+| Department | TotalCGPA |
+|------------|----------|
+| CSE | 11.70 |
+| EEE | 3.75 |
+| BBA | 3.60 |
+
+---
+
+## 4. GROUP BY with MAX()
+
+👉 প্রতি department এর highest CGPA
+
+---
+
+## Query
+```sql
+SELECT Department, MAX(CGPA) AS HighestCGPA
+FROM Students
+GROUP BY Department;
+
+```
+---
+
+## Output
+
+| Department | HighestCGPA |
+|------------|------------|
+| CSE | 3.95 |
+| EEE | 3.75 |
+| BBA | 3.60 |
+
+---
+
+## 5. GROUP BY with MIN()
+
+👉 প্রতি department এর lowest CGPA
+
+---
+
+## Query
+```sql
+SELECT Department, MIN(CGPA) AS LowestCGPA
+FROM Students
+GROUP BY Department;
+
+```
+---
+
+## Output
+
+| Department | LowestCGPA |
+|------------|------------|
+| CSE | 3.85 |
+| EEE | 3.75 |
+| BBA | 3.60 |
+
+---
+
+## 6. GROUP BY with WHERE
+
+👉 আগে filter হবে, তারপর group হবে
+
+---
+
+## Query
+```sql
+SELECT Department, AVG(CGPA) AS AvgCGPA
+FROM Students
+WHERE CGPA > 3.80
+GROUP BY Department;
+
+```
+---
+
+👉 শুধু 3.80 এর বেশি CGPA student নিয়ে group হবে
+
+---
+
+## 7. GROUP BY with HAVING (Very Important)
+
+👉 GROUP BY এর পরে condition apply করতে HAVING ব্যবহার হয়
+
+---
+
+## Difference:
+
+| WHERE | HAVING |
+|------|--------|
+| Row level filter | Group level filter |
+| GROUP BY এর আগে | GROUP BY এর পরে |
+
+---
+
+## Example 1
+
+👉 শুধু সেই department দেখাবে যাদের student সংখ্যা 2 এর বেশি
+
+---
+
+## Query
+```sql
+SELECT Department, COUNT(*) AS TotalStudents
+FROM Students
+GROUP BY Department
+HAVING COUNT(*) > 2;
+
+```
+---
+
+## Output
+
+| Department | TotalStudents |
+|------------|--------------|
+| CSE | 3 |
+
+---
+
+👉 শুধু CSE show হবে
+
+---
+
+## Example 2
+
+👉 average CGPA 3.80 এর বেশি department
+
+---
+
+## Query
+```sql
+SELECT Department, AVG(CGPA) AS AvgCGPA
+FROM Students
+GROUP BY Department
+HAVING AVG(CGPA) > 3.80;
+
+```
+---
+
+## Output
+
+| Department | AvgCGPA |
+|------------|--------|
+| CSE | 3.90 |
+
+---
+
+## 8. GROUP BY with Multiple Columns
+
+👉 একাধিক column দিয়ে grouping করা যায়
+
+---
+
+## Example Table: Sales
+
+| City | Product | Sales |
+|------|--------|------|
+| Dhaka | Laptop | 10 |
+| Dhaka | Mouse | 20 |
+| Chittagong | Laptop | 5 |
+
+---
+
+## Query
+```sql
+SELECT City, Product, SUM(Sales) AS TotalSales
+FROM Sales
+GROUP BY City, Product;
+
+```
+---
+
+## Output
+
+| City | Product | TotalSales |
+|------|--------|-----------|
+| Dhaka | Laptop | 10 |
+| Dhaka | Mouse | 20 |
+| Chittagong | Laptop | 5 |
+
+---
+
+👉 City + Product combination group হয়েছে
+
+---
+
+## 9. GROUP BY with ORDER BY
+
+---
+
+## Query
+```sql
+SELECT Department, COUNT(*) AS TotalStudents
+FROM Students
+GROUP BY Department
+ORDER BY TotalStudents DESC;
+
+```
+---
+
+👉 highest student department first
+
+---
+
+## Real-Life Example (University System)
+
+---
+
+## Example 1: Department wise students
+```sql
+SELECT Department, COUNT(*) AS Total
+FROM Students
+GROUP BY Department;
+
+```
+---
+
+## Example 2: Scholarship analysis
+```sql
+SELECT Department, AVG(CGPA) AS AvgCGPA
+FROM Students
+GROUP BY Department
+HAVING AVG(CGPA) >= 3.75;
+
+```
+---
+
+## Example 3: Highest achiever department
+```sql
+SELECT Department, MAX(CGPA)
+FROM Students
+GROUP BY Department;
+
+```
+---
+
+## Common Mistakes
+
+---
+
+## Mistake 1: SELECT column not in GROUP BY
+
+❌ Wrong:
+```sql
+SELECT Name, Department, COUNT(*)
+FROM Students
+GROUP BY Department;
+
+```
+---
+
+👉 Name group করা হয়নি → error বা wrong result
+
+---
+
+## Mistake 2: HAVING vs WHERE confusion
+
+❌ Wrong:
+```sql
+SELECT Department, COUNT(*)
+FROM Students
+WHERE COUNT(*) > 2
+GROUP BY Department;
+
+```
+---
+
+👉 Aggregate function WHERE এ use করা যায় না
+
+---
+
+## Common Viva Questions
+
+### Q: GROUP BY কী?
+
+Same values কে group করে aggregate function apply করে।
+
+---
+
+### Q: WHERE এবং HAVING এর পার্থক্য?
+
+| WHERE | HAVING |
+|------|--------|
+| Row filter | Group filter |
+
+---
+
+### Q: GROUP BY ছাড়া COUNT ব্যবহার করা যায়?
+
+হ্যাঁ, কিন্তু group analysis হবে না।
+
+---
+
+### Q: HAVING কেন ব্যবহার করা হয়?
+
+Aggregate result filter করার জন্য।
+
+---
+
+## Quick Summary
+
+• GROUP BY = category-wise grouping  
+• Aggregate function এর সাথে ব্যবহার হয়  
+• WHERE = row filter  
+• HAVING = group filter  
+• Multiple column grouping possible  
+
+---
+
+👉 মনে রাখার Shortcut
+```sql
+GROUP BY → Group data
+
+HAVING → Group filter
+
+WHERE → Row filter
+
+```
+---
+</details>
