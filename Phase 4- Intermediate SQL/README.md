@@ -2996,3 +2996,409 @@ WHERE → Row filter
 ```
 ---
 </details>
+
+<details>
+  <summary><b>HAVING Clause </b></summary>
+
+# HAVING Clause in SQL
+
+HAVING clause ব্যবহার করা হয় GROUP BY এর পরে তৈরি হওয়া groups এর উপর condition apply করার জন্য।
+
+👉 সহজভাবে:
+WHERE = row filter  
+HAVING = group filter  
+
+---
+
+## Why HAVING is Needed?
+
+GROUP BY দিয়ে যখন data group করা হয়, তখন সেই group গুলোর উপর condition দিতে হয়।
+
+কিন্তু সমস্যা হলো:
+👉 WHERE aggregate function (COUNT, SUM, AVG) এর সাথে কাজ করে না  
+👉 তাই GROUP level filter করার জন্য HAVING লাগে  
+
+---
+
+## Basic Syntax
+```sql
+SELECT column_name, AGGREGATE_FUNCTION(column_name)
+FROM table_name
+GROUP BY column_name
+HAVING condition;
+
+```
+---
+
+## Example Table: Students
+
+| StudentID | Name  | Department | CGPA |
+|------------|------|------------|------|
+| 101 | Rahim | CSE | 3.90 |
+| 102 | Karim | EEE | 3.75 |
+| 103 | Sakib | CSE | 3.85 |
+| 104 | Nayeem | BBA | 3.60 |
+| 105 | Arafat | CSE | 3.95 |
+
+---
+
+## 1. HAVING with COUNT()
+
+👉 যেসব department এ 2 জনের বেশি student আছে
+
+---
+
+## Query
+```sql
+SELECT Department, COUNT(*) AS TotalStudents
+FROM Students
+GROUP BY Department
+HAVING COUNT(*) > 2;
+
+```
+---
+
+## Step Breakdown
+
+First GROUP BY result:
+
+| Department | Count |
+|------------|------|
+| CSE | 3 |
+| EEE | 1 |
+| BBA | 1 |
+
+---
+
+Then HAVING apply:
+👉 COUNT > 2  
+✔ Only CSE remains  
+
+---
+
+## Final Output:
+
+| Department | TotalStudents |
+|------------|--------------|
+| CSE | 3 |
+
+---
+
+## 2. HAVING with AVG()
+
+👉 যেসব department এর average CGPA 3.80 এর বেশি
+
+---
+
+## Query
+```sql
+SELECT Department, AVG(CGPA) AS AvgCGPA
+FROM Students
+GROUP BY Department
+HAVING AVG(CGPA) > 3.80;
+
+```
+---
+
+## Calculation:
+
+CSE:
+```sql
+(3.90 + 3.85 + 3.95) / 3 = 3.90
+```
+---
+
+EEE:
+```sql
+3.75
+```
+---
+
+BBA:
+```sql
+3.60
+```
+---
+
+## Final Output:
+
+| Department | AvgCGPA |
+|------------|--------|
+| CSE | 3.90 |
+
+---
+
+## 3. HAVING with SUM()
+
+👉 যেসব department এর total CGPA 10 এর বেশি
+
+---
+
+## Query
+```sql
+SELECT Department, SUM(CGPA) AS TotalCGPA
+FROM Students
+GROUP BY Department
+HAVING SUM(CGPA) > 10;
+
+```
+---
+
+## Output:
+
+| Department | TotalCGPA |
+|------------|----------|
+| CSE | 11.70 |
+
+---
+
+## 4. HAVING with MAX()
+
+👉 যেসব department এর highest CGPA 3.90 এর বেশি
+
+---
+
+## Query
+```sql
+SELECT Department, MAX(CGPA) AS HighestCGPA
+FROM Students
+GROUP BY Department
+HAVING MAX(CGPA) > 3.90;
+
+```
+---
+
+## Output:
+
+| Department | HighestCGPA |
+|------------|------------|
+| CSE | 3.95 |
+
+---
+
+## 5. HAVING with MIN()
+
+👉 যেসব department এর lowest CGPA 3.70 এর নিচে
+
+---
+
+## Query
+```sql
+SELECT Department, MIN(CGPA) AS LowestCGPA
+FROM Students
+GROUP BY Department
+HAVING MIN(CGPA) < 3.70;
+
+```
+---
+
+## Output:
+
+| Department | LowestCGPA |
+|------------|------------|
+| BBA | 3.60 |
+
+---
+
+## 6. WHERE vs HAVING (Very Important)
+
+## WHERE (Row Level Filter)
+```sql
+SELECT *
+FROM Students
+WHERE CGPA > 3.80;
+
+```
+---
+
+👉 row filter (grouping এর আগে)
+
+---
+
+## HAVING (Group Level Filter)
+```sql
+SELECT Department, AVG(CGPA)
+FROM Students
+GROUP BY Department
+HAVING AVG(CGPA) > 3.80;
+
+```
+---
+
+👉 group filter (grouping এর পরে)
+
+---
+
+## Key Difference
+
+| WHERE | HAVING |
+|------|--------|
+| Row filter | Group filter |
+| Before GROUP BY | After GROUP BY |
+| No aggregate support | Aggregate support |
+
+---
+
+## 7. WHERE + HAVING Together
+
+👉 real-world queries এ দুটো একসাথে ব্যবহার হয়
+
+---
+
+## Example
+
+👉 CGPA > 3.70 students নিয়ে group করে average বের করা, তারপর filter করা
+```sql
+SELECT Department, AVG(CGPA) AS AvgCGPA
+FROM Students
+WHERE CGPA > 3.70
+GROUP BY Department
+HAVING AVG(CGPA) > 3.80;
+
+```
+---
+
+---
+
+## Step-by-step:
+
+### Step 1: WHERE
+Only CGPA > 3.70:
+• Rahim (3.90)  
+• Karim (3.75)  
+• Sakib (3.85)  
+• Arafat (3.95)  
+
+---
+
+### Step 2: GROUP BY Department
+
+---
+
+### Step 3: HAVING AVG > 3.80
+
+✔ Only CSE remains
+
+---
+
+## 8. HAVING with ORDER BY
+```sql
+SELECT Department, COUNT(*) AS TotalStudents
+FROM Students
+GROUP BY Department
+HAVING COUNT(*) >= 1
+ORDER BY TotalStudents DESC;
+
+```
+---
+
+👉 result sorted
+
+---
+
+## Real-Life Example
+
+---
+
+University Analysis  
+👉 যেসব department এ scholarship eligible students বেশি
+```sql
+SELECT Department, COUNT(*) AS EligibleStudents
+FROM Students
+WHERE CGPA >= 3.75
+GROUP BY Department
+HAVING COUNT(*) >= 2;
+
+```
+---
+
+## Common Mistakes
+
+---
+
+## Mistake 1: Using HAVING without GROUP BY
+
+❌ Wrong:
+```sql
+SELECT *
+FROM Students
+HAVING CGPA > 3.80;
+
+```
+---
+
+---
+
+## Mistake 2: Using WHERE with aggregate
+
+❌ Wrong:
+```sql
+SELECT Department, AVG(CGPA)
+FROM Students
+WHERE AVG(CGPA) > 3.80
+GROUP BY Department;
+
+```
+---
+
+---
+
+## Correct Rule
+```sql
+Aggregate function → HAVING
+
+Normal column → WHERE
+
+```
+---
+
+---
+
+## Common Viva Questions
+
+### Q: HAVING কী?
+
+GROUP BY এর পরে group filter করার clause।
+
+---
+
+### Q: WHERE এবং HAVING এর পার্থক্য?
+
+| WHERE | HAVING |
+|------|--------|
+| Row filter | Group filter |
+
+---
+
+### Q: HAVING ছাড়া GROUP BY use করা যায়?
+
+হ্যাঁ।
+
+---
+
+### Q: HAVING এ aggregate function use করা যায়?
+
+হ্যাঁ।
+
+---
+
+## Quick Summary
+
+• HAVING = group filter  
+• GROUP BY এর পরে কাজ করে  
+• Aggregate function support করে  
+• WHERE = row filter  
+• WHERE আগে, HAVING পরে  
+
+---
+
+👉 মনে রাখার Shortcut
+
+```sql
+WHERE → Before grouping
+
+HAVING → After grouping
+
+```
+---
+</details>
