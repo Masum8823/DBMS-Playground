@@ -3966,3 +3966,237 @@ WHERE Department IN ('CSE', 'SWE', 'EEE');
 ```
 ---
 </details>
+
+
+<details>
+  <summary><b>  BETWEEN</b></summary>
+
+# BETWEEN Operator in SQL
+
+BETWEEN ব্যবহার করা হয় range (interval) এর মধ্যে data খুঁজতে।
+
+👉 সহজভাবে:
+BETWEEN = range-based filtering (start to end)  
+
+---
+
+## Basic Syntax
+```sql
+SELECT column_name
+FROM table_name
+WHERE column_name BETWEEN value1 AND value2;
+
+```
+---
+
+## Example Table: Students
+
+| StudentID | Name  | CGPA |
+|------------|------|------|
+| 101 | Rahim | 3.90 |
+| 102 | Karim | 3.75 |
+| 103 | Sakib | 3.85 |
+| 104 | Nayeem | 3.60 |
+| 105 | Arafat | 3.95 |
+
+---
+
+## 1. BETWEEN with Numbers
+
+👉 CGPA 3.75 থেকে 3.90 এর মধ্যে students
+```sql
+SELECT *
+FROM Students
+WHERE CGPA BETWEEN 3.75 AND 3.90;
+
+```
+---
+
+## Query
+
+---
+
+## Output:
+
+| Name  | CGPA |
+|------|------|
+| Rahim | 3.90 |
+| Karim | 3.75 |
+| Sakib | 3.85 |
+
+---
+
+👉 range include হয় (inclusive)
+
+---
+
+## Important Note
+
+BETWEEN includes both boundary values:
+```sql
+BETWEEN 3.75 AND 3.90
+means:
+>= 3.75 AND <= 3.90
+
+```
+---
+
+## 2. BETWEEN with Dates
+
+👉 specific time range
+```sql
+SELECT *
+FROM Orders
+WHERE OrderDate BETWEEN '2026-01-01' AND '2026-01-31';
+
+```
+---
+
+---
+
+👉 January month orders
+
+---
+
+## 3. BETWEEN with NOT
+```sql
+SELECT *
+FROM Students
+WHERE CGPA NOT BETWEEN 3.70 AND 4.00;
+
+```
+---
+
+👉 range এর বাইরে data
+
+---
+
+## 4. BETWEEN with Text
+
+👉 alphabetical range (A to M)
+```sql
+SELECT *
+FROM Students
+WHERE Name BETWEEN 'A' AND 'M';
+
+```
+---
+
+---
+
+👉 A–M range names
+
+---
+
+## Real-Life Example (BETWEEN)
+
+👉 scholarship range
+```sql
+SELECT *
+FROM Students
+WHERE CGPA BETWEEN 3.80 AND 4.00;
+
+```
+---
+
+👉 eligible students filter
+
+---
+
+---
+
+## IN vs BETWEEN
+
+| Feature | IN | BETWEEN |
+|----------|----|--------|
+| Type | Multiple values | Range |
+| Use | Specific items | Continuous values |
+| Example | IN (CSE, EEE) | BETWEEN 3.5 AND 4.0 |
+
+---
+
+## Common Mistakes
+
+---
+
+## Mistake 1: BETWEEN wrong order
+
+❌
+```sql
+WHERE CGPA BETWEEN 4.00 AND 3.50
+```
+---
+
+👉 wrong logic
+
+---
+
+## Mistake 2: Missing quotes for text
+
+❌
+```sql
+WHERE Name BETWEEN A AND M
+```
+---
+
+✔ Correct:
+```sql
+WHERE Name BETWEEN 'A' AND 'M'
+```
+---
+
+---
+
+## Mistake 3: IN vs OR confusion
+
+❌ messy OR usage instead of IN
+
+---
+
+## Viva Questions
+
+### Q: IN operator কী?
+
+Multiple specific values match করার জন্য ব্যবহার হয়।
+
+---
+
+### Q: BETWEEN কী?
+
+Range এর মধ্যে data filter করার জন্য ব্যবহার হয়।
+
+---
+
+### Q: BETWEEN inclusive না exclusive?
+
+Inclusive (start এবং end দুইটাই include হয়)
+
+---
+
+### Q: IN vs BETWEEN পার্থক্য?
+
+| IN | BETWEEN |
+|----|--------|
+| Specific values | Range |
+
+---
+
+## Quick Summary
+
+• IN = multiple fixed values  
+• BETWEEN = range values  
+• IN = OR shortcut  
+• BETWEEN = inclusive range  
+• Both WHERE clause এর সাথে ব্যবহার হয়  
+
+---
+
+👉 মনে রাখার Shortcut
+```sql
+IN → list of values
+
+BETWEEN → range of values
+
+```
+---
+</details>
