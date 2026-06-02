@@ -4200,3 +4200,380 @@ BETWEEN → range of values
 ```
 ---
 </details>
+
+<details>
+  <summary><b> Aliases</b></summary>
+
+# Aliases in SQL
+
+Alias ব্যবহার করা হয় table বা column এর temporary নাম (nickname) দেওয়ার জন্য।
+
+👉 সহজভাবে:
+Alias = temporary নাম, যেটা শুধু query এর ভিতরে কাজ করে  
+
+---
+
+## Why Aliases are Important?
+
+Real SQL query অনেক বড় হয়। তখন:
+• column name ছোট করা যায়  
+• table name short করা যায়  
+• output readable হয়  
+• joins সহজ হয়  
+
+---
+
+## Types of Aliases
+
+| Type | Use |
+|------|-----|
+| Column Alias | column এর নাম পরিবর্তন করে দেখানো |
+| Table Alias | table এর short name দেওয়া |
+
+---
+
+## 1. Column Alias
+
+👉 column এর নাম পরিবর্তন করে output এ দেখানো
+
+---
+
+## Basic Syntax
+```sql
+SELECT column_name AS alias_name
+FROM table_name;
+
+```
+---
+
+## Example Table: Students
+
+| StudentID | Name  | CGPA |
+|------------|------|------|
+| 101 | Rahim | 3.90 |
+| 102 | Karim | 3.75 |
+
+---
+
+## Example 1
+```sql
+SELECT Name AS StudentName
+FROM Students;
+
+```
+---
+
+## Output:
+
+| StudentName |
+|-------------|
+| Rahim |
+| Karim |
+
+---
+
+👉 Name column এখন StudentName হিসেবে দেখাবে
+
+---
+
+## 2. Column Alias without AS
+
+AS optional
+```sql
+SELECT Name StudentName
+FROM Students;
+
+```
+---
+
+👉 same result
+
+---
+
+## 3. Multiple Column Aliases
+```sql
+SELECT Name AS StudentName,
+       CGPA AS GPA
+FROM Students;
+
+```
+---
+
+## Output:
+
+| StudentName | GPA |
+|-------------|-----|
+| Rahim | 3.90 |
+| Karim | 3.75 |
+
+---
+
+## 4. Expression with Alias
+
+👉 calculation result এর নাম দেওয়া
+
+---
+
+## Example
+```sql
+SELECT Name,
+       CGPA + 0.10 AS Improved_CGPA
+FROM Students;
+
+```
+---
+
+## Output:
+
+| Name  | Improved_CGPA |
+|------|--------------|
+| Rahim | 4.00 |
+| Karim | 3.85 |
+
+---
+
+👉 calculated column readable করা হলো
+
+---
+
+## 5. Table Alias
+
+👉 table এর short name দেওয়া
+
+---
+
+## Syntax
+```sql
+SELECT column_name
+FROM table_name AS alias;
+
+```
+---
+
+## Example
+```sql
+SELECT s.Name, s.CGPA
+FROM Students AS s;
+
+```
+---
+
+👉 Students table এখন “s”
+
+---
+
+## Output:
+
+| Name  | CGPA |
+|------|------|
+| Rahim | 3.90 |
+| Karim | 3.75 |
+
+---
+
+## 6. Table Alias without AS
+```sql
+SELECT s.Name
+FROM Students s;
+
+```
+---
+
+👉 AS ছাড়াও কাজ করে
+
+---
+
+## 7. Aliases in JOIN (Very Important)
+
+👉 multiple tables handle করার সময়
+
+---
+
+## Example Tables
+
+### Students
+| StudentID | Name | DeptID |
+
+### Departments
+| DeptID | DeptName |
+
+---
+
+## Query
+```sql
+SELECT s.Name, d.DeptName
+FROM Students s
+JOIN Departments d
+ON s.DeptID = d.DeptID;
+
+```
+---
+
+👉 এখানে:
+• s = Students  
+• d = Departments  
+
+---
+
+👉 query short + readable
+
+---
+
+## 8. Alias with Aggregates
+```sql
+SELECT Department,
+       COUNT(*) AS TotalStudents
+FROM Students
+GROUP BY Department;
+
+```
+---
+
+## Output:
+
+| Department | TotalStudents |
+|------------|--------------|
+| CSE | 3 |
+| EEE | 1 |
+
+---
+
+👉 readable report generate
+
+---
+
+## 9. Aliases with ORDER BY
+```sql
+SELECT Name AS StudentName, CGPA
+FROM Students
+ORDER BY StudentName ASC;
+
+```
+---
+
+👉 alias use করে sorting
+
+---
+
+## 10. Real-Life Example
+
+👉 University report system
+```sql
+SELECT Name AS Student,
+       CGPA AS GPA
+FROM Students;
+
+```
+---
+
+👉 report format clean হয়
+
+---
+
+## 11. Important Rules
+
+---
+
+## 1. Alias temporary
+
+👉 database এ save হয় না
+
+---
+
+## 2. Space in alias
+```sql
+SELECT Name AS "Student Name"
+FROM Students;
+
+```
+---
+
+👉 quotes ব্যবহার করতে হয়
+
+---
+
+## 3. Some DBMS case sensitive
+```sql
+StudentName ≠ studentname
+```
+---
+
+## Common Mistakes
+
+---
+
+## Mistake 1: alias confuse with column rename
+
+❌
+```sql
+ALTER TABLE Students RENAME Name;
+```
+---
+
+👉 wrong concept
+
+---
+
+## Mistake 2: missing quotes for space alias
+
+❌
+```sql
+SELECT Name AS Student Name
+```
+---
+
+✔ Correct:
+```sql
+SELECT Name AS "Student Name"
+```
+---
+
+---
+
+## Viva Questions
+
+### Q: Alias কী?
+
+Temporary name for column or table.
+
+---
+
+### Q: Alias কোথায় stored হয়?
+
+Database এ না, শুধু query output এ।
+
+---
+
+### Q: AS mandatory?
+
+না, optional।
+
+---
+
+### Q: Table alias কেন ব্যবহার করা হয়?
+
+Joins সহজ করার জন্য।
+
+---
+
+## Quick Summary
+
+• Alias = temporary name  
+• Column alias = rename output column  
+• Table alias = short table name  
+• AS optional  
+• Joins এ খুব important  
+
+---
+
+👉 মনে রাখার Shortcut
+```sql
+Column Alias → output rename
+
+Table Alias → table short name
+
+```
+---
+</details>
+
+
