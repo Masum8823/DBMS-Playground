@@ -355,6 +355,65 @@ Students      Departments
 👉 Right table এর সব data আসবে।
 
 ---
+# 4. FULL JOIN (FULL OUTER JOIN)
+
+FULL JOIN দুই table এর সব rows দেখায়।
+
+Match থাকলে combine করবে।
+
+Match না থাকলে NULL দিবে।
+
+---
+
+## Syntax
+```sql
+SELECT *
+FROM Students
+FULL JOIN Departments
+ON Students.DeptID = Departments.DeptID;
+
+```
+---
+
+## Query
+```sql
+SELECT s.Name, d.DeptName
+FROM Students s
+FULL JOIN Departments d
+ON s.DeptID = d.DeptID;
+
+```
+---
+
+## Output
+
+| Name | DeptName |
+|------|----------|
+| Rahim | CSE |
+| Sakib | CSE |
+| Karim | EEE |
+| Nayeem | NULL |
+| Arafat | NULL |
+| NULL | BBA |
+
+---
+
+👉 দুই table এর সব data এসেছে।
+
+---
+
+## FULL JOIN Visualization
+```sql
+Students      Departments
+
+✔✔✔✔✔✔✔✔✔✔
+
+```
+---
+
+সব data।
+
+---
 ---
 </details>  
 
