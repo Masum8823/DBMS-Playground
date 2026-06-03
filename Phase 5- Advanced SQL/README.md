@@ -603,7 +603,109 @@ FULL JOIN = Everything
 <details>  
   <summary><b>Subqueries</b></summary>
 
+# Subqueries in SQL
 
+Subquery হলো একটি query এর ভিতরে আরেকটি query।
+
+👉 **সহজভাবে:**
+
+Query এর ভিতরে Query = Subquery
+
+---
+
+## Why Subquery is Needed?
+
+অনেক সময় কোনো data বের করার জন্য আগে অন্য একটা data বের করতে হয়।
+
+উদাহরণ:
+
+- Highest CGPA পাওয়া student কে?
+- Average salary এর চেয়ে বেশি salary কার?
+- CSE department এর students কারা?
+- Highest priced product কোনটা?
+
+এখানে আগে একটা value বের করতে হবে, তারপর সেই value ব্যবহার করে main query run করতে হবে।
+
+এই কাজের জন্য Subquery ব্যবহার করা হয়।
+
+---
+
+## Basic Structure
+```sql
+SELECT column_name
+FROM table_name
+WHERE column_name OPERATOR (
+    SELECT column_name
+    FROM another_table
+);
+
+```
+---
+
+## How SQL Executes a Subquery?
+
+ধরি query:
+```sql
+SELECT Name
+FROM Students
+WHERE CGPA = (
+    SELECT MAX(CGPA)
+    FROM Students
+);
+
+```
+---
+
+### Execution Steps:
+
+### Step 1
+
+Subquery execute হবে
+```sql
+SELECT MAX(CGPA)
+FROM Students;
+
+```
+---
+
+Output:
+```sql
+3.95
+```
+---
+
+### Step 2
+
+Main query execute হবে
+```sql
+SELECT Name
+FROM Students
+WHERE CGPA = 3.95;
+
+```
+---
+
+Output:
+```sql
+Arafat
+```
+---
+
+👉 তাই Subquery সাধারণত আগে execute হয়।
+
+---
+
+## Example Table: Students
+
+| StudentID | Name | Department | CGPA |
+|------------|------|------------|------|
+| 101 | Rahim | CSE | 3.90 |
+| 102 | Karim | EEE | 3.75 |
+| 103 | Sakib | CSE | 3.85 |
+| 104 | Nayeem | BBA | 3.60 |
+| 105 | Arafat | CSE | 3.95 |
+
+---
 ---
 </details>  
 
