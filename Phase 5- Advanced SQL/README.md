@@ -114,6 +114,91 @@ ON Table1.column = Table2.column;
 
 ---
 
+# 1. INNER JOIN
+
+INNER JOIN শুধুমাত্র matching records return করে।
+
+👉 দুই table এ common data থাকলে শুধু সেটাই দেখাবে।
+
+---
+
+## Syntax
+```sql
+SELECT *
+FROM Students
+INNER JOIN Departments
+ON Students.DeptID = Departments.DeptID;
+
+```
+---
+
+## Query
+```sql
+SELECT s.Name, d.DeptName
+FROM Students s
+INNER JOIN Departments d
+ON s.DeptID = d.DeptID;
+
+```
+---
+
+## Matching Analysis
+
+| Student | DeptID |
+|----------|--------|
+| Rahim | 1 |
+| Karim | 2 |
+| Sakib | 1 |
+
+Match পাওয়া গেছে।
+
+---
+
+### Nayeem:
+```sql
+DeptID = 3
+```
+---
+
+Departments table এ নেই।
+
+---
+
+### Arafat:
+```sql
+NULL
+```
+---
+
+Match হবে না।
+
+---
+
+## Output
+
+| Name | DeptName |
+|------|----------|
+| Rahim | CSE |
+| Karim | EEE |
+| Sakib | CSE |
+
+---
+
+👉 শুধুমাত্র matching rows এসেছে।
+
+---
+
+## INNER JOIN Visualization
+```sql
+Students      Departments
+
+     (Overlap)
+
+        ✔
+
+```
+---
+
 ---
 </details>  
 
