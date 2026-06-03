@@ -706,6 +706,103 @@ Arafat
 | 105 | Arafat | CSE | 3.95 |
 
 ---
+## 1. Single Row Subquery
+
+যখন Subquery মাত্র ১টি value return করে।
+
+---
+
+### Example 1: Highest CGPA Student
+```sql
+SELECT Name, CGPA
+FROM Students
+WHERE CGPA = (
+    SELECT MAX(CGPA)
+    FROM Students
+);
+
+```
+---
+
+### Subquery Result
+```sql
+3.95
+```
+---
+
+### Final Output
+
+| Name | CGPA |
+|------|------|
+| Arafat | 3.95 |
+
+---
+
+### Example 2: Lowest CGPA Student
+```sql
+SELECT Name, CGPA
+FROM Students
+WHERE CGPA = (
+    SELECT MIN(CGPA)
+    FROM Students
+);
+
+```
+---
+
+### Output:
+
+| Name | CGPA |
+|------|------|
+| Nayeem | 3.60 |
+
+---
+
+### Example 3: Above Average Students
+
+---
+
+### Step 1
+
+Average CGPA বের হবে
+```sql
+SELECT AVG(CGPA)
+FROM Students;
+
+```
+---
+
+Result:
+```sql
+3.81
+```
+---
+
+### Step 2
+```sql
+SELECT Name, CGPA
+FROM Students
+WHERE CGPA > (
+    SELECT AVG(CGPA)
+    FROM Students
+);
+
+```
+---
+
+### Output:
+
+| Name | CGPA |
+|------|------|
+| Rahim | 3.90 |
+| Sakib | 3.85 |
+| Arafat | 3.95 |
+
+---
+
+👉 Viva favourite question।
+
+---
 ---
 </details>  
 
