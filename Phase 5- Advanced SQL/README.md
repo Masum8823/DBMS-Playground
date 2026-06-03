@@ -283,7 +283,78 @@ Students      Departments
 👉 Left table এর সব data আসবে।
 
 ---
+# 3. RIGHT JOIN
 
+RIGHT JOIN ডান পাশের (right table) সব rows দেখায়।
+
+Match থাকলে left table data দেখাবে।
+
+Match না থাকলে NULL দেখাবে।
+
+---
+
+## Syntax
+```sql
+SELECT *
+FROM Students
+RIGHT JOIN Departments
+ON Students.DeptID = Departments.DeptID;
+
+```
+---
+
+## Query
+```sql
+SELECT s.Name, d.DeptName
+FROM Students s
+RIGHT JOIN Departments d
+ON s.DeptID = d.DeptID;
+
+```
+---
+
+## Output
+
+| Name | DeptName |
+|------|----------|
+| Rahim | CSE |
+| Sakib | CSE |
+| Karim | EEE |
+| NULL | BBA |
+
+---
+
+### ব্যাখ্যা:
+
+Departments table এ:
+```sql
+DeptID = 4
+BBA
+
+```
+---
+
+কিন্তু কোনো student নেই।
+
+তাই:
+```sql
+Name = NULL
+```
+---
+
+## RIGHT JOIN Visualization
+```sql
+Students      Departments
+
+   ✔✔
+✔✔✔✔✔
+
+```
+---
+
+👉 Right table এর সব data আসবে।
+
+---
 ---
 </details>  
 
