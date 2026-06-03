@@ -414,6 +414,187 @@ Students      Departments
 সব data।
 
 ---
+## Comparison Table
+
+| JOIN Type | Matching Rows | Unmatched Left | Unmatched Right |
+|------------|--------------|----------------|-----------------|
+| INNER JOIN | ✅ | ❌ | ❌ |
+| LEFT JOIN | ✅ | ✅ | ❌ |
+| RIGHT JOIN | ✅ | ❌ | ✅ |
+| FULL JOIN | ✅ | ✅ | ✅ |
+
+---
+
+## Easy Memory Trick
+
+### INNER JOIN
+```sql
+Only Common Friends
+```
+---
+
+### LEFT JOIN
+```sql
+Take All From Left
+```
+---
+
+### RIGHT JOIN
+```sql
+Take All From Right
+```
+---
+
+### FULL JOIN
+```sql
+Take Everything
+```
+---
+
+## Real-Life University Example
+
+### Students + Departments
+```sql
+SELECT s.Name, d.DeptName
+FROM Students s
+INNER JOIN Departments d
+ON s.DeptID = d.DeptID;
+
+```
+---
+
+### Output:
+```sql
+Rahim  → CSE
+Karim  → EEE
+Sakib  → CSE
+
+```
+---
+
+### Students Without Department
+```sql
+SELECT s.Name
+FROM Students s
+LEFT JOIN Departments d
+ON s.DeptID = d.DeptID
+WHERE d.DeptID IS NULL;
+
+```
+---
+
+### Output:
+```sql
+Nayeem
+Arafat
+
+```
+---
+
+👉 Interview এবং viva তে খুব common question।
+
+---
+
+## Common Mistakes
+
+### Mistake 1
+
+ON condition ভুল দেওয়া
+
+❌
+```sql
+ON Students.StudentID = Departments.DeptID
+```
+---
+
+এখানে unrelated columns compare হচ্ছে।
+
+---
+
+### Mistake 2
+
+JOIN লিখে ON না দেওয়া
+
+❌
+```sql
+SELECT *
+FROM Students
+INNER JOIN Departments;
+
+```
+---
+
+Error হবে।
+
+---
+
+### Mistake 3
+
+LEFT JOIN এবং RIGHT JOIN confuse করা
+
+---
+
+মনে রাখুন:
+```sql
+LEFT JOIN = Left Table Priority
+
+RIGHT JOIN = Right Table Priority
+
+```
+---
+
+## Common Viva Questions
+
+### Q: JOIN কী?
+
+Multiple table এর related data combine করার technique।
+
+---
+
+### Q: INNER JOIN কী return করে?
+
+শুধুমাত্র matching rows।
+
+---
+
+### Q: LEFT JOIN কী return করে?
+
+Left table এর সব rows + matching right rows।
+
+---
+
+### Q: RIGHT JOIN কী return করে?
+
+Right table এর সব rows + matching left rows।
+
+---
+
+### Q: FULL JOIN কী return করে?
+
+দুই table এর সব rows।
+
+---
+
+### Q: JOIN এর জন্য সবচেয়ে গুরুত্বপূর্ণ clause কোনটি?
+
+---
+
+কারণ ON condition determine করে কীভাবে tables match হবে।
+
+---
+
+## Quick Summary
+
+```sql
+INNER JOIN = Only Matches
+
+LEFT JOIN = All Left + Matches
+
+RIGHT JOIN = All Right + Matches
+
+FULL JOIN = Everything
+
+```
 ---
 </details>  
 
