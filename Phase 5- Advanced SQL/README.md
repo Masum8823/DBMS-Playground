@@ -803,6 +803,100 @@ WHERE CGPA > (
 👉 Viva favourite question।
 
 ---
+## 2. Multiple Row Subquery
+
+যখন Subquery multiple values return করে।
+
+---
+
+### Example Tables
+
+### Students
+
+| Name | DeptID |
+|------|--------|
+| Rahim | 1 |
+| Karim | 2 |
+| Sakib | 1 |
+
+---
+
+### Departments
+
+| DeptID | DeptName |
+|--------|----------|
+| 1 | CSE |
+| 2 | EEE |
+
+---
+
+### Example 4
+
+CSE department এর students বের করো।
+
+---
+
+### Subquery
+```sql
+SELECT DeptID
+FROM Departments
+WHERE DeptName = 'CSE';
+
+```
+---
+
+Result:
+```sql
+1
+```
+---
+
+### Main Query
+```sql
+SELECT Name
+FROM Students
+WHERE DeptID IN (
+    SELECT DeptID
+    FROM Departments
+    WHERE DeptName = 'CSE'
+);
+
+```
+---
+
+### Output:
+
+| Name |
+|------|
+| Rahim |
+| Sakib |
+
+---
+
+## Why IN Used?
+
+কারণ subquery অনেক value return করতে পারে।
+
+---
+
+### Example:
+```sql
+1
+2
+3
+
+```
+---
+
+তখন:
+```sql
+WHERE DeptID IN (...)
+```
+---
+
+ব্যবহার করতে হয়।
+
+---
 ---
 </details>  
 
