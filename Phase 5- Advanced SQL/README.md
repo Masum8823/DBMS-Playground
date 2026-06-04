@@ -1027,6 +1027,178 @@ FROM
 👉 Temporary table তৈরি হয়।
 
 ---
+
+## Real-Life Example
+
+### Product Table
+
+| Product | Price |
+|----------|-------|
+| Laptop | 80000 |
+| Mouse | 1000 |
+| Keyboard | 3000 |
+| Monitor | 15000 |
+
+---
+
+### Products Above Average Price
+```sql
+SELECT Product, Price
+FROM Products
+WHERE Price >
+(
+    SELECT AVG(Price)
+    FROM Products
+);
+
+```
+---
+
+### Average:
+```sql
+24750
+```
+---
+
+### Output:
+
+| Product | Price |
+|----------|-------|
+| Laptop | 80000 |
+
+---
+
+## Subquery vs JOIN
+
+অনেক কাজ Subquery এবং JOIN দুটো দিয়েই করা যায়।
+
+---
+
+### Subquery
+```sql
+SELECT Name
+FROM Students
+WHERE DeptID IN (
+    SELECT DeptID
+    FROM Departments
+    WHERE DeptName = 'CSE'
+);
+
+```
+---
+
+### JOIN
+```sql
+SELECT s.Name
+FROM Students s
+INNER JOIN Departments d
+ON s.DeptID = d.DeptID
+WHERE d.DeptName = 'CSE';
+
+```
+---
+
+দুটোর output একই।
+
+---
+
+## Common Mistakes
+
+---
+
+### Mistake 1
+
+Multiple values return হলেও = ব্যবহার করা
+
+❌
+```sql
+WHERE DeptID =
+(
+    SELECT DeptID
+    FROM Departments
+)
+
+```
+---
+
+যদি multiple rows return করে error হবে।
+
+---
+
+✔ Use:
+```sql
+WHERE DeptID IN (...)
+```
+---
+
+### Mistake 2
+
+Parentheses ভুলে যাওয়া
+
+❌
+```sql
+WHERE CGPA >
+SELECT AVG(CGPA)
+FROM Students
+
+```
+---
+
+✔ Correct
+```sql
+WHERE CGPA >
+(
+    SELECT AVG(CGPA)
+    FROM Students
+)
+
+```
+---
+
+## Common Viva Questions
+
+### Q: Subquery কী?
+
+একটি query এর ভিতরে আরেকটি query।
+
+---
+
+### Q: Subquery আগে execute হয় নাকি Main Query?
+
+সাধারণত Subquery আগে execute হয়।
+
+---
+
+### Q: Single Row Subquery কী?
+
+যেটা মাত্র একটি value return করে।
+
+---
+
+### Q: Multiple Row Subquery কী?
+
+যেটা একাধিক value return করে।
+
+---
+
+### Q: Multiple Row Subquery এর সাথে কোন operator বেশি ব্যবহার হয়?
+IN
+---
+
+## Quick Summary
+
+```sql
+Subquery = Query inside another Query
+
+Single Row Subquery → 1 Value
+
+Multiple Row Subquery → Many Values
+
+IN → Multiple Values
+
+EXISTS → Check Existence
+
+```
 ---
 </details>  
 
