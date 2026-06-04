@@ -956,6 +956,77 @@ WHERE DeptID NOT IN (
 Departments table এ না থাকা students।
 
 ---
+
+## 5. Subquery with EXISTS
+
+EXISTS check করে Subquery result empty কি না।
+
+---
+
+### Example
+```sql
+SELECT Name
+FROM Students s
+WHERE EXISTS (
+    SELECT *
+    FROM Departments d
+    WHERE s.Department = d.DeptName
+);
+
+```
+---
+
+👉 Matching department থাকলে row return হবে।
+
+---
+
+## 6. Subquery in SELECT
+
+Subquery শুধু WHERE তেই না, SELECT এও ব্যবহার করা যায়।
+
+---
+
+### Example
+```sql
+SELECT Name,
+(
+    SELECT AVG(CGPA)
+    FROM Students
+) AS AverageCGPA
+FROM Students;
+
+```
+---
+
+### Output:
+
+| Name | AverageCGPA |
+|------|------------|
+| Rahim | 3.81 |
+| Karim | 3.81 |
+| Sakib | 3.81 |
+
+---
+
+## 7. Subquery in FROM
+
+---
+
+### Example
+```sql
+SELECT *
+FROM
+(
+    SELECT Name, CGPA
+    FROM Students
+) AS StudentData;
+
+```
+---
+
+👉 Temporary table তৈরি হয়।
+
+---
 ---
 </details>  
 
