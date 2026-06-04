@@ -897,6 +897,65 @@ WHERE DeptID IN (...)
 ব্যবহার করতে হয়।
 
 ---
+## 3. Subquery with IN
+
+---
+
+### Example
+```sql
+SELECT *
+FROM Students
+WHERE Department IN (
+    SELECT Department
+    FROM Students
+    WHERE CGPA > 3.90
+);
+
+```
+---
+
+প্রথমে Subquery:
+```sql
+CSE
+```
+---
+
+### Main Query:
+```sql
+SELECT *
+FROM Students
+WHERE Department = 'CSE';
+
+```
+---
+
+### Output:
+
+সব CSE student।
+
+---
+
+## 4. Subquery with NOT IN
+
+---
+
+### Example
+```sql
+SELECT *
+FROM Students
+WHERE DeptID NOT IN (
+    SELECT DeptID
+    FROM Departments
+);
+
+```
+---
+
+### Output:
+
+Departments table এ না থাকা students।
+
+---
 ---
 </details>  
 
