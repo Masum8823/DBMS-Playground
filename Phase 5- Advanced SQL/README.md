@@ -1520,6 +1520,69 @@ WHERE DeptID = 1;
 | Sakib |
 
 ---
+## Multiple Value Nested Query
+
+যদি Inner Query একাধিক value return করে তাহলে IN ব্যবহার করতে হয়।
+
+---
+
+## Example
+```sql
+SELECT Name
+FROM Students
+WHERE DeptID IN
+(
+    SELECT DeptID
+    FROM Departments
+);
+
+```
+---
+
+### Inner Query Result:
+```sql
+1
+2
+3
+
+```
+---
+
+### Main Query:
+```sql
+WHERE DeptID IN (1,2,3)
+```
+---
+
+## Nested Query with IN
+
+---
+
+## Example
+```sql
+SELECT *
+FROM Students
+WHERE Department IN
+(
+    SELECT Department
+    FROM Students
+    WHERE CGPA > 3.90
+);
+
+```
+---
+
+### Inner Query Result:
+```sql
+CSE
+```
+---
+
+### Output:
+
+সব CSE students
+
+---
 ---
 </details>  
 
