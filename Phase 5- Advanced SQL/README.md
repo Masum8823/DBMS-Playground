@@ -1207,7 +1207,107 @@ EXISTS → Check Existence
 <details>  
   <summary><b>Nested Queries</b></summary>
 
+# Nested Queries in SQL
 
+Nested Query বলতে এমন Query কে বোঝায় যেখানে একটি Query-এর ভিতরে আরেকটি Query থাকে।
+
+👉 **সহজভাবে:**
+
+Query এর ভিতরে Query = Nested Query
+
+---
+
+## Nested Query vs Subquery
+
+এখানে একটা common confusion আছে।
+
+অনেক বই এবং teacher Subquery ও Nested Query কে একই অর্থে ব্যবহার করেন।
+
+কারণ:
+```txt
+Every Subquery is a Nested Query
+Every Nested Query is a Subquery
+
+```
+---
+
+অর্থাৎ SQL-এর context এ সাধারণত দুটো একই জিনিস বোঝায়।
+
+---
+
+## Why Nested Queries Are Used?
+
+যখন Main Query execute করার আগে অন্য Query থেকে information বের করতে হয়।
+
+Examples:
+
+- Highest CGPA student খুঁজতে
+- Average CGPA এর উপরের students বের করতে
+- CSE department এর students খুঁজতে
+- Most expensive product খুঁজতে
+
+---
+
+## General Structure
+```sql
+SELECT column_name
+FROM table_name
+WHERE condition
+(
+    SELECT column_name
+    FROM another_table
+);
+
+```
+---
+
+## How Nested Query Works?
+
+ধরি:
+```sql
+SELECT Name
+FROM Students
+WHERE CGPA =
+(
+    SELECT MAX(CGPA)
+    FROM Students
+);
+
+```
+---
+
+### Step 1
+
+Inner Query execute হবে
+```sql
+SELECT MAX(CGPA)
+FROM Students;
+
+```
+---
+
+Result:
+```sql
+3.95
+```
+---
+
+### Step 2
+
+Outer Query execute হবে
+```sql
+SELECT Name
+FROM Students
+WHERE CGPA = 3.95;
+
+```
+---
+
+Output:
+```sql
+Arafat
+```
+---
 ---
 </details>  
 
