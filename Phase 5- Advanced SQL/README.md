@@ -1308,6 +1308,154 @@ Output:
 Arafat
 ```
 ---
+
+## Terminology
+
+Nested Query সাধারণত ২টি অংশে ভাগ করা হয়।
+
+---
+
+### Outer Query
+```sql
+SELECT Name
+FROM Students
+WHERE CGPA =
+
+```
+---
+
+### Inner Query
+```sql
+(
+    SELECT MAX(CGPA)
+    FROM Students
+)
+
+```
+---
+
+👉 Inner Query আগে execute হয়।
+
+---
+
+## Example Table: Students
+
+| StudentID | Name | Department | CGPA |
+|------------|------|------------|------|
+| 101 | Rahim | CSE | 3.90 |
+| 102 | Karim | EEE | 3.75 |
+| 103 | Sakib | CSE | 3.85 |
+| 104 | Nayeem | BBA | 3.60 |
+| 105 | Arafat | CSE | 3.95 |
+
+---
+
+## Example 1: Highest CGPA Student
+```sql
+SELECT Name, CGPA
+FROM Students
+WHERE CGPA =
+(
+    SELECT MAX(CGPA)
+    FROM Students
+);
+
+```
+---
+
+### Inner Query Result
+```sql
+3.95
+```
+---
+
+### Final Output
+
+| Name | CGPA |
+|------|------|
+| Arafat | 3.95 |
+
+---
+
+## Example 2: Lowest CGPA Student
+```sql
+SELECT Name, CGPA
+FROM Students
+WHERE CGPA =
+(
+    SELECT MIN(CGPA)
+    FROM Students
+);
+
+```
+---
+
+### Output:
+
+| Name | CGPA |
+|------|------|
+| Nayeem | 3.60 |
+
+---
+
+## Example 3: Above Average Students
+```sql
+SELECT Name, CGPA
+FROM Students
+WHERE CGPA >
+(
+    SELECT AVG(CGPA)
+    FROM Students
+);
+
+```
+---
+
+### Inner Query
+```sql
+SELECT AVG(CGPA)
+FROM Students;
+
+```
+---
+
+Result:
+```sql
+3.81
+```
+---
+
+### Output
+
+| Name | CGPA |
+|------|------|
+| Rahim | 3.90 |
+| Sakib | 3.85 |
+| Arafat | 3.95 |
+
+---
+
+## Example 4: Below Average Students
+```sql
+SELECT Name, CGPA
+FROM Students
+WHERE CGPA <
+(
+    SELECT AVG(CGPA)
+    FROM Students
+);
+
+```
+---
+
+### Output:
+
+| Name | CGPA |
+|------|------|
+| Karim | 3.75 |
+| Nayeem | 3.60 |
+
+---
 ---
 </details>  
 
