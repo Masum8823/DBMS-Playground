@@ -1456,6 +1456,70 @@ WHERE CGPA <
 | Nayeem | 3.60 |
 
 ---
+
+## Nested Query with Multiple Tables
+
+---
+
+### Departments Table
+
+| DeptID | DeptName |
+|--------|----------|
+| 1 | CSE |
+| 2 | EEE |
+| 3 | BBA |
+
+---
+
+### Students Table
+
+| Name | DeptID |
+|------|--------|
+| Rahim | 1 |
+| Karim | 2 |
+| Sakib | 1 |
+
+---
+
+## Example 5
+
+CSE students বের করো।
+```sql
+SELECT Name
+FROM Students
+WHERE DeptID =
+(
+    SELECT DeptID
+    FROM Departments
+    WHERE DeptName = 'CSE'
+);
+
+```
+---
+
+### Inner Query Result
+```sql
+1
+```
+---
+
+### Outer Query
+```sql
+SELECT Name
+FROM Students
+WHERE DeptID = 1;
+
+```
+---
+
+### Output:
+
+| Name |
+|------|
+| Rahim |
+| Sakib |
+
+---
 ---
 </details>  
 
