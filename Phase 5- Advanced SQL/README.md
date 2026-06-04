@@ -1583,6 +1583,42 @@ CSE
 সব CSE students
 
 ---
+## Nested Query with NOT IN
+```sql
+SELECT *
+FROM Students
+WHERE DeptID NOT IN
+(
+    SELECT DeptID
+    FROM Departments
+);
+
+```
+---
+
+### Output:
+
+Departments table এ নেই এমন students।
+
+---
+
+## Nested Query with EXISTS
+```sql
+SELECT Name
+FROM Students s
+WHERE EXISTS
+(
+    SELECT *
+    FROM Departments d
+    WHERE s.DeptID = d.DeptID
+);
+
+```
+---
+
+👉 Matching department থাকলে row return করবে।
+
+---
 ---
 </details>  
 
