@@ -2268,6 +2268,119 @@ FROM GraduatedStudents;
 ❌ Error হবে।
 
 ---
+## Real-Life Example
+
+### Dhaka Employees
+
+| Name |
+|------|
+| Rahim |
+| Karim |
+
+---
+
+### Chittagong Employees
+
+| Name |
+|------|
+| Sakib |
+| Nayeem |
+
+---
+
+## সব employees একসাথে:
+```sql
+SELECT Name
+FROM DhakaEmployees
+
+UNION
+
+SELECT Name
+FROM ChittagongEmployees;
+
+```
+---
+
+## Output:
+```sql
+Rahim
+Karim
+Sakib
+Nayeem
+
+```
+---
+
+## UNION with Aggregate Functions
+```sql
+SELECT COUNT(*) AS Total
+FROM CurrentStudents
+
+UNION
+
+SELECT COUNT(*)
+FROM GraduatedStudents;
+
+```
+---
+
+## Output:
+
+| Total |
+|--------|
+| 3 |
+| 2 |
+
+---
+
+## Common Mistakes
+
+---
+
+### Mistake 1
+
+Column Count Different
+
+❌
+```sql
+SELECT Name
+FROM Students
+
+UNION
+
+SELECT Name, CGPA
+FROM Graduates;
+
+```
+---
+
+Error হবে।
+
+---
+
+### Mistake 2
+
+Data Type Mismatch
+
+❌
+```sql
+VARCHAR
+UNION
+DATE
+
+```
+---
+
+সমস্যা হতে পারে।
+
+---
+
+### Mistake 3
+
+UNION এবং JOIN গুলিয়ে ফেলা
+
+---
+
 ---
 </details>  
 
