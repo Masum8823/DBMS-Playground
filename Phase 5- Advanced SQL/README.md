@@ -2786,6 +2786,46 @@ WHERE StudentID = 101;
 Students table-ও update হয়ে যাবে।
 
 ---
+## Non-Updatable Views
+
+নিচের ক্ষেত্রে সাধারণত update করা যায় না:
+
+---
+
+### Aggregate Functions
+```sql
+CREATE VIEW ResultSummary AS
+SELECT AVG(CGPA)
+FROM Students;
+
+```
+---
+
+### GROUP BY
+```sql
+CREATE VIEW DeptSummary AS
+SELECT Department,
+       COUNT(*)
+FROM Students
+GROUP BY Department;
+
+```
+---
+
+### DISTINCT
+```sql
+CREATE VIEW UniqueDepartments AS
+SELECT DISTINCT Department
+FROM Students;
+
+```
+---
+
+### Complex JOINs
+
+অনেক ক্ষেত্রে update করা যায় না।
+
+---
 ---
 </details>  
 
