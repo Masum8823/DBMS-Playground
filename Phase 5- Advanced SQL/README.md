@@ -2596,6 +2596,151 @@ WHERE condition;
 
 ```
 ---
+
+## Example 1: Basic View
+
+### Students Table:
+
+| StudentID | Name | CGPA |
+|------------|------|------|
+| 101 | Rahim | 3.90 |
+| 102 | Karim | 3.75 |
+| 103 | Sakib | 3.85 |
+
+---
+
+### Create View:
+```sql
+CREATE VIEW StudentView AS
+SELECT Name, CGPA
+FROM Students;
+
+```
+---
+
+### Use View:
+```sql
+SELECT *
+FROM StudentView;
+
+```
+---
+
+### Output:
+
+| Name | CGPA |
+|------|------|
+| Rahim | 3.90 |
+| Karim | 3.75 |
+| Sakib | 3.85 |
+
+---
+
+## What Happens Internally?
+
+Database View এর Query run করে।
+```sql
+SELECT *
+FROM StudentView;
+
+```
+---
+
+Internally:
+```sql
+SELECT Name, CGPA
+FROM Students;
+
+```
+---
+
+তাই View কোনো আলাদা data store করে না।
+
+---
+
+## Example 2: View with WHERE
+
+শুধু CSE students দেখাতে চাই।
+```sql
+CREATE VIEW CSEStudents AS
+SELECT *
+FROM Students
+WHERE Department = 'CSE';
+
+```
+ 
+
+### Use:
+```sql
+SELECT *
+FROM CSEStudents;
+
+```
+---
+
+### Output:
+
+| Name | Department |
+|------|------------|
+| Rahim | CSE |
+| Sakib | CSE |
+
+---
+
+## Example 3: View with JOIN
+
+---
+
+### Students
+
+| StudentID | Name | DeptID |
+|------------|------|--------|
+| 101 | Rahim | 1 |
+| 102 | Karim | 2 |
+
+---
+
+### Departments
+
+| DeptID | DeptName |
+|--------|----------|
+| 1 | CSE |
+| 2 | EEE |
+
+---
+
+### Create View:
+```sql
+CREATE VIEW StudentDepartmentView AS
+SELECT s.Name,
+       d.DeptName
+FROM Students s
+INNER JOIN Departments d
+ON s.DeptID = d.DeptID;
+
+```
+---
+
+### Use:
+```sql
+SELECT *
+FROM StudentDepartmentView;
+
+```
+---
+
+### Output:
+
+| Name | DeptName |
+|------|----------|
+| Rahim | CSE |
+| Karim | EEE |
+
+---
+
+👉 Complex JOIN query বারবার লিখতে হয় না।
+
+---
 ---
 </details>  
 
