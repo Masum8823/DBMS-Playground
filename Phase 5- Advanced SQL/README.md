@@ -2758,6 +2758,34 @@ FROM sys.views;
 
 ```
 ---
+## Updating Data Through View
+
+কিছু View updateable হয়।
+
+---
+
+### Example:
+```sql
+CREATE VIEW StudentBasicInfo AS
+SELECT StudentID,
+       Name
+FROM Students;
+
+```
+---
+
+### Update:
+```sql
+UPDATE StudentBasicInfo
+SET Name = 'Masum'
+WHERE StudentID = 101;
+
+```
+---
+
+Students table-ও update হয়ে যাবে।
+
+---
 ---
 </details>  
 
