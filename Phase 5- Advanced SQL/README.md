@@ -1657,6 +1657,208 @@ Inner-Inner Query
 👉 এটাকে Multi-Level Nested Query বলে।
 
 ---
+## Real-Life Example
+
+### Products Table
+
+| Product | Price |
+|----------|-------|
+| Laptop | 80000 |
+| Mouse | 1000 |
+| Keyboard | 3000 |
+| Monitor | 15000 |
+
+---
+
+## সবচেয়ে expensive product:
+```sql
+SELECT Product
+FROM Products
+WHERE Price =
+(
+    SELECT MAX(Price)
+    FROM Products
+);
+
+```
+---
+
+### Output:
+```sql
+Laptop
+```
+---
+
+## Nested Query vs JOIN
+
+---
+
+### Nested Query
+```sql
+SELECT Name
+FROM Students
+WHERE DeptID =
+(
+    SELECT DeptID
+    FROM Departments
+    WHERE DeptName = 'CSE'
+);
+
+```
+---
+
+### JOIN
+```sql
+SELECT s.Name
+FROM Students s
+INNER JOIN Departments d
+ON s.DeptID = d.DeptID
+WHERE d.DeptName = 'CSE';
+
+```
+---
+
+দুটোর Output একই।
+
+---
+
+## Nested Query Advantages
+
+### 1. Easy to Read
+
+Complex logic ছোট ছোট অংশে ভাগ করা যায়।
+
+---
+
+### 2. Dynamic Query
+
+Inner Query এর result automatically Main Query তে use হয়।
+
+---
+
+### 3. Powerful Filtering
+
+Complex condition তৈরি করা যায়।
+
+---
+
+## Nested Query Disadvantages
+
+### 1. Large Data এ Slow হতে পারে
+
+বিশেষ করে deeply nested query।
+
+---
+
+### 2. Debugging কঠিন
+
+অনেক level হলে বুঝতে সমস্যা হয়।
+
+---
+
+### 3. JOIN অনেক সময় Faster
+
+Database optimizer JOIN ভালোভাবে handle করতে পারে।
+
+---
+
+## Common Mistakes
+
+---
+
+### Mistake 1
+
+Multiple rows return করলে = ব্যবহার করা
+
+❌
+```sql
+WHERE DeptID =
+(
+    SELECT DeptID
+    FROM Departments
+)
+
+```
+---
+
+✔ Correct
+```sql
+WHERE DeptID IN (...)
+```
+---
+
+### Mistake 2
+
+Parentheses ভুলে যাওয়া
+
+❌
+```sql
+WHERE CGPA >
+SELECT AVG(CGPA)
+FROM Students
+
+```
+---
+
+✔ Correct
+```sql
+WHERE CGPA >
+(
+    SELECT AVG(CGPA)
+    FROM Students
+)
+
+```
+---
+
+## Common Viva Questions
+
+---
+
+### Q: Nested Query কী?
+
+Query এর ভিতরে Query।
+
+---
+
+### Q: Nested Query এবং Subquery কি একই?
+
+সাধারণ SQL context এ হ্যাঁ, প্রায় একই।
+
+---
+
+### Q: Inner Query আগে execute হয় নাকি Outer Query?
+
+Inner Query আগে execute হয়।
+
+---
+
+### Q: Multiple values return করলে কোন operator ব্যবহার করা হয়?
+IN
+---
+
+### Q: Nested Query কি SELECT ছাড়া অন্য clause এ ব্যবহার করা যায়?
+
+হ্যাঁ, WHERE, FROM, HAVING ইত্যাদিতেও ব্যবহার করা যায়।
+
+---
+
+## Quick Summary
+
+```sql
+Nested Query = Query inside Query
+
+Outer Query = Main Query
+
+Inner Query = Nested Query
+
+Single Value → =
+
+Multiple Values → IN
+
+EXISTS → Check Existence
+
+```
 ---
 </details>  
 
