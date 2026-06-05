@@ -1867,7 +1867,188 @@ EXISTS → Check Existence
 <details>  
   <summary><b>UNION</b></summary>
 
+# UNION in SQL
 
+UNION ব্যবহার করা হয় দুই বা তার বেশি SELECT query এর result একসাথে combine করার জন্য।
+
+👉 **সহজভাবে:**
+
+Multiple SELECT Results + Merge Together = UNION
+
+---
+
+## Why UNION is Needed?
+
+অনেক সময় data একাধিক table এ থাকে অথবা একই table থেকে ভিন্ন condition এর data একসাথে দেখাতে হয়।
+
+উদাহরণ:
+
+- CSE students + EEE students একসাথে দেখানো
+- Current students + Graduated students একসাথে দেখানো
+- Dhaka branch + Chittagong branch employees একসাথে দেখানো
+
+এই ধরনের কাজের জন্য UNION ব্যবহার করা হয়।
+
+---
+
+## Basic Syntax
+```sql
+SELECT column1, column2
+FROM Table1
+
+UNION
+
+SELECT column1, column2
+FROM Table2;
+
+```
+---
+
+## Important Rules of UNION
+
+UNION ব্যবহার করার সময় কিছু নিয়ম অবশ্যই মানতে হবে।
+
+---
+
+### Rule 1: Column সংখ্যা সমান হতে হবে
+
+✔ Correct
+```sql
+SELECT Name, CGPA
+FROM Students
+
+UNION
+
+SELECT Name, CGPA
+FROM Graduates;
+
+```
+---
+
+❌ Wrong
+```sql
+SELECT Name, CGPA
+FROM Students
+
+UNION
+
+SELECT Name
+FROM Graduates;
+
+```
+---
+
+কারণ column সংখ্যা match করছে না।
+
+---
+
+### Rule 2: Data Type Compatible হতে হবে
+
+✔ Correct
+```sql
+Name VARCHAR
+UNION
+Name VARCHAR
+
+```
+---
+
+✔ Also Correct
+```sql
+INT
+UNION
+FLOAT
+
+```
+---
+
+❌ Wrong
+```sql
+VARCHAR
+UNION
+DATE
+
+```
+---
+
+(অনেক DBMS এ error দিতে পারে)
+
+---
+
+### Rule 3: Column Names First Query থেকে আসে
+```sql
+SELECT Name, CGPA
+FROM Students
+
+UNION
+
+SELECT StudentName, GPA
+FROM Graduates;
+
+```
+---
+
+Output Column Names হবে:
+```sql
+Name
+CGPA
+
+```
+---
+
+কারণ First SELECT এর column names ব্যবহৃত হয়।
+
+---
+
+## Example Tables
+
+### CurrentStudents
+
+| StudentID | Name |
+|------------|------|
+| 101 | Rahim |
+| 102 | Karim |
+| 103 | Sakib |
+
+---
+
+### GraduatedStudents
+
+| StudentID | Name |
+|------------|------|
+| 104 | Nayeem |
+| 105 | Arafat |
+
+---
+
+## Example 1: Basic UNION
+```sql
+SELECT Name
+FROM CurrentStudents
+
+UNION
+
+SELECT Name
+FROM GraduatedStudents;
+
+```
+---
+
+## Output
+
+| Name |
+|------|
+| Rahim |
+| Karim |
+| Sakib |
+| Nayeem |
+| Arafat |
+
+---
+
+👉 দুই table এর result merge হয়েছে।
+
+---
 ---
 </details>  
 
