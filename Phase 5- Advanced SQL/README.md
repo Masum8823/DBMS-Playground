@@ -1619,6 +1619,44 @@ WHERE EXISTS
 👉 Matching department থাকলে row return করবে।
 
 ---
+
+## Multi-Level Nested Query
+
+একটার ভিতরে আরেকটা, তার ভিতরে আরেকটা Query।
+
+---
+
+## Example
+```sql
+SELECT Name
+FROM Students
+WHERE DeptID =
+(
+    SELECT DeptID
+    FROM Departments
+    WHERE DeptName =
+    (
+        SELECT 'CSE'
+    )
+);
+
+```
+---
+
+এখানে:
+```sql
+Outer Query
+   ↓
+Inner Query
+   ↓
+Inner-Inner Query
+
+```
+---
+
+👉 এটাকে Multi-Level Nested Query বলে।
+
+---
 ---
 </details>  
 
