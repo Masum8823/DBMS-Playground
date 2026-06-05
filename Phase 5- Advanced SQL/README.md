@@ -2842,6 +2842,20 @@ FROM Students;
 আগের View overwrite হয়ে যাবে।
 
 ---
+## Dropping a View
+
+View delete করতে:
+```sql
+DROP VIEW StudentView;
+```
+---
+
+👉 শুধু View delete হবে।
+
+মূল table delete হবে না।
+
+---
+
 ---
 </details>  
 
