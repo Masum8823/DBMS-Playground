@@ -2230,6 +2230,44 @@ FROM GraduatedStudents;
 👉 Multiple columns দিয়েও UNION করা যায়।
 
 ---
+## ORDER BY with UNION
+
+UNION এর শেষে ORDER BY দিতে হয়।
+
+---
+
+### Correct
+```sql
+SELECT Name
+FROM CurrentStudents
+
+UNION
+
+SELECT Name
+FROM GraduatedStudents
+
+ORDER BY Name;
+
+```
+---
+
+### Wrong
+```sql
+SELECT Name
+FROM CurrentStudents
+ORDER BY Name
+
+UNION
+
+SELECT Name
+FROM GraduatedStudents;
+
+```
+---
+
+❌ Error হবে।
+
+---
 ---
 </details>  
 
