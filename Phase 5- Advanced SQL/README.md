@@ -2109,6 +2109,127 @@ Sakib
 Sakib একবারই এসেছে।
 
 ---
+## UNION ALL
+
+UNION ALL duplicate remove করে না।
+
+সব data দেখায়।
+
+---
+
+## Syntax
+```sql
+SELECT column_name
+FROM TableA
+
+UNION ALL
+
+SELECT column_name
+FROM TableB;
+
+```
+---
+
+## Example
+```sql
+SELECT Name
+FROM TableA
+
+UNION ALL
+
+SELECT Name
+FROM TableB;
+
+```
+---
+
+## Output
+
+| Name |
+|------|
+| Rahim |
+| Karim |
+| Sakib |
+| Sakib |
+| Arafat |
+
+---
+
+👉 Duplicate রয়ে গেছে।
+
+---
+
+## UNION vs UNION ALL
+
+| Feature | UNION | UNION ALL |
+|----------|------|-----------|
+| Combine Results | ✅ | ✅ |
+| Removes Duplicates | ✅ | ❌ |
+| Faster | ❌ | ✅ |
+| Keeps All Rows | ❌ | ✅ |
+
+---
+
+## Example 2: Different Conditions
+
+একই table থেকেও UNION ব্যবহার করা যায়।
+
+---
+
+### Students Table
+
+| Name | Department |
+|------|------------|
+| Rahim | CSE |
+| Karim | EEE |
+| Sakib | CSE |
+| Nayeem | BBA |
+```sql
+SELECT Name
+FROM Students
+WHERE Department = 'CSE'
+
+UNION
+
+SELECT Name
+FROM Students
+WHERE Department = 'EEE';
+
+```
+---
+
+---
+
+## Output
+
+| Name |
+|------|
+| Rahim |
+| Sakib |
+| Karim |
+
+---
+
+👉 দুই query এর result একসাথে।
+
+---
+
+## Example 3: Multiple Columns
+```sql
+SELECT Name, Department
+FROM Students
+
+UNION
+
+SELECT Name, Department
+FROM GraduatedStudents;
+
+```
+---
+
+👉 Multiple columns দিয়েও UNION করা যায়।
+
+---
 ---
 </details>  
 
