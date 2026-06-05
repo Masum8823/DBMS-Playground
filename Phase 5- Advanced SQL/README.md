@@ -2741,6 +2741,23 @@ FROM StudentDepartmentView;
 👉 Complex JOIN query বারবার লিখতে হয় না।
 
 ---
+## Viewing Existing Views
+
+### SQL Server:
+```sql
+SELECT *
+FROM sys.views;
+
+```
+---
+
+অথবা:
+```sql
+SELECT name
+FROM sys.views;
+
+```
+---
 ---
 </details>  
 
