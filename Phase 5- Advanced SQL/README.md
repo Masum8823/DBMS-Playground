@@ -2049,6 +2049,66 @@ FROM GraduatedStudents;
 👉 দুই table এর result merge হয়েছে।
 
 ---
+## Duplicate Handling in UNION
+
+UNION automatically duplicate remove করে।
+
+---
+
+### Example Tables
+
+### Table A
+
+| Name |
+|------|
+| Rahim |
+| Karim |
+| Sakib |
+
+---
+
+### Table B
+
+| Name |
+|------|
+| Sakib |
+| Arafat |
+
+---
+
+## Query
+```sql
+SELECT Name
+FROM TableA
+
+UNION
+
+SELECT Name
+FROM TableB;
+
+```
+---
+
+## Output
+
+| Name |
+|------|
+| Rahim |
+| Karim |
+| Sakib |
+| Arafat |
+
+---
+
+খেয়াল করুন:
+```sql
+Sakib
+```
+---
+
+Sakib একবারই এসেছে।
+
+---
 ---
 </details>  
 
