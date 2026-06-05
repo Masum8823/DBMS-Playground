@@ -2826,6 +2826,22 @@ FROM Students;
 অনেক ক্ষেত্রে update করা যায় না।
 
 ---
+## Altering a View
+
+View modify করার জন্য:
+```sql
+ALTER VIEW StudentView AS
+SELECT Name,
+       CGPA,
+       Department
+FROM Students;
+
+```
+---
+
+আগের View overwrite হয়ে যাবে।
+
+---
 ---
 </details>  
 
