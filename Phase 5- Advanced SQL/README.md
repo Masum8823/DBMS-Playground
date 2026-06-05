@@ -2497,7 +2497,105 @@ JOIN = Horizontal Merge
 <details>  
   <summary><b>Views</b></summary>
 
+# Views in SQL
 
+View হলো একটি Virtual Table (ভার্চুয়াল টেবিল)।
+
+এটি আসলে database-এ physically data store করে না, বরং একটি SELECT query store করে রাখে।
+
+👉 **সহজভাবে:**
+```sql
+View = Saved SELECT Query
+```
+অথবা,
+```sql
+View = Virtual Table
+```
+---
+
+## Why Views Are Needed?
+
+ধরি University Database এ Students table আছে:
+
+| StudentID | Name | Email | Phone | CGPA |
+|------------|------|--------|--------|------|
+| 101 | Rahim | rahim@gmail.com | 017xxxx | 3.90 |
+| 102 | Karim | karim@gmail.com | 018xxxx | 3.75 |
+
+---
+
+এখন Teacher শুধু Name এবং CGPA দেখতে পারবে।
+
+কিন্তু Email এবং Phone দেখতে পারবে না।
+
+প্রতিবার এই Query লিখতে হবে:
+```sql
+SELECT Name, CGPA
+FROM Students;
+
+```
+---
+
+এর পরিবর্তে একটি View তৈরি করা যায়।
+```sql
+CREATE VIEW StudentResultView AS
+SELECT Name, CGPA
+FROM Students;
+
+```
+---
+
+এখন শুধু:
+```sql
+SELECT *
+FROM StudentResultView;
+
+```
+---
+
+লিখলেই হবে।
+
+---
+
+## Real-Life Meaning
+
+View অনেকটা shortcut এর মতো।
+
+যেমন:
+```sql
+Desktop Shortcut
+        ↓
+Actual Software
+
+```
+---
+
+তেমনি,
+```sql
+View
+   ↓
+Original Table
+
+```
+---
+
+View নিজের data রাখে না।
+
+মূল table থেকেই data নিয়ে আসে।
+
+---
+
+## Syntax
+
+### Creating a View
+```sql
+CREATE VIEW view_name AS
+SELECT column1, column2
+FROM table_name
+WHERE condition;
+
+```
+---
 ---
 </details>  
 
