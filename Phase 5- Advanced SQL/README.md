@@ -2380,7 +2380,115 @@ DATE
 UNION এবং JOIN গুলিয়ে ফেলা
 
 ---
+## UNION
 
+Rows combine করে
+```sql
+Top
++
+Bottom
+
+```
+---
+
+## JOIN
+
+Columns combine করে
+```sql
+Side by Side
+```
+---
+
+## UNION vs JOIN
+
+| UNION | JOIN |
+|------|------|
+| Rows combine | Columns combine |
+| Same structure দরকার | Relationship দরকার |
+| Vertical Merge | Horizontal Merge |
+
+---
+
+## Visual Memory Trick
+
+### UNION
+```sql
+Table A
+
+Rahim
+Karim
+
++
+
+Table B
+
+Sakib
+Nayeem
+
+↓
+
+Rahim
+Karim
+Sakib
+Nayeem
+
+```
+---
+
+### JOIN
+```sql
+Students + Departments
+
+Rahim | CSE
+Karim | EEE
+
+```
+---
+
+## Common Viva Questions
+
+### Q: UNION কী?
+
+Multiple SELECT query এর result combine করার operator।
+
+---
+
+### Q: UNION duplicate remove করে?
+
+হ্যাঁ।
+
+---
+
+### Q: UNION ALL duplicate remove করে?
+
+না।
+
+---
+
+### Q: UNION এর জন্য column সংখ্যা কি same হতে হবে?
+
+হ্যাঁ।
+
+---
+
+### Q: UNION এবং JOIN এর পার্থক্য কী?
+
+UNION rows combine করে, JOIN columns combine করে।
+
+---
+
+## Quick Summary
+
+```sql
+UNION = Combine Results + Remove Duplicates
+
+UNION ALL = Combine Results + Keep Duplicates
+
+UNION = Vertical Merge
+
+JOIN = Horizontal Merge
+
+```
 ---
 </details>  
 
