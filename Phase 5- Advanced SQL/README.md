@@ -2855,7 +2855,17 @@ DROP VIEW StudentView;
 মূল table delete হবে না।
 
 ---
+## View vs Table
 
+| Feature | View | Table |
+|----------|------|------|
+| Stores Data | ❌ | ✅ |
+| Virtual | ✅ | ❌ |
+| Physical Storage | ❌ | ✅ |
+| Based on Query | ✅ | ❌ |
+| Can Be Updated | Sometimes | ✅ |
+
+---
 ---
 </details>  
 
