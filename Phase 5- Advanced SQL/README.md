@@ -3079,7 +3079,78 @@ Table stores Data
 <details>  
   <summary><b>Indexing</b></summary>
 
+# Indexing in SQL
 
+Index হলো database-এর একটি special data structure, যেটা query execution fast করার জন্য ব্যবহার হয়।
+
+👉 **সহজভাবে:**
+
+Index = Database-এর “Book Index” (সূচিপত্র)
+
+---
+
+## Why Indexing is Important?
+
+Large table এ data খুঁজতে গেলে SQL পুরো table scan করতে পারে (Full Table Scan)।
+
+এটা slow হয়।
+
+Index থাকলে SQL সরাসরি দ্রুত location খুঁজে পায়।
+
+---
+
+### Without Index
+```sql
+Search → পুরো table scan (slow)
+```
+---
+
+### With Index
+```sql
+Search → direct location (fast)
+```
+---
+
+## Real-Life Example
+
+ধরি একটি Students table আছে:
+
+| StudentID | Name | CGPA |
+|------------|------|------|
+| 101 | Rahim | 3.90 |
+| 102 | Karim | 3.75 |
+| 103 | Sakib | 3.85 |
+
+---
+
+এখন যদি এই query দাও:
+```sql
+SELECT *
+FROM Students
+WHERE StudentID = 103;
+
+```
+---
+
+👉 Index থাকলে:
+
+Database সরাসরি 103 খুঁজে পাবে
+
+👉 Index না থাকলে:
+
+সব row check করতে হবে
+
+---
+
+## Basic Syntax
+
+### Create Index
+```sql
+CREATE INDEX index_name
+ON table_name (column_name);
+
+```
+---
 ---
 </details>  
 
