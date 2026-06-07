@@ -2933,6 +2933,44 @@ Original table change হলে View নষ্ট হতে পারে।
 
 ---
 
+## Real-Life Example
+
+ধরি University Portal আছে।
+
+---
+
+### Student Table
+
+| StudentID | Name | Email | CGPA |
+|------------|------|--------|------|
+
+---
+
+Teacher কে শুধু Result দেখতে দিতে হবে।
+
+---
+
+### Create View:
+```sql
+CREATE VIEW ResultView AS
+SELECT Name, CGPA
+FROM Students;
+
+```
+---
+
+### Teacher Query:
+```sql
+SELECT *
+FROM ResultView;
+
+```
+---
+
+Teacher Email বা Sensitive Info দেখতে পারবে না।
+
+---
+
 ---
 </details>  
 
