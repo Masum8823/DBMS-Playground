@@ -2866,6 +2866,73 @@ DROP VIEW StudentView;
 | Can Be Updated | Sometimes | ✅ |
 
 ---
+## Advantages of Views
+
+### 1. Security
+
+Sensitive column hide করা যায়।
+
+---
+
+### Example:
+```sql
+SELECT Name, CGPA
+```
+---
+
+দেখাবে,
+
+কিন্তু:
+```sql
+Email
+Password
+Phone
+
+```
+---
+
+দেখাবে না।
+
+---
+
+### 2. Simplicity
+
+Complex query save করা যায়।
+
+---
+
+### 3. Reusability
+
+একবার তৈরি করে বারবার ব্যবহার করা যায়।
+
+---
+
+### 4. Data Abstraction
+
+User কে table structure জানতেই হয় না।
+
+---
+
+## Disadvantages of Views
+
+### 1. Large Query হলে Slow হতে পারে
+
+বিশেষ করে multiple JOIN থাকলে।
+
+---
+
+### 2. Some Views Not Updateable
+
+সব View modify করা যায় না।
+
+---
+
+### 3. Dependency Problem
+
+Original table change হলে View নষ্ট হতে পারে।
+
+---
+
 ---
 </details>  
 
