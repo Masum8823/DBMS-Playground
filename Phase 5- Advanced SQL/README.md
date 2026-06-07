@@ -3054,7 +3054,23 @@ ALTER VIEW
 DROP VIEW
 ```
 ---
+## Quick Summary
 
+```sql
+View = Virtual Table
+
+View = Saved SELECT Query
+
+CREATE VIEW → Create View
+
+ALTER VIEW → Modify View
+
+DROP VIEW → Delete View
+
+View stores Query
+Table stores Data
+
+```
 ---
 </details>  
 
