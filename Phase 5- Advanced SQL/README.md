@@ -2970,7 +2970,53 @@ FROM ResultView;
 Teacher Email বা Sensitive Info দেখতে পারবে না।
 
 ---
+## Common Mistakes
 
+### Mistake 1
+
+View কে Table মনে করা
+
+❌
+```sql
+View stores data
+```
+---
+
+✔ Correct
+```sql
+View stores query
+```
+---
+
+### Mistake 2
+
+DROP VIEW করলে Table delete হবে ভাবা
+
+❌
+```sql
+Table delete হবে
+```
+---
+
+✔ Correct
+```sql
+Only View delete হবে
+```
+---
+
+### Mistake 3
+
+সব View updateable ভাবা
+
+❌
+```sql
+All Views can be updated
+```
+---
+
+✔ অনেক View updateable না।
+
+---
 ---
 </details>  
 
