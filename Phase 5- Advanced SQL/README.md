@@ -3187,6 +3187,128 @@ WHERE CGPA > 3.80;
 👉 Index থাকলে performance improve হবে
 
 ---
+## Types of Indexing
+
+---
+
+### 1. Primary Index (Automatically Created)
+
+Primary Key দিলে auto index তৈরি হয়
+```sql
+StudentID PRIMARY KEY
+```
+---
+
+👉 Automatically indexed
+
+---
+
+### 2. Unique Index
+
+UNIQUE constraint দিলে index তৈরি হয়
+```sql
+CREATE UNIQUE INDEX idx_email
+ON Students(Email);
+
+```
+---
+
+### 3. Clustered Index
+
+👉 Table data physically sorted থাকে index অনুযায়ী
+
+- একটাই clustered index per table
+- Usually primary key হয়
+
+---
+
+### 4. Non-Clustered Index
+
+👉 Separate structure তৈরি হয়
+
+👉 Data physically change হয় না
+
+---
+
+## Clustered vs Non-Clustered
+
+| Feature | Clustered | Non-Clustered |
+|----------|----------|---------------|
+| Data Order | Sorted | Not Sorted |
+| Count | 1 per table | Multiple |
+| Speed | Faster for range | Fast for lookup |
+
+---
+
+## Example Scenario
+
+### Clustered Index (StudentID)
+```sql
+101 → 102 → 103 → 104
+```
+---
+
+### Non-Clustered Index (Name)
+```sql
+Rahim → pointer → row 101
+Karim → pointer → row 102
+
+```
+---
+
+### 5. Composite Index
+
+👉 Multiple columns একসাথে index করা
+
+---
+```sql
+CREATE INDEX idx_name_cgpa
+ON Students(Name, CGPA);
+
+```
+---
+
+👉 দুই column একসাথে search fast হবে
+
+---
+
+### Example Query
+```sql
+SELECT *
+FROM Students
+WHERE Name = 'Rahim'
+AND CGPA = 3.90;
+
+```
+---
+
+👉 Composite index match করবে
+
+---
+
+### 6. Unique Index
+
+👉 duplicate value allow করে না
+```sql
+CREATE UNIQUE INDEX idx_student_id
+ON Students(StudentID);
+
+```
+---
+
+👉 StudentID unique থাকবে
+
+---
+
+### 7. Drop Index
+
+Index delete করতে:
+```sql
+DROP INDEX idx_student_name;
+```
+---
+👉 Only index delete হবে, table না
+---
 ---
 </details>  
 
