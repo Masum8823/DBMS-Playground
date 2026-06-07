@@ -3017,6 +3017,44 @@ All Views can be updated
 ✔ অনেক View updateable না।
 
 ---
+## Common Viva Questions
+
+### Q: View কী?
+
+Virtual Table বা Saved SELECT Query।
+
+---
+
+### Q: View কি data store করে?
+
+না।
+
+---
+
+### Q: View কেন ব্যবহার করা হয়?
+
+Security, simplicity এবং reusability এর জন্য।
+
+---
+
+### Q: View delete করলে Table delete হয়?
+
+না।
+
+---
+
+### Q: View modify করতে কোন command ব্যবহার হয়?
+```sql
+ALTER VIEW
+```
+---
+
+### Q: View delete করতে কোন command ব্যবহার হয়?
+```sql
+DROP VIEW
+```
+---
+
 ---
 </details>  
 
