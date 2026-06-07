@@ -3151,6 +3151,42 @@ ON table_name (column_name);
 
 ```
 ---
+## Example 1: Simple Index
+```sql
+CREATE INDEX idx_student_name
+ON Students(Name);
+
+```
+---
+
+👉 এখন Name column search fast হবে।
+
+---
+
+## Example 2: Index on CGPA
+```sql
+CREATE INDEX idx_cgpa
+ON Students(CGPA);
+
+```
+---
+
+👉 CGPA based search দ্রুত হবে
+
+---
+
+### Example Query
+```sql
+SELECT *
+FROM Students
+WHERE CGPA > 3.80;
+
+```
+---
+
+👉 Index থাকলে performance improve হবে
+
+---
 ---
 </details>  
 
