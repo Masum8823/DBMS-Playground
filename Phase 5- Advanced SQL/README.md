@@ -3399,7 +3399,35 @@ INSERT → Index update → slower
 ❌ Low-selectivity column (e.g. gender)
 
 ---
+## Real-Life Example
 
+### University System
+
+### Fast Search:
+```sql
+SELECT *
+FROM Students
+WHERE StudentID = 101;
+
+```
+---
+
+👉 Primary index used
+
+---
+
+### Fast Filter:
+```sql
+SELECT *
+FROM Students
+WHERE CGPA > 3.80;
+
+```
+---
+
+👉 CGPA index used
+
+---
 ---
 </details>  
 
