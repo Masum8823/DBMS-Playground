@@ -3309,6 +3309,29 @@ DROP INDEX idx_student_name;
 ---
 👉 Only index delete হবে, table না
 ---
+## How Index Works Internally
+
+Index সাধারণত B-Tree structure ব্যবহার করে।
+
+---
+
+### Without Index
+```sql
+1 → 2 → 3 → 4 → 5 → full scan
+```
+---
+
+### With Index
+```sql
+        3
+      /   \
+     1     5
+
+```
+👉 faster search path
+
+---
+
 ---
 </details>  
 
