@@ -3572,6 +3572,37 @@ EXEC GetAllStudents;
 👉 বারবার SELECT লিখতে হবে না
 
 ---
+## 2. Stored Procedure with Parameter
+
+👉 specific student খুঁজতে
+
+### Syntax
+```sql
+CREATE PROCEDURE GetStudentByID
+    @StudentID INT
+AS
+BEGIN
+    SELECT *
+    FROM Students
+    WHERE StudentID = @StudentID;
+END;
+
+```
+---
+
+### Execute
+```sql
+EXEC GetStudentByID 101;
+```
+---
+
+### Output
+
+| StudentID | Name | CGPA |
+|------------|------|------|
+| 101 | Rahim | 3.90 |
+
+---
 ---
 </details>  
 
