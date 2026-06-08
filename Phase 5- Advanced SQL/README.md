@@ -3378,6 +3378,28 @@ INSERT → Index update → slower
 ### 3. Too Many Index = Bad Performance
 
 ---
+## When to Use Index?
+
+✔ Large table
+
+✔ Frequently searched column
+
+✔ JOIN column
+
+✔ WHERE condition column
+
+---
+
+## When NOT to Use Index?
+
+❌ Small table
+
+❌ Frequently updated column
+
+❌ Low-selectivity column (e.g. gender)
+
+---
+
 ---
 </details>  
 
