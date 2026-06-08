@@ -3506,7 +3506,50 @@ Tradeoff = Speed vs Storage
 <details>  
   <summary><b>Stored Procedure</b></summary>
 
+# Stored Procedure in SQL
 
+Stored Procedure হলো pre-written SQL code block, যেটা database-এর ভিতরে save করে রাখা হয় এবং পরে বারবার execute করা যায়।
+
+👉 **সহজভাবে:**
+
+Stored Procedure = Saved SQL Program
+
+---
+
+## Why Stored Procedure is Important?
+
+Real-world system এ একই query বারবার ব্যবহার করতে হয়।
+
+উদাহরণ:
+
+- Login check
+- Student insert
+- Salary update
+- Report generate
+
+এইসব বারবার লিখলে time waste হয়। তাই procedure ব্যবহার করা হয়।
+
+---
+
+## Basic Syntax
+```sql
+CREATE PROCEDURE procedure_name
+AS
+BEGIN
+    SQL statements
+END;
+
+```
+---
+
+## Example Table: Students
+
+| StudentID | Name | CGPA |
+|------------|------|------|
+| 101 | Rahim | 3.90 |
+| 102 | Karim | 3.75 |
+
+---
 ---
 </details>  
 
