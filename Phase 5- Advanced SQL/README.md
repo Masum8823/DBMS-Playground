@@ -3428,6 +3428,27 @@ WHERE CGPA > 3.80;
 👉 CGPA index used
 
 ---
+## Common Mistakes
+
+---
+
+### Mistake 1: Too many indexes
+
+❌ slows down insert/update
+
+---
+
+### Mistake 2: Index on every column
+
+❌ useless
+
+---
+
+### Mistake 3: Small table indexing
+
+❌ no benefit
+
+---
 ---
 </details>  
 
