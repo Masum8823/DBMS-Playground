@@ -3449,6 +3449,40 @@ WHERE CGPA > 3.80;
 ❌ no benefit
 
 ---
+## Viva Questions
+
+---
+
+### Q: Indexing কী?
+
+Database search fast করার technique।
+
+---
+
+### Q: Indexing কেন ব্যবহার করা হয়?
+
+Query performance improve করার জন্য।
+
+---
+
+### Q: Index কি data store করে?
+
+না, শুধু reference রাখে।
+
+---
+
+### Q: Primary key কি automatically indexed?
+
+হ্যাঁ।
+
+---
+
+### Q: Index disadvantage কী?
+
+Storage বেশি লাগে এবং insert/update slow হয়।
+
+---
+
 ---
 </details>  
 
