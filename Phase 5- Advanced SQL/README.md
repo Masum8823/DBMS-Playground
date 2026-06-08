@@ -3550,6 +3550,28 @@ END;
 | 102 | Karim | 3.75 |
 
 ---
+## 1. Simple Stored Procedure
+
+👉 সব students দেখানোর procedure
+```sql
+CREATE PROCEDURE GetAllStudents
+AS
+BEGIN
+    SELECT * FROM Students;
+END;
+
+```
+---
+
+### Execute
+```sql
+EXEC GetAllStudents;
+```
+---
+
+👉 বারবার SELECT লিখতে হবে না
+
+---
 ---
 </details>  
 
