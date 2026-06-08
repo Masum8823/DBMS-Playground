@@ -3482,7 +3482,22 @@ Query performance improve করার জন্য।
 Storage বেশি লাগে এবং insert/update slow হয়।
 
 ---
+## Quick Summary
 
+```sql
+Index = Speed booster
+
+CREATE INDEX → create index
+
+DROP INDEX → remove index
+
+Clustered → sorted data
+
+Non-clustered → pointer based
+
+Tradeoff = Speed vs Storage
+
+```
 ---
 </details>  
 
