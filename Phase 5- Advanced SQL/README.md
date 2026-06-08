@@ -3331,7 +3331,53 @@ Index সাধারণত B-Tree structure ব্যবহার করে।
 👉 faster search path
 
 ---
+## Advantages of Indexing
 
+---
+
+### 1. Fast Search
+```sql
+SELECT * FROM Students WHERE Name='Rahim';
+```
+---
+
+### 2. Fast Sorting
+```sql
+ORDER BY CGPA
+```
+---
+
+### 3. Faster JOIN
+```sql
+JOIN on indexed columns
+```
+---
+
+### 4. Better Performance in Large Data
+
+---
+
+## Disadvantages of Indexing
+
+---
+
+### 1. Extra Storage
+
+Index আলাদা space নেয়
+
+---
+
+### 2. Slow INSERT/UPDATE
+
+কারণ index update করতে হয়
+```sql
+INSERT → Index update → slower
+```
+---
+
+### 3. Too Many Index = Bad Performance
+
+---
 ---
 </details>  
 
