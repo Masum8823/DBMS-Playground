@@ -3667,6 +3667,24 @@ END;
 EXEC UpdateCGPA 101, 4.00;
 ```
 ---
+## 6. Delete using Stored Procedure
+```sql
+CREATE PROCEDURE DeleteStudent
+    @StudentID INT
+AS
+BEGIN
+    DELETE FROM Students
+    WHERE StudentID = @StudentID;
+END;
+
+```
+---
+
+### Execute
+```sql
+EXEC DeleteStudent 102;
+```
+---
 ---
 </details>  
 
