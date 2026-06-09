@@ -3647,6 +3647,26 @@ EXEC AddStudent 'Sakib', 3.85;
 👉 data automatically insert হবে
 
 ---
+## 5. Update using Stored Procedure
+```sql
+CREATE PROCEDURE UpdateCGPA
+    @StudentID INT,
+    @CGPA FLOAT
+AS
+BEGIN
+    UPDATE Students
+    SET CGPA = @CGPA
+    WHERE StudentID = @StudentID;
+END;
+
+```
+---
+
+### Execute
+```sql
+EXEC UpdateCGPA 101, 4.00;
+```
+---
 ---
 </details>  
 
