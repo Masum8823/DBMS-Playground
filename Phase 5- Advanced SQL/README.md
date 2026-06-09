@@ -4199,6 +4199,33 @@ Product sold → stock automatically decrease
 | Use | Auto actions | Manual operations |
 
 ---
+## Common Mistakes
+
+---
+
+### Mistake 1: Trigger manually run করার চেষ্টা
+
+❌
+```sql
+EXEC trigger_name;
+```
+---
+
+✔ Trigger run হয় automatically
+
+---
+
+### Mistake 2: Wrong event type
+
+❌ AFTER INSERT on UPDATE logic
+
+---
+
+### Mistake 3: Infinite loop trigger
+
+❌ Trigger নিজেই আবার trigger call করলে loop হয়
+
+---
 ---
 </details>  
 
