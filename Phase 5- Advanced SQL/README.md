@@ -3991,6 +3991,63 @@ WHERE StudentID = 101;
 👉 Update হলে trigger run হবে automatically
 
 ---
+## 3. DELETE Trigger
+
+👉 student delete হলে log হবে
+
+---
+```sql
+CREATE TRIGGER trg_student_delete
+ON Students
+AFTER DELETE
+AS
+BEGIN
+    INSERT INTO Logs(Message)
+    VALUES ('Student deleted');
+END;
+
+```
+---
+
+### Example
+```sql
+DELETE FROM Students
+WHERE StudentID = 102;
+
+```
+---
+
+👉 delete হলে trigger execute হবে
+
+---
+
+## Types of Triggers
+
+---
+
+### 1. AFTER Trigger
+
+👉 event হওয়ার পরে execute হয়
+```sql
+INSERT → then Trigger runs
+```
+---
+
+### 2. BEFORE Trigger (MySQL)
+
+👉 event হওয়ার আগে execute হয়
+```sql
+Trigger → then INSERT/UPDATE/DELETE
+```
+---
+
+### 3. INSTEAD OF Trigger
+
+👉 event কে replace করে নিজের logic চালায়
+```sql
+Instead of INSERT → custom logic runs
+```
+---
 ---
 </details>  
 
