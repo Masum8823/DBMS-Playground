@@ -3961,7 +3961,36 @@ VALUES (103, 'Sakib', 3.85);
 👉 Trigger automatically run হবে
 
 ---
+## 2. UPDATE Trigger
 
+👉 CGPA change হলে log হবে
+```sql
+CREATE TRIGGER trg_student_update
+ON Students
+AFTER UPDATE
+AS
+BEGIN
+    INSERT INTO Logs(Message)
+    VALUES ('Student data updated');
+END;
+
+```
+---
+
+---
+
+### Example
+```sql
+UPDATE Students
+SET CGPA = 4.00
+WHERE StudentID = 101;
+
+```
+---
+
+👉 Update হলে trigger run হবে automatically
+
+---
 ---
 </details>  
 
