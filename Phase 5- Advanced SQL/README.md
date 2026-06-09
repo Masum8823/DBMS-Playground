@@ -3774,7 +3774,43 @@ EXEC GetTopStudents;
 👉 এক ক্লিকে report তৈরি
 
 ---
+## Common Mistakes
 
+---
+
+### Mistake 1: EXEC ছাড়া call করা
+
+❌
+```sql
+GetAllStudents
+```
+---
+
+✔ Correct:
+```sql
+EXEC GetAllStudents;
+```
+---
+
+### Mistake 2: Parameter ভুল order
+
+❌
+```sql
+EXEC GetStudentByID 'Rahim';
+```
+---
+
+✔ Correct:
+```sql
+EXEC GetStudentByID 101;
+```
+---
+
+### Mistake 3: BEGIN END ভুল
+
+❌ missing block
+
+---
 ---
 </details>  
 
