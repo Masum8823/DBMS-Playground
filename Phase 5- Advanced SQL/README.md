@@ -3863,7 +3863,65 @@ Used for reuse, speed, security
 <details>  
   <summary><b>Trigger</b></summary>
 
+# Trigger in SQL
 
+Trigger হলো এমন এক special type of stored program, যেটা automatically execute হয় যখন কোনো event ঘটে (INSERT, UPDATE, DELETE)।
+
+👉 **সহজভাবে:**
+
+Trigger = Automatic Action on Database Event
+
+---
+
+## When Trigger Works?
+
+Trigger automatically run হয় যখন:
+
+- INSERT → নতুন data insert হলে
+- UPDATE → data modify হলে
+- DELETE → data delete হলে
+
+---
+
+## Basic Idea
+```sql
+User Action → Trigger Automatically Runs → Extra Work Done
+```
+---
+
+## Why Trigger is Important?
+
+Real-world system এ অনেক automatic কাজ লাগে:
+
+- Log maintain করা
+- Audit system তৈরি করা
+- Salary auto update করা
+- Stock update করা
+- Data validation করা
+
+---
+
+## Basic Syntax
+```sql
+CREATE TRIGGER trigger_name
+ON table_name
+AFTER INSERT | UPDATE | DELETE
+AS
+BEGIN
+    SQL statements
+END;
+
+```
+---
+
+## Example Table: Students
+
+| StudentID | Name | CGPA |
+|------------|------|------|
+| 101 | Rahim | 3.90 |
+| 102 | Karim | 3.75 |
+
+---
 ---
 </details>  
 
