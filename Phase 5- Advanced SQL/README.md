@@ -3624,6 +3624,29 @@ END;
 EXEC GetStudentByDeptAndCGPA 'CSE', 3.80;
 ```
 ---
+## 4. Insert using Stored Procedure
+```sql
+CREATE PROCEDURE AddStudent
+    @Name VARCHAR(50),
+    @CGPA FLOAT
+AS
+BEGIN
+    INSERT INTO Students(Name, CGPA)
+    VALUES (@Name, @CGPA);
+END;
+
+```
+---
+
+### Execute
+```sql
+EXEC AddStudent 'Sakib', 3.85;
+```
+---
+
+👉 data automatically insert হবে
+
+---
 ---
 </details>  
 
