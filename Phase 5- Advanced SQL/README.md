@@ -3740,6 +3740,16 @@ EXEC DeleteStudent 102;
 👉 server-side load বাড়ে
 
 ---
+## Stored Procedure vs Function
+
+| Feature | Stored Procedure | Function |
+|----------|------------------|----------|
+| Return Value | optional | must return |
+| DML allowed | yes | limited |
+| Execution | EXEC | SELECT |
+| Use | operations | calculations |
+
+---
 ---
 </details>  
 
