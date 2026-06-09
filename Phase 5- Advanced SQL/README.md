@@ -4280,6 +4280,29 @@ Used for automation & auditing
 <details>  
   <summary><b>Functions</b></summary>
 
+# Functions in SQL
+
+SQL Function হলো এমন একটি reusable block of code, যেটা input নিয়ে process করে output return করে।
+
+👉 **সহজভাবে:**
+
+Function = Input → Process → Output
+
+---
+
+## Why SQL Functions Are Used?
+
+Real database এ বারবার একই ধরনের কাজ করতে হয়:
+
+- CGPA calculation
+- Age calculation
+- Salary calculation
+- Text formatting
+- Data aggregation
+
+👉 এগুলো বারবার লিখলে time waste হয়, তাই function ব্যবহার করা হয়।
+
+---
 
 ---
 </details>  
