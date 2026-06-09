@@ -4082,6 +4082,27 @@ END;
 👉 delete হবে না, শুধু log হবে
 
 ---
+## Trigger with OLD and NEW Values
+
+---
+
+### UPDATE Trigger Example
+```sql
+CREATE TRIGGER trg_update_log
+ON Students
+AFTER UPDATE
+AS
+BEGIN
+    INSERT INTO Logs(Message)
+    VALUES ('CGPA changed from OLD to NEW');
+END;
+
+```
+---
+
+👉 advanced tracking করা যায়
+
+---
 ---
 </details>  
 
