@@ -4259,6 +4259,19 @@ Automation, audit, validation এর জন্য।
 Trigger automatic, procedure manual।
 
 ---
+## Quick Summary
+
+```sql
+Trigger = Automatic SQL Action
+
+INSERT/UPDATE/DELETE → Trigger runs
+
+Types:
+AFTER, BEFORE, INSTEAD OF
+
+Used for automation & auditing
+
+```
 ---
 </details>  
 
