@@ -4226,6 +4226,39 @@ EXEC trigger_name;
 ❌ Trigger নিজেই আবার trigger call করলে loop হয়
 
 ---
+## Viva Questions
+
+---
+
+### Q: Trigger কী?
+
+Database event ঘটলে automatically execute হওয়া SQL block।
+
+---
+
+### Q: Trigger কখন execute হয়?
+
+INSERT, UPDATE, DELETE এর পরে বা আগে।
+
+---
+
+### Q: Trigger manually run করা যায়?
+
+না।
+
+---
+
+### Q: Trigger কেন ব্যবহার করা হয়?
+
+Automation, audit, validation এর জন্য।
+
+---
+
+### Q: Trigger vs Procedure?
+
+Trigger automatic, procedure manual।
+
+---
 ---
 </details>  
 
