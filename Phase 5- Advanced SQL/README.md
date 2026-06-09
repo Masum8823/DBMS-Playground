@@ -3811,6 +3811,39 @@ EXEC GetStudentByID 101;
 ❌ missing block
 
 ---
+## Viva Questions
+
+---
+
+### Q: Stored Procedure কী?
+
+Pre-written SQL code block যা database এ save থাকে।
+
+---
+
+### Q: কেন ব্যবহার করা হয়?
+
+Reusability এবং performance এর জন্য।
+
+---
+
+### Q: Procedure কিভাবে execute করা হয়?
+```sql
+EXEC procedure_name;
+```
+---
+
+### Q: Stored Procedure কি return value দেয়?
+
+Optional।
+
+---
+
+### Q: Function vs Procedure পার্থক্য?
+
+Function must return value, procedure optional।
+
+---
 ---
 </details>  
 
