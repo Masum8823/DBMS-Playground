@@ -4048,6 +4048,40 @@ Trigger → then INSERT/UPDATE/DELETE
 Instead of INSERT → custom logic runs
 ```
 ---
+## BEFORE Trigger Example (MySQL)
+```sql
+CREATE TRIGGER trg_before_insert
+BEFORE INSERT
+ON Students
+FOR EACH ROW
+BEGIN
+    SET NEW.CGPA = 3.00;
+END;
+
+```
+---
+
+👉 insert হলেও CGPA automatically set হবে
+
+---
+
+## INSTEAD OF Trigger Example
+```sql
+CREATE TRIGGER trg_instead_of_delete
+ON Students
+INSTEAD OF DELETE
+AS
+BEGIN
+    INSERT INTO Logs(Message)
+    VALUES ('Delete blocked');
+END;
+
+```
+---
+
+👉 delete হবে না, শুধু log হবে
+
+---
 ---
 </details>  
 
