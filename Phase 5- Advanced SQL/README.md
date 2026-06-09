@@ -3685,6 +3685,61 @@ END;
 EXEC DeleteStudent 102;
 ```
 ---
+## Advantages of Stored Procedure
+
+---
+
+### 1. Faster Execution
+
+👉 compiled code থাকে database এ
+
+---
+
+### 2. Reusability
+
+👉 একবার লিখে বারবার ব্যবহার করা যায়
+
+---
+
+### 3. Security
+
+👉 direct table access না দিয়ে procedure ব্যবহার করা যায়
+
+---
+
+### 4. Less Network Traffic
+
+👉 multiple query একসাথে run হয়
+
+---
+
+### 5. Easy Maintenance
+
+👉 logic এক জায়গায় থাকে
+
+---
+
+## Disadvantages
+
+---
+
+### 1. Debugging Hard
+
+👉 error খুঁজে পাওয়া কঠিন
+
+---
+
+### 2. Database Dependent
+
+👉 এক DBMS থেকে অন্য DBMS এ সহজে move হয় না
+
+---
+
+### 3. Memory Usage
+
+👉 server-side load বাড়ে
+
+---
 ---
 </details>  
 
