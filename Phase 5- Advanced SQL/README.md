@@ -3922,6 +3922,46 @@ END;
 | 102 | Karim | 3.75 |
 
 ---
+## 1. INSERT Trigger
+
+👉 নতুন student insert হলে log তৈরি হবে
+
+---
+
+### Log Table
+
+| LogID | Message |
+|--------|---------|
+| 1 | Student added |
+
+---
+
+### Trigger
+```sql
+CREATE TRIGGER trg_student_insert
+ON Students
+AFTER INSERT
+AS
+BEGIN
+    INSERT INTO Logs(Message)
+    VALUES ('New student inserted');
+END;
+
+```
+---
+
+### Now Insert Data
+```sql
+INSERT INTO Students(StudentID, Name, CGPA)
+VALUES (103, 'Sakib', 3.85);
+
+```
+---
+
+👉 Trigger automatically run হবে
+
+---
+
 ---
 </details>  
 
