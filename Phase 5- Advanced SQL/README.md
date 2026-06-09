@@ -3750,6 +3750,31 @@ EXEC DeleteStudent 102;
 | Use | operations | calculations |
 
 ---
+## Real-Life Example
+
+### University System
+```sql
+CREATE PROCEDURE GetTopStudents
+AS
+BEGIN
+    SELECT Name, CGPA
+    FROM Students
+    WHERE CGPA > 3.80;
+END;
+
+```
+---
+
+### Execute
+```sql
+EXEC GetTopStudents;
+```
+---
+
+👉 এক ক্লিকে report তৈরি
+
+---
+
 ---
 </details>  
 
