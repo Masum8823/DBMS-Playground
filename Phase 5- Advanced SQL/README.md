@@ -3603,6 +3603,27 @@ EXEC GetStudentByID 101;
 | 101 | Rahim | 3.90 |
 
 ---
+## 3. Multiple Parameters
+```sql
+CREATE PROCEDURE GetStudentByDeptAndCGPA
+    @Dept VARCHAR(20),
+    @CGPA FLOAT
+AS
+BEGIN
+    SELECT *
+    FROM Students
+    WHERE Department = @Dept
+    AND CGPA >= @CGPA;
+END;
+
+```
+---
+
+### Execute
+```sql
+EXEC GetStudentByDeptAndCGPA 'CSE', 3.80;
+```
+---
 ---
 </details>  
 
