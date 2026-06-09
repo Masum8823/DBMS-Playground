@@ -4134,6 +4134,62 @@ END;
 Product sold → stock automatically decrease
 ```
 ---
+## Advantages of Trigger
+
+---
+
+### 1. Automatic Execution
+
+👉 manual query লাগেনা
+
+---
+
+### 2. Data Integrity
+
+👉 rules automatically enforce হয়
+
+---
+
+### 3. Audit System
+
+👉 কে কী change করলো track করা যায়
+
+---
+
+### 4. Business Logic Automation
+
+👉 complex logic automatic
+
+---
+
+## Disadvantages of Trigger
+
+---
+
+### 1. Performance Issue
+
+👉 অনেক trigger থাকলে slow হতে পারে
+
+---
+
+### 2. Debugging Hard
+
+👉 hidden execution হয়
+
+---
+
+### 3. Complexity
+
+👉 system বুঝতে কঠিন
+
+---
+
+### 4. Unexpected Behavior
+
+👉 user না জানলেও trigger run হয়
+
+---
+
 ---
 </details>  
 
