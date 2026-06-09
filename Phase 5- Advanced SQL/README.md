@@ -3843,7 +3843,18 @@ Optional।
 
 Function must return value, procedure optional।
 
----
+---## Quick Summary
+
+```sql
+Stored Procedure = Saved SQL Code
+
+EXEC → run procedure
+
+Supports parameters
+
+Used for reuse, speed, security
+
+```
 ---
 </details>  
 
