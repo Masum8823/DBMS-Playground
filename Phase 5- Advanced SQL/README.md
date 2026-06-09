@@ -4189,7 +4189,16 @@ Product sold → stock automatically decrease
 👉 user না জানলেও trigger run হয়
 
 ---
+## Trigger vs Stored Procedure
 
+| Feature | Trigger | Stored Procedure |
+|----------|----------|------------------|
+| Execution | Automatic | Manual (EXEC) |
+| Called By | Event | User |
+| Return Value | No | Optional |
+| Use | Auto actions | Manual operations |
+
+---
 ---
 </details>  
 
