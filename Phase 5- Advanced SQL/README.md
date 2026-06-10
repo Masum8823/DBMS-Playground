@@ -5395,6 +5395,30 @@ ROLLBACK;
 | SAVEPOINT | Partial undo point |
 
 ---
+## Example with SAVEPOINT
+```sql
+BEGIN;
+
+UPDATE Students
+SET CGPA = 3.80
+WHERE StudentID = 101;
+
+SAVEPOINT sp1;
+
+UPDATE Students
+SET CGPA = 2.50
+WHERE StudentID = 102;
+
+ROLLBACK TO sp1;
+
+COMMIT;
+
+```
+---
+
+👉 শুধু sp1 পর্যন্ত changes থাকবে
+
+---
 ---
 </details>  
 
