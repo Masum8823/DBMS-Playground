@@ -5386,6 +5386,15 @@ ROLLBACK;
 👉 original CGPA ফিরে আসবে
 
 ---
+## COMMIT vs SAVEPOINT vs ROLLBACK
+
+| Command | Purpose |
+|----------|---------|
+| COMMIT | Full save |
+| ROLLBACK | Full undo |
+| SAVEPOINT | Partial undo point |
+
+---
 ---
 </details>  
 
