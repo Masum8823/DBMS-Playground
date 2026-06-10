@@ -4714,7 +4714,81 @@ Input → Process → Output
 <details>  
   <summary><b>Transactions</b></summary>
 
+## Transactions in SQL
 
+Transaction হলো এক বা একাধিক SQL operation এর logical unit, যেটা একসাথে execute হয়।
+
+👉 **সহজভাবে:**
+
+Transaction = Group of SQL operations that work as one unit
+
+---
+
+## Real-Life Example
+
+ধরি Bank system:
+
+- Account A → টাকা কমবে
+- Account B → টাকা বাড়বে
+```sql
+Transfer Money = Debit + Credit
+```
+---
+
+দুইটা কাজ একসাথে হতে হবে।
+
+👉 একটাও fail হলে পুরো transaction fail হবে।
+
+---
+
+## Why Transaction is Needed?
+
+Real database এ সমস্যা হতে পারে:
+
+- power failure
+- system crash
+- network error
+
+Transaction ensure করে:
+
+✔ Data safe থাকবে
+
+✔ Partial update হবে না
+
+✔ Consistency maintain হবে
+
+---
+
+## Example Scenario
+
+### Money Transfer
+
+---
+```sql
+UPDATE Account
+SET Balance = Balance - 500
+WHERE AccountID = 1;
+
+UPDATE Account
+SET Balance = Balance + 500
+WHERE AccountID = 2;
+
+```
+---
+
+👉 যদি 2nd query fail করে:
+
+❌ টাকা deduct হয়ে যাবে কিন্তু receive হবে না (problem)
+
+---
+
+👉 Transaction solve করে:
+
+✔ Either both success
+
+✔ Or both fail
+
+---
 ---
 </details>  
 
