@@ -4564,6 +4564,13 @@ SELECT GetBonus(50000);
 5000
 ```
 ---
+## Aggregate vs Scalar vs User Function
+
+| Type | Input | Output | Example |
+|------|------|--------|---------|
+| Aggregate | Multiple rows | Single value | AVG(), SUM() |
+| Scalar | Single row | Single value | UPPER(), ROUND() |
+| User-defined | Custom input | Custom output | GetAge() |
 
 ---
 
