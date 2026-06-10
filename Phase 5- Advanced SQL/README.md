@@ -5002,6 +5002,33 @@ Same query → different result
 New rows appear during execution
 
 ---
+## Solution: Isolation Levels
+
+---
+
+### 1. Read Uncommitted (Lowest)
+
+Dirty read possible
+
+---
+
+### 2. Read Committed
+
+Only committed data read হয়
+
+---
+
+### 3. Repeatable Read
+
+Same data multiple read safe
+
+---
+
+### 4. Serializable (Highest)
+
+Fully safe, no concurrency issues
+
+---
 ---
 </details>  
 
