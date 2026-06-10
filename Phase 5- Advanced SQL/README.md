@@ -4660,6 +4660,39 @@ FROM Students;
 ### Mistake 3: Wrong datatype return
 
 ---
+## Viva Questions
+
+---
+
+### Q: SQL Function কী?
+
+Reusable code block যা input নিয়ে output দেয়।
+
+---
+
+### Q: Types of functions?
+
+Aggregate, Scalar, User-defined
+
+---
+
+### Q: Function vs Procedure?
+
+Function returns value, procedure may not.
+
+---
+
+### Q: Can function be used in SELECT?
+
+Yes.
+
+---
+
+### Q: Example of aggregate function?
+
+AVG(), SUM(), COUNT()
+
+---
 ---
 </details>  
 
