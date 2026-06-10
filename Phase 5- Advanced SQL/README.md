@@ -4789,6 +4789,78 @@ WHERE AccountID = 2;
 ✔ Or both fail
 
 ---
+## Properties of Transaction (ACID)
+
+Transaction এর 4টি main property আছে:
+
+---
+
+### 1. Atomicity (All or Nothing)
+```sql
+Either ALL operations complete
+OR NONE complete
+
+```
+---
+
+👉 partial execution allowed না
+
+---
+
+### Example
+
+Money transfer:
+
+- deduct success
+- credit fail
+
+👉 rollback হবে
+
+---
+
+### 2. Consistency
+
+Database সবসময় valid state এ থাকবে।
+```sql
+Before = valid
+After = valid
+
+```
+---
+
+### Example
+
+Balance negative হতে পারবে না
+
+---
+
+### 3. Isolation
+
+একাধিক transaction একসাথে চললেও তারা interfere করবে না।
+```sql
+T1 + T2 = independent execution
+```
+---
+
+### Example
+
+Two users buying same product → conflict হবে না
+
+---
+
+### 4. Durability
+
+Once transaction committed → data permanently saved
+```sql
+COMMIT = permanent
+```
+---
+
+### Example
+
+Power off হলেও data থাকবে
+
+---
 ---
 </details>  
 
