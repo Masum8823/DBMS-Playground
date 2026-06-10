@@ -5158,6 +5158,20 @@ Changes undo করে।
 Data safety and consistency maintain করার জন্য।
 
 ---
+## Quick Summary
+
+```sql
+Transaction = Group of SQL operations
+
+ACID = Core properties
+
+COMMIT = Save
+
+ROLLBACK = Undo
+
+SAVEPOINT = Partial rollback
+
+```
 ---
 </details>  
 
