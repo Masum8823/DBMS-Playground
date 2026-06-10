@@ -5125,6 +5125,39 @@ COMMIT;
 ❌ dangerous system
 
 ---
+## Viva Questions
+
+---
+
+### Q: Transaction কী?
+
+A group of SQL operations executed as a single unit.
+
+---
+
+### Q: ACID কী?
+
+Atomicity, Consistency, Isolation, Durability
+
+---
+
+### Q: COMMIT কী করে?
+
+Data permanently save করে।
+
+---
+
+### Q: ROLLBACK কী করে?
+
+Changes undo করে।
+
+---
+
+### Q: Why transaction is needed?
+
+Data safety and consistency maintain করার জন্য।
+
+---
 ---
 </details>  
 
