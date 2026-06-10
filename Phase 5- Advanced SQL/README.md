@@ -4861,6 +4861,41 @@ COMMIT = permanent
 Power off হলেও data থাকবে
 
 ---
+## Transaction States
+
+Transaction বিভিন্ন state এ থাকতে পারে:
+
+---
+
+### 1. Active
+
+Transaction চলছে
+
+---
+
+### 2. Partially Committed
+
+All queries executed but not saved permanently
+
+---
+
+### 3. Committed
+
+Success → permanently saved
+
+---
+
+### 4. Failed
+
+Error occurred
+
+---
+
+### 5. Aborted
+
+Rollback done
+
+---
 ---
 </details>  
 
