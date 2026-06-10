@@ -5073,7 +5073,17 @@ Fully safe, no concurrency issues
 ### 3. Deadlock possibility
 
 ---
+## Deadlock Example
+```sql
+T1 waits for T2
+T2 waits for T1
 
+```
+---
+
+👉 system stuck
+
+---
 ---
 </details>  
 
