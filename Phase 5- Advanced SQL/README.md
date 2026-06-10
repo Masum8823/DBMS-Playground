@@ -4389,6 +4389,79 @@ MIN(CGPA) = 3.75
 
 ```
 ---
+## (B) Scalar Functions
+
+Single value নিয়ে কাজ করে।
+
+---
+
+### 1. UPPER()
+```sql
+SELECT UPPER(Name)
+FROM Students;
+
+```
+---
+
+👉 সব name capital letter এ convert করবে
+
+---
+
+### 2. LOWER()
+```sql
+SELECT LOWER(Name)
+FROM Students;
+
+```
+---
+
+👉 সব name small letter
+
+---
+
+### 3. LENGTH()
+```sql
+SELECT LENGTH(Name)
+FROM Students;
+
+```
+---
+
+👉 name এর length বের করবে
+
+---
+
+### 4. ROUND()
+```sql
+SELECT ROUND(3.678, 2);
+```
+---
+
+👉 output = 3.68
+
+---
+
+### 5. NOW()
+```sql
+SELECT NOW();
+```
+---
+
+👉 current date & time দিবে
+
+---
+
+### 6. CONCAT()
+```sql
+SELECT CONCAT(Name, ' - CSE')
+FROM Students;
+
+```
+---
+
+👉 text join করবে
+
+---
 
 
 ---
