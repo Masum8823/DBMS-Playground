@@ -5242,6 +5242,34 @@ WHERE StudentID = 101;
 👉 এখন change permanently save হয়ে যাবে।
 
 ---
+## COMMIT Real-Life Meaning
+```sql
+Before COMMIT → Temporary change
+After COMMIT  → Permanent change
+
+```
+---
+
+## COMMIT Example (Bank System)
+```sql
+BEGIN TRANSACTION;
+
+UPDATE Account
+SET Balance = Balance - 1000
+WHERE AccountID = 1;
+
+UPDATE Account
+SET Balance = Balance + 1000
+WHERE AccountID = 2;
+
+COMMIT;
+
+```
+---
+
+👉 টাকা transfer permanently save হবে
+
+---
 ---
 </details>  
 
