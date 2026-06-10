@@ -4693,6 +4693,19 @@ Yes.
 AVG(), SUM(), COUNT()
 
 ---
+## Quick Summary
+
+```sql
+Function = Reusable SQL code
+
+Types:
+- Aggregate
+- Scalar
+- User-defined
+
+Input → Process → Output
+
+```
 ---
 </details>  
 
