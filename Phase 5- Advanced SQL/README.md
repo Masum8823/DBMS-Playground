@@ -4462,7 +4462,110 @@ FROM Students;
 👉 text join করবে
 
 ---
+# 2. User-Defined Functions (UDF)
 
+👉 Programmer নিজে function তৈরি করে
+
+---
+
+## Syntax (MySQL style)
+```sql
+CREATE FUNCTION function_name(parameters)
+RETURNS datatype
+DETERMINISTIC
+BEGIN
+    RETURN value;
+END;
+
+```
+---
+
+## Example 1: Age Calculation Function
+```sql
+CREATE FUNCTION GetAge(birth_year INT)
+RETURNS INT
+DETERMINISTIC
+BEGIN
+    RETURN 2026 - birth_year;
+END;
+
+```
+---
+
+### Use:
+```sql
+SELECT GetAge(2003);
+```
+---
+
+### Output:
+```sql
+23
+```
+---
+
+---
+
+## Example 2: CGPA Status Function
+```sql
+CREATE FUNCTION GetStatus(cgpa FLOAT)
+RETURNS VARCHAR(20)
+DETERMINISTIC
+BEGIN
+    IF cgpa >= 3.80 THEN
+        RETURN 'Excellent';
+    ELSEIF cgpa >= 3.50 THEN
+        RETURN 'Good';
+    ELSE
+        RETURN 'Average';
+    END IF;
+END;
+
+```
+---
+
+### Use:
+```sql
+SELECT Name, CGPA, GetStatus(CGPA)
+FROM Students;
+
+```
+---
+
+### Output:
+
+| Name | CGPA | Status |
+|------|------|--------|
+| Rahim | 3.90 | Excellent |
+| Karim | 3.75 | Good |
+
+---
+
+## Example 3: Salary Bonus Function
+```sql
+CREATE FUNCTION GetBonus(salary INT)
+RETURNS INT
+DETERMINISTIC
+BEGIN
+    RETURN salary * 0.10;
+END;
+
+```
+---
+
+### Use:
+```sql
+SELECT GetBonus(50000);
+```
+---
+
+### Output:
+```sql
+5000
+```
+---
+
+---
 
 ---
 </details>  
