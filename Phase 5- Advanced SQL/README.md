@@ -4896,6 +4896,86 @@ Error occurred
 Rollback done
 
 ---
+## Transaction Control Commands
+
+---
+
+### 1. COMMIT
+
+👉 save permanently
+```sql
+COMMIT;
+```
+---
+
+### 2. ROLLBACK
+
+👉 undo changes
+```sql
+ROLLBACK;
+```
+---
+
+### 3. SAVEPOINT
+
+👉 partial rollback point
+```sql
+SAVEPOINT sp1;
+```
+---
+
+### Example Transaction
+```sql
+BEGIN;
+
+UPDATE Account
+SET Balance = Balance - 1000
+WHERE AccountID = 1;
+
+SAVEPOINT sp1;
+
+UPDATE Account
+SET Balance = Balance + 1000
+WHERE AccountID = 2;
+
+COMMIT;
+
+```
+---
+
+### If Error Occurs
+```sql
+ROLLBACK TO sp1;
+```
+---
+
+👉 specific point এ ফিরে যাওয়া যায়
+
+---
+
+## Real-Life Example
+
+### Shopping System
+```sql
+Order placed →
+Stock reduce →
+Payment done
+
+```
+---
+
+👉 সবগুলো success হলে order confirm
+
+---
+
+### If failure:
+
+✔ No order
+
+✔ No payment deduction
+
+---
+
 ---
 </details>  
 
