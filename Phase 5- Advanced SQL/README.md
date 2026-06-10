@@ -5038,6 +5038,41 @@ Fully safe, no concurrency issues
 | Control | COMMIT/ROLLBACK | No control |
 
 ---
+## Advantages of Transactions
+
+---
+
+### 1. Data Integrity
+
+---
+
+### 2. Error Handling
+
+---
+
+### 3. Safe Concurrent Access
+
+---
+
+### 4. Reliable System
+
+---
+
+## Disadvantages
+
+---
+
+### 1. Performance overhead
+
+---
+
+### 2. Complex management
+
+---
+
+### 3. Deadlock possibility
+
+---
 
 ---
 </details>  
