@@ -5457,6 +5457,36 @@ Bank transaction completed successfully
 ATM transaction failed → money not deducted
 ```
 ---
+## Advantages
+
+### COMMIT
+
+- Data permanently safe
+- Reliable system
+
+---
+
+### ROLLBACK
+
+- Error correction
+- Data safety
+- Prevent corruption
+
+---
+
+## Disadvantages
+
+### COMMIT
+
+- Cannot undo after save
+
+---
+
+### ROLLBACK
+
+- Wastes processing time if frequent
+
+---
 ---
 </details>  
 
