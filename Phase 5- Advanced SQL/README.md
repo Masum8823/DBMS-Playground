@@ -4975,7 +4975,33 @@ Payment done
 ✔ No payment deduction
 
 ---
+## Concurrent Transactions Problem
 
+---
+
+### 1. Dirty Read
+
+Uncommitted data read করা
+
+---
+
+### 2. Lost Update
+
+এক transaction অন্যটা overwrite করে দেয়
+
+---
+
+### 3. Non-repeatable Read
+
+Same query → different result
+
+---
+
+### 4. Phantom Read
+
+New rows appear during execution
+
+---
 ---
 </details>  
 
