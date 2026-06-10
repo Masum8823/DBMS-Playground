@@ -5444,7 +5444,19 @@ ROLLBACK will NOT work
 Some systems automatically commit each query।
 
 ---
+## Real-Life Analogy
 
+### COMMIT
+```sql
+Bank transaction completed successfully
+```
+---
+
+### ROLLBACK
+```sql
+ATM transaction failed → money not deducted
+```
+---
 ---
 </details>  
 
