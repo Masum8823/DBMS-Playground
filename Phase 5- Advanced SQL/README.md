@@ -4626,6 +4626,21 @@ SELECT GetBonus(50000);
 | Purpose | Calculation | Operations |
 
 ---
+## Real-Life Example
+
+---
+
+### University System
+```sql
+SELECT Name, CGPA, GetStatus(CGPA)
+FROM Students;
+
+```
+---
+
+👉 automatically performance label দেখাবে
+
+---
 ---
 </details>  
 
