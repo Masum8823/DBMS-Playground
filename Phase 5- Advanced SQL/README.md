@@ -4641,6 +4641,25 @@ FROM Students;
 👉 automatically performance label দেখাবে
 
 ---
+## Common Mistakes
+
+---
+
+### Mistake 1: Function without RETURN
+
+❌ invalid
+
+---
+
+### Mistake 2: Using procedure in SELECT
+
+❌ not allowed
+
+---
+
+### Mistake 3: Wrong datatype return
+
+---
 ---
 </details>  
 
