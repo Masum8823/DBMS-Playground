@@ -5354,6 +5354,38 @@ ROLLBACK → Return Back
 
 ```
 ---
+## Transaction Flow Example
+```sql
+Start Transaction
+      ↓
+SQL Operations
+      ↓
+If Success → COMMIT
+If Error   → ROLLBACK
+
+```
+---
+
+## Example: Student Result System
+
+### Step 1: Update marks
+```sql
+UPDATE Students
+SET CGPA = 3.50
+WHERE StudentID = 102;
+
+```
+---
+
+### Step 2: Wrong update detected
+```sql
+ROLLBACK;
+```
+---
+
+👉 original CGPA ফিরে আসবে
+
+---
 ---
 </details>  
 
