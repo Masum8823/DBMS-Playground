@@ -5084,6 +5084,26 @@ T2 waits for T1
 👉 system stuck
 
 ---
+## Real Banking Example
+```sql
+BEGIN TRANSACTION;
+
+UPDATE Accounts
+SET Balance = Balance - 500
+WHERE ID = 1;
+
+UPDATE Accounts
+SET Balance = Balance + 500
+WHERE ID = 2;
+
+COMMIT;
+
+```
+---
+
+👉 safe money transfer
+
+---
 ---
 </details>  
 
