@@ -5285,6 +5285,32 @@ ROLLBACK = Cancel all changes
 ROLLBACK;
 ```
 ---
+## Example Scenario
+
+### Step 1: Update
+```sql
+UPDATE Students
+SET CGPA = 2.00
+WHERE StudentID = 101;
+
+```
+---
+
+### Step 2: Mistake detected
+
+👉 ভুল data update হয়ে গেছে
+
+---
+
+### Step 3: Rollback
+```sql
+ROLLBACK;
+```
+---
+
+👉 আগের data ফিরে আসবে
+
+---
 ---
 </details>  
 
