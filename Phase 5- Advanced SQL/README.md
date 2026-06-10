@@ -4616,6 +4616,16 @@ SELECT GetBonus(50000);
 ### 3. DB dependent
 
 ---
+## Function vs Stored Procedure
+
+| Feature | Function | Stored Procedure |
+|----------|----------|------------------|
+| Return value | Must return | Optional |
+| Used in SELECT | Yes | No |
+| DML allowed | Limited | Yes |
+| Purpose | Calculation | Operations |
+
+---
 ---
 </details>  
 
