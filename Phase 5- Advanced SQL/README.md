@@ -5335,6 +5335,25 @@ ROLLBACK;
 👉 টাকা deduct হবে না
 
 ---
+## COMMIT vs ROLLBACK
+
+| Feature | COMMIT | ROLLBACK |
+|----------|---------|----------|
+| Meaning | Save permanently | Undo changes |
+| Effect | Final change | Revert to previous state |
+| Usage | Success case | Error case |
+| Data State | Permanent | Restored |
+
+---
+
+## Simple Memory Trick
+```sql
+COMMIT → Confirm
+
+ROLLBACK → Return Back
+
+```
+---
 ---
 </details>  
 
