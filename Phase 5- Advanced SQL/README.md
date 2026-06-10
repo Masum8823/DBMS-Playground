@@ -5541,6 +5541,18 @@ Error হলে বা undo করতে চাইলে।
 COMMIT saves data permanently, ROLLBACK restores previous state।
 
 ---
+## Quick Summary
+
+```sql
+COMMIT = Save permanently
+
+ROLLBACK = Undo changes
+
+COMMIT → Final state
+
+ROLLBACK → Previous state
+
+```
 ---
 </details>  
 
