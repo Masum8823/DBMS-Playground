@@ -4573,7 +4573,49 @@ SELECT GetBonus(50000);
 | User-defined | Custom input | Custom output | GetAge() |
 
 ---
+## Advantages of Functions
 
+---
+
+### 1. Reusability
+
+👉 একবার লিখে বারবার ব্যবহার করা যায়
+
+---
+
+### 2. Code Cleaner
+
+👉 complex logic সহজ হয়
+
+---
+
+### 3. Better Performance
+
+👉 repeated logic avoid করা যায়
+
+---
+
+### 4. Maintainability
+
+👉 change এক জায়গায় করলেই হয়
+
+---
+
+## Disadvantages
+
+---
+
+### 1. Debugging Hard
+
+---
+
+### 2. Performance Issue (complex function)
+
+---
+
+### 3. DB dependent
+
+---
 ---
 </details>  
 
