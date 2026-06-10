@@ -5487,6 +5487,27 @@ ATM transaction failed → money not deducted
 - Wastes processing time if frequent
 
 ---
+## Common Mistakes
+
+---
+
+### Mistake 1: Forgetting COMMIT
+
+❌ changes stay temporary
+
+---
+
+### Mistake 2: Using ROLLBACK after COMMIT
+
+❌ no effect
+
+---
+
+### Mistake 3: Not using transactions in critical systems
+
+❌ data inconsistency
+
+---
 ---
 </details>  
 
