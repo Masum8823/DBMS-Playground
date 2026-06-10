@@ -5104,6 +5104,27 @@ COMMIT;
 👉 safe money transfer
 
 ---
+## Common Mistakes
+
+---
+
+### Mistake 1: COMMIT না দেওয়া
+
+❌ changes temporary থেকে যায়
+
+---
+
+### Mistake 2: Partial update without rollback
+
+❌ inconsistent data
+
+---
+
+### Mistake 3: No transaction use in banking
+
+❌ dangerous system
+
+---
 ---
 </details>  
 
