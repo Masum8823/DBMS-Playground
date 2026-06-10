@@ -5029,6 +5029,16 @@ Same data multiple read safe
 Fully safe, no concurrency issues
 
 ---
+## Transaction vs Query
+
+| Feature | Transaction | Query |
+|----------|------------|--------|
+| Unit | Multiple SQL | Single SQL |
+| Safety | High | Low |
+| Control | COMMIT/ROLLBACK | No control |
+
+---
+
 ---
 </details>  
 
