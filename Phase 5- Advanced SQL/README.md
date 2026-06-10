@@ -5311,6 +5311,30 @@ ROLLBACK;
 👉 আগের data ফিরে আসবে
 
 ---
+## ROLLBACK Real-Life Meaning
+```sql
+Mistake → Undo → Previous State Restore
+```
+---
+
+## Bank Example (Rollback)
+```sql
+BEGIN TRANSACTION;
+
+UPDATE Account
+SET Balance = Balance - 500
+WHERE AccountID = 1;
+
+-- error happened
+
+ROLLBACK;
+
+```
+---
+
+👉 টাকা deduct হবে না
+
+---
 ---
 </details>  
 
