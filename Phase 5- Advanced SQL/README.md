@@ -5419,6 +5419,32 @@ COMMIT;
 👉 শুধু sp1 পর্যন্ত changes থাকবে
 
 ---
+## Important Notes
+
+---
+
+### 1. COMMIT cannot be undone
+
+Once committed:
+```sql
+Permanent change
+```
+---
+
+### 2. ROLLBACK only works before COMMIT
+
+After commit:
+```sql
+ROLLBACK will NOT work
+```
+---
+
+### 3. Auto-commit in some DBMS
+
+Some systems automatically commit each query।
+
+---
+
 ---
 </details>  
 
