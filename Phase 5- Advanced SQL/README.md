@@ -5508,6 +5508,39 @@ ATM transaction failed → money not deducted
 ❌ data inconsistency
 
 ---
+## Viva Questions
+
+---
+
+### Q: COMMIT কী?
+
+Changes permanently save করার command।
+
+---
+
+### Q: ROLLBACK কী?
+
+Changes undo করার command।
+
+---
+
+### Q: COMMIT এর পর ROLLBACK কাজ করে?
+
+না।
+
+---
+
+### Q: ROLLBACK কখন ব্যবহার করা হয়?
+
+Error হলে বা undo করতে চাইলে।
+
+---
+
+### Q: Difference between COMMIT and ROLLBACK?
+
+COMMIT saves data permanently, ROLLBACK restores previous state।
+
+---
 ---
 </details>  
 
