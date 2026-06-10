@@ -5214,6 +5214,34 @@ COMMIT = Final Save
 COMMIT;
 ```
 ---
+## Example Scenario
+
+### Students table:
+
+| StudentID | Name | CGPA |
+|------------|------|------|
+| 101 | Rahim | 3.90 |
+
+---
+
+### Step 1: Update Query
+```sql
+UPDATE Students
+SET CGPA = 4.00
+WHERE StudentID = 101;
+
+```
+---
+
+### Step 2: Commit
+```sql
+
+```
+---
+
+👉 এখন change permanently save হয়ে যাবে।
+
+---
 ---
 </details>  
 
