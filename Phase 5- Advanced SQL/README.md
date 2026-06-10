@@ -5270,6 +5270,21 @@ COMMIT;
 👉 টাকা transfer permanently save হবে
 
 ---
+## 2. ROLLBACK in SQL
+
+ROLLBACK ব্যবহার করা হয় transaction undo করার জন্য।
+
+👉 **সহজভাবে:**
+
+ROLLBACK = Cancel all changes
+
+---
+
+## Syntax
+```sql
+ROLLBACK;
+```
+---
 ---
 </details>  
 
