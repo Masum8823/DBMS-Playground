@@ -5180,7 +5180,40 @@ SAVEPOINT = Partial rollback
 <details>  
   <summary><b>Commit & Rollback</b></summary>
 
+# COMMIT & ROLLBACK in SQL
 
+COMMIT এবং ROLLBACK হলো Transaction Control Language (TCL) এর দুইটা গুরুত্বপূর্ণ command, যেগুলো database transaction manage করতে ব্যবহার হয়।
+
+👉 **সহজভাবে:**
+
+- COMMIT = Save permanently
+- ROLLBACK = Undo changes
+
+---
+
+## Transaction Concept (Quick Recap)
+
+Transaction মানে এক বা একাধিক SQL operation একসাথে execute হওয়া।
+```sql
+BEGIN TRANSACTION → Work → COMMIT / ROLLBACK
+```
+---
+
+## 1. COMMIT in SQL
+
+COMMIT ব্যবহার করা হয় সব changes permanently database এ save করার জন্য।
+
+👉 **সহজভাবে:**
+
+COMMIT = Final Save
+
+---
+
+## Syntax
+```sql
+COMMIT;
+```
+---
 ---
 </details>  
 
