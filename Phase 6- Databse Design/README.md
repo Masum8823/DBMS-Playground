@@ -172,6 +172,64 @@ ________________________________________
 2NF = Remove partial dependency
 ```
 ---
+## 3NF (Third Normal Form) – Deep
+________________________________________
+
+## Rule of 3NF
+
+✔ Must be in 2NF  
+✔ No transitive dependency  
+________________________________________
+
+## What is Transitive Dependency?
+```sql
+A → B → C
+A indirectly determines C
+
+```
+________________________________________
+
+## Example (Not 3NF)
+
+| StudentID | Dept | DeptHead |
+|------------|------|----------|
+| 101 | CSE | Mr. X |
+| 102 | CSE | Mr. X |
+________________________________________
+
+## Dependency:
+```sql
+StudentID → Dept → DeptHead
+```
+________________________________________
+
+## Problem:
+
+👉 DeptHead depends on Dept, not StudentID  
+________________________________________
+
+## Solution (3NF Decomposition)
+
+## Students Table
+
+| StudentID | Dept |
+|------------|------|
+| 101 | CSE |
+| 102 | CSE |
+
+## Department Table
+
+| Dept | DeptHead |
+|------|----------|
+| CSE | Mr. X |
+________________________________________
+
+## Key Idea:
+```sql
+3NF = Remove transitive dependency
+```
+________________________________________
+
 </details>
 
 
