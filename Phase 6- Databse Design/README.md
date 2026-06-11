@@ -1082,6 +1082,45 @@ ________________________________________
 | Based on | Functional Dependency | Normal Forms |
 
 ________________________________________
+## Real-Life Example
+
+________________________________________
+
+## Before
+
+ ```sql
+Student + Dept + Course + Teacher (all in one table)
+```
+________________________________________
+
+## After Decomposition
+
+## Students
+
+| StudentID | Name | Dept |
+|-----------|------|-------|
+________________________________________
+
+## Departments
+
+| Dept | DeptHead |
+|-------|---------|
+________________________________________
+
+## Courses
+
+| Course | Teacher |
+|---------|------|
+________________________________________
+
+## Enrollment
+
+| StudentID | Course |
+|-----------|--------|
+
+👉 Clean and scalable design
+
+________________________________________
 ---
 </details>
 
