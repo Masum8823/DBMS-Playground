@@ -1348,6 +1348,31 @@ Logical design এর সময় normalization করা হয়:
 👉 redundancy remove করা হয়
 
 ________________________________________
+## 4. Physical Design
+
+এখানে actual database storage structure তৈরি করা হয়।
+
+________________________________________
+
+## Includes:
+
+•	File organization  
+•	Indexing  
+•	Storage method  
+•	Performance optimization  
+
+________________________________________
+
+## Example:
+
+ ```sql
+CREATE INDEX idx_student ON Student(StudentID);
+```
+________________________________________
+
+👉 database fast কাজ করে
+
+________________________________________
 ---
 </details>
 
