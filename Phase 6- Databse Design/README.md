@@ -438,7 +438,17 @@ ________________________________________
 More tables and more JOIN required।
 
 ________________________________________
+## Quick Summary
+```sql
+Normalization = Clean database design
 
+1NF → atomic values
+2NF → remove partial dependency
+3NF → remove transitive dependency
+BCNF → strongest rule (key-based design)
+
+```
+---
 </details>
 
 
