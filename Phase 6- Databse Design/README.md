@@ -7,3 +7,44 @@
 
 ---
 
+<details>
+    <summary><b>Normalization</b></summary>
+
+
+---
+</details>
+
+
+<details>
+    <summary><b>Functional Dependency</b></summary>
+
+
+---
+</details>
+
+
+<details>
+    <summary><b>Decomposition</b></summary>
+
+
+---
+</details>
+
+
+<details>
+    <summary><b>Database Design Process</b></summary>
+
+
+---
+</details>
+
+
+<details>
+    <summary><b>ER to Relational Model Conversion</b></summary>
+
+
+---
+</details>
+
+
+
