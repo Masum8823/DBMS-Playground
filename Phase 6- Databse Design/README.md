@@ -1073,6 +1073,15 @@ If wrong split:
 ❌ lossy decomposition
 
 ________________________________________
+## Decomposition vs Normalization
+
+| Feature | Decomposition | Normalization |
+|----------|--------------|---------------|
+| Process | Splitting tables | Rule-based design |
+| Goal | Remove redundancy | Organize database |
+| Based on | Functional Dependency | Normal Forms |
+
+________________________________________
 ---
 </details>
 
