@@ -1520,7 +1520,25 @@ ________________________________________
 ## 4. Data anomalies
 
 ________________________________________
+## Common Mistakes
 
+________________________________________
+
+## Mistake 1: Skipping requirement analysis
+
+________________________________________
+
+## Mistake 2: No ER diagram
+
+________________________________________
+
+## Mistake 3: No normalization
+
+________________________________________
+
+## Mistake 4: Direct table creation without planning
+
+________________________________________
 ---
 </details>
 
