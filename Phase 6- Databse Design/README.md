@@ -1373,6 +1373,21 @@ ________________________________________
 👉 database fast কাজ করে
 
 ________________________________________
+## Full Database Design Flow
+```sql
+Requirements
+     ↓
+Conceptual Design (ER Diagram)
+     ↓
+Logical Design (Tables + Normalization)
+     ↓
+Physical Design (Indexes + Storage)
+     ↓
+Final Database
+
+```
+ 
+________________________________________
 ---
 </details>
 
