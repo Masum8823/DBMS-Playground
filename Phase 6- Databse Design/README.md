@@ -1250,6 +1250,38 @@ ________________________________________
 👉 তাই proper design খুব গুরুত্বপূর্ণ।
 
 ________________________________________
+## Main Phases of Database Design
+
+Database design সাধারণত 4টি main phase এ করা হয়:
+
+________________________________________
+
+## 1. Requirement Collection & Analysis
+
+এখানে বোঝা হয়:
+
+•	কি data store করতে হবে  
+•	user কীভাবে data ব্যবহার করবে  
+•	business rules কী  
+
+________________________________________
+
+## Example (University System)
+
+Requirements:
+
+•	Students info store করতে হবে  
+•	Courses and teachers track করতে হবে  
+•	Enrollment system দরকার  
+
+________________________________________
+
+## Output:
+```sql
+List of requirements + constraints
+```
+ 
+________________________________________
 ---
 </details>
 
