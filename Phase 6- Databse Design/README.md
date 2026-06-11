@@ -1388,6 +1388,43 @@ Final Database
 ```
  
 ________________________________________
+## Real-Life Example (University System)
+
+________________________________________
+
+## Step 1: Requirement
+
+•	Students register for courses  
+•	Teachers teach courses  
+•	Departments manage students  
+
+________________________________________
+
+## Step 2: Conceptual Design
+```sql
+Student → Enrolls → Course → Taught by → Teacher
+```
+ 
+________________________________________
+
+## Step 3: Logical Design
+
+Tables:
+
+•	Students(StudentID, Name, Dept)  
+•	Courses(CourseID, Title)  
+•	Teachers(TeacherID, Name)  
+•	Enrollment(StudentID, CourseID)  
+
+________________________________________
+
+## Step 4: Physical Design
+
+•	Index on StudentID  
+•	Index on CourseID  
+•	Optimized queries  
+
+________________________________________
 ---
 </details>
 
