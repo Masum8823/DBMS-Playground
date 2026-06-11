@@ -1160,6 +1160,21 @@ ________________________________________
 ## 3. Query overhead increases
 
 ________________________________________
+## Common Mistakes
+
+________________________________________
+
+## Mistake 1: Losing data (lossy decomposition)
+
+________________________________________
+
+## Mistake 2: Ignoring functional dependency
+
+________________________________________
+
+## Mistake 3: Wrong table splitting
+
+________________________________________
 ---
 </details>
 
