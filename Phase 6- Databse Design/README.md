@@ -455,7 +455,41 @@ BCNF → strongest rule (key-based design)
 <details>
     <summary><b>Functional Dependency</b></summary>
 
+# Functional Dependency (FD) in DBMS
 
+Functional Dependency হলো এমন একটি relationship, যেখানে একটি attribute (বা attribute set) অন্য attribute কে uniquely determine করে।
+
+👉 সহজভাবে:
+A → B  মানে A জানলে B uniquely জানা যায়
+
+________________________________________
+
+## Real-Life Example
+
+| StudentID | Name  | Dept |
+|-----------|------|------|
+| 101 | Rahim | CSE |
+| 102 | Karim | EEE |
+
+________________________________________
+
+👉 এখানে:
+```sql
+StudentID → Name
+StudentID → Dept
+
+```
+কারণ StudentID জানা থাকলে Name এবং Dept uniquely পাওয়া যায়।
+
+________________________________________
+
+## Formal Definition
+
+Functional Dependency বলতে বোঝায়:
+
+যদি X attribute set Y attribute set কে uniquely determine করে, তাহলে বলা হয় X → Y
+
+________________________________________
 ---
 </details>
 
