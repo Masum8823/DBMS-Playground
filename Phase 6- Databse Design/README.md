@@ -1308,6 +1308,46 @@ ________________________________________
 👉 ER Diagram (database blueprint)
 
 ________________________________________
+## 3. Logical Design (Relational Model)
+
+এই stage এ ER Diagram কে table structure এ convert করা হয়।
+
+________________________________________
+
+## Example:
+
+## Student Table
+
+| StudentID | Name | Dept |
+
+________________________________________
+
+## Course Table
+
+| CourseID | CourseName |
+
+________________________________________
+
+## Enrollment Table
+
+| StudentID | CourseID |
+
+________________________________________
+
+👉 এখন database relational form এ চলে আসে
+
+________________________________________
+
+## Important Step: Normalization (Inside Logical Design)
+
+Logical design এর সময় normalization করা হয়:
+
+ ```sql
+1NF → 2NF → 3NF → BCNF
+```
+👉 redundancy remove করা হয়
+
+________________________________________
 ---
 </details>
 
