@@ -926,6 +926,23 @@ ________________________________________
 Common attribute must be key in at least one table
 ```
 ________________________________________
+## 2. Lossy Decomposition (BAD CASE)
+
+👉 যখন decomposition করলে original table fully recover করা যায় না
+
+ ```sql
+Data loss or extra fake tuples appear
+```
+________________________________________
+
+## Problem Example:
+
+Wrong split করলে:
+
+•	duplicate rows তৈরি হতে পারে  
+•	wrong join result  
+
+________________________________________
 ---
 </details>
 
