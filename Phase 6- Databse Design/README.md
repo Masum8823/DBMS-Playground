@@ -331,6 +331,49 @@ ________________________________________
 
 👉 clean, scalable design
 ________________________________________
+## Advantages (Deep Understanding)
+
+________________________________________
+
+## 1. No redundancy
+
+👉 storage save  
+________________________________________
+
+## 2. No update anomaly
+
+👉 one place update enough  
+________________________________________
+
+## 3. Better consistency
+
+👉 no conflicting data  
+________________________________________
+
+## 4. Scalable design
+
+👉 large system easy handle  
+________________________________________
+
+## Disadvantages (Important Exam Point)
+
+________________________________________
+
+## 1. More tables
+
+👉 complexity increase  
+________________________________________
+
+## 2. More JOIN needed
+
+👉 query becomes heavy  
+________________________________________
+
+## 3. Slight performance cost
+
+👉 read slow sometimes  
+________________________________________
+
 </details>
 
 
