@@ -951,7 +951,42 @@ ________________________________________
 All FD should still work after decomposition
 ```
 ________________________________________
+## Example of Good Decomposition
 
+________________________________________
+
+## Original Table
+
+| StudentID | Name | Dept | DeptHead |
+
+________________________________________
+
+## Functional Dependencies:
+
+ ```sql
+StudentID → Name, Dept
+Dept → DeptHead
+
+```
+________________________________________
+
+## Decomposed Tables
+
+## Students Table
+
+| StudentID | Name | Dept |
+
+________________________________________
+
+## Department Table
+
+| Dept | DeptHead |
+
+________________________________________
+
+👉 Now redundancy removed
+
+________________________________________
 ---
 </details>
 
