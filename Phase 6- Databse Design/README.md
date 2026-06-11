@@ -1175,6 +1175,39 @@ ________________________________________
 ## Mistake 3: Wrong table splitting
 
 ________________________________________
+## Viva Questions
+
+________________________________________
+
+## Q: Decomposition কী?
+
+Big table কে small tables এ ভাগ করা।
+
+________________________________________
+
+## Q: Lossless decomposition কী?
+
+Original data join করে ফিরে পাওয়া যায়।
+
+________________________________________
+
+## Q: Lossy decomposition কী?
+
+Data loss হয় বা incorrect result আসে।
+
+________________________________________
+
+## Q: Dependency preserving কী?
+
+All functional dependencies preserved থাকে।
+
+________________________________________
+
+## Q: কেন decomposition করা হয়?
+
+Redundancy কমাতে এবং anomalies দূর করতে।
+
+________________________________________
 ---
 </details>
 
