@@ -742,6 +742,15 @@ X → Y and WY → Z ⇒ WX → Z
 ```
 ________________________________________
 
+## Functional Dependency vs Normalization
+
+| Concept | Role |
+|----------|------|
+| FD | Relationship between attributes |
+| Normalization | Uses FD to design tables |
+
+________________________________________
+
 </details>
 
 
