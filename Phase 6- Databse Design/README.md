@@ -1539,6 +1539,39 @@ ________________________________________
 ## Mistake 4: Direct table creation without planning
 
 ________________________________________
+## Viva Questions
+
+________________________________________
+
+## Q: Database design process কী?
+
+Step-by-step method to design a database from requirements.
+
+________________________________________
+
+## Q: Phases of database design?
+
+Requirement → Conceptual → Logical → Physical
+
+________________________________________
+
+## Q: ER diagram কোন phase এ আসে?
+
+Conceptual design phase
+
+________________________________________
+
+## Q: Normalization কোন phase এ হয়?
+
+Logical design phase
+
+________________________________________
+
+## Q: Physical design কী?
+
+Storage and performance optimization stage
+
+________________________________________
 ---
 </details>
 
