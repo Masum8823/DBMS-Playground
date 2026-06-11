@@ -1022,6 +1022,57 @@ ________________________________________
 Ensure FD still valid
 
 ________________________________________
+## Lossless Join Condition (Important)
+
+For decomposition R → R1, R2:
+```sql
+(R1 ∩ R2) → R1 OR (R1 ∩ R2) → R2
+```
+ 
+👉 intersection must be a key
+
+________________________________________
+
+## Example (Lossless)
+
+________________________________________
+
+## Table
+
+R(A, B, C)
+
+Functional Dependency:
+
+ ```sql
+A → B
+```
+________________________________________
+
+## Decomposition:
+
+•	R1(A, B)  
+•	R2(A, C)  
+
+________________________________________
+
+## Intersection = A
+
+👉 A is key of R1  
+✔ Lossless decomposition
+
+________________________________________
+
+## Example (Lossy)
+
+If wrong split:
+
+•	R1(B, C)  
+•	R2(A, B)  
+
+👉 No proper key in intersection  
+❌ lossy decomposition
+
+________________________________________
 ---
 </details>
 
