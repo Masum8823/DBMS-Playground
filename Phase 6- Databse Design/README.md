@@ -943,6 +943,15 @@ Wrong split করলে:
 •	wrong join result  
 
 ________________________________________
+## 3. Dependency Preserving Decomposition
+
+👉 যদি original functional dependencies preserve থাকে
+
+ ```sql
+All FD should still work after decomposition
+```
+________________________________________
+
 ---
 </details>
 
