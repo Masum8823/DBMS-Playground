@@ -1425,6 +1425,23 @@ ________________________________________
 •	Optimized queries  
 
 ________________________________________
+## Schema Design Types
+
+________________________________________
+
+## 1. Star Schema (Data Warehouse)
+
+•	Central fact table  
+•	Dimension tables around it  
+
+________________________________________
+
+## 2. Snowflake Schema
+
+•	Normalized star schema  
+•	More tables  
+
+________________________________________
 ---
 </details>
 
