@@ -1227,7 +1227,29 @@ Goal: Clean & efficient database design
 <details>
     <summary><b>Database Design Process</b></summary>
 
+# Database Design Process
 
+Database Design Process হলো একটি step-by-step method, যার মাধ্যমে raw requirements থেকে একটি efficient, consistent এবং well-structured database তৈরি করা হয়।
+
+👉 সহজভাবে:
+ ```sql
+Requirements → Conceptual Design → Logical Design → Physical Design → Database
+```
+________________________________________
+
+## Why Database Design is Important?
+
+ভালো design না করলে database এ সমস্যা হয়:
+
+•	Data redundancy  
+•	Inconsistency  
+•	Poor performance  
+•	Difficult maintenance  
+•	Data anomalies  
+
+👉 তাই proper design খুব গুরুত্বপূর্ণ।
+
+________________________________________
 ---
 </details>
 
