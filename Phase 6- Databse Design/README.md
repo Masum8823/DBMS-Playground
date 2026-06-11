@@ -65,6 +65,54 @@ ________________________________________
 •	Course and Teacher repeated 
 •	update difficult 
 ---
+## Normalization Levels
+
+```sql
+1NF → 2NF → 3NF → BCNF
+```
+
+Each level previous level এর উপর build হয়।
+________________________________________
+
+## 1NF (First Normal Form) – Deep
+________________________________________
+
+## Rule of 1NF
+
+✔ Each column must contain atomic value  
+✔ No repeating groups  
+✔ Each row must be unique  
+________________________________________
+
+## Problem Table (Not 1NF)
+
+| StudentID | Name  | Subjects |
+|------------|------|----------|
+| 101 | Rahim | DBMS, AI |
+| 102 | Karim | Math, Physics |
+________________________________________
+
+## Problem:
+
+👉 multiple values in one cell  
+________________________________________
+
+## Convert to 1NF
+
+| StudentID | Name  | Subject |
+|------------|------|---------|
+| 101 | Rahim | DBMS |
+| 101 | Rahim | AI |
+| 102 | Karim | Math |
+| 102 | Karim | Physics |
+________________________________________
+
+## Key Idea:
+
+```sql
+1NF = Atomic columns only
+```
+---
 </details>
 
 
