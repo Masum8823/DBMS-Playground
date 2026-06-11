@@ -1460,7 +1460,23 @@ ________________________________________
 👉 Start from existing tables → structure design
 
 ________________________________________
+## Keys in Design Process
 
+•	Primary Key → uniqueness  
+•	Foreign Key → relationships  
+•	Candidate Key → possible keys  
+
+________________________________________
+
+## Importance of Normalization in Design
+
+👉 Logical design এর সময় normalization না করলে:
+
+•	duplicate data  
+•	update anomaly  
+•	inconsistency  
+
+________________________________________
 ---
 </details>
 
