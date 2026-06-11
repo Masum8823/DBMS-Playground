@@ -1208,6 +1208,18 @@ ________________________________________
 Redundancy কমাতে এবং anomalies দূর করতে।
 
 ________________________________________
+## Quick Summary
+```sql
+Decomposition = Table splitting
+
+Types:
+- Lossless (GOOD)
+- Lossy (BAD)
+- Dependency Preserving
+
+Goal: Clean & efficient database design
+
+```
 ---
 </details>
 
