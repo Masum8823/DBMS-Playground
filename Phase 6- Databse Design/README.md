@@ -842,7 +842,59 @@ Used in normalization
 <details>
     <summary><b>Decomposition</b></summary>
 
+# Decomposition in DBMS
 
+Decomposition হলো একটি process যেখানে বড় table কে ছোট ছোট related tables এ ভাগ করা হয় যাতে redundancy কমে এবং data consistency maintain থাকে।
+
+👉 সহজভাবে:
+ ```sql
+Decomposition = Big table → Multiple small tables
+```
+________________________________________
+
+## Why Decomposition is Needed?
+
+Large table এ অনেক সমস্যা থাকে:
+
+•	Data redundancy (duplicate data)  
+•	Update anomaly  
+•	Insert anomaly  
+•	Delete anomaly  
+•	Data inconsistency  
+
+👉 এসব সমস্যা solve করার জন্য table ভাঙা হয়।
+
+________________________________________
+
+## Example (Before Decomposition)
+
+| StudentID | Name  | Dept | DeptHead | Course | Teacher |
+|------------|------|------|----------|--------|----------|
+| 101 | Rahim | CSE | Mr. X | DBMS | Mr. A |
+| 101 | Rahim | CSE | Mr. X | AI | Mr. B |
+| 102 | Karim | EEE | Mr. Y | Circuit | Mr. C |
+
+________________________________________
+
+## Problems:
+
+•	Rahim repeat  
+•	DeptHead repeat  
+•	Course–Teacher repeat  
+•	update multiple place required  
+
+________________________________________
+
+## Goal of Decomposition
+
+ ```sql
+Reduce redundancy
+Remove anomalies
+Improve consistency
+Better structure
+
+```
+________________________________________
 ---
 </details>
 
