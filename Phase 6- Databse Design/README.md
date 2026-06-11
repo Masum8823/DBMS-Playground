@@ -764,6 +764,24 @@ Roll number → Student info
 
 ________________________________________
 
+## Common Mistakes
+
+________________________________________
+
+## Mistake 1: One-to-one thinking
+
+❌ সব dependency symmetric ভাবে ভাবা
+
+________________________________________
+
+## Mistake 2: Missing composite key dependency
+
+________________________________________
+
+## Mistake 3: Confusing FD with foreign key
+
+________________________________________
+
 </details>
 
 
