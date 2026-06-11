@@ -230,6 +230,68 @@ ________________________________________
 ```
 ________________________________________
 
+## BCNF (Boyce-Codd Normal Form) – Deep
+________________________________________
+
+## Rule of BCNF
+
+✔ Must be in 3NF  
+✔ Every determinant must be a candidate key  
+________________________________________
+
+## What is Determinant?
+
+👉 যেটা অন্য attribute কে determine করে  
+________________________________________
+
+## Example (3NF but NOT BCNF)
+
+| Student | Course | Teacher |
+|----------|--------|----------|
+| A | DBMS | Mr. X |
+| B | DBMS | Mr. X |
+| A | AI | Mr. Y |
+________________________________________
+
+## Functional Dependency:
+```sql
+Course → Teacher
+Student + Course → Record
+
+```
+________________________________________
+
+## Problem:
+
+👉 Course is not a candidate key but determines Teacher  
+________________________________________
+
+## Solution (BCNF Decomposition)
+
+## Course Table
+
+| Course | Teacher |
+|--------|----------|
+| DBMS | Mr. X |
+| AI | Mr. Y |
+
+## Enrollment Table
+
+| Student | Course |
+|----------|--------|
+| A | DBMS |
+| B | DBMS |
+________________________________________
+
+## Key Idea:
+```sql
+BCNF = Strongest normalization rule
+Every determinant must be a key
+
+```
+
+---
+
 </details>
 
 
