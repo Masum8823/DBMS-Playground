@@ -490,7 +490,49 @@ Functional Dependency বলতে বোঝায়:
 যদি X attribute set Y attribute set কে uniquely determine করে, তাহলে বলা হয় X → Y
 
 ________________________________________
----
+## Types of Functional Dependency
+
+________________________________________
+
+## 1. Trivial Functional Dependency
+
+👉 যখন RHS (right side) LHS এর subset হয়
+
+Example:
+
+ ```sql
+(A, B) → A
+(A, B) → B
+
+```
+
+👉 এটা always true
+
+________________________________________
+
+## 2. Non-Trivial Functional Dependency
+
+👉 যখন RHS, LHS এর subset না হয়
+
+Example:
+
+ ```sql
+StudentID → Name
+```
+
+👉 meaningful dependency
+
+________________________________________
+
+## 3. Completely Non-Trivial FD
+
+👉 যখন RHS এবং LHS completely different
+
+Example:
+```sql
+StudentID → Dept
+```
+ ---
 </details>
 
 
