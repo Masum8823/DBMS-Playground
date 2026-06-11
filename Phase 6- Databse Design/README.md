@@ -399,6 +399,46 @@ BCNF → Make everything key-based
 ```
 ________________________________________
 
+## Viva Ready Questions
+
+________________________________________
+
+## Q: Normalization কেন করা হয়?
+
+Redundancy কমাতে এবং data consistency বাড়াতে।
+
+________________________________________
+
+## Q: 1NF কী?
+
+Atomic values only, no repeating groups।
+
+________________________________________
+
+## Q: 2NF কী?
+
+No partial dependency।
+
+________________________________________
+
+## Q: 3NF কী?
+
+No transitive dependency।
+
+________________________________________
+
+## Q: BCNF কী?
+
+Every determinant must be a candidate key।
+
+________________________________________
+
+## Q: Normalization এর disadvantage কী?
+
+More tables and more JOIN required।
+
+________________________________________
+
 </details>
 
 
