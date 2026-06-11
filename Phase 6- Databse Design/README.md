@@ -292,6 +292,16 @@ Every determinant must be a key
 
 ---
 
+## Full Comparison (Deep View)
+
+| Normal Form | Problem Solved | Rule |
+|-------------|---------------|------|
+| 1NF | Repeating groups | Atomic values |
+| 2NF | Partial dependency | Full dependency on key |
+| 3NF | Transitive dependency | No indirect dependency |
+| BCNF | Functional anomaly | Determinant must be key |
+________________________________________
+
 </details>
 
 
