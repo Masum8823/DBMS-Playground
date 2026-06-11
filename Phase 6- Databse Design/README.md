@@ -895,6 +895,37 @@ Better structure
 
 ```
 ________________________________________
+
+## Types of Decomposition
+
+________________________________________
+
+## 1. Lossless Decomposition (VERY IMPORTANT)
+
+👉 Decomposition এমনভাবে করা হয় যাতে আবার tables join করলে original table ফিরে পাওয়া যায়।
+
+ ```sql
+Split → Join → Original data must come back
+```
+________________________________________
+
+## Example:
+
+Original Table → split into:
+
+•	Students(StudentID, Name, Dept)  
+•	Departments(Dept, DeptHead)  
+
+👉 JOIN করলে original data ফিরে আসে
+
+________________________________________
+
+## Condition for Lossless Decomposition
+
+ ```sql
+Common attribute must be key in at least one table
+```
+________________________________________
 ---
 </details>
 
