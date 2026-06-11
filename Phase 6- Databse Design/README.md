@@ -49,6 +49,22 @@ ________________________________________
 ________________________________________
 
 ---
+## Example (Before Normalization)
+
+| StudentID | Name  | Dept | DeptHead | Course | Teacher |
+|------------|------|------|----------|--------|----------|
+| 101 | Rahim | CSE | Mr. X | DBMS | Mr. A |
+| 101 | Rahim | CSE | Mr. X | AI | Mr. B |
+| 102 | Karim | EEE | Mr. Y | Circuit | Mr. C |
+________________________________________
+
+## Problems:
+
+•	Rahim repeated multiple times 
+•	DeptHead repeated 
+•	Course and Teacher repeated 
+•	update difficult 
+---
 </details>
 
 
