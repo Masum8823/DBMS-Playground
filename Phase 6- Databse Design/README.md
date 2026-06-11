@@ -587,6 +587,42 @@ StudentID → Dept → DeptHead
 
 👉 StudentID indirectly determines DeptHead
 ---
+
+## Functional Dependency Diagram Concept
+
+ ```sql
+A → B → C
+```
+
+👉 A indirectly determines C
+
+________________________________________
+
+## Key Terms
+
+________________________________________
+
+## 1. Determinant
+
+👉 যেটা অন্য attribute কে determine করে
+
+ 
+```sql
+StudentID → Name
+StudentID = Determinant
+
+```
+________________________________________
+
+## 2. Dependent Attribute
+
+👉 যেটা depend করে
+
+ ```sql
+Name depends on StudentID
+```
+
+---
 </details>
 
 
