@@ -113,6 +113,65 @@ ________________________________________
 1NF = Atomic columns only
 ```
 ---
+
+## 2NF (Second Normal Form) – Deep
+________________________________________
+
+## Rule of 2NF
+
+✔ Must be in 1NF  
+✔ No partial dependency  
+________________________________________
+
+## What is Partial Dependency?
+
+👉 যখন composite key এর part এর উপর non-key attribute depend করে  
+________________________________________
+
+## Example (1NF but not 2NF)
+
+| StudentID | Course | StudentName |
+|------------|--------|-------------|
+| 101 | DBMS | Rahim |
+| 101 | AI | Rahim |
+________________________________________
+
+## Functional Dependency:
+```sql
+StudentID → StudentName
+Course → (nothing)
+(StudentID, Course) → record
+
+```
+________________________________________
+
+## Problem:
+
+👉 StudentName depends only on StudentID (partial dependency)
+________________________________________
+
+## Solution (2NF Decomposition)
+
+## Students Table
+
+| StudentID | StudentName |
+|------------|-------------|
+| 101 | Rahim |
+| 102 | Karim |
+
+## Enrollment Table
+
+| StudentID | Course |
+|------------|--------|
+| 101 | DBMS |
+| 101 | AI |
+________________________________________
+
+## Key Idea:
+```sql
+2NF = Remove partial dependency
+```
+---
 </details>
 
 
