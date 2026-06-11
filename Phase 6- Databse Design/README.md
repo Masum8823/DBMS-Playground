@@ -388,6 +388,16 @@ Normalization → split tables
 Denormalization → merge tables
 
 ```
+---
+## Easy Memory Trick
+```sql
+1NF → Make atomic
+2NF → Remove partial dependency
+3NF → Remove indirect dependency
+BCNF → Make everything key-based
+
+```
+________________________________________
 
 </details>
 
