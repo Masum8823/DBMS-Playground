@@ -374,6 +374,21 @@ ________________________________________
 👉 read slow sometimes  
 ________________________________________
 
+## When NOT to Normalize Fully?
+
+👉 Sometimes denormalization is used when:
+• reporting system  
+• analytics  
+• performance critical read system  
+________________________________________
+
+## Denormalization (Opposite Idea)
+```sql
+Normalization → split tables
+Denormalization → merge tables
+
+```
+
 </details>
 
 
