@@ -987,6 +987,41 @@ ________________________________________
 👉 Now redundancy removed
 
 ________________________________________
+## Steps of Decomposition
+
+________________________________________
+
+## Step 1: Identify Functional Dependencies
+```sql
+A → B, B → C etc.
+```
+ 
+________________________________________
+
+## Step 2: Find anomalies
+
+•	redundancy  
+•	dependency issues  
+
+________________________________________
+
+## Step 3: Split table
+
+Based on FD rules
+
+________________________________________
+
+## Step 4: Check Lossless Join
+
+Ensure no data loss after join
+
+________________________________________
+
+## Step 5: Check Dependency Preservation
+
+Ensure FD still valid
+
+________________________________________
 ---
 </details>
 
