@@ -1442,6 +1442,25 @@ ________________________________________
 •	More tables  
 
 ________________________________________
+## Database Design Approaches
+
+________________________________________
+
+## 1. Top-Down Approach
+
+👉 Start from ER diagram → tables
+
+ ```sql
+Conceptual → Logical → Physical
+```
+________________________________________
+
+## 2. Bottom-Up Approach
+
+👉 Start from existing tables → structure design
+
+________________________________________
+
 ---
 </details>
 
