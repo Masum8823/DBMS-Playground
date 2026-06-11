@@ -533,6 +533,60 @@ Example:
 StudentID → Dept
 ```
  ---
+
+ ## Types Based on Dependency Strength
+
+________________________________________
+
+## 4. Full Functional Dependency
+
+👉 যখন attribute পুরো key এর উপর depend করে
+
+Example:
+
+| StudentID | Course | Grade |
+
+```sql
+(StudentID, Course) → Grade
+```
+ 
+
+👉 Grade depends on full composite key
+
+________________________________________
+
+## 5. Partial Dependency
+
+👉 যখন attribute composite key এর part এর উপর depend করে
+
+Example:
+
+ ```sql
+(StudentID, Course) → StudentName
+```
+
+👉 StudentName depends only on StudentID
+
+________________________________________
+
+## Problem:
+
+👉 2NF violation
+
+________________________________________
+
+## 6. Transitive Dependency
+
+👉 indirect dependency
+
+Example:
+```sql
+StudentID → Dept → DeptHead
+```
+ 
+
+👉 StudentID indirectly determines DeptHead
+---
 </details>
 
 
