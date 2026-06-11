@@ -623,6 +623,27 @@ Name depends on StudentID
 ```
 
 ---
+## Importance of Functional Dependency
+
+________________________________________
+
+## 1. Helps in Normalization
+
+👉 1NF, 2NF, 3NF, BCNF FD এর উপর based
+
+________________________________________
+
+## 2. Reduces Redundancy
+
+________________________________________
+
+## 3. Improves Database Design
+
+________________________________________
+
+## 4. Ensures Data Integrity
+
+________________________________________
 </details>
 
 
