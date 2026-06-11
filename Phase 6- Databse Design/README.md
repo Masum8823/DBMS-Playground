@@ -782,6 +782,41 @@ ________________________________________
 
 ________________________________________
 
+## Viva Questions
+
+________________________________________
+
+## Q: Functional Dependency কী?
+
+Attribute relationship where one attribute determines another.
+
+________________________________________
+
+## Q: Determinant কী?
+
+Left side of FD.
+
+________________________________________
+
+## Q: Full FD কী?
+
+Attribute depends on full composite key.
+
+________________________________________
+
+## Q: Partial dependency কী?
+
+Depends on part of composite key.
+
+________________________________________
+
+## Q: Transitive dependency কী?
+
+Indirect dependency (A → B → C).
+
+________________________________________
+
+
 </details>
 
 
