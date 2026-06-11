@@ -816,6 +816,25 @@ Indirect dependency (A → B → C).
 
 ________________________________________
 
+## Quick Summary
+
+```sql
+Functional Dependency = Attribute relationship
+
+A → B = A determines B
+
+Types:
+- Trivial
+- Non-trivial
+- Full
+- Partial
+- Transitive
+
+Used in normalization
+
+```
+---
+
 
 </details>
 
