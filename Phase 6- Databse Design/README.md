@@ -644,6 +644,47 @@ ________________________________________
 ## 4. Ensures Data Integrity
 
 ________________________________________
+## Example (Complex Table)
+
+| StudentID | Course | Instructor | Dept | DeptHead |
+
+________________________________________
+
+## Functional Dependencies:
+
+ ```sql
+StudentID → Dept
+Dept → DeptHead
+Course → Instructor
+(StudentID, Course) → Grade
+
+```
+
+________________________________________
+
+👉 এই dependencies বুঝলেই normalization করা সহজ
+
+________________________________________
+
+## Closure of Functional Dependency (Important Concept)
+
+👉 attribute set দিয়ে কতগুলো attribute determine করা যায়
+
+Example:
+```sql
+A → B
+B → C
+
+```
+ 
+
+👉 তাহলে:
+
+ ```sql
+A+ = {A, B, C}
+```
+
+________________________________________
 </details>
 
 
