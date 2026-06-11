@@ -1282,6 +1282,32 @@ List of requirements + constraints
 ```
  
 ________________________________________
+## 2. Conceptual Design (ER Modeling)
+
+এই phase এ high-level design করা হয় using ER Diagram।
+
+________________________________________
+
+## ER Diagram includes:
+
+•	Entities (Student, Course)  
+•	Attributes (Name, ID)  
+•	Relationships (Enrolls)  
+
+________________________________________
+
+## Example:
+
+ ```sql
+Student → enrolls → Course
+```
+________________________________________
+
+## Output:
+
+👉 ER Diagram (database blueprint)
+
+________________________________________
 ---
 </details>
 
