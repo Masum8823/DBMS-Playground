@@ -302,6 +302,35 @@ Every determinant must be a key
 | BCNF | Functional anomaly | Determinant must be key |
 ________________________________________
 
+## Real-Life University Example
+________________________________________
+
+## Before Normalization
+```sql
+Student + Dept + DeptHead + Course + Teacher (all mixed)
+```
+________________________________________
+
+## After Full Normalization
+
+## Students
+
+| StudentID | Name | Dept |
+
+## Departments
+
+| Dept | DeptHead |
+
+## Courses
+
+| Course | Teacher |
+
+## Enrollment
+
+| StudentID | Course |
+
+👉 clean, scalable design
+________________________________________
 </details>
 
 
