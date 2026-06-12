@@ -2110,6 +2110,20 @@ ________________________________________
 না, calculate করা হয়।
 
 ________________________________________
+## Quick Summary
+```sql
+ER → Relational Mapping:
+
+Entity → Table
+Attribute → Column
+1:1 → Merge/FK
+1:M → FK in many side
+M:N → Junction table
+Weak entity → Composite PK
+Multivalued → Separate table
+Derived → Not stored
+
+```
 ---
 </details>
 
