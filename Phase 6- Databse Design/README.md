@@ -1655,6 +1655,54 @@ ________________________________________
 
 ________________________________________
 
+## 2. Weak Entity Set → Table (DETAILED)
+
+Weak entity নিজে uniquely identified হতে পারে না।
+
+________________________________________
+
+## Example ER:
+
+Employee(EmpID)  
+Dependent(Name, Age)
+
+________________________________________
+
+## Dependency:
+
+Dependent depends on Employee
+
+________________________________________
+
+## Relational Table:
+
+## Employee
+
+| EmpID (PK) | Name |
+
+________________________________________
+
+## Dependent
+
+| EmpID (FK) | DependentName | Age |
+
+________________________________________
+
+## Primary Key:
+
+ ```sql
+PK = (EmpID + DependentName)
+```
+________________________________________
+
+## Rule:
+```sql
+Weak entity → PK = Partial Key + Owner PK
+Owner key → foreign key
+
+```
+ 
+________________________________________
 ---
 </details>
 
