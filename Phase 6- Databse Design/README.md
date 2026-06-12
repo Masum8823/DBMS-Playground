@@ -1904,6 +1904,29 @@ Break composite attributes into atomic columns
 ```
  
 ________________________________________
+## 8. Derived Attribute (VERY IMPORTANT)
+
+________________________________________
+
+## Example:
+
+Age = DOB থেকে calculate
+
+________________________________________
+
+## Rule:
+
+👉 NOT stored in table
+
+________________________________________
+
+## Example:
+
+| StudentID | DOB |
+
+Age calculate করা হয় query দিয়ে
+
+________________________________________
 ---
 </details>
 
