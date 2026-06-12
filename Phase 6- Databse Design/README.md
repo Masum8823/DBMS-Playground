@@ -2033,6 +2033,30 @@ ________________________________________
 👉 Fully normalized database ready
 
 ________________________________________
+
+## Common Mistakes (VERY IMPORTANT)
+
+________________________________________
+
+## Mistake 1: M:N relationship not converted
+
+❌ direct table merge
+
+________________________________________
+
+## Mistake 2: Weak entity without composite key
+
+________________________________________
+
+## Mistake 3: Storing multivalued attribute in one column
+
+❌ Phone = "017,018"
+
+________________________________________
+
+## Mistake 4: Forgetting foreign key constraint
+
+________________________________________
 ---
 </details>
 
