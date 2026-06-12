@@ -2081,6 +2081,35 @@ ________________________________________
 ## Viva Questions (IMPORTANT)
 
 ________________________________________
+## Q: ER to Relational mapping কী?
+
+ER diagram কে tables এ convert করা process।
+
+________________________________________
+
+## Q: 1:M relationship কিভাবে convert হয়?
+
+Foreign key many side এ যায়।
+
+________________________________________
+
+## Q: M:N relationship কিভাবে handle করা হয়?
+
+New junction table তৈরি করা হয়।
+
+________________________________________
+
+## Q: Weak entity কীভাবে convert করা হয়?
+
+Composite key + foreign key দিয়ে।
+
+________________________________________
+
+## Q: Derived attribute store করা হয়?
+
+না, calculate করা হয়।
+
+________________________________________
 ---
 </details>
 
