@@ -1735,6 +1735,52 @@ ________________________________________
 FK goes to either side OR merge if total participation
 ```
 ________________________________________
+## 4. 1:M Relationship (DETAILED)
+
+________________________________________
+
+## Example:
+
+Department → Students  
+(one department, many students)
+
+________________________________________
+
+## Rule:
+
+👉 FK always goes to MANY side
+
+________________________________________
+
+## Tables:
+
+## Department
+
+| DeptID (PK) | DeptName |
+
+________________________________________
+
+## Student
+
+| StudentID (PK) | Name | DeptID (FK) |
+
+________________________________________
+
+## Explanation:
+
+ ```sql
+One Dept → Many Students
+So Students table stores DeptID
+
+```
+________________________________________
+
+## Important Constraint:
+
+•	DeptID in Student must exist in Department (referential integrity)
+
+________________________________________
+
 ---
 </details>
 
