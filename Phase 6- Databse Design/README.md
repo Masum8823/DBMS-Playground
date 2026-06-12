@@ -1978,6 +1978,19 @@ ________________________________________
 •	Partial → nullable FK possible  
 
 ________________________________________
+## 11. General Mapping Algorithm (EXAM IMPORTANT)
+
+ ```sql
+Step 1: Convert all strong entities → tables
+Step 2: Convert weak entities → composite key tables
+Step 3: Convert 1:1 → merge or FK
+Step 4: Convert 1:M → FK in many side
+Step 5: Convert M:N → new table
+Step 6: Convert multivalued attributes → new table
+Step 7: Remove derived attributes
+
+```
+________________________________________
 ---
 </details>
 
