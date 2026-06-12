@@ -1703,6 +1703,38 @@ Owner key → foreign key
 ```
  
 ________________________________________
+## 3. 1:1 Relationship (DETAILED)
+
+________________________________________
+
+## Example:
+
+Person ↔ Passport
+
+________________________________________
+
+## Rule Options:
+
+### Option 1: Merge Tables (Best choice)
+
+| PersonID | Name | PassportNo |
+
+________________________________________
+
+### Option 2: Foreign Key in one table
+
+## Person:
+
+| PersonID | Name | PassportNo (FK) |
+
+________________________________________
+
+## Decision Rule:
+
+ ```sql
+FK goes to either side OR merge if total participation
+```
+________________________________________
 ---
 </details>
 
