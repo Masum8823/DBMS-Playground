@@ -1619,6 +1619,42 @@ ER model এর সব parts আলাদা rules দিয়ে convert হয়:
 •	Constraints → Keys / Rules  
 
 ________________________________________
+
+## 1. Strong Entity Set → Table (DETAILED)
+
+Strong entity হলো যার নিজস্ব primary key আছে।
+
+________________________________________
+
+## Example ER:
+
+Student(StudentID, Name, Age, Dept)
+
+________________________________________
+
+## Relational Table:
+
+| StudentID (PK) | Name | Age | Dept |
+
+________________________________________
+
+## Rule:
+
+ ```sql
+Each strong entity → separate table
+Primary key → 그대로 primary key
+Simple attributes → columns
+
+```
+________________________________________
+
+## Important Notes:
+
+•	Composite attributes (Name = First + Last) → split columns  
+•	Derived attributes → NOT stored  
+
+________________________________________
+
 ---
 </details>
 
