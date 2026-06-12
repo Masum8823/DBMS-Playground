@@ -1780,6 +1780,66 @@ ________________________________________
 •	DeptID in Student must exist in Department (referential integrity)
 
 ________________________________________
+## 5. M:N Relationship (VERY IMPORTANT)
+
+________________________________________
+
+## Example:
+
+Student ↔ Course
+
+________________________________________
+
+## Problem:
+
+•	One student takes many courses  
+•	One course has many students  
+
+👉 direct mapping possible না
+
+________________________________________
+
+## Solution: Junction Table
+
+## Student
+
+| StudentID | Name |
+
+________________________________________
+
+## Course
+
+| CourseID | Title |
+
+________________________________________
+
+## Enrollment (Bridge Table)
+
+| StudentID (FK) | CourseID (FK) |
+
+________________________________________
+
+## Composite Key:
+```sql
+PK = (StudentID, CourseID)
+```
+ 
+________________________________________
+
+## Extra Attributes Example:
+
+If relationship has attributes:
+
+Enrollment(Date, Grade)
+
+________________________________________
+
+Then:
+
+| StudentID | CourseID | Date | Grade |
+
+________________________________________
+
 
 ---
 </details>
