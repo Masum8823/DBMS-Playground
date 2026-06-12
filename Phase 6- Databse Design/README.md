@@ -1882,7 +1882,28 @@ Avoid repeating group → 1NF requirement
 ```
  
 ________________________________________
+## 7. Composite Attribute Handling
 
+________________________________________
+
+## Example:
+
+Name = FirstName + LastName
+
+________________________________________
+
+## Table:
+
+| StudentID | FirstName | LastName |
+
+________________________________________
+
+## Rule:
+```sql
+Break composite attributes into atomic columns
+```
+ 
+________________________________________
 ---
 </details>
 
