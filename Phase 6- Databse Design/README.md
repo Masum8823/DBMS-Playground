@@ -1991,6 +1991,48 @@ Step 7: Remove derived attributes
 
 ```
 ________________________________________
+## Complete Real-Life Example (University System)
+
+________________________________________
+
+## ER Model:
+
+•	Student(StudentID, Name)  
+•	Department(DeptID, DeptName)  
+•	Course(CourseID, Title)  
+•	Enrolls (Date, Grade)  
+
+________________________________________
+
+## Relational Model:
+
+## Student
+
+| StudentID | Name | DeptID |
+
+________________________________________
+
+## Department
+
+| DeptID | DeptName |
+
+________________________________________
+
+## Course
+
+| CourseID | Title |
+
+________________________________________
+
+## Enrollment
+
+| StudentID | CourseID | Date | Grade |
+
+________________________________________
+
+👉 Fully normalized database ready
+
+________________________________________
 ---
 </details>
 
