@@ -1591,7 +1591,34 @@ Goal: Efficient, scalable database
 <details>
     <summary><b>ER to Relational Model Conversion</b></summary>
 
+# ER to Relational Model Conversion
 
+ER to Relational mapping হলো এমন একটা process যেখানে ER Diagram এর conceptual structure কে relational database (tables) এ convert করা হয়।
+
+👉 সহজভাবে:
+ ```sql
+ER Diagram (Conceptual) → Relational Schema (Tables)
+```
+________________________________________
+
+## Why This Step is Important?
+
+ER diagram বাস্তবে database না, এটা শুধু design।
+
+Database engine কাজ করে table-based structure এ, তাই conversion দরকার।
+
+________________________________________
+
+## Complete Mapping Strategy
+
+ER model এর সব parts আলাদা rules দিয়ে convert হয়:
+
+•	Entity → Table  
+•	Attribute → Column  
+•	Relationship → FK / New Table  
+•	Constraints → Keys / Rules  
+
+________________________________________
 ---
 </details>
 
