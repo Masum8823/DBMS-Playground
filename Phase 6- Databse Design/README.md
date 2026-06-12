@@ -1927,6 +1927,34 @@ ________________________________________
 Age calculate করা হয় query দিয়ে
 
 ________________________________________
+## 9. Relationship with Attributes (Advanced)
+
+________________________________________
+
+## Example:
+
+Enrolls(Date, Grade)
+
+________________________________________
+
+## Rule:
+
+👉 Relationship becomes table
+
+________________________________________
+
+## Table:
+
+| StudentID | CourseID | Date | Grade |
+
+________________________________________
+
+## Key:
+
+ ```sql
+Composite key + relationship attributes
+```
+________________________________________
 ---
 </details>
 
