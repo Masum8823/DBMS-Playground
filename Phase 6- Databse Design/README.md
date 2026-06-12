@@ -1840,6 +1840,48 @@ Then:
 
 ________________________________________
 
+## 6. Multi-Valued Attribute (DETAILED)
+
+________________________________________
+
+## Example:
+
+Student has multiple phone numbers
+
+________________________________________
+
+## ER Problem:
+
+Phone = {017..., 018...}
+
+________________________________________
+
+## Rule:
+
+👉 Create separate table
+
+________________________________________
+
+## Tables:
+
+## Student
+
+| StudentID | Name |
+
+________________________________________
+
+## StudentPhone
+
+| StudentID (FK) | Phone |
+
+________________________________________
+
+## Why?
+```sql
+Avoid repeating group → 1NF requirement
+```
+ 
+________________________________________
 
 ---
 </details>
