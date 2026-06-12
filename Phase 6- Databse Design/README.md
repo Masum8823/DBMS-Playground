@@ -1955,6 +1955,29 @@ ________________________________________
 Composite key + relationship attributes
 ```
 ________________________________________
+## 10. Special Case: Total vs Partial Participation
+
+________________________________________
+
+## Total Participation:
+
+Every entity must participate  
+👉 stronger constraint
+
+________________________________________
+
+## Partial Participation:
+
+Optional participation
+
+________________________________________
+
+## Impact:
+
+•	Total participation → FK placement strict  
+•	Partial → nullable FK possible  
+
+________________________________________
 ---
 </details>
 
