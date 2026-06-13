@@ -592,7 +592,24 @@ ________________________________________
 Older transaction younger transaction কে abort করাতে পারে।
 
 ________________________________________
+## Timestamp-Based Concurrency Control
 
+Lock ব্যবহার না করে timestamp ব্যবহার করে।
+
+________________________________________
+
+প্রত্যেক transaction unique timestamp পায়।
+
+  ```text
+T1 = 100
+T2 = 101
+
+ ```
+________________________________________
+
+Older transaction priority পায়।
+
+________________________________________
 ---
 </details>
 
