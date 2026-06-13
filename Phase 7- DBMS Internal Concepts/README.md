@@ -447,7 +447,27 @@ T1 row lock করেছে।
 Other transactions wait
  ```
 ________________________________________
+## Types of Locks
 
+________________________________________
+
+## Shared Lock (S)
+
+Read করার জন্য।
+
+  ```text
+Multiple users can read
+ ```
+________________________________________
+
+### Example:
+
+  ```text
+SELECT *
+FROM Students
+
+ ```
+________________________________________
 ---
 </details>
 
