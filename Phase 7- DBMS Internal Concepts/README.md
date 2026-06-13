@@ -142,6 +142,70 @@ ________________________________________
 •	Data conflict হতে পারে  
 
 ________________________________________
+## Problems in Concurrent Transactions
+
+________________________________________
+
+## 1. Lost Update Problem
+
+সবচেয়ে common concurrency issue।
+
+________________________________________
+
+### Example
+
+Initial Balance = 1000
+
+________________________________________
+
+### Transaction T1
+
+  ```text
+Read 1000
+Add 500
+Write 1500
+
+ ```
+________________________________________
+
+### Transaction T2
+ ```text
+Read 1000
+Subtract 200
+Write 800
+
+ ```
+ 
+________________________________________
+
+### Execution:
+
+  ```text
+T1 reads 1000
+T2 reads 1000
+
+T1 writes 1500
+T2 writes 800
+
+ ```
+________________________________________
+
+### Final Balance:
+ ```text
+800
+ ```
+ 
+Correct balance হওয়া উচিত:
+ ```text
+1300
+ ```
+ 
+👉 T1-এর update হারিয়ে গেছে।
+
+এটাকেই Lost Update বলে।
+
+________________________________________
+
 ---
 </details>
 
