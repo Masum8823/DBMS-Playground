@@ -425,6 +425,29 @@ ________________________________________
 
 Conflict serializability এর চেয়ে broad concept।
 ---
+## Lock-Based Concurrency Control
+
+সবচেয়ে popular technique।
+
+________________________________________
+
+## Lock কী?
+
+Lock = Permission
+
+________________________________________
+
+### Example
+
+T1 row lock করেছে।
+
+তাহলে:
+
+  ```text
+Other transactions wait
+ ```
+________________________________________
+
 ---
 </details>
 
