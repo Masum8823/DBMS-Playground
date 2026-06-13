@@ -610,6 +610,30 @@ ________________________________________
 Older transaction priority পায়।
 
 ________________________________________
+## Optimistic Concurrency Control
+
+### Assumption:
+
+  ```text
+Conflict rarely happens
+ ```
+________________________________________
+
+### Phase:
+
+  ```text
+Read
+↓
+Validate
+↓
+Write
+
+ ```
+________________________________________
+
+Validation fail করলে rollback।
+
+________________________________________
 ---
 </details>
 
