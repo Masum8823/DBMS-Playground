@@ -718,6 +718,27 @@ ________________________________________
 Concurrent execution-এর result serial execution-এর মতো হওয়া।
 
 ________________________________________
+## Quick Summary
+ ```text
+Concurrency Control = Multi-user data protection
+
+Main Problems:
+- Lost Update
+- Dirty Read
+- Non-Repeatable Read
+- Phantom Read
+- Deadlock
+
+Techniques:
+- Locking
+- Two Phase Locking (2PL)
+- Timestamp Ordering
+- Optimistic Concurrency Control
+
+Goal:
+Consistency + Isolation + Correctness
+
+ ```
 ---
 </details>
 
