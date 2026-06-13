@@ -8,6 +8,30 @@
 <details>
     <summary><b>Concurrency Control</b></summary>
 
+# Concurrency Control
+
+Concurrency Control হলো DBMS-এর এমন একটি mechanism, যা একই database-এ একাধিক user বা transaction একই সময়ে access করলে data consistency এবং correctness বজায় রাখে।
+
+👉 সহজভাবে:
+ ```text
+Concurrency Control = Multiple Users + Same Data + No Conflict
+ ```
+________________________________________
+
+## Why Concurrency Control is Needed?
+
+Real-world database এ অনেক user একসাথে কাজ করে।
+
+Example:
+
+একটি ব্যাংকের database-এ:
+
+•	User A টাকা তুলছে  
+•	User B একই account-এ টাকা deposit করছে  
+
+যদি proper control না থাকে, তাহলে balance ভুল হতে পারে।
+
+________________________________________
 
 ---
 </details>
