@@ -401,6 +401,30 @@ ________________________________________
 
 ❌ Non-Serializable
 ---
+## Types of Serializability
+
+________________________________________
+
+## 1. Conflict Serializability
+
+Most important and exam favourite topic।
+
+________________________________________
+
+যদি transactions swap করে serial schedule বানানো যায়:
+
+✔ Conflict Serializable
+
+________________________________________
+
+## 2. View Serializability
+
+Read-write relationship preserve করতে হবে।
+
+________________________________________
+
+Conflict serializability এর চেয়ে broad concept।
+---
 ---
 </details>
 
