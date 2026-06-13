@@ -338,7 +338,33 @@ Extra row "phantom" এর মতো দেখা দিল।
 এটাই Phantom Read।
 
 ________________________________________
+## 5. Dirty Write
 
+এক transaction-এর uncommitted data অন্য transaction overwrite করে।
+
+________________________________________
+
+### Example
+
+### T1:
+ ```text
+UPDATE Balance=5000
+ ```
+ 
+(Not committed)
+
+________________________________________
+
+### T2:
+
+  ```text
+UPDATE Balance=8000
+ ```
+________________________________________
+
+এখন conflict তৈরি হবে।
+
+________________________________________
 ---
 </details>
 
