@@ -669,6 +669,55 @@ ________________________________________
 ### 4. Waiting Time
 
 ________________________________________
+## Viva Questions
+
+### Q: Concurrency Control কী?
+
+Multiple transactions simultaneously execute হলেও consistency maintain করার technique।
+
+________________________________________
+
+### Q: Lost Update কী?
+
+এক transaction-এর update অন্য transaction overwrite করলে।
+
+________________________________________
+
+### Q: Dirty Read কী?
+
+Uncommitted data read করা।
+
+________________________________________
+
+### Q: Deadlock কী?
+
+দুই transaction একে অপরের resource-এর জন্য indefinitely wait করলে।
+
+________________________________________
+
+### Q: Shared Lock কী?
+
+Read lock।
+
+________________________________________
+
+### Q: Exclusive Lock কী?
+
+Write lock।
+
+________________________________________
+
+### Q: 2PL কী?
+
+Two Phase Locking protocol যেখানে growing phase ও shrinking phase থাকে।
+
+________________________________________
+
+### Q: Serializability কী?
+
+Concurrent execution-এর result serial execution-এর মতো হওয়া।
+
+________________________________________
 ---
 </details>
 
