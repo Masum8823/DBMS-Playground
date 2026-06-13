@@ -468,6 +468,23 @@ FROM Students
 
  ```
 ________________________________________
+## Exclusive Lock (X)
+
+Write করার জন্য।
+
+  ```text
+Only one transaction allowed
+ ```
+________________________________________
+
+### Example:
+
+  ```text
+UPDATE Students
+SET CGPA = 4.00
+
+ ```
+________________________________________
 ---
 </details>
 
