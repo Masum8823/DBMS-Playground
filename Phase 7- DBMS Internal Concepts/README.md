@@ -90,7 +90,58 @@ Failure হলেও data recover করা যাবে।
 ### 4. Serializability
 
 Concurrent execution হলেও result serial execution-এর মতো হবে।
+---
+## Serial vs Concurrent Execution
 
+________________________________________
+
+## Serial Execution
+
+এক transaction শেষ হওয়ার পর আরেকটি শুরু হয়।
+
+  ```text
+T1 → Complete
+↓
+T2 → Complete
+
+ ```
+________________________________________
+
+### Example
+ ```text
+T1 Withdraw
+T2 Deposit
+
+ ```
+ 
+Result সবসময় correct।
+
+________________________________________
+
+## Concurrent Execution
+
+একাধিক transaction একই সময়ে execute হয়।
+
+  ```text
+T1
+   ↕
+T2
+
+ ```
+________________________________________
+
+### Advantage
+
+•	Faster execution  
+•	Better resource utilization  
+
+________________________________________
+
+### Disadvantage
+
+•	Data conflict হতে পারে  
+
+________________________________________
 ---
 </details>
 
