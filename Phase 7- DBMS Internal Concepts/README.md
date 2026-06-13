@@ -567,6 +567,32 @@ ________________________________________
 এটাকেই Deadlock বলে।
 
 ________________________________________
+## Deadlock Prevention
+
+### 1. Timeout
+
+অনেকক্ষণ wait করলে transaction abort।
+
+________________________________________
+
+### 2. Resource Ordering
+
+সব transaction same order-এ lock নেবে।
+
+________________________________________
+
+### 3. Wait-Die Protocol
+
+Older transaction wait করতে পারে।
+
+________________________________________
+
+### 4. Wound-Wait Protocol
+
+Older transaction younger transaction কে abort করাতে পারে।
+
+________________________________________
+
 ---
 </details>
 
