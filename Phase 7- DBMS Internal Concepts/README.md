@@ -365,6 +365,42 @@ ________________________________________
 এখন conflict তৈরি হবে।
 
 ________________________________________
+## Serializability
+
+Concurrency Control-এর সবচেয়ে গুরুত্বপূর্ণ concept।
+
+________________________________________
+
+### Definition
+
+Concurrent execution এমন হতে হবে যাতে result serial execution-এর মতো হয়।
+
+________________________________________
+
+### Example
+
+#### Serial Order:
+ ```text
+T1 → T2
+ ```
+ 
+or
+ ```text
+T2 → T1
+ ```
+ 
+________________________________________
+
+Concurrent execution-এর result যদি এই দুইটার যেকোনো একটার মতো হয়:
+
+✔ Serializable
+
+________________________________________
+
+না হলে:
+
+❌ Non-Serializable
+---
 ---
 </details>
 
