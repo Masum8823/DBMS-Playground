@@ -634,6 +634,16 @@ ________________________________________
 Validation fail করলে rollback।
 
 ________________________________________
+## Concurrency Control Techniques Summary
+
+| Technique | Idea |
+|------------|------|
+| Locking | Lock data |
+| 2PL | Two-phase locking |
+| Timestamp | Time-based ordering |
+| Optimistic | Validate before commit |
+
+________________________________________
 ---
 </details>
 
