@@ -644,6 +644,31 @@ ________________________________________
 | Optimistic | Validate before commit |
 
 ________________________________________
+## Advantages of Concurrency Control
+
+### 1. Data Consistency
+
+### 2. Data Integrity
+
+### 3. Better Multi-user Support
+
+### 4. Correct Transaction Execution
+
+### 5. Prevents Data Corruption
+
+________________________________________
+
+## Disadvantages
+
+### 1. Lock Overhead
+
+### 2. Deadlock Risk
+
+### 3. Increased Complexity
+
+### 4. Waiting Time
+
+________________________________________
 ---
 </details>
 
