@@ -485,6 +485,14 @@ SET CGPA = 4.00
 
  ```
 ________________________________________
+## Shared vs Exclusive Lock
+
+| Lock Type | Read | Write |
+|------------|------|--------|
+| Shared | Yes | No |
+| Exclusive | No | Yes |
+
+________________________________________
 ---
 </details>
 
