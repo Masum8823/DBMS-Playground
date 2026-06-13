@@ -71,6 +71,26 @@ T2 writes 15000
 👉 এখানে data inconsistency হয়েছে।
 
 ________________________________________
+## What Concurrency Control Ensures?
+
+Concurrency Control নিশ্চিত করে:
+
+### 1. Consistency
+
+Database সবসময় correct state এ থাকবে।
+
+### 2. Isolation
+
+এক transaction অন্য transaction-এর কাজ disturb করতে পারবে না।
+
+### 3. Recoverability
+
+Failure হলেও data recover করা যাবে।
+
+### 4. Serializability
+
+Concurrent execution হলেও result serial execution-এর মতো হবে।
+
 ---
 </details>
 
