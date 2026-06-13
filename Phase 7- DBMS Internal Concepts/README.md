@@ -493,6 +493,45 @@ ________________________________________
 | Exclusive | No | Yes |
 
 ________________________________________
+## Two Phase Locking (2PL)
+
+Most important protocol।
+
+________________________________________
+
+## Rule
+
+Transaction দুই phase এ কাজ করে:
+
+________________________________________
+
+## Growing Phase
+
+Lock acquire করা যায়।
+
+  ```text
+Acquire Lock
+Acquire Lock
+Acquire Lock
+
+ ```
+________________________________________
+
+## Shrinking Phase
+
+Lock release করা যায়।
+
+  ```text
+Release Lock
+Release Lock
+
+ ```
+________________________________________
+
+Lock release করার পরে নতুন lock নেওয়া যাবে না।
+
+________________________________________
+
 ---
 </details>
 
