@@ -985,7 +985,50 @@ ________________________________________
 এটাই Deadlock-এর সবচেয়ে গুরুত্বপূর্ণ condition।
 
 ________________________________________
+## Wait-For Graph (Very Important)
 
+Deadlock detect করার সবচেয়ে popular method।
+
+________________________________________
+
+## Definition
+
+Graph-এর node = Transaction
+
+Edge = Waiting relationship
+
+________________________________________
+
+## Example
+
+  ```text
+T1 waits for T2
+T2 waits for T3
+T3 waits for T1
+
+ ```
+________________________________________
+
+## Graph:
+
+  ```text
+T1 → T2
+↑      ↓
+|      |
+T3 ←---
+
+ ```
+________________________________________
+
+## Rule
+ ```text
+Cycle exists → Deadlock exists
+
+No cycle → No deadlock
+
+ ```
+ 
+________________________________________
 ---
 </details>
 
