@@ -1396,7 +1396,29 @@ Deadlock এ circular wait থাকে, starvation এ থাকে না।
 
 ________________________________________
 
+## Quick Summary
+ ```text
+Deadlock = Transactions waiting forever
 
+Necessary Conditions:
+1. Mutual Exclusion
+2. Hold and Wait
+3. No Preemption
+4. Circular Wait
+
+Handling Methods:
+- Prevention
+- Avoidance
+- Detection
+- Recovery
+
+Detection Tool:
+Wait-For Graph
+
+Recovery:
+Abort / Rollback
+
+ ```
 ---
 </details>
 
