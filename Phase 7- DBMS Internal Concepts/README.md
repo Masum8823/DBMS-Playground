@@ -843,6 +843,78 @@ T2 ← waiting
 👉 Deadlock তৈরি হয়েছে।
 
 ________________________________________
+## SQL-Based Example
+
+________________________________________
+
+## Transaction T1
+ ```text
+BEGIN TRANSACTION;
+
+UPDATE Student
+SET Name = 'Rahim'
+WHERE ID = 1;
+
+ ```
+ 
+এখন Student row lock হয়েছে।
+
+________________________________________
+
+এরপর:
+
+  ```text
+UPDATE Course
+SET Title = 'DBMS'
+WHERE ID = 10;
+
+ ```
+কিন্তু Course row T2 lock করে রেখেছে।
+
+________________________________________
+
+## Transaction T2
+
+  ```text
+BEGIN TRANSACTION;
+
+UPDATE Course
+SET Title = 'OOP'
+WHERE ID = 10;
+
+ ```
+এখন Course lock হয়েছে।
+
+________________________________________
+
+এরপর:
+
+  ```text
+UPDATE Student
+SET Name = 'Karim'
+WHERE ID = 1;
+
+ ```
+কিন্তু Student row T1 lock করে রেখেছে।
+
+________________________________________
+
+## Final State
+ ```text
+T1 waiting for Course
+
+T2 waiting for Student
+
+ ```
+ 
+________________________________________
+
+## Result:
+ ```text
+Deadlock
+ ```
+ 
+________________________________________
 ---
 </details>
 
