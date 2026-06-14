@@ -915,6 +915,77 @@ Deadlock
  ```
  
 ________________________________________
+## Four Necessary Conditions of Deadlock
+
+Deadlock হওয়ার জন্য 4টি condition একসাথে true হতে হবে।
+
+একটাও না থাকলে deadlock হবে না।
+
+________________________________________
+
+## 1. Mutual Exclusion
+
+এক resource একসাথে একজনই ব্যবহার করতে পারবে।
+
+________________________________________
+
+### Example:
+
+  ```text
+Exclusive Lock
+ ```
+________________________________________
+
+## 2. Hold and Wait
+
+Transaction একটি resource hold করে রেখে আরেকটি resource-এর জন্য wait করবে।
+
+________________________________________
+
+### Example:
+
+  ```text
+T1 holds A
+Waiting for B
+
+ ```
+________________________________________
+
+## 3. No Preemption
+
+জোর করে resource কেড়ে নেওয়া যাবে না।
+
+________________________________________
+
+### Example:
+
+  ```text
+Lock owner must release it voluntarily
+ ```
+________________________________________
+
+## 4. Circular Wait
+
+একটি circular chain তৈরি হবে।
+
+________________________________________
+
+### Example:
+ ```text
+T1 → waits for T2
+
+T2 → waits for T3
+
+T3 → waits for T1
+
+ ```
+ 
+________________________________________
+
+এটাই Deadlock-এর সবচেয়ে গুরুত্বপূর্ণ condition।
+
+________________________________________
+
 ---
 </details>
 
