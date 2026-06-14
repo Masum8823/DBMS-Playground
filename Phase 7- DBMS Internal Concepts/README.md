@@ -1345,7 +1345,16 @@ ________________________________________
 ### 4. Resource consumption
 
 ________________________________________
+## Exam-Oriented Comparison
 
+| Technique | Idea |
+|------------|------|
+| Prevention | Stop deadlock before it occurs |
+| Avoidance | Avoid unsafe state |
+| Detection | Find deadlock after it occurs |
+| Recovery | Resolve deadlock |
+
+________________________________________
 ---
 </details>
 
