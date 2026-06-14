@@ -1029,6 +1029,56 @@ No cycle → No deadlock
  ```
  
 ________________________________________
+## Deadlock Handling Methods
+
+DBMS deadlock handle করার জন্য 4টা major approach ব্যবহার করে।
+
+________________________________________
+
+## 1. Deadlock Prevention
+
+Deadlock হওয়ার আগেই prevent করা।
+
+________________________________________
+
+## Idea:
+ ```text
+Break at least one deadlock condition
+ ```
+ 
+________________________________________
+
+### Method 1: Eliminate Hold and Wait
+
+Transaction সব resource একবারে request করবে।
+
+________________________________________
+
+### Example:
+
+  ```text
+Request A + B together
+ ```
+________________________________________
+
+### Method 2: Resource Ordering
+
+সব resource fixed order-এ request করতে হবে।
+
+________________________________________
+
+### Example:
+ ```text
+A → B → C
+ ```
+ 
+সব transaction একই order follow করবে।
+
+________________________________________
+
+Deadlock হবে না।
+
+_______________________________________
 ---
 </details>
 
