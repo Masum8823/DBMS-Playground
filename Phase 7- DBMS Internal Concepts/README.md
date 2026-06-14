@@ -1186,7 +1186,50 @@ ________________________________________
 
 transaction কে victim বানানো হয়।
 ---
+## Deadlock Prevention Protocols
 
+________________________________________
+
+## Wait-Die Protocol
+
+Timestamp-based method।
+
+________________________________________
+
+## Rule:
+
+### Older Transaction
+
+Can wait
+
+________________________________________
+
+### Younger Transaction
+
+Must abort
+
+________________________________________
+
+### Example:
+
+  ```text
+T1 = Older
+T2 = Younger
+
+ ```
+________________________________________
+
+### If:
+ ```text
+T2 wants T1 resource
+ ```
+ 
+### Result:
+
+  ```text
+T2 dies (abort)
+ ```
+________________________________________
 ---
 </details>
 
