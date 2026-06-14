@@ -1137,6 +1137,43 @@ Deadlock detected
  ```
 ________________________________________
 
+## 4. Deadlock Recovery
+
+Deadlock detect হওয়ার পরে solve করা হয়।
+
+________________________________________
+
+### Method 1: Transaction Abort
+
+একটি transaction terminate করা হয়।
+
+________________________________________
+
+### Example:
+
+  ```text
+Abort T2
+
+T1 continues
+
+ ```
+________________________________________
+
+### Method 2: Rollback
+
+Transaction rollback করে previous state-এ নিয়ে যাওয়া হয়।
+
+________________________________________
+
+### Example:
+ ```text
+ROLLBACK;
+ ```
+ 
+________________________________________
+
+
+
 ---
 </details>
 
