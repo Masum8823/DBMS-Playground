@@ -788,7 +788,61 @@ Both are waiting
 এটাই Deadlock-এর real-life example।
 
 ________________________________________
+## Database Example
 
+ধরি database এ দুইটা resource আছে:
+ ```text
+Resource A = Student Table
+Resource B = Course Table
+
+ ```
+ 
+________________________________________
+
+## Transaction T1
+
+  ```text
+Lock(Resource A)
+
+Needs Resource B
+
+ ```
+________________________________________
+
+## Transaction T2
+
+  ```text
+Lock(Resource B)
+
+Needs Resource A
+
+ ```
+________________________________________
+
+## Situation
+
+  ```text
+T1 has A
+T1 waiting for B
+
+T2 has B
+T2 waiting for A
+
+ ```
+________________________________________
+
+## Result:
+ ```text
+T1 ← waiting
+T2 ← waiting
+
+ ```
+ 
+কেউই execute করতে পারছে না।
+
+👉 Deadlock তৈরি হয়েছে।
+
+________________________________________
 ---
 </details>
 
