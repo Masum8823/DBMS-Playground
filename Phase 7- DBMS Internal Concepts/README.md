@@ -1230,6 +1230,41 @@ T2 wants T1 resource
 T2 dies (abort)
  ```
 ________________________________________
+## Wound-Wait Protocol
+
+Wait-Die-এর opposite।
+
+________________________________________
+
+## Rule:
+
+### Older Transaction
+
+Can force younger to abort
+
+________________________________________
+
+### Younger Transaction
+
+Must wait
+
+________________________________________
+
+### Example:
+
+  ```text
+T1 older
+T2 younger
+
+ ```
+________________________________________
+
+T1 needs T2 resource:
+
+  ```text
+T2 abort
+ ```
+________________________________________
 ---
 </details>
 
