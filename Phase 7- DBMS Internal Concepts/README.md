@@ -1288,6 +1288,41 @@ Low-priority transaction never executes
 
  ```
 ---
+## Deadlock vs Livelock
+
+________________________________________
+
+## Deadlock
+
+  ```text
+Nobody moves
+ ```
+________________________________________
+
+## Livelock
+
+  ```text
+Everybody moves
+But no progress
+
+ ```
+________________________________________
+
+### Example:
+
+দুইজন মানুষ বারবার একে অপরকে রাস্তা দিতে গিয়ে একই দিকে সরে যাচ্ছে।
+ ```text
+Move left
+Move right
+Move left
+Move right
+
+ ```
+ 
+কিন্তু কেউই সামনে যেতে পারছে না।
+
+________________________________________
+---
 </details>
 
 
