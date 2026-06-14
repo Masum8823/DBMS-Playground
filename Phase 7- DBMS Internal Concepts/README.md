@@ -1172,7 +1172,20 @@ ROLLBACK;
  
 ________________________________________
 
+## Victim Selection
 
+Recovery-এর সময় কোন transaction abort হবে?
+
+________________________________________
+
+### Usually:
+
+•	Less work done  
+•	Less resources used  
+•	Lower priority  
+
+transaction কে victim বানানো হয়।
+---
 
 ---
 </details>
