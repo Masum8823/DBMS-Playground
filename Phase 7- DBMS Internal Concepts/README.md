@@ -1079,6 +1079,42 @@ ________________________________________
 Deadlock হবে না।
 
 _______________________________________
+## 2. Deadlock Avoidance
+
+Deadlock হওয়ার সম্ভাবনা থাকলে request reject করা হয়।
+
+________________________________________
+
+### Most famous algorithm:
+
+Banker's Algorithm
+
+### Created by:
+
+Edsger W. Dijkstra
+
+________________________________________
+
+## Idea:
+ ```text
+Grant request only if system remains safe
+ ```
+ 
+________________________________________
+
+## Safe State
+
+  ```text
+All transactions can finish
+ ```
+________________________________________
+
+## Unsafe State
+
+  ```text
+Deadlock may occur
+ ```
+________________________________________
 ---
 </details>
 
