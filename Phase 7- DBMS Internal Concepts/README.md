@@ -1279,6 +1279,14 @@ ________________________________________
 | More dangerous | Less dangerous |
 
 ________________________________________
+## Example of Starvation
+
+  ```text
+High-priority transactions always run
+
+Low-priority transaction never executes
+
+ ```
 ---
 </details>
 
