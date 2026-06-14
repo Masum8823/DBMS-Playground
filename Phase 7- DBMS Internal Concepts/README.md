@@ -746,6 +746,48 @@ Consistency + Isolation + Correctness
 <details>
     <summary><b>Deadlock</b></summary>
 
+# Deadlock in DBMS
+
+Deadlock হলো এমন একটি situation যেখানে দুই বা তার বেশি transaction একে অপরের কাছে থাকা resource-এর জন্য অপেক্ষা করতে থাকে, কিন্তু কেউই resource release করতে পারে না।
+
+ফলে:
+
+ 
+  ```text
+All Transactions Wait Forever
+ ```
+👉 সহজভাবে:
+
+  ```text
+T1 waits for T2
+T2 waits for T1
+
+Nobody can continue
+
+ ```
+এটাকেই Deadlock বলে।
+
+________________________________________
+
+## Real-Life Example (Easy Analogy)
+
+ধরুন দুইজন মানুষ একটি সরু সেতুর দুই পাশ থেকে আসছে।
+
+  ```text
+Person A ← Bridge → Person B
+ ```
+কেউ কাউকে আগে যেতে দিচ্ছে না।
+
+ফলে:
+
+  ```text
+Both are waiting
+ ```
+কেউ move করতে পারছে না।
+
+এটাই Deadlock-এর real-life example।
+
+________________________________________
 
 ---
 </details>
