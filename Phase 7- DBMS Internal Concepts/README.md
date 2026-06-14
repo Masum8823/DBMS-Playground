@@ -1355,6 +1355,48 @@ ________________________________________
 | Recovery | Resolve deadlock |
 
 ________________________________________
+## Viva Questions
+
+### Q: Deadlock কী?
+
+দুই বা ততোধিক transaction একে অপরের resource-এর জন্য indefinitely wait করলে তাকে deadlock বলে।
+
+________________________________________
+
+### Q: Deadlock হওয়ার 4টি condition কী?
+
+•	Mutual Exclusion  
+•	Hold and Wait  
+•	No Preemption  
+•	Circular Wait  
+
+________________________________________
+
+### Q: Wait-For Graph কী?
+
+Transaction waiting relationship-এর graph।
+
+________________________________________
+
+### Q: Deadlock detect কিভাবে করা হয়?
+
+Wait-For Graph এ cycle খুঁজে।
+
+________________________________________
+
+### Q: Deadlock recovery কিভাবে করা হয়?
+
+Abort বা rollback করে।
+
+________________________________________
+
+### Q: Deadlock এবং Starvation-এর পার্থক্য কী?
+
+Deadlock এ circular wait থাকে, starvation এ থাকে না।
+
+________________________________________
+
+
 ---
 </details>
 
