@@ -1265,6 +1265,20 @@ T1 needs T2 resource:
 T2 abort
  ```
 ________________________________________
+## Deadlock vs Starvation
+
+অনেক student viva-তে এইটা confuse করে।
+
+________________________________________
+
+| Deadlock | Starvation |
+|-----------|------------|
+| Transactions wait forever | Transaction never gets chance |
+| Circular wait exists | Circular wait not necessary |
+| System stuck | System running |
+| More dangerous | Less dangerous |
+
+________________________________________
 ---
 </details>
 
