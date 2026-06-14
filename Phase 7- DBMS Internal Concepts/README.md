@@ -1322,6 +1322,30 @@ Move right
 কিন্তু কেউই সামনে যেতে পারছে না।
 
 ________________________________________
+## Advantages of Deadlock Handling
+
+### 1. Prevents system freeze
+
+### 2. Improves reliability
+
+### 3. Better transaction management
+
+### 4. Data consistency maintained
+
+________________________________________
+
+## Disadvantages
+
+### 1. Extra overhead
+
+### 2. Complex algorithms
+
+### 3. Performance cost
+
+### 4. Resource consumption
+
+________________________________________
+
 ---
 </details>
 
