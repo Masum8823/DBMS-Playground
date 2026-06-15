@@ -1636,6 +1636,72 @@ ________________________________________
 তাই Non-Serial Schedule automatically safe না।
 
 ________________________________________
+## Serializable Schedule
+
+Serializable Schedule হলো এমন non-serial schedule যার result serial schedule-এর result-এর সমান।
+
+________________________________________
+
+### Definition
+ ```text
+Concurrent execution
+produces same result
+as some serial execution
+
+ ```
+ 
+________________________________________
+
+### Example
+
+Initial Balance = 1000
+
+________________________________________
+
+### T1
+
+  ```text
++500
+ ```
+________________________________________
+
+### T2
+ ```text
+-200
+ ```
+ 
+________________________________________
+
+### Serial Result:
+ ```text
+1000 + 500 - 200
+= 1300
+
+ ```
+ 
+________________________________________
+
+Concurrent execution-এর result যদি:
+ ```text
+1300
+ ```
+ 
+হয়
+
+✔ Serializable
+
+________________________________________
+
+যদি:
+ ```text
+800
+ ```
+ 
+হয়
+
+❌ Not Serializable
+
+________________________________________
 ---
 </details>
 
