@@ -2233,6 +2233,27 @@ ________________________________________
 Conflict Serializable ⊂ View Serializable
  ```
 ________________________________________
+## Quick Summary
+ ```text
+Serializability = Correct Concurrent Execution
+
+Types:
+1. Conflict Serializability
+2. View Serializability
+
+Conflict Rules:
+RW → Conflict
+WR → Conflict
+WW → Conflict
+RR → No Conflict
+
+Precedence Graph:
+No Cycle → Serializable
+Cycle → Not Serializable
+
+Conflict Serializable ⊂ View Serializable
+
+ ```
 ---
 </details>
 
