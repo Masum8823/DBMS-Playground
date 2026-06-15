@@ -2195,7 +2195,44 @@ ________________________________________
 Less strict
 
 ________________________________________
+## Viva Questions
 
+### Q: Serializability কী?
+
+Concurrent schedule-এর result যদি serial schedule-এর result-এর সমান হয়, তাহলে সেটি serializable।
+
+________________________________________
+
+### Q: Conflict Serializability কী?
+
+Conflict operations reorder করে serial schedule পাওয়া গেলে।
+
+________________________________________
+
+### Q: Precedence Graph কী?
+
+Conflict relationship দেখানোর graph।
+
+________________________________________
+
+### Q: Graph-এ cycle থাকলে কী হবে?
+
+Schedule conflict serializable হবে না।
+
+________________________________________
+
+### Q: View Serializability কী?
+
+Read-from এবং final write relationship preserve থাকলে।
+
+________________________________________
+
+### Q: Conflict Serializable এবং View Serializable-এর সম্পর্ক কী?
+
+  ```text
+Conflict Serializable ⊂ View Serializable
+ ```
+________________________________________
 ---
 </details>
 
