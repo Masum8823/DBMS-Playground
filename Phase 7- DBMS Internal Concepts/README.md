@@ -2154,6 +2154,47 @@ ________________________________________
 
 ________________________________________
 
+## Common Exam Confusions
+
+________________________________________
+
+### Serializable ≠ Serial
+
+________________________________________
+
+### Serial
+ ```text
+T1 complete
+then T2
+
+ ```
+ 
+________________________________________
+
+### Serializable
+
+  ```text
+T1 and T2 interleaved
+but same final result
+
+ ```
+________________________________________
+
+### Conflict Serializable ≠ View Serializable
+
+________________________________________
+
+### Conflict Serializable:
+
+More strict
+
+________________________________________
+
+### View Serializable:
+
+Less strict
+
+________________________________________
 
 ---
 </details>
