@@ -1702,6 +1702,105 @@ ________________________________________
 ❌ Not Serializable
 
 ________________________________________
+## Types of Serializability
+
+Exam-এর জন্য সবচেয়ে important section।
+
+________________________________________
+
+## 1. Conflict Serializability
+
+Most Important
+
+Most Asked
+
+Most Used
+
+________________________________________
+
+## What is Conflict?
+
+দুই operation conflict করবে যদি:
+
+________________________________________
+
+### Condition 1
+
+Different transactions থেকে আসতে হবে।
+
+________________________________________
+
+### Condition 2
+
+Same data item access করতে হবে।
+
+________________________________________
+
+### Condition 3
+
+At least one operation Write হতে হবে।
+
+________________________________________
+
+## Conflict Cases
+
+________________________________________
+
+### Read-Read
+ ```text
+R1(A)
+R2(A)
+
+ ```
+ 
+Conflict?
+
+❌ No
+
+________________________________________
+
+কারণ কেউ data change করছে না।
+
+________________________________________
+
+### Read-Write
+ ```text
+R1(A)
+W2(A)
+
+ ```
+ 
+Conflict?
+
+✔ Yes
+
+________________________________________
+
+### Write-Read
+ ```text
+W1(A)
+R2(A)
+
+ ```
+ 
+Conflict?
+
+✔ Yes
+
+________________________________________
+
+### Write-Write
+
+  ```text
+W1(A)
+W2(A)
+
+ ```
+Conflict?
+
+✔ Yes
+
+________________________________________
 ---
 </details>
 
