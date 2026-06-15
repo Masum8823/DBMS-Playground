@@ -2086,6 +2086,15 @@ ________________________________________
 এটাকে Cascading Rollback বলে।
 
 ________________________________________
+## Serializability vs Concurrency
+
+| Feature | Serial Execution | Concurrent Execution |
+|----------|-----------------|----------------------|
+| Speed | Low | High |
+| Resource Usage | Poor | Better |
+| Correctness | Guaranteed | Need Control |
+
+________________________________________
 ---
 </details>
 
