@@ -2014,6 +2014,32 @@ is NOT Conflict Serializable
  ```
  
 ________________________________________
+## Recoverable Schedule
+
+Serializability-এর সাথে closely related।
+
+________________________________________
+
+### Example:
+ ```text
+T1 writes A
+
+T2 reads A
+
+ ```
+ 
+________________________________________
+
+T2 commit করার আগে:
+
+  ```text
+T1 must commit
+ ```
+________________________________________
+
+Otherwise recovery problem হবে।
+
+________________________________________
 ---
 </details>
 
