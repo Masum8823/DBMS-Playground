@@ -1483,6 +1483,40 @@ ________________________________________
 এই conflict prevent করার জন্য DBMS serializability ব্যবহার করে।
 
 ________________________________________
+## What is a Schedule?
+
+Transaction operations execute হওয়ার order-কে Schedule বলে।
+
+________________________________________
+
+### Example
+
+ধরি:
+
+### Transaction T1
+
+  ```text
+Read(A)
+A = A + 100
+Write(A)
+
+ ```
+________________________________________
+
+### Transaction T2
+
+  ```text
+Read(A)
+A = A - 50
+Write(A)
+
+ ```
+________________________________________
+
+এই operations কী order-এ execute হবে, সেটাই schedule।
+
+________________________________________
+
 
 ---
 </details>
