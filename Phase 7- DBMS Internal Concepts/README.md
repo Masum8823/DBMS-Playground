@@ -1952,6 +1952,68 @@ Cycle আছে।
 ❌ Not Serializable
 
 ________________________________________
+## 2. View Serializability
+
+Conflict serializability-এর চেয়ে broader concept।
+
+________________________________________
+
+### Idea
+
+Read-write relationship preserve থাকতে হবে।
+
+________________________________________
+
+Schedule view serializable হবে যদি:
+
+________________________________________
+
+### Initial Read preserved
+
+কে প্রথম value read করেছে সেটা same থাকতে হবে।
+
+________________________________________
+
+### Read-From preserved
+
+কে কার write থেকে value read করেছে সেটা same থাকতে হবে।
+
+________________________________________
+
+### Final Write preserved
+
+Last write same transaction হতে হবে।
+
+________________________________________
+
+### Example
+
+Some schedules conflict serializable না হলেও view serializable হতে পারে।
+
+________________________________________
+
+তাই:
+
+  ```text
+Conflict Serializable
+⊂
+View Serializable
+
+ ```
+________________________________________
+
+মানে:
+ ```text
+Every Conflict Serializable
+is View Serializable
+
+But
+Every View Serializable
+is NOT Conflict Serializable
+
+ ```
+ 
+________________________________________
 ---
 </details>
 
