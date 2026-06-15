@@ -2095,6 +2095,25 @@ ________________________________________
 | Correctness | Guaranteed | Need Control |
 
 ________________________________________
+## Serializability vs Isolation
+
+অনেক student confuse করে।
+
+________________________________________
+
+### Isolation
+
+ACID property
+
+এক transaction অন্য transaction-এর intermediate result দেখতে পারবে না।
+
+________________________________________
+
+### Serializability
+
+Schedule correctness নিশ্চিত করে।
+
+________________________________________
 ---
 </details>
 
