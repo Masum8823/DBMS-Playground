@@ -1801,6 +1801,34 @@ Conflict?
 ✔ Yes
 
 ________________________________________
+
+## Example of Conflict Serializable Schedule
+
+________________________________________
+
+### Schedule:
+
+  ```text
+R1(A)
+
+W1(A)
+
+R2(A)
+
+W2(A)
+
+ ```
+________________________________________
+
+### Equivalent Serial Order:
+ ```text
+T1 → T2
+ ```
+ 
+________________________________________
+
+✔ Conflict Serializable
+---
 ---
 </details>
 
