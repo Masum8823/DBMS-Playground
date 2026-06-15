@@ -1426,6 +1426,63 @@ Abort / Rollback
 <details>
     <summary><b>Serializability</b></summary>
 
+# Serializability
+
+Serializability হলো Concurrency Control-এর সবচেয়ে গুরুত্বপূর্ণ concept।
+
+এটা নিশ্চিত করে যে, database-এ একাধিক transaction একসাথে (concurrently) execute হলেও final result এমন হবে যেন transaction গুলো serially (একটার পর একটা) execute হয়েছে।
+
+👉 সহজভাবে:
+
+  ```text
+Concurrent Execution
+        ↓
+Result should be same as
+        ↓
+Serial Execution
+
+ ```
+________________________________________
+
+## Why Serializability is Needed?
+
+DBMS-এর মূল উদ্দেশ্য:
+
+  ```text
+High Performance + Correct Result
+ ```
+________________________________________
+
+যদি আমরা সব transaction serially চালাই:
+
+  ```text
+T1 → T2 → T3 → T4
+ ```
+তাহলে result সবসময় correct হবে।
+
+কিন্তু system slow হয়ে যাবে।
+
+________________________________________
+
+আর যদি concurrently চালাই:
+ ```text
+T1
+ ↕
+T2
+ ↕
+T3
+
+ ```
+ 
+তাহলে system fast হবে।
+
+কিন্তু conflict হওয়ার chance থাকবে।
+
+________________________________________
+
+এই conflict prevent করার জন্য DBMS serializability ব্যবহার করে।
+
+________________________________________
 
 ---
 </details>
