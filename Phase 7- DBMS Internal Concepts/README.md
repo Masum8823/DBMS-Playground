@@ -2114,6 +2114,47 @@ ________________________________________
 Schedule correctness নিশ্চিত করে।
 
 ________________________________________
+## Advantages of Serializability
+
+### 1. Ensures Correct Results
+
+________________________________________
+
+### 2. Maintains Consistency
+
+________________________________________
+
+### 3. Supports Concurrency
+
+________________________________________
+
+### 4. Prevents Transaction Anomalies
+
+________________________________________
+
+### 5. Basis of Concurrency Control
+
+________________________________________
+
+## Disadvantages
+
+### 1. Extra Checking Overhead
+
+________________________________________
+
+### 2. Graph Construction Cost
+
+________________________________________
+
+### 3. Performance Impact
+
+________________________________________
+
+### 4. Complex Implementation
+
+________________________________________
+
+
 ---
 </details>
 
