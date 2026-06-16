@@ -2307,7 +2307,36 @@ first lock it."
 
  ```
 ________________________________________
+## What is a Lock?
 
+Lock হলো database object (row, table, page, record)-এর উপর temporary restriction।
+
+________________________________________
+
+### Example
+
+T1 Student table-এর একটি row lock করেছে।
+
+তখন:
+
+  ```text
+Other transactions may wait
+or be blocked
+
+ ```
+________________________________________
+
+## Basic Idea
+
+  ```text
+Acquire Lock
+      ↓
+Perform Operation
+      ↓
+Release Lock
+
+ ```
+________________________________________
 ---
 </details>
 
