@@ -2435,6 +2435,18 @@ T2 Write? ❌ Not Allowed
  ```
  
 ________________________________________
+## Lock Compatibility Matrix
+
+এটা exam-এর জন্য খুব গুরুত্বপূর্ণ।
+
+| Existing Lock | Requested S | Requested X |
+|----------------|------------|-------------|
+| S | ✔ Allowed | ❌ Not Allowed |
+| X | ❌ Not Allowed | ❌ Not Allowed |
+
+________________________________________
+
+
 ---
 </details>
 
