@@ -2461,6 +2461,19 @@ X + X = Block
 
  ```
 ________________________________________
+## Lock Manager
+
+DBMS-এর ভিতরে Lock Manager নামে component থাকে।
+
+এর কাজ:
+
+• Lock grant করা  
+• Lock release করা  
+• Waiting queue maintain করা  
+• Deadlock detect করা  
+
+________________________________________
+---
 </details>
 
 
