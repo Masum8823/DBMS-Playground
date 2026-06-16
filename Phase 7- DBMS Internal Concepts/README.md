@@ -2581,6 +2581,101 @@ ________________________________________
 তাই modern DBMS এটি খুব কম ব্যবহার করে।
 
 ________________________________________
+## Two-Phase Locking Protocol (2PL)
+
+Concurrency Control-এর সবচেয়ে important locking protocol।
+
+Exam এবং viva-তে খুব common।
+
+________________________________________
+
+## Basic Rule
+
+Transaction দুই phase-এ কাজ করবে।
+
+________________________________________
+
+## Phase 1: Growing Phase
+
+শুধু lock acquire করা যাবে।
+
+________________________________________
+
+### Example
+
+  ```text
+Lock(A)
+
+Lock(B)
+
+Lock(C)
+
+ ```
+Allowed
+
+________________________________________
+
+## Phase 2: Shrinking Phase
+
+শুধু lock release করা যাবে।
+
+________________________________________
+
+### Example
+
+  ```text
+Unlock(A)
+
+Unlock(B)
+
+Unlock(C)
+
+ ```
+Allowed
+
+________________________________________
+
+## Important Rule
+ ```text
+After first unlock,
+new lock cannot be acquired
+
+ ```
+ 
+________________________________________
+
+### Example
+
+  ```text
+Lock(A)
+
+Lock(B)
+
+Unlock(A)
+
+Lock(C)
+
+ ```
+❌ Invalid
+
+________________________________________
+
+কারণ unlock করার পরে নতুন lock নেওয়া হয়েছে।
+
+________________________________________
+
+## Why 2PL is Important?
+
+2PL guarantee করে:
+
+  ```text
+Conflict Serializability
+ ```
+________________________________________
+
+অর্থাৎ concurrent schedule correct থাকবে।
+
+________________________________________
 ---
 </details>
 
