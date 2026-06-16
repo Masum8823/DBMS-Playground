@@ -2394,6 +2394,47 @@ Read + Read = No Conflict
  ```
  
 ________________________________________
+## 2. Exclusive Lock (X-Lock)
+
+Exclusive Lock write operation-এর জন্য ব্যবহৃত হয়।
+
+________________________________________
+
+### Characteristics
+
+✔ Only one transaction allowed  
+✔ Read/Write block হতে পারে  
+
+________________________________________
+
+### Example
+
+T1:
+
+  ```text
+UPDATE Student
+SET CGPA = 4.00
+WHERE ID = 101;
+
+ ```
+________________________________________
+
+DBMS:
+
+  ```text
+Exclusive Lock on Student
+ ```
+________________________________________
+
+এখন:
+ ```text
+T2 Read? ❌ Not Allowed
+
+T2 Write? ❌ Not Allowed
+
+ ```
+ 
+________________________________________
 ---
 </details>
 
