@@ -2261,6 +2261,52 @@ Conflict Serializable ⊂ View Serializable
 <details>
     <summary><b>Locking Protocol</b></summary>
 
+# Locking Protocol
+
+Locking Protocol হলো DBMS-এর এমন একটি technique, যা concurrent transactions-এর মধ্যে data access control করে এবং data inconsistency, lost update, dirty read ইত্যাদি সমস্যা প্রতিরোধ করে।
+
+👉 সহজভাবে:
+
+  ```text
+Locking Protocol = Before using data,
+take permission (lock) first
+
+ ```
+________________________________________
+
+## Why Locking Protocol is Needed?
+
+ধরুন একটি bank account-এ balance আছে:
+ ```text
+Balance = 10000
+ ```
+ 
+________________________________________
+
+## Transaction T1
+
+  ```text
+Withdraw 2000
+ ```
+________________________________________
+
+## Transaction T2
+ ```text
+Deposit 5000
+ ```
+ 
+________________________________________
+
+যদি T1 এবং T2 একই সময়ে balance update করে, তাহলে wrong result আসতে পারে।
+
+তাই DBMS বলে:
+
+  ```text
+"Before reading or writing data,
+first lock it."
+
+ ```
+________________________________________
 
 ---
 </details>
