@@ -2798,7 +2798,51 @@ ________________________________________
 
 Low concurrency
 
+---
+## Lock Granularity
+
+Lock কত বড় data unit-এর উপর apply হবে।
+
 ________________________________________
+
+## Database Level Lock
+
+পুরো database lock।
+ ```text
+One lock
+Huge restriction
+
+ ```
+ 
+________________________________________
+
+## Table Level Lock
+
+একটি table lock।
+
+________________________________________
+
+### Example
+
+  ```text
+Student Table Locked
+ ```
+________________________________________
+
+## Page Level Lock
+
+Memory page lock।
+
+Moderate overhead
+
+________________________________________
+
+## Row Level Lock
+
+Most common।
+
+________________________________________
+
 
 ---
 </details>
