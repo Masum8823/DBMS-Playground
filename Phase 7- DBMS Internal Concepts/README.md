@@ -2769,6 +2769,37 @@ ________________________________________
 Less concurrency
 
 ________________________________________
+## 4. Conservative (Static) 2PL
+
+Transaction শুরু হওয়ার আগে সব lock acquire করতে হবে।
+
+________________________________________
+
+### Example
+
+  ```text
+Need A,B,C
+
+Acquire A,B,C first
+
+Then start execution
+
+ ```
+________________________________________
+
+### Benefit:
+
+  ```text
+Deadlock Impossible
+ ```
+________________________________________
+
+### Drawback:
+
+Low concurrency
+
+________________________________________
+
 ---
 </details>
 
