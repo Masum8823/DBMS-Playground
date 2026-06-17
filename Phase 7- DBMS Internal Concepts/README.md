@@ -2970,6 +2970,17 @@ ________________________________________
 ### 4. Complex Lock Management
 
 ________________________________________
+## Locking Protocol vs Timestamp Protocol
+
+| Feature | Locking | Timestamp |
+|----------|--------|----------|
+| Uses Locks | Yes | No |
+| Deadlock | Possible | Not Possible |
+| Waiting | Yes | No |
+| Rollback | Less | More |
+
+________________________________________
+
 ________________________________________
 
 ---
