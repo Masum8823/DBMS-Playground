@@ -2980,6 +2980,49 @@ ________________________________________
 | Rollback | Less | More |
 
 ________________________________________
+## Viva Questions
+
+### Q: Locking Protocol কী?
+
+Concurrency control technique যেখানে data access-এর আগে lock নেওয়া হয়।
+
+________________________________________
+
+### Q: Shared Lock কী?
+
+Read lock।
+
+________________________________________
+
+### Q: Exclusive Lock কী?
+
+Write lock।
+
+________________________________________
+
+### Q: 2PL কী?
+
+Two-Phase Locking protocol যেখানে growing phase এবং shrinking phase থাকে।
+
+________________________________________
+
+### Q: Strict 2PL কী?
+
+সব exclusive lock commit পর্যন্ত hold করা হয়।
+
+________________________________________
+
+### Q: Conservative 2PL-এর সুবিধা কী?
+
+Deadlock prevent করে।
+
+________________________________________
+
+### Q: Lock Manager-এর কাজ কী?
+
+Lock grant, release এবং management করা।
+
+________________________________________
 
 ________________________________________
 
