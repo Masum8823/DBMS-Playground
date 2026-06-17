@@ -2707,6 +2707,37 @@ ________________________________________
 Deadlock হতে পারে।
 
 ________________________________________
+## 2. Strict 2PL
+
+সব X-lock commit/rollback পর্যন্ত release করা যাবে না।
+
+________________________________________
+
+### Example
+
+  ```text
+Lock-X(A)
+
+Update A
+
+COMMIT
+
+Unlock(A)
+
+ ```
+________________________________________
+
+### Benefits:
+
+✔ Prevents Dirty Read  
+✔ Prevents Cascading Rollback  
+✔ Easier Recovery  
+
+________________________________________
+
+Modern DBMS-এ সবচেয়ে বেশি ব্যবহৃত।
+
+________________________________________
 ---
 </details>
 
