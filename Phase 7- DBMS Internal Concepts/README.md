@@ -2945,6 +2945,31 @@ Low priority waits forever
 
  ```
 ________________________________________
+## Advantages of Locking Protocol
+
+### 1. Maintains Consistency
+
+### 2. Prevents Lost Update
+
+### 3. Prevents Dirty Read
+
+### 4. Supports Concurrent Execution
+
+### 5. Ensures Serializability
+
+________________________________________
+
+## Disadvantages
+
+### 1. Deadlock Risk
+
+### 2. Waiting Overhead
+
+### 3. Performance Cost
+
+### 4. Complex Lock Management
+
+________________________________________
 ________________________________________
 
 ---
