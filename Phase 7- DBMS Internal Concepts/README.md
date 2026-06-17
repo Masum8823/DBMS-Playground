@@ -2842,6 +2842,29 @@ ________________________________________
 Most common।
 
 ________________________________________
+### Example
+
+  ```text
+Student Table Locked
+ ```
+________________________________________
+
+### Benefits:
+
+High concurrency
+
+________________________________________
+
+## Granularity Comparison
+
+| Lock Level | Concurrency | Overhead |
+|-------------|------------|----------|
+| Database | Low | Low |
+| Table | Medium | Medium |
+| Page | High | Medium |
+| Row | Very High | High |
+
+________________________________________
 
 
 ---
