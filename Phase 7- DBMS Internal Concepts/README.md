@@ -3023,10 +3023,34 @@ ________________________________________
 Lock grant, release এবং management করা।
 
 ________________________________________
+## Quick Summary
+```text
+Locking Protocol = Permission-based concurrency control
 
+Locks:
+S-Lock → Read
+X-Lock → Write
+
+Protocols:
+1. Binary Locking
+2. Basic 2PL
+3. Strict 2PL
+4. Rigorous 2PL
+5. Conservative 2PL
+
+Benefits:
+- Consistency
+- Isolation
+- Serializability
+
+Problems:
+- Deadlock
+- Starvation
+
+ ```
 ________________________________________
 
----
+
 </details>
 
 
