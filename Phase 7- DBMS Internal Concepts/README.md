@@ -3277,6 +3277,30 @@ Result:
 Transaction Failed
  ```
 ________________________________________
+## 2. System Crash
+
+পুরো DBMS crash করে।
+
+________________________________________
+
+### Causes
+
+• Power failure  
+• OS crash  
+• RAM failure  
+
+________________________________________
+
+### Example
+```text
+Electricity gone
+ ```
+ 
+________________________________________
+
+All active transactions interrupted।
+
+________________________________________
 
 ---
 </details>
