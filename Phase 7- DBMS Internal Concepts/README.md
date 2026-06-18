@@ -3812,6 +3812,16 @@ ________________________________________
 Database consistent again।
 
 ________________________________________
+## Recovery Algorithms Summary
+
+| Technique | Undo | Redo |
+|------------|------|------|
+| Deferred Update | No | Yes |
+| Immediate Update | Yes | Yes |
+| Shadow Paging | No | No |
+
+________________________________________
+
 ---
 </details>
 
