@@ -3337,7 +3337,85 @@ Server disconnected
  ```
  
 ________________________________________
+## Recovery Techniques
 
+DBMS recovery-এর জন্য কয়েকটি technique ব্যবহার করে।
+
+________________________________________
+
+## 1. Log-Based Recovery
+
+সবচেয়ে popular technique।
+
+Almost every modern DBMS ব্যবহার করে।
+
+________________________________________
+
+## What is Log?
+
+Log হলো special file যেখানে transaction-এর history store হয়।
+
+________________________________________
+
+### Example
+```text
+T1 Started
+
+T1 Updated A
+
+T1 Updated B
+
+T1 Committed
+
+ ```
+ 
+________________________________________
+
+সব log stable storage-এ রাখা হয়।
+
+________________________________________
+
+## Log Record Format
+
+________________________________________
+
+## Transaction Start
+```text
+<T1 START>
+ ```
+ 
+________________________________________
+
+## Write Operation
+```text
+<T1, A, 1000, 1500>
+ ```
+ 
+Meaning:
+
+ ```text
+A changed
+
+Old Value = 1000
+
+New Value = 1500
+
+ ```
+________________________________________
+
+## Commit
+
+ ```text
+<T1 COMMIT>
+ ```
+________________________________________
+
+## Rollback
+
+ ```text
+<T1 ABORT>
+ ```
+________________________________________
 ---
 </details>
 
