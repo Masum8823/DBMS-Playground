@@ -3220,6 +3220,29 @@ ________________________________________
 Rollback করা হয়েছে।
 
 ________________________________________
+## Transaction State Diagram
+
+ ```text
+Active
+   ↓
+Partially Committed
+   ↓
+Committed
+
+ ```
+________________________________________
+
+Failure হলে:
+```text
+Active
+   ↓
+Failed
+   ↓
+Aborted
+
+ ```
+ 
+________________________________________
 
 ---
 </details>
