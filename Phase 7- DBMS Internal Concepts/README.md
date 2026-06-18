@@ -3470,6 +3470,44 @@ Then Update Database
 ✔ Safe
 
 ________________________________________
+## Deferred Update Recovery
+
+Also called:
+```text
+NO-UNDO / REDO
+ ```
+ 
+________________________________________
+
+Idea:
+
+Database update commit-এর আগে করা হবে না।
+
+________________________________________
+
+### Example
+
+ ```text
+Transaction running
+
+Changes only in log
+
+ ```
+________________________________________
+
+After COMMIT:
+
+ ```text
+Apply changes
+ ```
+________________________________________
+
+Crash হলে:
+
+ ```text
+Only REDO required
+ ```
+________________________________________
 ---
 </details>
 
