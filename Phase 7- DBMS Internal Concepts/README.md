@@ -3416,6 +3416,60 @@ ________________________________________
 <T1 ABORT>
  ```
 ________________________________________
+## Write Ahead Logging (WAL)
+
+Most important recovery rule।
+
+________________________________________
+
+## Rule
+
+ ```text
+Write Log First
+
+Write Database Later
+
+ ```
+________________________________________
+
+Meaning:
+
+ ```text
+Log must reach disk
+before actual data update
+
+ ```
+________________________________________
+
+This guarantees recovery।
+
+________________________________________
+
+### Example
+
+Wrong:
+```text
+Update Database
+
+Then Write Log
+
+ ```
+ 
+❌ Dangerous
+
+________________________________________
+
+Correct:
+```text
+Write Log
+
+Then Update Database
+
+ ```
+ 
+✔ Safe
+
+________________________________________
 ---
 </details>
 
