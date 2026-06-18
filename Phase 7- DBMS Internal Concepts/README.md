@@ -3894,6 +3894,27 @@ ________________________________________
 Commit-এর আগেই database update হতে পারে।
 
 ________________________________________
+## Recovery Flow (Exam Favourite)
+```text
+Transaction Starts
+        ↓
+     Log Write
+        ↓
+ Database Update
+        ↓
+      COMMIT
+        ↓
+ Crash?
+   ↓      ↓
+ No      Yes
+ ↓        ↓
+Done   Recovery
+            ↓
+      UNDO / REDO
+            ↓
+ Consistent Database
+
+ ```
 ---
 </details>
 
