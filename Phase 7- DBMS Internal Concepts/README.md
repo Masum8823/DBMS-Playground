@@ -3243,6 +3243,40 @@ Aborted
  ```
  
 ________________________________________
+## Types of Failures
+
+Recovery System-এর সবচেয়ে important topic।
+
+________________________________________
+
+## 1. Transaction Failure
+
+Single transaction fail করে।
+
+________________________________________
+
+### Causes
+
+• Invalid input  
+• Arithmetic error  
+• Constraint violation  
+• Deadlock victim  
+
+________________________________________
+
+### Example
+
+ ```text
+Balance = Balance / 0
+ ```
+________________________________________
+
+Result:
+
+ ```text
+Transaction Failed
+ ```
+________________________________________
 
 ---
 </details>
