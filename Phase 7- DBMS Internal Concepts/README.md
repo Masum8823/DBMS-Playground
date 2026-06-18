@@ -3916,6 +3916,37 @@ Done   Recovery
 
  ```
 ---
+## Quick Summary
+```text
+Recovery System = Restore database after failure
+
+Main Components:
+- Log
+- WAL
+- Checkpoint
+- Recovery Manager
+
+Recovery Operations:
+- UNDO
+- REDO
+
+Failure Types:
+- Transaction Failure
+- System Crash
+- Media Failure
+- Communication Failure
+
+Techniques:
+- Deferred Update
+- Immediate Update
+- Shadow Paging
+
+Supports:
+- Atomicity
+- Durability
+
+ ```
+---
 </details>
 
 
