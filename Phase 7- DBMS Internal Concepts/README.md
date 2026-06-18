@@ -3730,6 +3730,39 @@ Responsibilities:
 • Crash recovery  
 
 ________________________________________
+## Recovery and ACID Properties
+
+Recovery System mainly supports:
+
+________________________________________
+
+## Atomicity
+```text
+All or Nothing
+ ```
+ 
+________________________________________
+
+If transaction incomplete:
+```text
+UNDO
+ ```
+
+________________________________________
+
+## Durability
+
+ ```text
+Committed = Permanent
+ ```
+________________________________________
+
+If crash occurs:
+```text
+REDO
+ ```
+________________________________________
+
 ---
 </details>
 
