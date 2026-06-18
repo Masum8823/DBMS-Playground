@@ -3821,7 +3821,29 @@ ________________________________________
 | Shadow Paging | No | No |
 
 ________________________________________
+## Advantages of Recovery System
 
+### 1. Data Consistency
+
+### 2. Data Reliability
+
+### 3. Crash Recovery
+
+### 4. Supports Atomicity
+
+### 5. Supports Durability
+
+________________________________________
+
+## Disadvantages
+
+### 1. Extra Storage for Logs
+
+### 2. Performance Overhead
+
+### 3. Complex Implementation
+
+### 4. Checkpoint Cost
 ---
 </details>
 
