@@ -3131,6 +3131,30 @@ ________________________________________
 এই সমস্যা solve করার জন্য Recovery System ব্যবহার করা হয়।
 
 ________________________________________
+## Main Goal of Recovery System
+
+Recovery System-এর প্রধান লক্ষ্য:
+
+ ```text
+Maintain Database Consistency
+ ```
+________________________________________
+
+এছাড়া:
+
+1. Preserve Data  
+2. Recover Lost Data  
+3. Ensure Transaction Reliability  
+4. Maintain ACID Properties  
+
+বিশেষ করে:
+```text
+Atomicity
+Durability
+
+ ```
+ 
+________________________________________
 ---
 </details>
 
