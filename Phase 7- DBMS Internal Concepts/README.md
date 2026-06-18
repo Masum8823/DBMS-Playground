@@ -3953,6 +3953,27 @@ Supports:
 <details>
     <summary><b>ACID Properties</b></summary>
 
+# ACID Properties in DBMS
+
+ACID হলো Database Transaction-এর 4টি fundamental property-এর সমষ্টি, যা database-এর reliability, consistency এবং correctness নিশ্চিত করে।
+
+ACID এর পূর্ণরূপ:
+```text
+A = Atomicity
+C = Consistency
+I = Isolation
+D = Durability
+
+ ```
+---
+
+## What is a Transaction?
+
+ACID বোঝার আগে Transaction বুঝতে হবে।
+
+Transaction হলো database-এর এক বা একাধিক operation-এর group, যা একসাথে একটি logical task complete করে।
+
+---
 
 ---
 </details>
