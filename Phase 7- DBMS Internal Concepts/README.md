@@ -3762,7 +3762,56 @@ If crash occurs:
 REDO
  ```
 ________________________________________
+## Example (Complete Recovery Scenario)
 
+Initial Balance:
+```text
+10000
+ ```
+ 
+________________________________________
+
+Transaction T1:
+```text
+Withdraw 2000
+ ```
+   
+________________________________________
+
+## Log:
+
+ ```text
+<T1 START>
+
+<T1,Balance,10000,8000>
+
+ ```
+________________________________________
+
+Before commit:
+
+ ```text
+System Crash
+ ```
+________________________________________
+
+## Recovery:
+
+ ```text
+T1 incomplete
+ ```
+________________________________________
+
+UNDO:
+
+ ```text
+Balance restored to 10000
+ ```
+________________________________________
+
+Database consistent again।
+
+________________________________________
 ---
 </details>
 
