@@ -3057,6 +3057,35 @@ ________________________________________
 <details>
     <summary><b>Recovery System</b></summary>
 
+# Recovery System in DBMS
+
+Recovery System হলো DBMS-এর এমন একটি mechanism, যা system failure, software crash, hardware failure, power failure বা transaction failure-এর পরে database কে আবার consistent state-এ ফিরিয়ে আনে।
+
+👉 সহজভাবে:
+
+ ```text
+Recovery System = Database Crash
+                    ↓
+              Restore Correct Data
+
+ ```
+________________________________________
+
+## Why Recovery System is Needed?
+
+Database system সবসময় perfectly run করে না।
+
+অনেক কারণে failure হতে পারে:
+l
+• Power failure  
+• Software bug  
+• Operating System crash  
+• Hard disk failure  
+• Network problem  
+• Transaction error  
+• Human mistake  
+
+________________________________________
 
 ---
 </details>
