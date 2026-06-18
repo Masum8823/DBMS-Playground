@@ -3301,7 +3301,29 @@ ________________________________________
 All active transactions interrupted।
 
 ________________________________________
+## 3. Media Failure
 
+Storage device damage।
+
+________________________________________
+
+### Causes
+
+• Hard disk crash  
+• SSD corruption  
+
+________________________________________
+
+### Example
+
+ ```text
+Disk physically damaged
+ ```
+________________________________________
+
+Most dangerous failure।
+
+________________________________________
 ---
 </details>
 
