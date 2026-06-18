@@ -3714,6 +3714,22 @@ ________________________________________
 No need for log।
 
 ________________________________________
+
+## Recovery Manager
+
+DBMS-এর internal component।
+
+________________________________________
+
+Responsibilities:
+
+• Maintain logs  
+• Perform rollback  
+• Perform redo  
+• Handle checkpoints  
+• Crash recovery  
+
+________________________________________
 ---
 </details>
 
