@@ -3596,7 +3596,58 @@ Balance = 1500 again
  ```
  
 ________________________________________
-s
+
+## Checkpointing
+
+Very important recovery optimization।
+
+________________________________________
+
+## Problem Without Checkpoint
+
+Suppose log contains:
+```text
+10 Million Records
+ ```
+ 
+________________________________________
+
+Crash হলে:
+
+সব log scan করতে হবে।
+
+Slow হবে।
+
+________________________________________
+
+## Solution
+
+Checkpoint ব্যবহার করা।
+
+________________________________________
+
+### Example
+```text
+<Checkpoint>
+ ```
+ 
+________________________________________
+
+Meaning:
+
+ ```text
+Database consistent until here
+ ```
+________________________________________
+
+Recovery শুরু হবে checkpoint থেকে।
+
+________________________________________
+
+Not from beginning।
+
+________________________________________
+
 ---
 </details>
 
