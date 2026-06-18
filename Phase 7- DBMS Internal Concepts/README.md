@@ -3086,7 +3086,51 @@ l
 • Human mistake  
 
 ________________________________________
+ধরুন:
 
+Rahim ATM থেকে 5000 টাকা withdraw করলো।
+
+### Transaction:
+```text
+Balance = 10000
+
+Withdraw = 5000
+
+New Balance = 5000
+
+ ```
+ 
+________________________________________
+
+ঠিক balance update হওয়ার আগে system crash করলো।
+
+________________________________________
+
+## Possible Problems:
+
+ ```text
+Money deducted from ATM
+
+But database not updated
+
+ ```
+or
+```text
+Database updated
+
+But money not delivered
+
+ ```
+ 
+________________________________________
+
+এখন database inconsistent হয়ে যাবে।
+
+________________________________________
+
+এই সমস্যা solve করার জন্য Recovery System ব্যবহার করা হয়।
+
+________________________________________
 ---
 </details>
 
