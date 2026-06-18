@@ -3845,6 +3845,56 @@ ________________________________________
 
 ### 4. Checkpoint Cost
 ---
+## Common Viva Questions
+
+### Q: Recovery System কী?
+
+Failure-এর পরে database কে consistent state-এ ফিরিয়ে আনার mechanism।
+
+________________________________________
+
+### Q: Log কী?
+
+Transaction history store করা special file।
+
+________________________________________
+
+### Q: WAL কী?
+
+Write-Ahead Logging, যেখানে log আগে write হয়।
+
+________________________________________
+
+### Q: UNDO কী?
+
+Uncommitted changes remove করা।
+
+________________________________________
+
+### Q: REDO কী?
+
+Committed changes reapply করা।
+
+________________________________________
+
+### Q: Checkpoint কী?
+
+Recovery fast করার জন্য consistency marker।
+
+________________________________________
+
+### Q: Deferred Update কী?
+
+Commit-এর আগে database update হয় না।
+
+________________________________________
+
+### Q: Immediate Update কী?
+
+Commit-এর আগেই database update হতে পারে।
+
+________________________________________
+---
 </details>
 
 
