@@ -3974,7 +3974,37 @@ ACID বোঝার আগে Transaction বুঝতে হবে।
 Transaction হলো database-এর এক বা একাধিক operation-এর group, যা একসাথে একটি logical task complete করে।
 
 ---
+## Example: Bank Transfer
 
+Rahim-এর account থেকে Karim-এর account-এ 5000 টাকা transfer করা হবে।
+```text
+Subtract 5000 from Rahim
+
+Add 5000 to Karim
+
+ ```
+---
+
+এখানে 2টি operation আছে।  
+কিন্তু user-এর কাছে এটা একটি transaction।
+
+---
+
+### Problem:
+
+যদি প্রথম operation execute হয় কিন্তু দ্বিতীয়টা না হয়?
+```text
+Rahim lost 5000
+
+Karim did not receive 5000
+
+ ```
+---
+
+Database inconsistent হয়ে যাবে।  
+এই সমস্যা সমাধানের জন্য ACID properties ব্যবহার করা হয়।
+
+---
 ---
 </details>
 
