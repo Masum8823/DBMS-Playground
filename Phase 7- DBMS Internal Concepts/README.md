@@ -3647,6 +3647,35 @@ ________________________________________
 Not from beginning।
 
 ________________________________________
+## Recovery Using Checkpoint
+
+________________________________________
+
+Crash হলে:
+
+### Step 1
+
+Find latest checkpoint
+
+________________________________________
+
+### Step 2
+
+Check active transactions
+
+________________________________________
+
+### Step 3
+
+UNDO incomplete transactions
+
+________________________________________
+
+### Step 4
+
+REDO committed transactions
+
+________________________________________
 
 ---
 </details>
