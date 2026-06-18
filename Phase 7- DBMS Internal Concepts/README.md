@@ -3508,6 +3508,36 @@ Crash হলে:
 Only REDO required
  ```
 ________________________________________
+## Immediate Update Recovery
+
+Most common technique।
+
+________________________________________
+
+Idea:
+
+Database commit-এর আগেই update হতে পারে।
+
+________________________________________
+
+### Example
+
+ ```text
+Update database
+
+Before COMMIT
+
+ ```
+________________________________________
+
+Crash হলে:
+
+Need:
+```text
+UNDO + REDO
+ ```
+ 
+________________________________________
 ---
 </details>
 
