@@ -3324,6 +3324,20 @@ ________________________________________
 Most dangerous failure।
 
 ________________________________________
+
+## 4. Communication Failure
+
+Distributed database-এ network issue।
+
+________________________________________
+
+### Example
+```text
+Server disconnected
+ ```
+ 
+________________________________________
+
 ---
 </details>
 
