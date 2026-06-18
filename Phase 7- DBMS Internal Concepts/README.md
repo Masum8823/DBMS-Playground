@@ -3155,6 +3155,37 @@ Durability
  ```
  
 ________________________________________
+
+## Recovery Concepts
+
+Recovery বুঝতে হলে কিছু basic concept আগে জানতে হবে।
+
+________________________________________
+
+## Transaction
+
+Transaction হলো logical unit of work।
+
+________________________________________
+
+### Example:
+
+ ```text
+BEGIN TRANSACTION
+
+Withdraw 5000
+
+Update Balance
+
+COMMIT
+
+ ```
+________________________________________
+
+Transaction complete না হওয়া পর্যন্ত DBMS এটাকে monitor করে।
+
+________________________________________
+
 ---
 </details>
 
