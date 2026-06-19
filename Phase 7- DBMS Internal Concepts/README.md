@@ -4490,7 +4490,42 @@ D = Data Never Lost
 
  ```
 ---
+# Viva Questions
 
+Q: ACID এর পূর্ণরূপ কী?  
+Atomicity, Consistency, Isolation, Durability।
+
+---
+
+Q: Atomicity কী?  
+All operations complete হবে অথবা একটাও হবে না।
+
+---
+
+Q: Consistency কী?  
+Database সবসময় valid state-এ থাকবে।
+
+---
+
+Q: Isolation কী?  
+Concurrent transactions একে অপরকে interfere করতে পারবে না।
+
+---
+
+Q: Durability কী?  
+Committed data permanently stored থাকবে।
+
+---
+
+Q: কোন ACID property ROLLBACK-এর সাথে সম্পর্কিত?  
+Atomicity।
+
+---
+
+Q: কোন ACID property COMMIT-এর সাথে সম্পর্কিত?  
+Durability।
+
+---
 ---
 </details>
 
