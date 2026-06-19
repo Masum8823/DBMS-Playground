@@ -4005,6 +4005,26 @@ Database inconsistent হয়ে যাবে।
 এই সমস্যা সমাধানের জন্য ACID properties ব্যবহার করা হয়।
 
 ---
+## Why ACID is Needed?
+
+ACID না থাকলে:
+• Data corruption হতে পারে  
+• Wrong balance হতে পারে  
+• Incomplete transactions হতে পারে  
+• Crash-এর পরে data হারিয়ে যেতে পারে  
+• Multiple users data destroy করতে পারে  
+
+---
+
+## ACID Overview
+
+Property | Purpose
+---|---
+Atomicity | All or Nothing
+Consistency | Valid State
+Isolation | No Interference
+Durability | Permanent Storage
+
 ---
 </details>
 
