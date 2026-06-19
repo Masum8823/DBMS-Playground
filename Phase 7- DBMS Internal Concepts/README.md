@@ -4093,6 +4093,31 @@ Nothing Happens
 
  ```
 ---
+
+## Atomicity Using Rollback
+
+Transaction fail হলে:
+```text
+ROLLBACK;
+ ```
+---
+
+সব changes undo করা হয়।
+
+---
+Example:
+Before:
+```text
+Balance = 10000
+ ```
+---
+
+After failure:
+```text
+Balance = 10000
+ ```
+---
+
 ---
 </details>
 
