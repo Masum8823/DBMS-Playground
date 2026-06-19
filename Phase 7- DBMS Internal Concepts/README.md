@@ -4444,6 +4444,16 @@ Total money same থাকবে।
 COMMIT-এর পরে crash হলেও transfer save থাকবে।
 
 ---
+# ACID vs Non-ACID
+
+Feature | ACID Database | Non-ACID Database
+---|---|---
+Data Reliability | High | Lower
+Consistency | Strong | Weak
+Recovery | Strong | Limited
+Transaction Safety | High | Lower
+
+---
 ---
 </details>
 
