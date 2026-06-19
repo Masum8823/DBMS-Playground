@@ -4162,6 +4162,38 @@ Balance = -3000
 Consistency এই transaction reject করবে।
 
 ---
+## Real-Life Example
+
+University Database:
+
+Rule:
+```text
+CGPA must be between 0 and 4
+ ```
+---
+
+Invalid Query:
+```text
+UPDATE Student
+SET CGPA = 8.5
+
+ ```
+---
+
+Consistency violation।  
+DBMS reject করবে।
+
+---
+
+## Consistency Maintained By
+
+• Constraints  
+• Keys  
+• Triggers  
+• Business Rules  
+• Referential Integrity  
+
+---
 ---
 </details>
 
