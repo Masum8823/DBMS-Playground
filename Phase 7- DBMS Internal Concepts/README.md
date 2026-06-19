@@ -4565,6 +4565,41 @@ Recovery = Restore data when needed
 
  ```
 ---
+## Real-Life Example
+
+ধরুন আপনার University Management System database-এ 10,000 student-এর তথ্য আছে।
+
+একদিন:
+```text
+Server Crash
+ ```
+---
+
+অথবা
+```text
+Hard Disk Failure
+ ```
+---
+
+হয়ে গেল।
+
+---
+
+যদি backup না থাকে:
+```text
+All data lost
+ ```
+---
+
+যদি backup থাকে:
+```text
+Restore Database
+ ```
+---
+
+এবং সব data আবার ফিরে পাওয়া যাবে।
+
+---
 ---
 </details>
 
