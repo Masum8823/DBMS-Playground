@@ -4553,7 +4553,18 @@ Reliable and Correct Database Transactions
 <details>
     <summary><b>Backup & Recovery</b></summary>
 
+# Backup & Recovery in DBMS
 
+Backup & Recovery হলো DBMS-এর এমন একটি process যার মাধ্যমে database-এর data নিরাপদে সংরক্ষণ (Backup) করা হয় এবং কোনো failure, crash বা data loss হলে সেই data পুনরুদ্ধার (Recovery) করা হয়।
+
+👉 সহজভাবে:
+```text
+Backup = Save a copy of data
+
+Recovery = Restore data when needed
+
+ ```
+---
 ---
 </details>
 
