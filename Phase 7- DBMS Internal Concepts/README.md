@@ -4623,6 +4623,23 @@ Complete Data Loss
 তাই database administration-এর সবচেয়ে গুরুত্বপূর্ণ কাজগুলোর একটি হলো backup maintain করা।
 
 ---
+## What is Backup?
+
+Backup হলো database-এর একটি copy, যা original database-এর বাইরে সংরক্ষণ করা হয়।
+
+---
+
+## Purpose
+
+যদি original database destroy হয়ে যায়:
+```text
+Backup Copy
+      ↓
+Restore Database
+
+ ```
+---
+
 ---
 </details>
 
