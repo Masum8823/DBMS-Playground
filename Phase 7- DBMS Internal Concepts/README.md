@@ -4463,6 +4463,24 @@ Examples:
 • PostgreSQL  
 
 ---
+# Advantages of ACID
+
+1. Data Integrity  
+2. Data Consistency  
+3. Safe Concurrent Access  
+4. Reliable Recovery  
+5. Prevents Data Corruption  
+
+---
+
+# Disadvantages
+
+1. Extra Overhead  
+2. Slower Than Simple Systems  
+3. More Storage Needed For Logs  
+4. Complex Implementation  
+
+---
 ---
 </details>
 
