@@ -4600,6 +4600,29 @@ Restore Database
 এবং সব data আবার ফিরে পাওয়া যাবে।
 
 ---
+## Why Backup is Important?
+
+Database অনেক valuable information store করে। যেমন:
+• Student Records  
+• Bank Accounts  
+• Hospital Data  
+• E-Commerce Orders  
+• Employee Information  
+
+---
+
+Backup না থাকলে:
+```text
+Single Failure
+        ↓
+Complete Data Loss
+
+ ```
+---
+
+তাই database administration-এর সবচেয়ে গুরুত্বপূর্ণ কাজগুলোর একটি হলো backup maintain করা।
+
+---
 ---
 </details>
 
