@@ -4398,6 +4398,52 @@ Recovery fast করে।
 Data protection দেয়।
 
 ---
+
+# Full Bank Transfer Example Using ACID
+
+Initial State:
+```text
+Rahim = 10000
+
+Karim = 5000
+
+ ```
+---
+
+Transaction:
+```text
+BEGIN TRANSACTION
+
+Rahim = Rahim - 5000
+
+Karim = Karim + 5000
+
+COMMIT
+
+ ```
+---
+
+## Atomicity
+দুই operation-ই complete হবে।
+
+---
+
+## Consistency
+Total money same থাকবে।
+```text
+15000
+ ```
+---
+
+## Isolation
+অন্য user মাঝখানে partial result দেখতে পারবে না।
+
+---
+
+## Durability
+COMMIT-এর পরে crash হলেও transfer save থাকবে।
+
+---
 ---
 </details>
 
