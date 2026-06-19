@@ -4316,6 +4316,66 @@ Repeatable Read | No | No | Yes
 Serializable | No | No | No
 
 ---
+# 4. Durability
+
+Durability নিশ্চিত করে:
+```text
+Once Committed
+Always Stored
+
+ ```
+---
+
+Transaction commit হওয়ার পরে data permanently save হবে।
+
+---
+
+Even if:
+• Power failure  
+• Server crash  
+• OS failure  
+
+হলেও data হারাবে না।
+
+---
+
+## Example
+
+Balance:
+```text
+10000
+ ```
+---
+
+Transaction:
+```text
+Deposit 5000
+ ```
+---
+
+New Balance:
+```text
+15000
+ ```
+---
+```text
+COMMIT;
+ ```
+---
+
+COMMIT হওয়ার 1 second পরে server crash করলো।
+
+---
+
+Recovery-এর পরে balance থাকবে:
+```text
+15000
+ ```
+---
+
+কারণ Durability guarantee করেছে।
+
+---
 ---
 </details>
 
