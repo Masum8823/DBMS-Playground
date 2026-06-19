@@ -4639,6 +4639,24 @@ Restore Database
 
  ```
 ---
+## What is Recovery?
+
+Recovery হলো failure-এর পরে database-কে আবার usable এবং consistent state-এ ফিরিয়ে আনার process।
+
+---
+
+## Example:
+```text
+Database Crash
+      ↓
+Use Backup
+      ↓
+Restore Data
+      ↓
+Database Running Again
+
+ ```
+---
 
 ---
 </details>
