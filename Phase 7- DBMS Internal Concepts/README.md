@@ -4264,6 +4264,24 @@ Actual Balance:
 Isolation এই সমস্যা prevent করে।
 
 ---
+## Isolation Problems
+
+Isolation ঠিকমতো না থাকলে:
+
+### Dirty Read
+Uncommitted data read করা।
+
+### Lost Update
+এক transaction-এর update হারিয়ে যাওয়া।
+
+### Non-Repeatable Read
+একই query different result দেওয়া।
+
+### Phantom Read
+নতুন rows suddenly দেখা দেওয়া।
+
+---
+
 ---
 </details>
 
