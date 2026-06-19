@@ -4526,6 +4526,26 @@ Q: কোন ACID property COMMIT-এর সাথে সম্পর্কি�
 Durability।
 
 ---
+## Quick Summary
+```text
+ACID = Core Transaction Properties
+
+A → Atomicity
+    All or Nothing
+
+C → Consistency
+    Valid State to Valid State
+
+I → Isolation
+    No Transaction Interference
+
+D → Durability
+    Committed Data Never Lost
+
+Goal:
+Reliable and Correct Database Transactions
+
+ ```
 ---
 </details>
 
