@@ -4026,6 +4026,74 @@ Isolation | No Interference
 Durability | Permanent Storage
 
 ---
+# 1. Atomicity
+
+Atomicity-এর মূল ধারণা:
+```text
+All or Nothing
+ ```
+---
+
+একটি transaction-এর সব operation execute হবে।  
+অথবা একটাও execute হবে না।  
+Partial execution allowed নয়।
+
+---
+
+## Example: ATM Withdrawal
+
+Initial Balance:
+```text
+10000
+ ```
+---
+
+Transaction:
+```text
+Step 1:
+Balance = Balance - 5000
+
+Step 2:
+Cash Dispense
+
+ ```
+---
+
+ধরি:  
+Step 1 execute হয়েছে।
+
+Balance:
+```text
+5000
+ ```
+---
+
+কিন্তু ATM crash করলো।  
+Cash বের হলো না।
+
+---
+
+Result:
+```text
+Money lost
+ ```
+---
+
+Atomicity ensure করবে:
+```text
+Either:
+
+Balance = 5000
+AND
+Cash Dispensed
+
+OR
+
+Nothing Happens
+
+ ```
+---
+---
 </details>
 
 
