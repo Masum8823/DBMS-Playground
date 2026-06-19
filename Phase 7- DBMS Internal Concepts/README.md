@@ -4282,6 +4282,40 @@ Uncommitted data read করা।
 
 ---
 
+## Isolation Levels
+
+Read Uncommitted  
+Lowest isolation।
+
+---
+
+Read Committed  
+Most common।  
+Dirty read prevent করে।
+
+---
+
+Repeatable Read  
+Same row repeat read করলে same result দেয়।
+
+---
+
+Serializable  
+Highest isolation level।  
+Maximum protection।
+
+---
+
+## Isolation Level Comparison
+
+Isolation Level | Dirty Read | Non-Repeatable Read | Phantom Read
+---|---|---|---
+Read Uncommitted | Yes | Yes | Yes
+Read Committed | No | Yes | Yes
+Repeatable Read | No | No | Yes
+Serializable | No | No | No
+
+---
 ---
 </details>
 
