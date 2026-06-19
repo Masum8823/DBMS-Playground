@@ -4481,6 +4481,16 @@ Examples:
 4. Complex Implementation  
 
 ---
+## Easy Memory Trick
+```text
+A = All or Nothing
+C = Correct State
+I = Independent Transactions
+D = Data Never Lost
+
+ ```
+---
+
 ---
 </details>
 
