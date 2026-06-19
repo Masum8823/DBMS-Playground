@@ -4376,6 +4376,28 @@ Recovery-এর পরে balance থাকবে:
 কারণ Durability guarantee করেছে।
 
 ---
+## Durability Achieved By
+
+### Transaction Log
+সব changes log file-এ store হয়।
+
+---
+
+### Write-Ahead Logging (WAL)
+আগে log write হয়।  
+পরে database update হয়।
+
+---
+
+### Checkpoint
+Recovery fast করে।
+
+---
+
+### Backup System
+Data protection দেয়।
+
+---
 ---
 </details>
 
