@@ -4117,7 +4117,51 @@ After failure:
 Balance = 10000
  ```
 ---
+# 2. Consistency
 
+Consistency নিশ্চিত করে:
+```text
+Database always moves
+from one valid state
+to another valid state
+
+ ```
+---
+
+Invalid state-এ database যেতে পারবে না।
+
+---
+
+## Example
+
+Rule:
+```text
+Balance cannot be negative
+ ```
+---
+
+Current Balance:
+```text
+2000
+ ```
+---
+
+Transaction:
+```text
+Withdraw 5000
+ ```
+---
+
+Result:
+```text
+Balance = -3000
+ ```
+---
+
+এটা invalid।  
+Consistency এই transaction reject করবে।
+
+---
 ---
 </details>
 
