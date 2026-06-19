@@ -4194,6 +4194,76 @@ DBMS reject করবে।
 • Referential Integrity  
 
 ---
+# 3. Isolation
+
+Isolation নিশ্চিত করে:
+```text
+Concurrent transactions
+cannot interfere with each other
+
+ ```
+---
+
+এক transaction অন্য transaction-এর incomplete result দেখতে পারবে না।
+
+---
+
+## Example
+
+Initial Balance:
+```text
+10000
+ ```
+---
+
+Transaction T1:
+```text
+Withdraw 2000
+ ```
+---
+
+Balance:
+```text
+8000
+ ```
+---
+
+কিন্তু এখনো COMMIT হয়নি।
+
+---
+
+Transaction T2:
+```text
+SELECT Balance
+ ```
+---
+
+T2 যদি 8000 দেখে ফেলে:
+```text
+Dirty Read
+ ```
+---
+
+যদি পরে:
+```text
+ROLLBACK
+ ```
+---
+
+হয়?
+
+---
+
+Actual Balance:
+```text
+10000
+ ```
+---
+
+তাহলে T2 ভুল data read করেছে।  
+Isolation এই সমস্যা prevent করে।
+
+---
 ---
 </details>
 
