@@ -4454,6 +4454,15 @@ Recovery | Strong | Limited
 Transaction Safety | High | Lower
 
 ---
+# Real Databases Using ACID
+
+Examples:
+• MySQL  
+• Microsoft SQL Server  
+• Oracle Database  
+• PostgreSQL  
+
+---
 ---
 </details>
 
