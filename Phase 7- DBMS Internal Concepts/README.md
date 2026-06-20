@@ -5132,6 +5132,16 @@ Apply Transaction Logs
 Database আবার latest state-এ ফিরে আসবে।
 
 ---
+## Backup vs Log
+
+Backup | Log
+---|---
+Full/Partial database copy | Transaction history
+Used for restore | Used for recovery
+Large file | Smaller records
+Periodically created | Continuously updated
+
+---
 ---
 </details>
 
