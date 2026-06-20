@@ -5221,6 +5221,33 @@ REDO = Reapply Committed
 
  ```
 ---
+## Quick Summary
+```text
+Backup = Data Copy
+
+Recovery = Data Restoration
+
+Backup Types:
+1. Full Backup
+2. Incremental Backup
+3. Differential Backup
+
+Recovery Tools:
+- Logs
+- Checkpoints
+- UNDO
+- REDO
+
+Failure Types:
+- Transaction Failure
+- System Crash
+- Media Failure
+
+Goal:
+Protect Data and Restore Database
+
+ ```
+
 ---
 </details>
 
