@@ -4958,6 +4958,41 @@ Backup + Logs
 সব data restore হবে।
 
 ---
+## Recovery Concepts
+
+---
+
+## UNDO
+
+Incomplete transaction remove করা।
+
+---
+
+Example
+
+Before:
+```text
+Balance = 10000
+ ```
+---
+
+Transaction:
+```text
+Balance = 8000
+ ```
+---
+
+Crash before commit।
+
+---
+
+UNDO:
+```text
+Balance = 10000
+ ```
+---
+
+
 ---
 </details>
 
