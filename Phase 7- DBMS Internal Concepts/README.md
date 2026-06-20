@@ -4912,7 +4912,24 @@ Apply transaction logs
 Database becomes consistent
 
 ---
+## Types of Recovery
 
+---
+
+### 1. Transaction Recovery
+Single transaction fail করেছে।
+
+---
+
+Example:
+```text
+ROLLBACK;
+ ```
+---
+
+Uncommitted changes remove হবে।
+
+---
 ---
 </details>
 
