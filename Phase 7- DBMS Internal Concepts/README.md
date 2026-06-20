@@ -4944,6 +4944,20 @@ Logs + Checkpoints
 Recovery করা হবে।
 
 ---
+### 3. Media Recovery
+Hard Disk failure হয়েছে।
+
+---
+
+Use:
+```text
+Backup + Logs
+ ```
+---
+
+সব data restore হবে।
+
+---
 ---
 </details>
 
