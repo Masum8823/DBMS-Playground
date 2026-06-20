@@ -4821,6 +4821,17 @@ Restore easier than Incremental।
 
 Backup size gradually increases।
 
+---
+## Full vs Incremental vs Differential
+
+Feature | Full | Incremental | Differential
+---|---|---|---
+Backup Size | Large | Small | Medium
+Backup Time | High | Low | Medium
+Restore Time | Fast | Slow | Medium
+Storage Need | High | Low | Medium
+
+---
 
 ---
 </details>
