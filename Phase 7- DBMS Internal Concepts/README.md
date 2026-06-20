@@ -5035,6 +5035,44 @@ Start from checkpoint
 Recovery অনেক দ্রুত হয়।
 
 ---
+## Backup Strategy (Real World)
+
+Most organizations use:
+```text
+Weekly Full Backup
++
+Daily Incremental Backup
+
+ ```
+---
+
+Example:
+```text
+Sunday:
+Full Backup
+
+Monday:
+Incremental
+
+Tuesday:
+Incremental
+
+Wednesday:
+Incremental
+
+ ```
+---
+
+Balance between:
+```text
+Storage
++
+Speed
++
+Recovery Time
+
+ ```
+---
 
 ---
 </details>
