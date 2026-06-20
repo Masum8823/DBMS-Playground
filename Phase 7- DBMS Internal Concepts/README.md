@@ -4832,7 +4832,44 @@ Restore Time | Fast | Slow | Medium
 Storage Need | High | Low | Medium
 
 ---
+## Backup Storage Locations
 
+Backup কোথায় রাখা হয়?
+
+---
+
+### Local Storage
+Same computer/server।
+
+---
+
+Problem:
+```text
+Server destroyed
+Backup also destroyed
+
+ ```
+---
+
+### External Drive
+Hard Disk / SSD
+
+---
+
+### Network Storage
+Dedicated backup server।
+
+---
+
+### Cloud Backup
+সবচেয়ে popular।
+
+Examples:
+• Google Cloud  
+• Amazon Web Services  
+• Microsoft Azure  
+
+---
 ---
 </details>
 
