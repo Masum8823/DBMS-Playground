@@ -4930,6 +4930,20 @@ ROLLBACK;
 Uncommitted changes remove হবে।
 
 ---
+### 2. Crash Recovery
+Server crash করেছে।
+
+---
+
+Use:
+```text
+Logs + Checkpoints
+ ```
+---
+
+Recovery করা হবে।
+
+---
 ---
 </details>
 
