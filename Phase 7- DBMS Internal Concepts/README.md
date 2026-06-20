@@ -5014,7 +5014,27 @@ REDO:
 Balance = 8000
  ```
 ---
+## Checkpoint
 
+Recovery fast করার জন্য checkpoint ব্যবহার করা হয়।
+
+---
+
+Without Checkpoint:
+```text
+Read entire log
+ ```
+---
+
+With Checkpoint:
+```text
+Start from checkpoint
+ ```
+---
+
+Recovery অনেক দ্রুত হয়।
+
+---
 
 ---
 </details>
