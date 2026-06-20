@@ -4716,7 +4716,65 @@ Full Backup
  ```
 ---
 
+## 2. Incremental Backup
 
+শুধুমাত্র last backup-এর পরে changed data backup হয়।
+
+---
+
+### Example
+
+Sunday:
+```text
+Full Backup
+ ```
+---
+
+Monday:
+```text
+5 GB Changed
+ ```
+---
+
+Incremental Backup:
+```text
+Only 5 GB
+ ```
+---
+
+Tuesday:
+```text
+3 GB Changed
+ ```
+---
+
+Backup:
+```text
+Only 3 GB
+ ```
+---
+
+### Advantages
+
+✔ Fast  
+✔ Small Storage  
+
+---
+
+### Disadvantages
+
+Restore complex।
+
+Need:
+```text
+Full Backup
++
+All Incremental Backups
+
+ ```
+---
+
+---
 ---
 </details>
 
