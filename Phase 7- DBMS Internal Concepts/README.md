@@ -4668,6 +4668,54 @@ Data save করে | Data recover করে
 
 ---
 
+## Types of Backup
+
+Exam-এর জন্য খুব গুরুত্বপূর্ণ।
+
+---
+
+## 1. Full Backup
+
+Database-এর সম্পূর্ণ copy নেওয়া হয়।
+
+---
+
+### Example
+
+Database Size:
+```text
+100 GB
+ ```
+---
+
+Full Backup:
+```text
+Copy Entire 100 GB
+ ```
+---
+
+### Advantages
+
+✔ Easy Restore  
+✔ Complete Protection  
+
+---
+
+### Disadvantages
+
+❌ Large Storage Required  
+❌ More Backup Time  
+
+---
+
+### Example
+
+Sunday:
+```text
+Full Backup
+ ```
+---
+
 
 ---
 </details>
