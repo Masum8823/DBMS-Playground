@@ -4657,6 +4657,17 @@ Database Running Again
 
  ```
 ---
+## Difference Between Backup and Recovery
+
+Backup | Recovery
+---|---
+Data copy তৈরি করে | Data restore করে
+Failure-এর আগে করা হয় | Failure-এর পরে করা হয়
+Preventive action | Corrective action
+Data save করে | Data recover করে
+
+---
+
 
 ---
 </details>
