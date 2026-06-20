@@ -5142,6 +5142,32 @@ Large file | Smaller records
 Periodically created | Continuously updated
 
 ---
+## Advantages of Backup
+
+1. Prevents Data Loss  
+2. Disaster Recovery  
+3. Business Continuity  
+4. Protection Against Human Errors  
+5. Fast Restoration  
+
+---
+## Advantages of Recovery
+
+1. Restores Consistency  
+2. Supports ACID Properties  
+3. Crash Handling  
+4. Reliable Database Operations  
+
+---
+
+## Disadvantages
+
+1. Extra Storage Cost  
+2. Backup Maintenance Required  
+3. Recovery Can Be Time Consuming  
+4. Additional System Overhead  
+
+---
 ---
 </details>
 
