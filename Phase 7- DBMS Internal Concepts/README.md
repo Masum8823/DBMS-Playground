@@ -4870,6 +4870,49 @@ Examples:
 • Microsoft Azure  
 
 ---
+## Recovery Process
+
+Failure হলে recovery সাধারণত নিচের steps follow করে।
+
+---
+
+### Step 1
+Identify failure
+
+---
+
+Example:
+```text
+Power Failure
+ ```
+---
+
+### Step 2
+Locate latest backup
+
+---
+
+Example:
+```text
+Backup_10_June.bak
+ ```
+---
+
+### Step 3
+Restore backup
+
+---
+
+### Step 4
+Apply transaction logs
+
+---
+
+### Step 5
+Database becomes consistent
+
+---
+
 ---
 </details>
 
