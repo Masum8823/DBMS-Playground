@@ -5104,6 +5104,34 @@ FROM DISK = 'D:\Backup\UniversityDB.bak';
 এটাই SQL Server-এ basic backup ও restore command।
 
 ---
+## Backup Failure Scenario
+
+ধরি:
+```text
+10 June
+Backup Taken
+
+ ```
+---
+
+11 June:
+```text
+Server Crash
+ ```
+---
+
+Recovery:
+```text
+Restore 10 June Backup
++
+Apply Transaction Logs
+
+ ```
+---
+
+Database আবার latest state-এ ফিরে আসবে।
+
+---
 ---
 </details>
 
