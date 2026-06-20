@@ -5168,6 +5168,59 @@ Periodically created | Continuously updated
 4. Additional System Overhead  
 
 ---
+## Common Viva Questions
+
+Q: Backup কী?  
+Database-এর copy সংরক্ষণ করার process।
+
+---
+
+Q: Recovery কী?  
+Failure-এর পরে database restore করার process।
+
+---
+
+Q: Full Backup কী?  
+Complete database copy।
+
+---
+
+Q: Incremental Backup কী?  
+Last backup-এর পর changed data backup।
+
+---
+
+Q: Differential Backup কী?  
+Last full backup-এর পর সব changes backup।
+
+---
+
+Q: UNDO কী?  
+Incomplete transaction reverse করা।
+
+---
+
+Q: REDO কী?  
+Committed transaction পুনরায় apply করা।
+
+---
+
+Q: Checkpoint কী?  
+Recovery fast করার marker।
+
+---
+## Easy Memory Trick
+```text
+Backup = Save
+
+Recovery = Restore
+
+UNDO = Remove Uncommitted
+
+REDO = Reapply Committed
+
+ ```
+---
 ---
 </details>
 
