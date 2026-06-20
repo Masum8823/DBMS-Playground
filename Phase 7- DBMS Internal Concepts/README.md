@@ -4773,8 +4773,55 @@ All Incremental Backups
 
  ```
 ---
+## 3. Differential Backup
+
+Last Full Backup-এর পর থেকে সব changes backup হয়।
 
 ---
+
+### Example
+
+Sunday:
+```text
+Full Backup
+ ```
+---
+
+Monday:
+```text
+5 GB Changed
+ ```
+---
+
+Backup:
+```text
+5 GB
+ ```
+---
+
+Tuesday:
+```text
+8 GB Total Changed Since Sunday
+ ```
+---
+
+Backup:
+```text
+8 GB
+ ```
+---
+
+### Advantages
+
+Restore easier than Incremental।
+
+---
+
+### Disadvantages
+
+Backup size gradually increases।
+
+
 ---
 </details>
 
