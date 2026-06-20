@@ -4991,6 +4991,29 @@ UNDO:
 Balance = 10000
  ```
 ---
+## REDO
+
+Committed transaction পুনরায় apply করা।
+
+---
+
+Example
+
+Committed:
+```text
+Balance = 8000
+ ```
+---
+
+Crash occurred।
+
+---
+
+REDO:
+```text
+Balance = 8000
+ ```
+---
 
 
 ---
