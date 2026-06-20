@@ -5073,7 +5073,37 @@ Recovery Time
 
  ```
 ---
+## SQL Server Backup Example
 
+---
+
+### Create Backup
+```text
+BACKUP DATABASE UniversityDB
+TO DISK = 'D:\Backup\UniversityDB.bak';
+
+ ```
+---
+
+### Explanation:
+```text
+UniversityDB → Database Name
+
+.bak → Backup File
+
+ ```
+---
+### Restore Backup
+```text
+RESTORE DATABASE UniversityDB
+FROM DISK = 'D:\Backup\UniversityDB.bak';
+
+ ```
+---
+
+এটাই SQL Server-এ basic backup ও restore command।
+
+---
 ---
 </details>
 
