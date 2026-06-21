@@ -115,7 +115,26 @@ Students Collection:
 
 ```
 ---
+## Key Feature: Schema Flexibility
 
+MongoDB-তে সব document একই structure follow করতে বাধ্য না।
+
+---
+
+## Example
+```json
+{ "name": "A" }
+{ "name": "B", "age": 20 }
+{ "name": "C", "department": "CSE" }
+
+```
+---
+
+👉 এটাকে বলে:
+```json
+Schema-less / Flexible Schema
+```
+---
 ---
 </details>
 
