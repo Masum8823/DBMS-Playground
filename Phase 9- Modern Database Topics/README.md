@@ -156,6 +156,17 @@ Different type of data store করা যায়।
 Horizontal scaling support করে।
 
 ---
+## SQL vs MongoDB
+
+| Feature | SQL | MongoDB |
+|---|---|---|
+| Structure | Fixed | Flexible |
+| Schema | Strict | Dynamic |
+| Scaling | Vertical | Horizontal |
+| Join | Yes | Limited |
+| Format | Table | JSON Document |
+
+---
 ---
 </details>
 
