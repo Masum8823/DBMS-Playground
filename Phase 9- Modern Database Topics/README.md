@@ -180,6 +180,30 @@ MongoDB internally BSON (Binary JSON) ব্যবহার করে।
 • Supports more data types  
 
 ---
+## Important Data Types in MongoDB
+
+• String  
+• Integer  
+• Boolean  
+• Array  
+• Object  
+• Date  
+• Null  
+
+---
+
+## Example
+```json
+{
+  "name": "Rahim",
+  "age": 22,
+  "isStudent": true,
+  "skills": ["C++", "DBMS"],
+  "createdAt": "2026-06-12"
+}
+
+```
+---
 ---
 </details>
 
