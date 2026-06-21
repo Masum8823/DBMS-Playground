@@ -35,6 +35,22 @@ MongoDB হলো একটি NoSQL database যেখানে data JSON-like 
 | Fixed Schema | Flexible Schema |
 
 ---
+## Core Idea of MongoDB
+
+MongoDB data store করে document আকারে।
+
+---
+
+## Example
+```json
+{
+  "name": "Rahim",
+  "age": 22,
+  "department": "CSE"
+}
+
+```
+---
 ---
 </details>
 
