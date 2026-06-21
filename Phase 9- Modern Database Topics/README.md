@@ -276,7 +276,21 @@ db.students.updateMany(
 
 ```
 ---
+## 4. Delete Data
 
+---
+```json
+db.students.deleteOne({ name: "Rahim" });
+```
+---
+
+Multiple delete:
+
+---
+```json
+db.students.deleteMany({ age: 21 });
+```
+---
 ---
 </details>
 
