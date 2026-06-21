@@ -74,6 +74,32 @@ Student Document
 
 ```
 ---
+## What is a Document?
+
+Document হলো MongoDB-এর basic data unit।  
+It is similar to JSON.
+
+---
+
+## Example Document
+```json
+{
+  "student_id": 101,
+  "name": "Karim",
+  "cgpa": 3.85
+}
+
+```
+---
+
+## Document Features
+
+✔ Key-value format  
+✔ Nested structure possible  
+✔ No fixed schema required  
+✔ Each document can be different  
+
+---
 ---
 </details>
 
