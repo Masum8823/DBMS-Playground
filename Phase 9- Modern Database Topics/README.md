@@ -315,6 +315,33 @@ MongoDB-তে powerful operators আছে।
 db.students.find({ age: { $gt: 20 } });
 ```
 ---
+## Logical Operators
+
+---
+
+### $and
+
+---
+```json
+db.students.find({
+  $and: [
+    { age: { $gt: 20 } },
+    { dept: "CSE" }
+  ]
+});
+
+```
+### $or
+```json
+db.students.find({
+  $or: [
+    { age: 21 },
+    { age: 23 }
+  ]
+});
+
+```
+---
 ---
 </details>
 
