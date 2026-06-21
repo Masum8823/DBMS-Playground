@@ -167,6 +167,19 @@ Horizontal scaling support করে।
 | Format | Table | JSON Document |
 
 ---
+## BSON Format
+
+MongoDB internally BSON (Binary JSON) ব্যবহার করে।
+
+---
+
+## Why BSON?
+
+• Faster parsing  
+• Efficient storage  
+• Supports more data types  
+
+---
 ---
 </details>
 
