@@ -238,8 +238,24 @@ db.students.insertMany([
 
 ```
 ---
-
+## 2. Read (Find Data)
+```json
+db.students.find();
+```
 ---
+
+Condition:
+```json
+db.students.find({ age: 22 });
+```
+---
+
+Pretty format:
+```json
+db.students.find().pretty();
+```
+---
+
 ---
 </details>
 
