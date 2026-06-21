@@ -291,6 +291,30 @@ Multiple delete:
 db.students.deleteMany({ age: 21 });
 ```
 ---
+## Query Operators
+
+MongoDB-তে powerful operators আছে।
+
+---
+
+## Comparison Operators
+
+| Operator | Meaning |
+|---|---|
+| $eq | equal |
+| $ne | not equal |
+| $gt | greater than |
+| $lt | less than |
+| $gte | greater or equal |
+| $lte | less or equal |
+
+---
+
+## Example
+```json
+db.students.find({ age: { $gt: 20 } });
+```
+---
 ---
 </details>
 
