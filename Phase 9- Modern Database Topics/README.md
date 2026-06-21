@@ -51,6 +51,29 @@ MongoDB data store করে document আকারে।
 
 ```
 ---
+## Database Structure in MongoDB
+
+MongoDB structure:
+```json
+Database
+   ↓
+Collection
+   ↓
+Document
+
+```
+---
+
+## Example
+```json
+UniversityDB
+   ↓
+Students Collection
+   ↓
+Student Document
+
+```
+---
 ---
 </details>
 
