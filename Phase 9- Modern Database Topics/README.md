@@ -255,6 +255,27 @@ Pretty format:
 db.students.find().pretty();
 ```
 ---
+## 3. Update Data
+```json
+db.students.updateOne(
+  { name: "Rahim" },
+  { $set: { age: 23 } }
+);
+
+```
+---
+
+Multiple update:
+
+---
+```json
+db.students.updateMany(
+  { dept: "CSE" },
+  { $set: { cgpa: 4.00 } }
+);
+
+```
+---
 
 ---
 </details>
