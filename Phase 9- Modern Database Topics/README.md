@@ -25,7 +25,16 @@ MongoDB = Table না
 MongoDB হলো একটি NoSQL database যেখানে data JSON-like format (BSON) এ store হয়।
 
 ---
+## Traditional DB vs MongoDB
 
+| Relational DB | MongoDB |
+|---|---|
+| Table | Collection |
+| Row | Document |
+| Column | Field |
+| Fixed Schema | Flexible Schema |
+
+---
 ---
 </details>
 
