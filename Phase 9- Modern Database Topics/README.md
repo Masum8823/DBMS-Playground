@@ -135,6 +135,27 @@ MongoDB-তে সব document একই structure follow করতে বাধ
 Schema-less / Flexible Schema
 ```
 ---
+## Why MongoDB is Used?
+
+### 1. Big Data Support
+Huge data handle করতে পারে।
+
+---
+
+### 2. Fast Performance
+No complex joins like SQL।
+
+---
+
+### 3. Flexible Structure
+Different type of data store করা যায়।
+
+---
+
+### 4. Scalable
+Horizontal scaling support করে।
+
+---
 ---
 </details>
 
