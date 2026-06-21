@@ -204,6 +204,42 @@ MongoDB internally BSON (Binary JSON) ব্যবহার করে।
 
 ```
 ---
+## MongoDB Operations (Basic CRUD)
+
+CRUD মানে:
+```json
+Create
+Read
+Update
+Delete
+
+```
+---
+
+---
+
+## 1. Create (Insert Data)
+```json
+db.students.insertOne({
+  name: "Rahim",
+  age: 22,
+  dept: "CSE"
+});
+
+```
+---
+
+Multiple insert:
+```json
+db.students.insertMany([
+  { name: "Karim", age: 21 },
+  { name: "Jamal", age: 23 }
+]);
+
+```
+---
+
+---
 ---
 </details>
 
