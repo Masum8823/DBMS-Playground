@@ -100,6 +100,22 @@ It is similar to JSON.
 ✔ Each document can be different  
 
 ---
+## What is a Collection?
+
+Collection হলো documents-এর group।
+
+---
+
+## Example
+```json
+Students Collection:
+{ "name": "Rahim" }
+{ "name": "Karim", "age": 22 }
+{ "name": "Jamal", "cgpa": 3.90 }
+
+```
+---
+
 ---
 </details>
 
