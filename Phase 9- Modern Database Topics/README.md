@@ -469,6 +469,26 @@ Q: MongoDB কেন ব্যবহার করা হয়?
 Fast, scalable, big data support করার জন্য।
 
 ---
+## Quick Summary
+```text
+MongoDB = NoSQL Database
+
+Structure:
+Database → Collection → Document
+
+Key Features:
+- Schema-less
+- JSON-like documents
+- High scalability
+- Fast performance
+
+CRUD:
+Create, Read, Update, Delete
+
+Best for:
+Big data + modern web apps
+
+```
 ---
 </details>
 
