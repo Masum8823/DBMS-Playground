@@ -531,7 +531,39 @@ Firebase এ:
 সব ready-made service
 
 ---
+## Core Features of Firebase
 
+Firebase অনেক services দেয়:
+
+---
+
+## 1. Firebase Authentication
+
+User login system handle করে।
+
+---
+
+## Features
+
+✔ Email/Password login  
+✔ Google login  
+✔ Facebook login  
+✔ Phone number login  
+
+---
+
+## Example Flow
+```text
+User → Sign Up → Firebase Auth → Login Success
+```
+---
+
+## Example Use
+
+• Facebook login button  
+• Google login system  
+
+---
 ---
 
 </details>
