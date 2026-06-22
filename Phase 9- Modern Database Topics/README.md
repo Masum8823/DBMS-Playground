@@ -438,6 +438,37 @@ MongoDB → Flexible, document-based, scalable
 
 ```
 ---
+## Viva Questions
+
+Q: MongoDB কী?  
+NoSQL document-based database system।
+
+---
+
+Q: MongoDB data কোথায় store করে?  
+Document আকারে (BSON format)।
+
+---
+
+Q: Collection কী?  
+Documents-এর group।
+
+---
+
+Q: Document কী?  
+Key-value based data structure।
+
+---
+
+Q: MongoDB কি schema-less?  
+Yes, flexible schema।
+
+---
+
+Q: MongoDB কেন ব্যবহার করা হয়?  
+Fast, scalable, big data support করার জন্য।
+
+---
 ---
 </details>
 
