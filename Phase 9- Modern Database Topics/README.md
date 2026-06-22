@@ -492,3 +492,46 @@ Big data + modern web apps
 ---
 </details>
 
+<details>
+    <summary><b>Firebase Basics</b></summary>
+
+# Firebase Basics
+
+Firebase হলো Google-এর একটি Backend-as-a-Service (BaaS) platform, যেখানে backend server setup না করেও mobile ও web application বানানো যায়।
+
+👉 সহজভাবে:
+```text
+Firebase = Ready-made Backend
+          (No server setup needed)
+
+```
+---
+
+## Firebase কীভাবে কাজ করে?
+
+Firebase cloud-based system ব্যবহার করে।
+```text
+App (Frontend)
+     ↓
+Firebase (Cloud Backend)
+     ↓
+Database + Auth + Storage + Hosting
+
+```
+---
+
+## Firebase কেন ব্যবহার করা হয়?
+
+Traditional backend এ:
+• Server বানাতে হয়  
+• API লিখতে হয়  
+• Database manage করতে হয়  
+
+Firebase এ:
+সব ready-made service
+
+---
+
+---
+
+</details>
