@@ -430,6 +430,14 @@ db.students.createIndex({ name: 1 });
 • Content management systems  
 
 ---
+## MongoDB vs RDBMS Summary
+```json
+RDBMS → Structured, strict, relational
+
+MongoDB → Flexible, document-based, scalable
+
+```
+---
 ---
 </details>
 
