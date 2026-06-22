@@ -342,6 +342,24 @@ db.students.find({
 
 ```
 ---
+## Embedded Documents
+
+MongoDB nested data support করে।
+
+---
+
+## Example
+```json
+{
+  "name": "Rahim",
+  "address": {
+    "city": "Khulna",
+    "zip": 9100
+  }
+}
+
+```
+---
 ---
 </details>
 
