@@ -421,6 +421,15 @@ db.students.createIndex({ name: 1 });
 4. Not ideal for highly structured data  
 
 ---
+## Use Cases of MongoDB
+
+• Social Media Apps  
+• Real-time analytics  
+• E-commerce platforms  
+• IoT systems  
+• Content management systems  
+
+---
 ---
 </details>
 
