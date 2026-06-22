@@ -601,7 +601,16 @@ Users Collection:
 
 ---
 
+## Firestore vs MongoDB
 
+| Feature | Firestore | MongoDB |
+|---|---|---|
+| Type | BaaS NoSQL | Standalone NoSQL |
+| Hosting | Cloud | Self/Cloud |
+| Real-time | Built-in | Limited |
+| Setup | Easy | Moderate |
+
+---
 ---
 
 </details>
