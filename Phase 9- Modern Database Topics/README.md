@@ -403,6 +403,24 @@ db.students.createIndex({ name: 1 });
 👉 1 = Ascending order
 
 ---
+## Advantages of MongoDB
+
+1. High Performance  
+2. Flexible Schema  
+3. Easy Scaling  
+4. JSON-like structure  
+5. Good for Big Data & Real-time apps  
+
+---
+
+## Disadvantages
+
+1. No strong joins  
+2. Large storage use  
+3. Complex transactions (compared to SQL)  
+4. Not ideal for highly structured data  
+
+---
 ---
 </details>
 
