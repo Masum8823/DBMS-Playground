@@ -360,6 +360,35 @@ MongoDB nested data support করে।
 
 ```
 ---
+
+## Query Nested Field
+```json
+db.students.find({ "address.city": "Khulna" });
+```
+---
+
+## Arrays in MongoDB
+
+MongoDB array support করে।
+
+---
+
+## Example
+```json
+{
+  "name": "Karim",
+  "skills": ["C++", "Java", "DBMS"]
+}
+
+```
+---
+
+## Query Array
+```json
+db.students.find({ skills: "C++" });
+```
+---
+
 ---
 </details>
 
