@@ -645,6 +645,32 @@ Firebase-এর older NoSQL database।
 • Game score tracking  
 
 ---
+## 4. Firebase Storage
+
+Large files store করার জন্য ব্যবহার করা হয়।
+
+---
+
+## Store Types
+
+✔ Images  
+✔ Videos  
+✔ PDFs  
+✔ Audio files  
+
+---
+
+## Example
+```text
+Upload Profile Picture
+     ↓
+Firebase Storage
+     ↓
+URL generated
+
+```
+---
+
 ---
 
 </details>
