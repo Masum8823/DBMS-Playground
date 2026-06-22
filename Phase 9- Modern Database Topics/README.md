@@ -388,7 +388,21 @@ MongoDB array support করে।
 db.students.find({ skills: "C++" });
 ```
 ---
+## Indexing in MongoDB
 
+Index query speed increase করে।
+
+---
+
+## Example
+```json
+db.students.createIndex({ name: 1 });
+```
+---
+
+👉 1 = Ascending order
+
+---
 ---
 </details>
 
