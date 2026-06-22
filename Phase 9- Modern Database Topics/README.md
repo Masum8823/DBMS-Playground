@@ -563,7 +563,45 @@ User → Sign Up → Firebase Auth → Login Success
 • Facebook login button  
 • Google login system  
 
+---## 2. Firestore Database
+
+Cloud Firestore হলো Firebase-এর NoSQL document database।
+
 ---
+
+## Structure
+```text
+Database
+   ↓
+Collections
+   ↓
+Documents
+
+```
+---
+
+## Example
+```text
+Users Collection:
+{
+  "name": "Rahim",
+  "age": 22,
+  "dept": "CSE"
+}
+
+```
+---
+
+## Features
+
+✔ Real-time data update  
+✔ NoSQL structure  
+✔ Offline support  
+✔ Fast query  
+
+---
+
+
 ---
 
 </details>
