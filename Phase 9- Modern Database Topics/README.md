@@ -611,6 +611,40 @@ Users Collection:
 | Setup | Easy | Moderate |
 
 ---
+## 3. Realtime Database
+
+Firebase-এর older NoSQL database।
+
+---
+
+## Features
+
+✔ JSON tree structure  
+✔ Real-time sync  
+✔ Mobile friendly  
+
+---
+
+## Example
+```text
+{
+  "users": {
+    "user1": {
+      "name": "Karim"
+    }
+  }
+}
+
+```
+---
+
+## Use Case
+
+• Chat apps  
+• Live updates  
+• Game score tracking  
+
+---
 ---
 
 </details>
