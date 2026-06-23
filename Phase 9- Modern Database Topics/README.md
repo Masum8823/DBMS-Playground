@@ -2077,6 +2077,26 @@ Cloud database data store করে:
 • Replication systems  
 
 ---
+## Replication in Cloud Database
+
+Data multiple server এ copy থাকে।
+
+---
+
+## Example:
+```text
+Server A (USA)
+Server B (Asia)
+Server C (Europe)
+
+```
+---
+
+👉 Benefit:
+```text
+If one server fails → others work
+```
+---
 ---
 
 </details>
