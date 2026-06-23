@@ -2622,7 +2622,17 @@ Developer doesn’t see actual SQL sometimes
 ORM syntax learn করতে হয়
 
 ---
+## ORM vs Raw SQL
 
+| Feature | ORM | Raw SQL |
+|---|---|---|
+| Speed | Medium | Fast |
+| Ease of Use | Easy | Medium |
+| Control | Low | High |
+| Flexibility | Medium | High |
+| Productivity | High | Medium |
+
+---
 ---
 
 </details>
