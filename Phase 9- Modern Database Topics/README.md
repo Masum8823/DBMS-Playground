@@ -1574,6 +1574,22 @@ Permission remove করা হয়।
 REVOKE INSERT ON Students FROM user1;
 ```
 ---
+## Roles in Database Security
+
+Role = predefined set of permissions
+```text
+Role = predefined set of permissions
+```
+---
+
+## Example
+```text
+Admin Role → Full access
+Editor Role → Modify data
+Viewer Role → Read only
+
+```
+---
 ---
 
 
