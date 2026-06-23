@@ -1350,7 +1350,25 @@ Q: API এর সাথে database কিভাবে কাজ করে?
 Client → API → Backend → Database → Response।
 
 ---
+## Quick Summary
+```text
+API = Bridge between Frontend and Database
 
+Flow:
+Client → API → Server → Database → Response
+
+Main Features:
+- Secure access
+- Structured communication
+- CRUD operations support
+
+Most common type:
+REST API
+
+Used in:
+Web apps, mobile apps, banking, e-commerce
+
+```
 ---
 
 </details>
