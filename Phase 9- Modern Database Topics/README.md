@@ -717,6 +717,27 @@ Auth / DB / Storage
 
 ```
 ---
+## Firebase SDK
+
+Firebase ব্যবহার করতে SDK লাগে।
+```text
+SDK = Software Development Kit
+```
+---
+
+## Example (Web)
+```text
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: "...",
+  authDomain: "...",
+  projectId: "..."
+};
+
+const app = initializeApp(firebaseConfig);
+```
+---
 ---
 
 </details>
