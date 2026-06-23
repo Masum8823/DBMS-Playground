@@ -2311,6 +2311,48 @@ Popular Platforms:
 
 ```
 ---
+
+
+</details>
+
+<details>
+    <summary><b>ORM Basics</b></summary>
+
+# ORM Basics
+
+ORM (Object Relational Mapping) হলো এমন একটি technique, যা Object-Oriented Programming (OOP) এবং Relational Database (SQL) এর মধ্যে bridge হিসেবে কাজ করে।
+
+👉 সহজভাবে:
+```text
+ORM = Code Object ↔ Database Table Conversion System
+```
+---
+
+## ORM কী?
+
+ORM এমন একটি system, যেখানে আমরা SQL query না লিখে সরাসরি programming language (Java, Python, C#, Node.js) এর object ব্যবহার করে database এর সাথে কাজ করি।
+
+---
+
+## Example (Simple Idea)
+
+Without ORM (SQL):
+```text
+SELECT * FROM users WHERE id = 1;
+```
+---
+
+## With ORM:
+```text
+User.findById(1);
+```
+---
+
+👉 এখানে ORM SQL কে hide করে দিয়েছে।
+
+---
+
+
 ---
 
 </details>
