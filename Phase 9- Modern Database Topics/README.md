@@ -771,7 +771,16 @@ await setDoc(doc(db, "users", "user1"), {
 
 ```
 ---
+## Read Data
+```text
+import { getDoc, doc } from "firebase/firestore";
 
+const docSnap = await getDoc(doc(db, "users", "user1"));
+
+console.log(docSnap.data());
+
+```
+---
 ---
 
 </details>
