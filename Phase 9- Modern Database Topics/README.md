@@ -2508,6 +2508,23 @@ ORM:
 User.findAll();
 ```
 ---
+## 3. Update
+
+SQL:
+```text
+User.findAll();
+```
+---
+
+ORM:
+```text
+User.update(
+  { age: 23 },
+  { where: { id: 1 } }
+);
+
+```
+---
 ---
 
 </details>
