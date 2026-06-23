@@ -906,3 +906,36 @@ No server needed + Real-time + Fast development
 ---
 
 </details>
+
+
+<details>
+    <summary><b>API with Database</b></summary>
+
+# API with Database
+
+API (Application Programming Interface) হলো এমন একটি medium, যার মাধ্যমে frontend (client) এবং backend/database এর মধ্যে data exchange করা হয়।
+
+👉 সহজভাবে:
+```text
+Frontend → API → Backend → Database
+```
+---
+
+## API কী?
+
+API হলো একটি set of rules এবং endpoints, যা ব্যবহার করে একটি application অন্য application-এর সাথে communicate করে।
+
+---
+
+## Example (Simple)
+
+তুমি mobile app থেকে login করছো:
+```text
+App → Send login request → API → Database check → Response
+```
+---
+
+
+---
+
+</details>
