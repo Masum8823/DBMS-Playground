@@ -2069,6 +2069,14 @@ Cloud → Everything manage
 User cloud server control করে।
 
 ---
+## Data Storage in Cloud
+
+Cloud database data store করে:
+• Distributed servers  
+• Multiple regions  
+• Replication systems  
+
+---
 ---
 
 </details>
