@@ -2525,6 +2525,23 @@ User.update(
 
 ```
 ---
+## 4. Delete
+
+SQL:
+```text
+DELETE FROM users WHERE id = 1;
+```
+---
+
+ORM:
+```text
+User.destroy({
+  where: { id: 1 }
+});
+
+```
+---
+
 ---
 
 </details>
