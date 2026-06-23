@@ -1998,6 +1998,18 @@ Microsoft Azure provides SQL-based cloud DB
 Firebase provides real-time NoSQL database
 
 ---
+## Cloud Database Architecture
+```text
+Client (Mobile/Web)
+        ↓
+API Layer
+        ↓
+Cloud Database Service
+        ↓
+Storage + Compute + Backup
+
+```
+---
 ---
 
 </details>
