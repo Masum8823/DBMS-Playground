@@ -1539,6 +1539,22 @@ Basic method
 • Face recognition  
 
 ---
+## Authorization
+
+Authorization means:  
+User কী করতে পারবে তা control করা
+
+---
+
+## Example:
+
+| User Type | Permission |
+|---|---|
+| Admin | Full access |
+| Student | Read only |
+| Guest | Limited access |
+
+---
 ---
 
 
