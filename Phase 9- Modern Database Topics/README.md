@@ -1786,6 +1786,38 @@ Encrypt data → Store in DB
 
 ```
 ---
+## Viva Questions
+
+Q: Database Security কী?  
+Database protect করার system।
+
+---
+
+Q: CIA Triad কী?  
+Confidentiality, Integrity, Availability।
+
+---
+
+Q: SQL Injection কী?  
+Malicious SQL code inject করে data steal করা।
+
+---
+
+Q: Authentication vs Authorization?  
+Authentication = Identity verify  
+Authorization = Permission control  
+
+---
+
+Q: Hashing কী?  
+One-way encryption method for passwords।
+
+---
+
+Q: GRANT কী?  
+Permission দেওয়ার SQL command।
+
+---
 ---
 
 
