@@ -2633,6 +2633,24 @@ ORM syntax learn করতে হয়
 | Productivity | High | Medium |
 
 ---
+## Real-Life Example
+
+E-commerce System
+```text
+User → ORM → Database
+```
+---
+
+Example:
+```text
+Order.create({
+  userId: 1,
+  product: "Laptop",
+  price: 50000
+});
+
+```
+---
 ---
 
 </details>
