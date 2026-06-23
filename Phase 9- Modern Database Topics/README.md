@@ -2460,6 +2460,18 @@ Database change করলেও code mostly same থাকে।
 • Laravel Eloquent ORM  
 
 ---
+## ORM Architecture
+```text
+Application Code (Objects)
+        ↓
+ORM Framework
+        ↓
+SQL Query Generator
+        ↓
+Database
+
+```
+---
 ---
 
 </details>
