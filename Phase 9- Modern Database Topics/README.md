@@ -862,6 +862,32 @@ service cloud.firestore {
 | Scaling | Automatic | Manual |
 
 ---
+## Viva Questions
+
+Q: Firebase কী?  
+Google-এর Backend-as-a-Service platform।
+
+---
+
+Q: Firebase কি NoSQL?  
+Yes, Firestore & Realtime DB NoSQL।
+
+---
+
+Q: Firebase Authentication কী?  
+User login system handle করে।
+
+---
+
+Q: Firestore কী?  
+Cloud-based NoSQL document database।
+
+---
+
+Q: Firebase Hosting কী?  
+Static website deploy করার service।
+
+---
 ---
 
 </details>
