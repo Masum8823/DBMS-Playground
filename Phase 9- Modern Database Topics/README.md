@@ -2097,6 +2097,67 @@ Server C (Europe)
 If one server fails → others work
 ```
 ---
+## Advantages of Cloud Database
+
+---
+
+## 1. Easy Setup
+
+No installation needed
+
+---
+
+## 2. Cost Saving
+
+Pay-as-you-go model
+
+---
+
+## 3. High Scalability
+
+Traffic increase handle করে
+
+---
+
+## 4. Global Access
+
+Anywhere access possible
+
+---
+
+## 5. Automatic Maintenance
+
+Updates handled by provider
+
+---
+
+## Disadvantages of Cloud Database
+
+---
+
+## 1. Internet Dependency
+
+No internet = no access
+
+---
+
+## 2. Security Concerns
+
+Data third-party server এ থাকে
+
+---
+
+## 3. Cost at Scale
+
+Large usage = expensive
+
+---
+
+## 4. Vendor Lock-in
+
+One provider dependancy
+
+---
 ---
 
 </details>
