@@ -2676,6 +2676,23 @@ DB Insert
 
 ```
 ---
+## When to Use ORM?
+
+✔ Small to medium projects  
+✔ Fast development needed  
+✔ Standard CRUD applications  
+✔ Web/mobile apps  
+
+---
+
+## When NOT to Use ORM?
+
+❌ Complex analytics queries  
+❌ High-performance systems  
+❌ Big data optimization  
+❌ Real-time low-latency systems  
+
+---
 ---
 
 </details>
