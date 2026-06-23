@@ -1745,6 +1745,18 @@ User permissions
 Authentication, authorization, encryption
 
 ---
+## Real-World Example
+
+Banking System
+```text
+User Login → Authentication
+      ↓
+Check Role → Authorization
+      ↓
+Encrypt data → Store in DB
+
+```
+---
 ---
 
 
