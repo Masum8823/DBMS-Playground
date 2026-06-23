@@ -670,7 +670,30 @@ URL generated
 
 ```
 ---
+## 5. Firebase Hosting
 
+Static website deploy করার জন্য ব্যবহার হয়।
+
+---
+
+## Features
+
+✔ Free hosting  
+✔ HTTPS support  
+✔ Fast CDN  
+
+---
+
+## Example
+```text
+HTML + CSS + JS
+        ↓
+Firebase Hosting
+        ↓
+Live Website
+
+```
+---
 ---
 
 </details>
