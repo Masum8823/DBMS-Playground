@@ -1443,7 +1443,21 @@ CIA Triad
 ```
 ---
 
+## Types of Database Threats
 
+---
+
+## 1. Unauthorized Access
+
+Permission ছাড়া database access করা।
+
+---
+
+## Example:
+```text
+Hacker login without password
+```
+---
 ---
 
 
