@@ -1697,6 +1697,27 @@ Backup security provide করে:
 Attack → Data loss → Restore from backup
 ```
 ---
+## Logging & Auditing
+
+---
+
+## Logging
+
+System actions record করা।
+
+---
+
+## Auditing
+
+User activity track করা।
+
+---
+
+## Example:
+```text
+User X deleted record at 10:00 AM
+```
+---
 ---
 
 
