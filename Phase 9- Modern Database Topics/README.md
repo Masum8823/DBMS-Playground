@@ -1776,5 +1776,17 @@ Encrypt data → Store in DB
 
 ---
 
+## Common Attacks Summary
+```text
+1. SQL Injection
+2. Data Breach
+3. Insider Attack
+4. Malware
+5. Unauthorized Access
+
+```
+---
+---
+
 
 </details>
