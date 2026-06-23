@@ -2472,6 +2472,30 @@ Database
 
 ```
 ---
+## ORM CRUD Operations
+
+---
+
+## 1. Create (Insert)
+
+SQL:
+```text
+INSERT INTO users (name, age)
+VALUES ('Rahim', 22);
+
+```
+---
+
+ORM:
+```text
+User.create({
+  name: "Rahim",
+  age: 22
+});
+
+```
+---
+
 ---
 
 </details>
