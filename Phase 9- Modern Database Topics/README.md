@@ -934,7 +934,40 @@ API হলো একটি set of rules এবং endpoints, যা ব্যব
 App → Send login request → API → Database check → Response
 ```
 ---
+## API কেন লাগে?
 
+Direct database access করা নিরাপদ না।  
+তাই API ব্যবহার করা হয়।
+
+---
+
+## Without API (Bad Practice)
+```text
+Frontend → Direct Database ❌
+```
+---
+
+Problems:
+• Security risk  
+• Data leak  
+• No control  
+• No validation  
+
+---
+
+## With API (Good Practice)
+```text
+Frontend → API → Database ✔
+```
+---
+
+Benefits:
+• Secure  
+• Controlled access  
+• Validation possible  
+• Scalable system  
+
+---
 
 ---
 
