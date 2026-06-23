@@ -2430,6 +2430,36 @@ Same model multiple places ব্যবহার করা যায়।
 Database change করলেও code mostly same থাকে।
 
 ---
+## Popular ORM Tools
+
+---
+
+## 1. Java
+
+• Hibernate  
+• EclipseLink  
+
+---
+
+## 2. Python
+
+• Django ORM  
+• SQLAlchemy  
+
+---
+
+## 3. Node.js
+
+• Sequelize  
+• TypeORM  
+
+---
+
+## 4. PHP
+
+• Laravel Eloquent ORM  
+
+---
 ---
 
 </details>
