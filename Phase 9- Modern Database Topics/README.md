@@ -2252,6 +2252,15 @@ Message → Cloud Database → Receiver instantly
 Order → Cloud DB → Inventory update
 ```
 ---
+## Cloud Database Limitations Summary
+```text
+Internet required
+Cost increases with scale
+Security depends on provider
+Less control over infrastructure
+
+```
+---
 ---
 
 </details>
