@@ -791,6 +791,14 @@ await updateDoc(doc(db, "users", "user1"), {
 
 ```
 ---
+## Delete Data
+```text
+import { deleteDoc, doc } from "firebase/firestore";
+
+await deleteDoc(doc(db, "users", "user1"));
+
+```
+---
 ---
 
 </details>
