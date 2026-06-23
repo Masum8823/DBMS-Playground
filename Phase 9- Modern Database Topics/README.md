@@ -1944,6 +1944,30 @@ Example:
 SQL + NoSQL mix system।
 
 ---
+## Deployment Models
+
+---
+
+## 1. Public Cloud
+
+Shared infrastructure।  
+Example:
+• AWS  
+• Google Cloud  
+
+---
+
+## 2. Private Cloud
+
+Single organization use করে।
+
+---
+
+## 3. Hybrid Cloud
+
+Public + Private combined।
+
+---
 ---
 
 </details>
