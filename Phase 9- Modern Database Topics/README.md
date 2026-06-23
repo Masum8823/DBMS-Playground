@@ -1842,7 +1842,39 @@ Common Threats:
 
 ```
 ---
+
+
+</details>
+
+<details>
+    <summary><b>Cloud Database</b></summary>
+
+# Cloud Database
+
+Cloud Database হলো এমন একটি database system, যা local server-এর বদলে cloud computing infrastructure-এ host করা থাকে এবং internet এর মাধ্যমে access করা যায়।
+
+👉 সহজভাবে:
+```text
+Cloud Database = Internet-based Database
+                (No local server needed)
+
+```
 ---
 
+## Cloud Database কীভাবে কাজ করে?
+```text
+User / App
+    ↓
+Internet
+    ↓
+Cloud Provider Server
+    ↓
+Database (Stored in Cloud)
+
+```
+---
+
+
+---
 
 </details>
