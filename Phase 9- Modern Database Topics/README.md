@@ -851,7 +851,17 @@ service cloud.firestore {
 • Mobile apps backend  
 
 ---
+## Firebase vs Traditional Backend
 
+| Feature | Firebase | Traditional Backend |
+|---|---|---|
+| Setup | Easy | Hard |
+| Server | Not needed | Required |
+| Speed | Fast development | Slower |
+| Control | Limited | Full control |
+| Scaling | Automatic | Manual |
+
+---
 ---
 
 </details>
