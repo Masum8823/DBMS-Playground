@@ -738,6 +738,22 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 ```
 ---
+## Firebase Authentication Example
+```text
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+
+const auth = getAuth();
+
+signInWithEmailAndPassword(auth, email, password)
+  .then(user => {
+    console.log("Login Successful");
+  })
+  .catch(error => {
+    console.log(error.message);
+  });
+
+```
+---
 ---
 
 </details>
