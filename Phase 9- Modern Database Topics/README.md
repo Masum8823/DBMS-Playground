@@ -1488,7 +1488,17 @@ Sensitive data leak হয়ে যাওয়া।
 Hacked database dump online
 ```
 ---
+## 4. Insider Threat
 
+System admin বা employee malicious activity করে।
+
+---
+
+## Example:
+```text
+Employee copies customer data
+```
+---
 ---
 
 
