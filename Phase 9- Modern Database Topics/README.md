@@ -986,6 +986,50 @@ Database (Orders, Users, Products)
 
 ```
 ---
+## API Types
+
+---
+
+## 1. REST API
+
+REST API হলো most common API style।
+
+---
+
+## REST Principles
+
+✔ Stateless  
+✔ Uses HTTP methods  
+✔ JSON data format  
+✔ Client-server architecture  
+
+---
+
+## HTTP Methods
+
+| Method | Use |
+|---|---|
+| GET | Data read |
+| POST | New data create |
+| PUT | Update full data |
+| PATCH | Partial update |
+| DELETE | Data remove |
+
+---
+
+## Example REST Flow
+```text
+GET /users → Get all users
+
+POST /users → Create user
+
+PUT /users/1 → Update user
+
+DELETE /users/1 → Delete user
+
+```
+---
+
 ---
 
 </details>
