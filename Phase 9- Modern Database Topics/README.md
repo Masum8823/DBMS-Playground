@@ -968,7 +968,24 @@ Benefits:
 • Scalable system  
 
 ---
+## Real-Life Example
 
+ধরো একটি e-commerce app:
+```text
+User → Order Product
+```
+---
+
+Flow:
+```text
+Frontend (Website)
+     ↓
+API Server
+     ↓
+Database (Orders, Users, Products)
+
+```
+---
 ---
 
 </details>
