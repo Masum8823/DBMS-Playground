@@ -1054,6 +1054,51 @@ Database insert
 User registration system:
 
 ---
+## Example API with Database (Step-by-Step)
+
+---
+
+## Step 1: User Request
+```text
+POST /register
+```
+Data:
+```text
+{
+  "name": "Rahim",
+  "email": "rahim@gmail.com",
+  "password": "1234"
+}
+
+```
+---
+
+## Step 2: API Receives Data
+
+Backend checks:
+• Email valid?  
+• Password strong?  
+• User exists?  
+
+---
+
+## Step 3: Database Insert
+```text
+INSERT INTO users (name, email, password)
+VALUES ('Rahim', 'rahim@gmail.com', '1234');
+
+```
+---
+
+## Step 4: Response
+```text
+{
+  "message": "User created successfully"
+}
+
+```
+---
+
 ---
 
 </details>
