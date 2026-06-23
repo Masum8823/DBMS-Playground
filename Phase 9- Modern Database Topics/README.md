@@ -1510,6 +1510,35 @@ System attack করে data encrypt করে ফেলে।
 Database locked → ransom demand
 ```
 ---
+## Authentication in Database Security
+
+Authentication means:
+```text
+User identity verify করা
+```
+---
+
+## Methods:
+
+### 1. Username & Password
+Basic method
+
+---
+
+### 2. Multi-Factor Authentication (MFA)
+
+• Password  
+• OTP  
+• Email verification  
+
+---
+
+### 3. Biometric
+
+• Fingerprint  
+• Face recognition  
+
+---
 ---
 
 
