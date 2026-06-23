@@ -1178,6 +1178,40 @@ app.post("/users", (req, res) => {
 
 ```
 ---
+## API Security with Database
+
+---
+
+## 1. Authentication
+
+User verify করা হয়।
+
+---
+
+## 2. Authorization
+
+User permission check করা হয়।
+
+---
+
+## 3. SQL Injection Protection
+
+Unsafe query prevent করা।
+
+---
+
+## Bad Example
+```text
+SELECT * FROM users WHERE email = '$email';
+```
+---
+
+## Safe Example
+```text
+db.query("SELECT * FROM users WHERE email = ?", [email]);
+```
+---
+
 ---
 
 </details>
