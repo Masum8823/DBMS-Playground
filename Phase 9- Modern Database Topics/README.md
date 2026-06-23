@@ -2736,6 +2736,27 @@ ORM = easy but slower
 SQL = fast but manual  
 
 ---
+## Quick Summary
+```text
+ORM = Bridge between OOP and Database
+
+Mapping:
+Class → Table
+Object → Row
+Attribute → Column
+
+Flow:
+Code → ORM → SQL → Database
+
+Benefits:
+- Fast development
+- Less SQL
+- Easy maintenance
+
+Tools:
+Hibernate, Django ORM, Sequelize, Eloquent
+
+```
 ---
 
 </details>
