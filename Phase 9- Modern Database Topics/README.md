@@ -1884,6 +1884,39 @@ Database (Stored in Cloud)
 | Cost | High upfront | Pay-as-you-use |
 
 ---
+## Why Cloud Database is Used?
+
+---
+
+## 1. No Physical Server Needed
+```text
+No hardware setup required
+```
+---
+
+## 2. Global Access
+
+Anywhere from internet access করা যায়।
+
+---
+
+## 3. Scalability
+
+Traffic বাড়লে automatically scale করে।
+
+---
+
+## 4. Backup & Recovery Built-in
+
+Cloud provider নিজেই backup manage করে।
+
+---
+
+## 5. Cost Efficient
+```text
+Pay only for what you use
+```
+---
 
 ---
 
