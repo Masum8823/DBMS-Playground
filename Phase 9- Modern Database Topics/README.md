@@ -781,6 +781,16 @@ console.log(docSnap.data());
 
 ```
 ---
+## Update Data
+```text
+import { updateDoc, doc } from "firebase/firestore";
+
+await updateDoc(doc(db, "users", "user1"), {
+  age: 23
+});
+
+```
+---
 ---
 
 </details>
