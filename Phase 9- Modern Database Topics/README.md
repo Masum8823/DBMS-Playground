@@ -1372,3 +1372,50 @@ Web apps, mobile apps, banking, e-commerce
 ---
 
 </details>
+
+<details>
+    <summary><b>Database Security</b></summary>
+
+# Database Security
+
+Database Security হলো এমন একটি system বা mechanism, যা database-এর data কে unauthorized access, misuse, theft, corruption এবং attacks থেকে protect করে।
+
+👉 সহজভাবে:
+```text
+Database Security = Data protect করা
+                    (Unauthorized access থেকে)
+
+```
+---
+
+## Why Database Security is Important?
+
+Database এ sensitive data থাকে:
+• Student records  
+• Bank account info  
+• Passwords  
+• Medical records  
+• Business data  
+
+---
+
+## যদি security না থাকে:
+```text
+Data leak + hacking + corruption
+```
+---
+
+## Real impact:
+```text
+Bank balance change
+Personal data leak
+System crash abuse
+
+```
+---
+
+
+---
+
+
+</details>
