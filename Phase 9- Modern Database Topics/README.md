@@ -2693,6 +2693,22 @@ DB Insert
 ❌ Real-time low-latency systems  
 
 ---
+## ORM Security Benefits
+
+• Prevents SQL injection (parameterized queries)  
+• Input sanitization  
+• Controlled access to DB  
+
+---
+
+## ORM Security Example
+```text
+User.findOne({
+  where: { email: userEmail }
+});
+
+```
+---
 ---
 
 </details>
