@@ -799,6 +799,31 @@ await deleteDoc(doc(db, "users", "user1"));
 
 ```
 ---
+## Firebase Rules (Security Rules)
+
+Firebase data protect করার জন্য rules ব্যবহার করে।
+
+---
+
+## Example Rule
+```text
+Allow read/write if user is authenticated
+```
+---
+
+## Code Example
+```text
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{userId} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
+
+```
+---
 ---
 
 </details>
