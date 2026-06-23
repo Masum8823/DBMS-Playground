@@ -1917,7 +1917,33 @@ Cloud provider নিজেই backup manage করে।
 Pay only for what you use
 ```
 ---
+## Types of Cloud Databases
 
+---
+
+## 1. SQL Cloud Database
+
+Relational database in cloud.  
+Example:
+• MySQL Cloud  
+• PostgreSQL Cloud  
+
+---
+
+## 2. NoSQL Cloud Database
+
+Document / key-value based.  
+Example:
+• Amazon DynamoDB  
+• Cloud Firestore  
+
+---
+
+## 3. Hybrid Cloud Database
+
+SQL + NoSQL mix system।
+
+---
 ---
 
 </details>
