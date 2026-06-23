@@ -2403,6 +2403,33 @@ id | name   | age
 👉 ORM এই দুইটা connect করে।
 
 ---
+## Why ORM is Used?
+
+---
+
+## 1. No need to write raw SQL
+```text
+Less SQL → More Code-based development
+```
+---
+
+## 2. Faster Development
+
+CRUD operations সহজ হয়।
+
+---
+
+## 3. Code Reusability
+
+Same model multiple places ব্যবহার করা যায়।
+
+---
+
+## 4. Database Independence
+
+Database change করলেও code mostly same থাকে।
+
+---
 ---
 
 </details>
