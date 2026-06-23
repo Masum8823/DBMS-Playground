@@ -1690,6 +1690,13 @@ Special characters block করা।
 Object Relational Mapping (safe abstraction)
 
 ---
+## Backup & Security Relation
+
+Backup security provide করে:
+```text
+Attack → Data loss → Restore from backup
+```
+---
 ---
 
 
