@@ -2010,6 +2010,41 @@ Storage + Compute + Backup
 
 ```
 ---
+## Key Features of Cloud Database
+
+---
+
+## 1. Scalability
+
+Auto scaling support করে।
+
+---
+
+## 2. High Availability
+
+System always online থাকে।
+
+---
+
+## 3. Automatic Backup
+
+Manual backup লাগে না।
+
+---
+
+## 4. Disaster Recovery
+
+Crash হলেও data restore করা যায়।
+
+---
+
+## 5. Security
+
+• Encryption  
+• Authentication  
+• Access control  
+
+---
 ---
 
 </details>
