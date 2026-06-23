@@ -2158,6 +2158,17 @@ Large usage = expensive
 One provider dependancy
 
 ---
+## Cloud Database vs On-Premise Database
+
+| Feature | Cloud DB | On-Premise DB |
+|---|---|---|
+| Setup | Easy | Complex |
+| Cost | Low initial | High initial |
+| Maintenance | Provider | User |
+| Access | Global | Local |
+| Scalability | High | Limited |
+
+---
 ---
 
 </details>
