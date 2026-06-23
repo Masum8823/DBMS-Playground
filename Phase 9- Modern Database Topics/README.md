@@ -1211,7 +1211,40 @@ SELECT * FROM users WHERE email = '$email';
 db.query("SELECT * FROM users WHERE email = ?", [email]);
 ```
 ---
+## API Authentication Methods
 
+---
+
+## 1. Session-based
+
+Server memory store করে session।
+
+---
+
+## 2. Token-based (JWT)
+
+Most popular method।
+
+---
+
+## Example:
+```text
+User Login → JWT Token → API Request → Verify Token
+```
+---
+
+## JWT Flow
+```text
+Login → Generate Token
+      ↓
+Frontend stores token
+      ↓
+Every API request sends token
+      ↓
+Backend verifies token
+
+```
+---
 ---
 
 </details>
