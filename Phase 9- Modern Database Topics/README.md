@@ -1555,6 +1555,25 @@ User কী করতে পারবে তা control করা
 | Guest | Limited access |
 
 ---
+## SQL-Based Security Control
+
+---
+
+## GRANT Command
+
+Permission দেওয়া হয়।
+```text
+GRANT SELECT, INSERT ON Students TO user1;
+```
+---
+
+## REVOKE Command
+
+Permission remove করা হয়।
+```text
+REVOKE INSERT ON Students FROM user1;
+```
+---
 ---
 
 
