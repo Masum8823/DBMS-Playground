@@ -2541,7 +2541,36 @@ User.destroy({
 
 ```
 ---
+## ORM Relationships
 
+ORM relationships database relations map করে।
+
+---
+
+## 1. One-to-One
+```text
+User ↔ Profile
+```
+---
+
+## 2. One-to-Many
+```text
+Teacher → Students
+```
+---
+
+## 3. Many-to-Many
+```text
+Students ↔ Courses
+```
+---
+## ORM Example Relationship
+```text
+User.hasMany(Post);
+Post.belongsTo(User);
+
+```
+---
 ---
 
 </details>
