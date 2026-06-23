@@ -1314,6 +1314,16 @@ User → API → Product DB → Cart/Order
 ATM → API → Account DB → Balance Update
 ```
 ---
+## API vs Direct Database
+
+| Feature | API | Direct DB |
+|---|---|---|
+| Security | High | Low |
+| Control | High | Low |
+| Scalability | High | Low |
+| Risk | Low | High |
+
+---
 ---
 
 </details>
