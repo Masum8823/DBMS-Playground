@@ -1324,6 +1324,33 @@ ATM → API → Account DB → Balance Update
 | Risk | Low | High |
 
 ---
+## Viva Questions
+
+Q: API কী?  
+Application communication interface।
+
+---
+
+Q: API কেন ব্যবহার করা হয়?  
+Secure and controlled database access-এর জন্য।
+
+---
+
+Q: REST API কী?  
+HTTP-based web service architecture।
+
+---
+
+Q: API কোন format ব্যবহার করে?  
+Mostly JSON।
+
+---
+
+Q: API এর সাথে database কিভাবে কাজ করে?  
+Client → API → Backend → Database → Response।
+
+---
+
 ---
 
 </details>
