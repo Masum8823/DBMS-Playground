@@ -1256,6 +1256,28 @@ API abuse prevent করার জন্য ব্যবহার হয়।
 Max 100 requests per minute
 ```
 ---
+## API with Firebase / MongoDB / SQL
+
+---
+
+## MySQL
+
+Structured queries ব্যবহার করে।
+
+---
+
+## MongoDB
+
+Document-based JSON API response।
+
+---
+
+## Firebase
+
+Direct SDK + API combined system।
+
+---
+
 ---
 
 </details>
