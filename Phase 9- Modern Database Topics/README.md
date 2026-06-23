@@ -1277,6 +1277,24 @@ Document-based JSON API response।
 Direct SDK + API combined system।
 
 ---
+## Advantages of API with Database
+
+1. Secure system  
+2. Scalable architecture  
+3. Easy frontend-backend separation  
+4. Multi-platform support (web/mobile)  
+5. Better control over data  
+
+---
+
+## Disadvantages
+
+1. Extra layer increases complexity  
+2. API latency  
+3. Server maintenance needed  
+4. Security management required  
+
+---
 
 ---
 
