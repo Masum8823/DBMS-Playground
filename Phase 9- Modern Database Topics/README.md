@@ -1590,6 +1590,30 @@ Viewer Role → Read only
 
 ```
 ---
+## Encryption in Database
+
+Encryption মানে data কে unreadable format এ convert করা।
+
+---
+
+## Types:
+
+### 1. Symmetric Encryption
+Same key used for encrypt & decrypt
+
+---
+
+### 2. Asymmetric Encryption
+Public key + Private key
+
+---
+
+## Example:
+```text
+Plain text → Encrypted text → Stored in DB
+
+```
+---
 ---
 
 
