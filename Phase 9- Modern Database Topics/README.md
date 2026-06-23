@@ -1633,6 +1633,36 @@ Hash: 81dc9bdb52d04dc20036dbd8313ed055
 One-way function (cannot be reversed)
 ```
 ---
+## Access Control Models
+
+---
+
+## 1. Discretionary Access Control (DAC)
+
+Owner decides permissions.
+
+---
+
+## 2. Mandatory Access Control (MAC)
+
+System rules control access.
+
+---
+
+## 3. Role-Based Access Control (RBAC)
+
+Access based on role.
+
+---
+
+## Example:
+```text
+Student → Read only
+Teacher → Update marks
+Admin → Full control
+
+```
+---
 ---
 
 
