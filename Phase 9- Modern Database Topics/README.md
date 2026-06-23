@@ -1098,7 +1098,32 @@ VALUES ('Rahim', 'rahim@gmail.com', '1234');
 
 ```
 ---
+## API Response Format
 
+Usually JSON format ব্যবহার করা হয়।
+
+---
+
+## Success Response
+```text
+{
+  "status": 200,
+  "message": "Success",
+  "data": { "id": 1, "name": "Rahim" }
+}
+
+```
+---
+
+## Error Response
+```text
+{
+  "status": 400,
+  "message": "Invalid input"
+}
+
+```
+---
 ---
 
 </details>
