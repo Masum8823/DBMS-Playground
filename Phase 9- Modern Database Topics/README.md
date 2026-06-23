@@ -824,6 +824,24 @@ service cloud.firestore {
 
 ```
 ---
+## Advantages of Firebase
+
+1. No Backend Setup  
+2. Fast Development  
+3. Real-time Database  
+4. Scalable  
+5. Google Infrastructure  
+
+---
+
+## Disadvantages of Firebase
+
+1. Expensive at scale  
+2. Limited SQL support  
+3. Vendor lock-in (Google dependency)  
+4. Complex queries limited  
+
+---
 ---
 
 </details>
