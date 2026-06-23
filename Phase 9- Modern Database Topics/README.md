@@ -1968,6 +1968,36 @@ Single organization use করে।
 Public + Private combined।
 
 ---
+## Popular Cloud Database Services
+
+---
+
+## 1. Amazon RDS
+
+Amazon Web Services provides RDS (Relational Database Service)  
+✔ MySQL  
+✔ PostgreSQL  
+✔ Oracle  
+
+---
+
+## 2. Google Cloud SQL
+
+Google Cloud offers managed SQL databases
+
+---
+
+## 3. Microsoft Azure SQL Database
+
+Microsoft Azure provides SQL-based cloud DB
+
+---
+
+## 4. Firebase Database
+
+Firebase provides real-time NoSQL database
+
+---
 ---
 
 </details>
