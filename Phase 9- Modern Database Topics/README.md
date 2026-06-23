@@ -2239,6 +2239,19 @@ Response shown in app
 
 ```
 ---
+# Real-World Example
+
+WhatsApp / Messenger
+```text
+Message → Cloud Database → Receiver instantly
+```
+---
+
+## Online Shopping
+```text
+Order → Cloud DB → Inventory update
+```
+---
 ---
 
 </details>
