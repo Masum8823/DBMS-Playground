@@ -2651,6 +2651,31 @@ Order.create({
 
 ```
 ---
+## ORM in API Layer
+```text
+Frontend
+   ↓
+API
+   ↓
+ORM Layer
+   ↓
+Database
+
+```
+---
+
+## ORM + API Example Flow
+```text
+POST /users
+     ↓
+ORM: User.create()
+     ↓
+SQL auto generated
+     ↓
+DB Insert
+
+```
+---
 ---
 
 </details>
