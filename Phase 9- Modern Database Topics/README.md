@@ -1155,6 +1155,14 @@ DELETE /users/1
 DELETE FROM users WHERE id=1;
 ```
 ---
+## Backend Languages Used for API
+
+• Node.js  
+• PHP  
+• Python (Django/Flask)  
+• Java (Spring Boot)  
+
+---
 ---
 
 </details>
