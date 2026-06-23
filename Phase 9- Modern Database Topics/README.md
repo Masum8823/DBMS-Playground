@@ -1458,6 +1458,25 @@ Permission ছাড়া database access করা।
 Hacker login without password
 ```
 ---
+## 2. SQL Injection
+
+SQL Injection হলো একটি attack যেখানে malicious SQL code input field দিয়ে inject করা হয়।
+
+---
+
+## Example
+```text
+SELECT * FROM users
+WHERE email = '' OR '1'='1';
+
+```
+---
+
+👉 Result:
+```text
+All users data exposed
+```
+---
 ---
 
 
