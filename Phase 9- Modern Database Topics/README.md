@@ -2045,6 +2045,30 @@ Crash হলেও data restore করা যায়।
 • Access control  
 
 ---
+## Cloud Database Services Types
+
+---
+
+## 1. DBaaS (Database as a Service)
+
+Most common model।  
+Provider handles everything.
+
+---
+
+## Example:
+```text
+User → Just use database
+Cloud → Everything manage
+
+```
+---
+
+## 2. Self-managed Cloud DB
+
+User cloud server control করে।
+
+---
 ---
 
 </details>
