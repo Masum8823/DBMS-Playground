@@ -2495,7 +2495,19 @@ User.create({
 
 ```
 ---
+## 2. Read (Select)
 
+SQL:
+```text
+SELECT * FROM users;
+```
+---
+
+ORM:
+```text
+User.findAll();
+```
+---
 ---
 
 </details>
