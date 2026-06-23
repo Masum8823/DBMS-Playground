@@ -1873,7 +1873,17 @@ Database (Stored in Cloud)
 
 ```
 ---
+## Traditional DB vs Cloud Database
 
+| Feature | Traditional Database | Cloud Database |
+|---|---|---|
+| Location | Local Server | Cloud Server |
+| Setup | Manual | Easy (managed) |
+| Scalability | Limited | High |
+| Maintenance | User handles | Provider handles |
+| Cost | High upfront | Pay-as-you-use |
+
+---
 
 ---
 
