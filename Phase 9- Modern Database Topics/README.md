@@ -694,6 +694,17 @@ Live Website
 
 ```
 ---
+## Firebase Project Structure
+```text
+Firebase Project
+   ├── Authentication
+   ├── Firestore Database
+   ├── Storage
+   ├── Hosting
+   └── Functions
+
+```
+---
 ---
 
 </details>
