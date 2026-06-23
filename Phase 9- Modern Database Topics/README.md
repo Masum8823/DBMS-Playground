@@ -2709,6 +2709,33 @@ User.findOne({
 
 ```
 ---
+## Viva Questions
+
+Q: ORM কী?  
+Object Relational Mapping, OOP এবং database connect করার technique।
+
+---
+
+Q: ORM কীভাবে কাজ করে?  
+Object → ORM → SQL → Database
+
+---
+
+Q: ORM এর advantage কী?  
+Faster development, less SQL writing, better maintainability।
+
+---
+
+Q: ORM এর disadvantage?  
+Performance overhead and complex queries difficult।
+
+---
+
+Q: ORM vs SQL?  
+ORM = easy but slower  
+SQL = fast but manual  
+
+---
 ---
 
 </details>
