@@ -842,6 +842,16 @@ service cloud.firestore {
 4. Complex queries limited  
 
 ---
+## Firebase Use Cases
+
+• Chat applications  
+• E-commerce apps  
+• Social media apps  
+• Real-time dashboards  
+• Mobile apps backend  
+
+---
+
 ---
 
 </details>
