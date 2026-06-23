@@ -1477,6 +1477,18 @@ WHERE email = '' OR '1'='1';
 All users data exposed
 ```
 ---
+## 3. Data Breach
+
+Sensitive data leak হয়ে যাওয়া।
+
+---
+
+## Example:
+```text
+Hacked database dump online
+```
+---
+
 ---
 
 
