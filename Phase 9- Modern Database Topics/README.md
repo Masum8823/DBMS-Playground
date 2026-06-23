@@ -2288,6 +2288,29 @@ Q: Example cloud database?
 Firebase, Amazon RDS, Azure SQL
 
 ---
+## Quick Summary
+```text
+Cloud Database = Internet-based managed database
+
+Key Features:
+- Scalability
+- High availability
+- Automatic backup
+- Global access
+- Pay-as-you-go
+
+Types:
+- SQL Cloud DB
+- NoSQL Cloud DB
+
+Popular Platforms:
+- AWS
+- Google Cloud
+- Azure
+- Firebase
+
+```
+---
 ---
 
 </details>
