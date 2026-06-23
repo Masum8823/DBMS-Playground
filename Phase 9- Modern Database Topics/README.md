@@ -2261,6 +2261,33 @@ Less control over infrastructure
 
 ```
 ---
+## Viva Questions
+
+Q: Cloud Database কী?  
+Internet-based database system hosted on cloud servers।
+
+---
+
+Q: Cloud Database কেন ব্যবহার করা হয়?  
+Scalability, cost efficiency এবং easy access-এর জন্য।
+
+---
+
+Q: DBaaS কী?  
+Database as a Service যেখানে provider সব manage করে।
+
+---
+
+Q: Cloud DB vs Traditional DB difference?  
+Cloud = online, scalable  
+Traditional = local, manual management
+
+---
+
+Q: Example cloud database?  
+Firebase, Amazon RDS, Azure SQL
+
+---
 ---
 
 </details>
