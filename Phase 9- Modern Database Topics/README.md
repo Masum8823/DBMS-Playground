@@ -1614,6 +1614,25 @@ Plain text → Encrypted text → Stored in DB
 
 ```
 ---
+## Hashing (Very Important)
+
+Hashing is used for passwords।
+
+---
+
+## Example:
+```text
+Password: 1234
+Hash: 81dc9bdb52d04dc20036dbd8313ed055
+
+```
+---
+
+👉 Hashing is:
+```text
+One-way function (cannot be reversed)
+```
+---
 ---
 
 
