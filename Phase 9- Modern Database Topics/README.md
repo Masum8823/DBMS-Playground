@@ -754,6 +754,24 @@ signInWithEmailAndPassword(auth, email, password)
 
 ```
 ---
+## Firestore CRUD Example
+
+---
+
+## Create Data
+```text
+import { getFirestore, setDoc, doc } from "firebase/firestore";
+
+const db = getFirestore();
+
+await setDoc(doc(db, "users", "user1"), {
+  name: "Rahim",
+  age: 22
+});
+
+```
+---
+
 ---
 
 </details>
