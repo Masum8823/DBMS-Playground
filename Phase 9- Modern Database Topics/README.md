@@ -1663,6 +1663,33 @@ Admin → Full control
 
 ```
 ---
+## SQL Injection Prevention
+
+---
+
+## 1. Parameterized Query
+```sql
+db.query("SELECT * FROM users WHERE email = ?", [email]);
+```
+---
+
+## 2. Input Validation
+
+Invalid input reject করা।
+
+---
+
+## 3. Escaping Input
+
+Special characters block করা।
+
+---
+
+## 4. ORM Usage
+
+Object Relational Mapping (safe abstraction)
+
+---
 ---
 
 
