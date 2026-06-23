@@ -1124,6 +1124,37 @@ Usually JSON format ব্যবহার করা হয়।
 
 ```
 ---
+## CRUD with API + Database
+
+---
+
+## Create
+```text
+POST /users
+INSERT INTO users VALUES (...);
+```
+---
+
+## Read
+```text
+GET /users
+SELECT * FROM users;
+```
+---
+
+## Update
+```text
+PUT /users/1
+UPDATE users SET name='Karim' WHERE id=1;
+```
+---
+
+## Delete
+```text
+DELETE /users/1
+DELETE FROM users WHERE id=1;
+```
+---
 ---
 
 </details>
