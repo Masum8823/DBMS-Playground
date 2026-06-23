@@ -2200,6 +2200,33 @@ One provider dependancy
 • Large dataset processing  
 
 ---
+## Security in Cloud Database
+
+---
+
+## 1. Encryption
+
+Data encrypted in transit & storage
+
+---
+
+## 2. IAM (Identity Access Management)
+
+User access control
+
+---
+
+## 3. Firewalls
+
+Network protection
+
+---
+
+## 4. Backup Systems
+
+Automatic recovery support
+
+---
 ---
 
 </details>
