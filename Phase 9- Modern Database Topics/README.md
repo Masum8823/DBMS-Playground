@@ -1818,6 +1818,30 @@ Q: GRANT কী?
 Permission দেওয়ার SQL command।
 
 ---
+## Quick Summary
+```text
+Database Security = Protect Data from Attacks
+
+Main Goals:
+- Confidentiality
+- Integrity
+- Availability
+
+Main Tools:
+- Authentication
+- Authorization
+- Encryption
+- Hashing
+- Logging
+
+Common Threats:
+- SQL Injection
+- Data Breach
+- Malware
+- Unauthorized Access
+
+```
+---
 ---
 
 
