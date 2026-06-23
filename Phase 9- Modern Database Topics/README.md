@@ -1245,6 +1245,17 @@ Backend verifies token
 
 ```
 ---
+## API Rate Limiting
+
+API abuse prevent করার জন্য ব্যবহার হয়।
+
+---
+
+## Example:
+```text
+Max 100 requests per minute
+```
+---
 ---
 
 </details>
