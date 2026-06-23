@@ -888,6 +888,21 @@ Q: Firebase Hosting কী?
 Static website deploy করার service।
 
 ---
+## Quick Summary
+```text
+Firebase = Backend-as-a-Service (BaaS)
+
+Main Services:
+- Authentication
+- Firestore Database
+- Realtime Database
+- Storage
+- Hosting
+
+Key Feature:
+No server needed + Real-time + Fast development
+
+```
 ---
 
 </details>
