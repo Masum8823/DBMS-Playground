@@ -2169,6 +2169,37 @@ One provider dependancy
 | Scalability | High | Limited |
 
 ---
+## Use Cases of Cloud Database
+
+---
+
+## 1. E-commerce
+
+• Orders  
+• Users  
+• Payments  
+
+---
+
+## 2. Mobile Apps
+
+• Chat apps  
+• Social media  
+
+---
+
+## 3. Banking Systems
+
+• Transactions  
+• Accounts  
+
+---
+
+## 4. AI & Big Data
+
+• Large dataset processing  
+
+---
 ---
 
 </details>
