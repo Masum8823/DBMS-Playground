@@ -705,6 +705,18 @@ Firebase Project
 
 ```
 ---
+## How Firebase Works (Simple Flow)
+```text
+Frontend App
+     ↓
+Firebase SDK
+     ↓
+Cloud Services
+     ↓
+Auth / DB / Storage
+
+```
+---
 ---
 
 </details>
