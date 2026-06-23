@@ -1718,6 +1718,33 @@ User activity track করা।
 User X deleted record at 10:00 AM
 ```
 ---
+## Database Security Layers
+
+---
+
+## 1. Physical Security
+
+Server room protection
+
+---
+
+## 2. Network Security
+
+Firewall, VPN
+
+---
+
+## 3. OS Security
+
+User permissions
+
+---
+
+## 4. DBMS Security
+
+Authentication, authorization, encryption
+
+---
 ---
 
 
