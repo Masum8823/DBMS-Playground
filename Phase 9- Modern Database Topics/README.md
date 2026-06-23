@@ -2571,6 +2571,58 @@ Post.belongsTo(User);
 
 ```
 ---
+## Advantages of ORM
+
+---
+
+## 1. Faster Development
+
+---
+
+## 2. Less SQL Writing
+
+---
+
+## 3. Better Code Organization
+
+---
+
+## 4. Easier Maintenance
+
+---
+
+## 5. Database Portability
+
+---
+
+## Disadvantages of ORM
+
+---
+
+## 1. Performance Overhead
+
+Raw SQL usually faster
+
+---
+
+## 2. Complex Queries Difficult
+
+Advanced SQL hard to express
+
+---
+
+## 3. Hidden Queries
+
+Developer doesn’t see actual SQL sometimes
+
+---
+
+## 4. Learning Curve
+
+ORM syntax learn করতে হয়
+
+---
+
 ---
 
 </details>
