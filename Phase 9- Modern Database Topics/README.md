@@ -1499,6 +1499,17 @@ System admin বা employee malicious activity করে।
 Employee copies customer data
 ```
 ---
+## 5. Malware / Ransomware
+
+System attack করে data encrypt করে ফেলে।
+
+---
+
+## Example:
+```text
+Database locked → ransom demand
+```
+---
 ---
 
 
