@@ -2227,6 +2227,18 @@ Network protection
 Automatic recovery support
 
 ---
+## Example Cloud Database Flow
+```text
+User logs in
+    ↓
+Firebase Auth / API
+    ↓
+Cloud DB fetch data
+    ↓
+Response shown in app
+
+```
+---
 ---
 
 </details>
