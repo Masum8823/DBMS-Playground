@@ -2352,7 +2352,57 @@ User.findById(1);
 
 ---
 
+## ORM কীভাবে কাজ করে?
+```text
+Object (Code)
+     ↓
+ORM Layer
+     ↓
+SQL Query (Auto Generated)
+     ↓
+Database
 
+```
+---
+
+## ORM Example Mapping
+
+| OOP Concept | Database Concept |
+|---|---|
+| Class | Table |
+| Object | Row |
+| Attribute | Column |
+
+---
+
+## Example:
+
+### Class (OOP)
+```text
+class Student {
+  int id;
+  String name;
+  int age;
+}
+
+```
+---
+
+### Database Table
+```text
+Students Table:
+-----------------------
+id | name   | age
+-----------------------
+1  | Rahim  | 22
+2  | Karim  | 21
+
+```
+---
+
+👉 ORM এই দুইটা connect করে।
+
+---
 ---
 
 </details>
