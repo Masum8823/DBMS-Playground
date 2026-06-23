@@ -1295,7 +1295,25 @@ Direct SDK + API combined system।
 4. Security management required  
 
 ---
+## Real-World Example
 
+Facebook
+```text
+App → API → Database → Feed Data
+```
+---
+
+## E-commerce
+```text
+User → API → Product DB → Cart/Order
+```
+---
+
+## Banking
+```text
+ATM → API → Account DB → Balance Update
+```
+---
 ---
 
 </details>
