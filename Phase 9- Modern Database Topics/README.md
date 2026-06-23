@@ -1757,6 +1757,23 @@ Encrypt data → Store in DB
 
 ```
 ---
+## Advantages of Database Security
+
+1. Protect sensitive data  
+2. Prevent unauthorized access  
+3. Ensure data integrity  
+4. Build user trust  
+5. Support compliance (laws)  
+
+---
+
+## Disadvantages
+
+1. System complexity increases  
+2. Performance overhead  
+3. Cost of security tools  
+4. Maintenance required  
+
 ---
 
 
