@@ -1163,6 +1163,21 @@ DELETE FROM users WHERE id=1;
 • Java (Spring Boot)  
 
 ---
+## Example API (Node.js + Express)
+```js
+app.post("/users", (req, res) => {
+  const { name, email } = req.body;
+
+  const sql = "INSERT INTO users (name, email) VALUES (?, ?)";
+  db.query(sql, [name, email], (err, result) => {
+    if (err) return res.json({ error: err });
+
+    res.json({ message: "User added" });
+  });
+});
+
+```
+---
 ---
 
 </details>
