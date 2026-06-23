@@ -1413,6 +1413,35 @@ System crash abuse
 
 ```
 ---
+## Goals of Database Security
+
+Database security-এর main goals:
+
+---
+
+## 1. Confidentiality
+
+Data শুধু authorized user access করতে পারবে।
+
+---
+
+## 2. Integrity
+
+Data correct এবং unchanged থাকবে unauthorized modification ছাড়া।
+
+---
+
+## 3. Availability
+
+Authorized user যখন দরকার তখন data access করতে পারবে।
+
+---
+
+👉 এগুলো একসাথে বলা হয়:
+```text
+CIA Triad
+```
+---
 
 
 ---
