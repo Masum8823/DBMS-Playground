@@ -1029,7 +1029,31 @@ DELETE /users/1 → Delete user
 
 ```
 ---
+## 2. API + Database Architecture
+```text
+Client (Browser / Mobile)
+        ↓
+API Server (Node/PHP/Python)
+        ↓
+Database (MySQL / MongoDB)
 
+```
+---
+
+## Example
+```text
+Frontend form
+   ↓
+API: /register
+   ↓
+Backend validation
+   ↓
+Database insert
+
+```
+User registration system:
+
+---
 ---
 
 </details>
