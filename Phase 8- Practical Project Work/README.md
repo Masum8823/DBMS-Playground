@@ -24,9 +24,15 @@
 
 
 <details>
-    <summary><b>University Management System DB</b></summary>
+    <summary><b>University Management System DB (UMS)</b></summary>
 
-
+# 🎓 University Management System (UMS)
+ 
+A complete **Database Management System** project for managing all academic and administrative operations of a university — designed using core DBMS concepts including ER Diagrams, Relational Schema, Normalization, Joins, Views, and more.
+ 
+> **University:** Northern University Bangladesh (NUB)
+ 
+---
 ---
 
 </details>
