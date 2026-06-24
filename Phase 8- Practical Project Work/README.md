@@ -174,6 +174,24 @@ The **University Management System** is one of the most complete academic DBMS p
 | Semester → Enrollment | One-to-Many | A semester has many enrollments |
  
 ---
+## 📊 ER Diagram (Conceptual)
+ 
+```
+Department ──1────M── Student
+Department ──1────M── Teacher
+Department ──1────M── Course
+Teacher    ──1────M── Course
+ 
+Student ──M──┐
+             ├── Enrollment ──M── Course
+Semester──1──┘
+ 
+Student ──1────M── Attendance
+Student ──1────M── Result
+Student ──1────M── Fees
+```
+ 
+---
 
 </details>
 
