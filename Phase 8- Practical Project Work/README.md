@@ -418,6 +418,20 @@ INNER JOIN Student s ON f.StudentID = s.StudentID;
 ```
  
 ---
+
+## 📐 Normalization
+ 
+| Normal Form | Condition Met |
+|---|---|
+| **1NF** | ✅ All attributes contain atomic values |
+| **2NF** | ✅ No partial dependencies |
+| **3NF** | ✅ No transitive dependencies |
+ 
+> This database design is normalized up to **3NF**.
+ 
+---
+ 
+
 </details>
 
 
