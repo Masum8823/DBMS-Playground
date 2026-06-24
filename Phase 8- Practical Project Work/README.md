@@ -85,11 +85,14 @@ The **University Management System** is one of the most complete academic DBMS p
  
 <details>
 <summary><strong>Department</strong></summary>
+
 - `DepartmentID` (PK)
 - `DepartmentName`
+
 </details>
 <details>
 <summary><strong>Student</strong></summary>
+
 - `StudentID` (PK)
 - `Name`
 - `Email`
@@ -99,6 +102,7 @@ The **University Management System** is one of the most complete academic DBMS p
 </details>
 <details>
 <summary><strong>Teacher</strong></summary>
+
 - `TeacherID` (PK)
 - `Name`
 - `Email`
@@ -107,6 +111,7 @@ The **University Management System** is one of the most complete academic DBMS p
 </details>
 <details>
 <summary><strong>Course</strong></summary>
+
 - `CourseID` (PK)
 - `CourseName`
 - `Credit`
@@ -115,11 +120,13 @@ The **University Management System** is one of the most complete academic DBMS p
 </details>
 <details>
 <summary><strong>Semester</strong></summary>
+
 - `SemesterID` (PK)
 - `SemesterName`
 </details>
 <details>
 <summary><strong>Enrollment</strong></summary>
+
 - `EnrollmentID` (PK)
 - `StudentID` (FK)
 - `CourseID` (FK)
@@ -127,6 +134,7 @@ The **University Management System** is one of the most complete academic DBMS p
 </details>
 <details>
 <summary><strong>Attendance</strong></summary>
+
 - `AttendanceID` (PK)
 - `StudentID` (FK)
 - `CourseID` (FK)
@@ -135,6 +143,7 @@ The **University Management System** is one of the most complete academic DBMS p
 </details>
 <details>
 <summary><strong>Result</strong></summary>
+
 - `ResultID` (PK)
 - `StudentID` (FK)
 - `CourseID` (FK)
@@ -142,6 +151,7 @@ The **University Management System** is one of the most complete academic DBMS p
 </details>
 <details>
 <summary><strong>Fees</strong></summary>
+
 - `FeeID` (PK)
 - `StudentID` (FK)
 - `SemesterID` (FK)
@@ -149,6 +159,20 @@ The **University Management System** is one of the most complete academic DBMS p
 - `Status`
 </details>
 
+---
+
+## 🔗 Relationship Analysis
+ 
+| Relationship | Type | Notes |
+|---|---|---|
+| Department → Student | One-to-Many | A department has many students |
+| Department → Teacher | One-to-Many | A department has many teachers |
+| Department → Course | One-to-Many | A department offers many courses |
+| Teacher → Course | One-to-Many | A teacher teaches many courses |
+| Student ↔ Course | Many-to-Many | Resolved via `Enrollment` table |
+| Student → Fees | One-to-Many | A student has many fee records |
+| Semester → Enrollment | One-to-Many | A semester has many enrollments |
+ 
 ---
 
 </details>
