@@ -450,6 +450,17 @@ INNER JOIN Student s ON f.StudentID = s.StudentID;
  
 ---
 
+## 🛠️ Tech Stack
+ 
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-025E8C?style=for-the-badge&logo=databricks&logoColor=white)
+ 
+---
+ 
+## 👤 Author
+ 
+**Masum** — [@Masum8823](https://github.com/Masum8823)
+
 </details>
 
 
