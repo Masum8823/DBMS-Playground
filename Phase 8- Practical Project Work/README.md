@@ -218,6 +218,160 @@ Fees        ( FeeID, StudentID*, SemesterID*, Amount, Status )
  
 ---
 
+## 💻 Database Implementation
+ 
+### Create & Use Database
+ 
+```sql
+CREATE DATABASE UniversityManagementDB;
+ 
+USE UniversityManagementDB;
+```
+ 
+### Department Table
+ 
+```sql
+CREATE TABLE Department (
+    DepartmentID   INT PRIMARY KEY,
+    DepartmentName VARCHAR(100)
+);
+```
+ 
+### Student Table
+ 
+```sql
+CREATE TABLE Student (
+    StudentID    INT PRIMARY KEY,
+    Name         VARCHAR(100),
+    Email        VARCHAR(100),
+    Phone        VARCHAR(20),
+    Address      VARCHAR(200),
+    DepartmentID INT,
+    FOREIGN KEY (DepartmentID) REFERENCES Department(DepartmentID)
+);
+```
+ 
+### Teacher Table
+ 
+```sql
+CREATE TABLE Teacher (
+    TeacherID    INT PRIMARY KEY,
+    Name         VARCHAR(100),
+    Email        VARCHAR(100),
+    Designation  VARCHAR(50),
+    DepartmentID INT,
+    FOREIGN KEY (DepartmentID) REFERENCES Department(DepartmentID)
+);
+```
+ 
+### Course Table
+ 
+```sql
+CREATE TABLE Course (
+    CourseID     INT PRIMARY KEY,
+    CourseName   VARCHAR(100),
+    Credit       INT,
+    DepartmentID INT,
+    TeacherID    INT,
+    FOREIGN KEY (DepartmentID) REFERENCES Department(DepartmentID),
+    FOREIGN KEY (TeacherID)    REFERENCES Teacher(TeacherID)
+);
+```
+ 
+### Semester Table
+ 
+```sql
+CREATE TABLE Semester (
+    SemesterID   INT PRIMARY KEY,
+    SemesterName VARCHAR(50)
+);
+```
+ 
+### Enrollment Table
+ 
+```sql
+CREATE TABLE Enrollment (
+    EnrollmentID INT PRIMARY KEY,
+    StudentID    INT,
+    CourseID     INT,
+    SemesterID   INT,
+    FOREIGN KEY (StudentID)   REFERENCES Student(StudentID),
+    FOREIGN KEY (CourseID)    REFERENCES Course(CourseID),
+    FOREIGN KEY (SemesterID)  REFERENCES Semester(SemesterID)
+);
+```
+ 
+### Attendance Table
+ 
+```sql
+CREATE TABLE Attendance (
+    AttendanceID INT PRIMARY KEY,
+    StudentID    INT,
+    CourseID     INT,
+    Date         DATE,
+    Status       VARCHAR(10),
+    FOREIGN KEY (StudentID) REFERENCES Student(StudentID),
+    FOREIGN KEY (CourseID)  REFERENCES Course(CourseID)
+);
+```
+ 
+### Result Table
+ 
+```sql
+CREATE TABLE Result (
+    ResultID  INT PRIMARY KEY,
+    StudentID INT,
+    CourseID  INT,
+    Grade     VARCHAR(5),
+    FOREIGN KEY (StudentID) REFERENCES Student(StudentID),
+    FOREIGN KEY (CourseID)  REFERENCES Course(CourseID)
+);
+```
+ 
+### Fees Table
+ 
+```sql
+CREATE TABLE Fees (
+    FeeID      INT PRIMARY KEY,
+    StudentID  INT,
+    SemesterID INT,
+    Amount     DECIMAL(10,2),
+    Status     VARCHAR(20),
+    FOREIGN KEY (StudentID)  REFERENCES Student(StudentID),
+    FOREIGN KEY (SemesterID) REFERENCES Semester(SemesterID)
+);
+```
+ 
+---
+ 
+## 🧪 Sample Data
+ 
+```sql
+-- Departments
+INSERT INTO Department VALUES
+(1, 'CSE'),
+(2, 'EEE'),
+(3, 'BBA');
+ 
+-- Student
+INSERT INTO Student VALUES
+(2210001, 'Rahim', 'rahim@gmail.com', '01711111111', 'Dhaka', 1);
+ 
+-- Teacher
+INSERT INTO Teacher VALUES
+(101, 'Dr. Hasan', 'hasan@gmail.com', 'Professor', 1);
+ 
+-- Course
+INSERT INTO Course VALUES
+(401, 'Database Systems', 3, 1, 101);
+ 
+-- Semester
+INSERT INTO Semester VALUES
+(1, 'Spring 2026');
+```
+ 
+---
+
 </details>
 
 
