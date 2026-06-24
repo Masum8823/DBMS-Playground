@@ -430,7 +430,25 @@ INNER JOIN Student s ON f.StudentID = s.StudentID;
 > This database design is normalized up to **3NF**.
  
 ---
+
+## ❓ Viva Q&A
  
+**Q: University Management System-এর main entities কী?**  
+→ `Department`, `Student`, `Teacher`, `Course`, `Semester`, `Enrollment`, `Attendance`, `Result`, `Fees`
+ 
+**Q: Student এবং Course-এর relationship কী?**  
+→ Many-to-Many
+ 
+**Q: Many-to-Many relationship কীভাবে solve করা হয়েছে?**  
+→ `Enrollment` table ব্যবহার করে bridge/junction table হিসেবে
+ 
+**Q: Fees table কেন ব্যবহার করা হয়?**  
+→ Semester-wise fee tracking এবং payment status manage করার জন্য
+ 
+**Q: Department এবং Course relationship কী?**  
+→ One-to-Many — একটি Department অনেক Course offer করতে পারে
+ 
+---
 
 </details>
 
