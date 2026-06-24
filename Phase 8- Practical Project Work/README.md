@@ -46,6 +46,24 @@ A complete **Database Management System** project for managing all academic and 
 - [Normalization](#normalization)
 - [Viva Q&A](#viva-qa)
 ---
+
+## 📖 Project Overview
+ 
+The **University Management System** is one of the most complete academic DBMS projects, covering nearly every core database concept. It handles:
+ 
+| Module | Description |
+|---|---|
+| Student Management | Student records, department assignment |
+| Teacher Management | Faculty info and course assignment |
+| Department Management | Academic departments |
+| Course Management | Course details with credit and instructor |
+| Semester Management | Semester-wise tracking |
+| Enrollment Management | Student-course registration per semester |
+| Result Management | Grade recording and reporting |
+| Attendance Management | Daily attendance per course |
+| Fee Management | Semester fee tracking and status |
+ 
+---
 ---
 
 </details>
