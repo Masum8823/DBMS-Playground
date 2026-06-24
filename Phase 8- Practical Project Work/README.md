@@ -372,6 +372,52 @@ INSERT INTO Semester VALUES
  
 ---
 
+## 🔍 Useful Queries
+ 
+### Show All Students
+```sql
+SELECT * FROM Student;
+```
+ 
+### Students with Department Name
+```sql
+SELECT s.Name, d.DepartmentName
+FROM Student s
+INNER JOIN Department d ON s.DepartmentID = d.DepartmentID;
+```
+ 
+### Course with Teacher Name
+```sql
+SELECT c.CourseName, t.Name AS TeacherName
+FROM Course c
+INNER JOIN Teacher t ON c.TeacherID = t.TeacherID;
+```
+ 
+### Enrollment Report
+```sql
+SELECT s.Name, c.CourseName, sem.SemesterName
+FROM Enrollment e
+INNER JOIN Student  s   ON e.StudentID  = s.StudentID
+INNER JOIN Course   c   ON e.CourseID   = c.CourseID
+INNER JOIN Semester sem ON e.SemesterID = sem.SemesterID;
+```
+ 
+### Result Report
+```sql
+SELECT s.Name, c.CourseName, r.Grade
+FROM Result r
+INNER JOIN Student s ON r.StudentID = s.StudentID
+INNER JOIN Course  c ON r.CourseID  = c.CourseID;
+```
+ 
+### Fee Report
+```sql
+SELECT s.Name, f.Amount, f.Status
+FROM Fees f
+INNER JOIN Student s ON f.StudentID = s.StudentID;
+```
+ 
+---
 </details>
 
 
