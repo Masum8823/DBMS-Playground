@@ -64,6 +64,20 @@ The **University Management System** is one of the most complete academic DBMS p
 | Fee Management | Semester fee tracking and status |
  
 ---
+## 🗂️ System Modules
+ 
+### 🔐 Admin Module
+- Manage Students, Teachers, Courses, Departments, Fees
+### 👨‍🏫 Teacher Module
+- Attendance Entry
+- Marks/Grade Submission
+- Student Information View
+### 🎓 Student Module
+- Course Registration
+- View Attendance
+- View Results
+- View Fee Status
+---
 ---
 
 </details>
