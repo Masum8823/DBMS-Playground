@@ -78,6 +78,77 @@ The **University Management System** is one of the most complete academic DBMS p
 - View Results
 - View Fee Status
 ---
+
+## 📋 Requirements Analysis
+ 
+### Entities & Attributes
+ 
+<details>
+<summary><strong>Department</strong></summary>
+- `DepartmentID` (PK)
+- `DepartmentName`
+</details>
+<details>
+<summary><strong>Student</strong></summary>
+- `StudentID` (PK)
+- `Name`
+- `Email`
+- `Phone`
+- `Address`
+- `DepartmentID` (FK)
+</details>
+<details>
+<summary><strong>Teacher</strong></summary>
+- `TeacherID` (PK)
+- `Name`
+- `Email`
+- `Designation`
+- `DepartmentID` (FK)
+</details>
+<details>
+<summary><strong>Course</strong></summary>
+- `CourseID` (PK)
+- `CourseName`
+- `Credit`
+- `DepartmentID` (FK)
+- `TeacherID` (FK)
+</details>
+<details>
+<summary><strong>Semester</strong></summary>
+- `SemesterID` (PK)
+- `SemesterName`
+</details>
+<details>
+<summary><strong>Enrollment</strong></summary>
+- `EnrollmentID` (PK)
+- `StudentID` (FK)
+- `CourseID` (FK)
+- `SemesterID` (FK)
+</details>
+<details>
+<summary><strong>Attendance</strong></summary>
+- `AttendanceID` (PK)
+- `StudentID` (FK)
+- `CourseID` (FK)
+- `Date`
+- `Status`
+</details>
+<details>
+<summary><strong>Result</strong></summary>
+- `ResultID` (PK)
+- `StudentID` (FK)
+- `CourseID` (FK)
+- `Grade`
+</details>
+<details>
+<summary><strong>Fees</strong></summary>
+- `FeeID` (PK)
+- `StudentID` (FK)
+- `SemesterID` (FK)
+- `Amount`
+- `Status`
+</details>
+
 ---
 
 </details>
