@@ -193,6 +193,31 @@ Student ──1────M── Fees
  
 ---
 
+## 🗃️ Relational Schema
+ 
+```
+Department  ( DepartmentID, DepartmentName )
+ 
+Student     ( StudentID, Name, Email, Phone, Address, DepartmentID* )
+ 
+Teacher     ( TeacherID, Name, Email, Designation, DepartmentID* )
+ 
+Course      ( CourseID, CourseName, Credit, DepartmentID*, TeacherID* )
+ 
+Semester    ( SemesterID, SemesterName )
+ 
+Enrollment  ( EnrollmentID, StudentID*, CourseID*, SemesterID* )
+ 
+Attendance  ( AttendanceID, StudentID*, CourseID*, Date, Status )
+ 
+Result      ( ResultID, StudentID*, CourseID*, Grade )
+ 
+Fees        ( FeeID, StudentID*, SemesterID*, Amount, Status )
+```
+> `*` = Foreign Key
+ 
+---
+
 </details>
 
 
