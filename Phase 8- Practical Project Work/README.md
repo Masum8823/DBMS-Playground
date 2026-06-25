@@ -15,7 +15,20 @@ A complete **Database Management System** project for managing student records, 
 > **University:** Northern University Bangladesh (NUB)
 
 ---
+## 📌 Table of Contents
 
+- [Project Overview](#project-overview)
+- [System Modules](#system-modules)
+- [Requirements Analysis](#requirements-analysis)
+- [ER Diagram (Conceptual)](#er-diagram-conceptual)
+- [Relational Schema](#relational-schema)
+- [Database Implementation](#database-implementation)
+- [Sample Data](#sample-data)
+- [Useful Queries](#useful-queries)
+- [Normalization](#normalization)
+- [Viva Q&A](#viva-qa)
+
+---
 ---
 
 </details>
