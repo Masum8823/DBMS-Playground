@@ -8,6 +8,13 @@
 <details>
     <summary><b>Student Management System DB</b></summary>
 
+# 🎓 Student Management System (SMS)
+
+A complete **Database Management System** project for managing student records, courses, teachers, attendance, and results — built using core DBMS concepts including ER Diagrams, Relational Schema, Normalization, Joins, and SQL Queries.
+
+> **University:** Northern University Bangladesh (NUB)
+
+---
 
 ---
 
