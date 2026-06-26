@@ -282,7 +282,30 @@ CREATE TABLE Result (
 ```
 
 ---
+## 🧪 Sample Data
 
+```sql
+-- Departments
+INSERT INTO Department VALUES
+(1, 'CSE'),
+(2, 'EEE'),
+(3, 'BBA');
+
+-- Students
+INSERT INTO Student VALUES
+(101, 'Rahim', 'rahim@gmail.com', '01711111111', 'Dhaka',  1),
+(102, 'Karim', 'karim@gmail.com', '01822222222', 'Khulna', 1);
+
+-- Teacher
+INSERT INTO Teacher VALUES
+(1, 'Dr. Hasan', 'hasan@gmail.com', 'Professor', 1);
+
+-- Course
+INSERT INTO Course VALUES
+(101, 'Database Systems', 3, 1);
+```
+
+---
 ---
 
 </details>
