@@ -138,7 +138,16 @@ The **Student Management System** is one of the most popular academic DBMS proje
 </details>
 
 ---
+## 🔗 Relationship Analysis
 
+| Relationship | Type | Notes |
+|---|---|---|
+| Department → Student | One-to-Many | A department has many students |
+| Department → Teacher | One-to-Many | A department has many teachers |
+| Teacher → Course | One-to-Many | A teacher teaches many courses |
+| Student ↔ Course | Many-to-Many | Resolved via `Enrollment` table |
+
+---
 ---
 
 </details>
