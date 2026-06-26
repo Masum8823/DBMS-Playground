@@ -163,6 +163,26 @@ Student ──1────M── Result
 ```
 
 ---
+## 🗃️ Relational Schema
+
+```
+Department  ( DepartmentID, DepartmentName )
+
+Student     ( StudentID, Name, Email, Phone, Address, DepartmentID* )
+
+Teacher     ( TeacherID, Name, Email, Designation, DepartmentID* )
+
+Course      ( CourseID, CourseName, Credit, TeacherID* )
+
+Enrollment  ( EnrollmentID, StudentID*, CourseID*, Semester )
+
+Attendance  ( AttendanceID, StudentID*, CourseID*, Date, Status )
+
+Result      ( ResultID, StudentID*, CourseID*, Grade )
+```
+> `*` = Foreign Key
+
+---
 ---
 
 </details>
