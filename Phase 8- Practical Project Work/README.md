@@ -148,6 +148,21 @@ The **Student Management System** is one of the most popular academic DBMS proje
 | Student ↔ Course | Many-to-Many | Resolved via `Enrollment` table |
 
 ---
+## 📊 ER Diagram (Conceptual)
+
+```
+Department ──1────M── Student
+Department ──1────M── Teacher
+Teacher    ──1────M── Course
+
+Student ──M──┐
+             ├── Enrollment ──M── Course
+
+Student ──1────M── Attendance
+Student ──1────M── Result
+```
+
+---
 ---
 
 </details>
