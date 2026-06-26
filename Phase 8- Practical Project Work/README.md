@@ -61,6 +61,83 @@ The **Student Management System** is one of the most popular academic DBMS proje
 - View Results
 
 ---
+## 📋 Requirements Analysis
+
+### Entities & Attributes
+
+<details>
+<summary><strong>Student</strong></summary>
+
+- `StudentID` (PK)
+- `Name`
+- `Email`
+- `Phone`
+- `Address`
+- `DepartmentID` (FK)
+
+</details>
+
+<details>
+<summary><strong>Department</strong></summary>
+
+- `DepartmentID` (PK)
+- `DepartmentName`
+
+</details>
+
+<details>
+<summary><strong>Teacher</strong></summary>
+
+- `TeacherID` (PK)
+- `Name`
+- `Email`
+- `Designation`
+- `DepartmentID` (FK)
+
+</details>
+
+<details>
+<summary><strong>Course</strong></summary>
+
+- `CourseID` (PK)
+- `CourseName`
+- `Credit`
+- `TeacherID` (FK)
+
+</details>
+
+<details>
+<summary><strong>Enrollment</strong></summary>
+
+- `EnrollmentID` (PK)
+- `StudentID` (FK)
+- `CourseID` (FK)
+- `Semester`
+
+</details>
+
+<details>
+<summary><strong>Attendance</strong></summary>
+
+- `AttendanceID` (PK)
+- `StudentID` (FK)
+- `CourseID` (FK)
+- `Date`
+- `Status`
+
+</details>
+
+<details>
+<summary><strong>Result</strong></summary>
+
+- `ResultID` (PK)
+- `StudentID` (FK)
+- `CourseID` (FK)
+- `Grade`
+
+</details>
+
+---
 
 ---
 
