@@ -44,6 +44,24 @@ The **Student Management System** is one of the most popular academic DBMS proje
 | Result Management | Grade recording and reporting |
 
 ---
+## 🗂️ System Modules
+
+### 🔐 Admin Module
+- Add, Update, Delete Students
+- Manage Courses
+
+### 👨‍🏫 Teacher Module
+- Take Attendance
+- Submit Marks
+- View Students
+
+### 🎓 Student Module
+- View Profile
+- View Attendance
+- View Results
+
+---
+
 ---
 
 </details>
