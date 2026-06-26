@@ -183,6 +183,106 @@ Result      ( ResultID, StudentID*, CourseID*, Grade )
 > `*` = Foreign Key
 
 ---
+## 💻 Database Implementation
+
+### Create & Use Database
+
+```sql
+CREATE DATABASE StudentManagementDB;
+
+USE StudentManagementDB;
+```
+
+### Department Table
+
+```sql
+CREATE TABLE Department (
+    DepartmentID   INT PRIMARY KEY,
+    DepartmentName VARCHAR(50)
+);
+```
+
+### Student Table
+
+```sql
+CREATE TABLE Student (
+    StudentID    INT PRIMARY KEY,
+    Name         VARCHAR(100),
+    Email        VARCHAR(100),
+    Phone        VARCHAR(20),
+    Address      VARCHAR(200),
+    DepartmentID INT,
+    FOREIGN KEY (DepartmentID) REFERENCES Department(DepartmentID)
+);
+```
+
+### Teacher Table
+
+```sql
+CREATE TABLE Teacher (
+    TeacherID    INT PRIMARY KEY,
+    Name         VARCHAR(100),
+    Email        VARCHAR(100),
+    Designation  VARCHAR(50),
+    DepartmentID INT,
+    FOREIGN KEY (DepartmentID) REFERENCES Department(DepartmentID)
+);
+```
+
+### Course Table
+
+```sql
+CREATE TABLE Course (
+    CourseID   INT PRIMARY KEY,
+    CourseName VARCHAR(100),
+    Credit     INT,
+    TeacherID  INT,
+    FOREIGN KEY (TeacherID) REFERENCES Teacher(TeacherID)
+);
+```
+
+### Enrollment Table
+
+```sql
+CREATE TABLE Enrollment (
+    EnrollmentID INT PRIMARY KEY,
+    StudentID    INT,
+    CourseID     INT,
+    Semester     VARCHAR(20),
+    FOREIGN KEY (StudentID) REFERENCES Student(StudentID),
+    FOREIGN KEY (CourseID)  REFERENCES Course(CourseID)
+);
+```
+
+### Attendance Table
+
+```sql
+CREATE TABLE Attendance (
+    AttendanceID INT PRIMARY KEY,
+    StudentID    INT,
+    CourseID     INT,
+    Date         DATE,
+    Status       VARCHAR(10),
+    FOREIGN KEY (StudentID) REFERENCES Student(StudentID),
+    FOREIGN KEY (CourseID)  REFERENCES Course(CourseID)
+);
+```
+
+### Result Table
+
+```sql
+CREATE TABLE Result (
+    ResultID  INT PRIMARY KEY,
+    StudentID INT,
+    CourseID  INT,
+    Grade     VARCHAR(5),
+    FOREIGN KEY (StudentID) REFERENCES Student(StudentID),
+    FOREIGN KEY (CourseID)  REFERENCES Course(CourseID)
+);
+```
+
+---
+
 ---
 
 </details>
