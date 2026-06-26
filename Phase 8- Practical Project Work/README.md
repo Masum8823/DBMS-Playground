@@ -306,6 +306,57 @@ INSERT INTO Course VALUES
 ```
 
 ---
+## 🔍 Useful Queries
+
+### Show All Students
+```sql
+SELECT * FROM Student;
+```
+
+### Show CSE Students
+```sql
+SELECT * FROM Student
+WHERE DepartmentID = 1;
+```
+
+### Students with Department Name
+```sql
+SELECT s.Name, d.DepartmentName
+FROM Student s
+INNER JOIN Department d ON s.DepartmentID = d.DepartmentID;
+```
+
+### Course with Teacher Name
+```sql
+SELECT c.CourseName, t.Name AS TeacherName
+FROM Course c
+INNER JOIN Teacher t ON c.TeacherID = t.TeacherID;
+```
+
+### Enrollment Report
+```sql
+SELECT s.Name, c.CourseName
+FROM Enrollment e
+INNER JOIN Student s ON e.StudentID = s.StudentID
+INNER JOIN Course  c ON e.CourseID  = c.CourseID;
+```
+
+### Result Report
+```sql
+SELECT s.Name, c.CourseName, r.Grade
+FROM Result r
+INNER JOIN Student s ON r.StudentID = s.StudentID
+INNER JOIN Course  c ON r.CourseID  = c.CourseID;
+```
+
+### Attendance Report
+```sql
+SELECT StudentID, CourseID, Date, Status
+FROM Attendance;
+```
+
+---
+
 ---
 
 </details>
