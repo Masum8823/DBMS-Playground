@@ -29,6 +29,21 @@ A complete **Database Management System** project for managing student records, 
 - [Viva Q&A](#viva-qa)
 
 ---
+## 📖 Project Overview
+
+The **Student Management System** is one of the most popular academic DBMS projects, covering nearly every core database concept. It handles:
+
+| Module | Description |
+|---|---|
+| Student Registration | Student records with department assignment |
+| Teacher Management | Faculty info linked to departments |
+| Department Management | Academic department structure |
+| Course Management | Course details with assigned teacher |
+| Enrollment Management | Student-course registration per semester |
+| Attendance Management | Daily attendance per course |
+| Result Management | Grade recording and reporting |
+
+---
 ---
 
 </details>
