@@ -356,6 +356,17 @@ FROM Attendance;
 ```
 
 ---
+## 📐 Normalization
+
+| Normal Form | Condition Met |
+|---|---|
+| **1NF** | ✅ No repeating groups — all attributes are atomic |
+| **2NF** | ✅ No partial dependencies |
+| **3NF** | ✅ No transitive dependencies |
+
+> This database design is normalized up to **3NF**.
+
+---
 
 ---
 
