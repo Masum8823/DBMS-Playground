@@ -367,7 +367,35 @@ FROM Attendance;
 > This database design is normalized up to **3NF**.
 
 ---
+## ❓ Viva Q&A
 
+**Q: Student Management System-এর main entities কী?**  
+→ `Student`, `Teacher`, `Department`, `Course`, `Enrollment`, `Attendance`, `Result`
+
+**Q: Student এবং Course-এর relationship কী?**  
+→ Many-to-Many
+
+**Q: Many-to-Many relationship কীভাবে solve করা হয়েছে?**  
+→ `Enrollment` table ব্যবহার করে bridge/junction table হিসেবে
+
+**Q: Department এবং Student relationship কী?**  
+→ One-to-Many — একটি Department-এ অনেক Student থাকতে পারে
+
+**Q: Enrollment table কেন প্রয়োজন?**  
+→ Student এবং Course-এর Many-to-Many relationship manage করার জন্য
+
+---
+
+## 🛠️ Tech Stack
+
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-025E8C?style=for-the-badge&logo=databricks&logoColor=white)
+
+---
+
+## 👤 Author
+
+**Masum** — [@Masum8823](https://github.com/Masum8823)
 ---
 
 </details>
