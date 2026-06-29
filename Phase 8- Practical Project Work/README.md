@@ -854,7 +854,11 @@ INNER JOIN Student s ON f.StudentID = s.StudentID;
 <details>
     <summary><b>CGPA Calculator Database</b></summary>
 
+# 🎓 CGPA Calculator Database
 
+A practical **CGPA Calculator System** database project built with SQL — designed for **Northern University Bangladesh**. This project demonstrates database design, relationships, aggregate functions, views, and academic report generation.
+
+---
 ---
 
 </details>
