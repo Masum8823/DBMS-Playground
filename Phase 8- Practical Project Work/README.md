@@ -876,6 +876,18 @@ A practical **CGPA Calculator System** database project built with SQL — desig
 - [Viva Q&A](#viva-qa)
 
 ---
+## 🔍 Overview
+
+This system manages complete academic records for university students:
+
+- 👤 Student registration with department and batch info
+- 📚 Course and credit hour management
+- 📅 Semester-wise grade tracking
+- 📊 Automatic GPA calculation per semester
+- 🏆 CGPA calculation across all semesters
+- 📄 Full academic transcript generation
+
+
 ---
 
 </details>
