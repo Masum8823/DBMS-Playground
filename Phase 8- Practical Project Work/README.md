@@ -1161,6 +1161,24 @@ This schema is normalized up to **3rd Normal Form (3NF)**:
 | **3NF** | No transitive dependencies between non-key attributes |
 
 ---
+## 🧩 Project Modules
+
+```
+📦 CGPA Calculator System
+ ┣ 🔐 Admin Module
+ ┃  ┣ Add Students
+ ┃  ┣ Add Courses
+ ┃  ┗ Manage Semesters
+ ┣ 👨‍🏫 Teacher Module
+ ┃  ┣ Enter Grades
+ ┃  ┗ Update Results
+ ┗ 👤 Student Module
+    ┣ View GPA
+    ┣ View CGPA
+    ┗ Download Transcript
+```
+
+---
 ---
 
 </details>
