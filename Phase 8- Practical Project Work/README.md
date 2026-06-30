@@ -1200,7 +1200,43 @@ This schema is normalized up to **3rd Normal Form (3NF)**:
 > তিনটি — StudentID, CourseID, SemesterID
 
 ---
+## 🚀 Project Flow Summary
 
+```
+Student ──┐
+          ├──► Result ──► GPA (one semester)
+Course ───┤                    │
+          │                    ▼
+Semester ─┘              All Semesters ──► CGPA
+```
+
+---
+
+## 🛠️ Tech Stack
+
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-Database-orange?style=for-the-badge)
+
+---
+
+## 📁 Project Structure
+
+```
+cgpa-calculator-db/
+ ┣ schema.sql          # All CREATE TABLE statements
+ ┣ sample_data.sql     # INSERT statements for testing
+ ┣ queries.sql         # GPA, CGPA, transcript queries
+ ┣ views.sql           # StudentCGPA view
+ ┗ README.md           # Project documentation
+```
+
+---
+
+## 📄 License
+
+This project is open-source and available for educational purposes.
+
+---
 ---
 
 </details>
