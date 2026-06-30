@@ -1131,6 +1131,25 @@ ORDER BY CGPA DESC;
 ```
 
 ---
+## 👁️ Views
+
+### CGPA Report View
+```sql
+CREATE VIEW StudentCGPA AS
+SELECT
+    r.StudentID,
+    SUM(r.GradePoint * c.Credit) / SUM(c.Credit) AS CGPA
+FROM Result r
+INNER JOIN Course c ON r.CourseID = c.CourseID
+GROUP BY r.StudentID;
+```
+
+Usage:
+```sql
+SELECT * FROM StudentCGPA;
+```
+
+---
 ---
 
 </details>
