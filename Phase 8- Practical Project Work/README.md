@@ -859,6 +859,23 @@ INNER JOIN Student s ON f.StudentID = s.StudentID;
 A practical **CGPA Calculator System** database project built with SQL — designed for **Northern University Bangladesh**. This project demonstrates database design, relationships, aggregate functions, views, and academic report generation.
 
 ---
+## 📋 Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Grading System](#grading-system)
+- [Database Schema](#database-schema)
+- [ER Diagram](#er-diagram)
+- [Relationships](#relationships)
+- [Setup & Usage](#setup--usage)
+- [GPA & CGPA Calculation](#gpa--cgpa-calculation)
+- [Sample Queries](#sample-queries)
+- [Views](#views)
+- [Normalization](#normalization)
+- [Project Modules](#project-modules)
+- [Viva Q&A](#viva-qa)
+
+---
 ---
 
 </details>
