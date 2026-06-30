@@ -902,6 +902,45 @@ This system manages complete academic records for university students:
 | Transcript Generation | Complete academic result report |
 
 ---
+## 📊 Grading System
+
+| Letter Grade | Grade Point |
+|:---:|:---:|
+| A+ | 4.00 |
+| A | 3.75 |
+| A- | 3.50 |
+| B+ | 3.25 |
+| B | 3.00 |
+| C+ | 2.50 |
+| C | 2.25 |
+| D | 2.00 |
+| F | 0.00 |
+
+---
+
+## 🗄️ Database Schema
+
+### `Student`
+```sql
+Student(StudentID PK, Name, Department, Batch)
+```
+
+### `Semester`
+```sql
+Semester(SemesterID PK, SemesterName)
+```
+
+### `Course`
+```sql
+Course(CourseID PK, CourseName, Credit)
+```
+
+### `Result`
+```sql
+Result(ResultID PK, StudentID FK, CourseID FK, SemesterID FK, LetterGrade, GradePoint)
+```
+
+---
 ---
 
 </details>
