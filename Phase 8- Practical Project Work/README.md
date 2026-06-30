@@ -1062,6 +1062,75 @@ GPA = 33.75 / 9 = 3.75
 | Formula | Same weighted average | Same, but across all results |
 
 ---
+## 🔎 Sample Queries
+
+### GPA for One Semester
+```sql
+SELECT
+    SUM(r.GradePoint * c.Credit) / SUM(c.Credit) AS GPA
+FROM Result r
+INNER JOIN Course c ON r.CourseID = c.CourseID
+WHERE r.StudentID = 2210001
+AND r.SemesterID = 1;
+```
+
+### CGPA (All Semesters)
+```sql
+SELECT
+    SUM(r.GradePoint * c.Credit) / SUM(c.Credit) AS CGPA
+FROM Result r
+INNER JOIN Course c ON r.CourseID = c.CourseID
+WHERE r.StudentID = 2210001;
+```
+
+### Full Academic Transcript
+```sql
+SELECT
+    s.Name,
+    sem.SemesterName,
+    c.CourseName,
+    c.Credit,
+    r.LetterGrade,
+    r.GradePoint
+FROM Result r
+INNER JOIN Student s   ON r.StudentID  = s.StudentID
+INNER JOIN Course c    ON r.CourseID   = c.CourseID
+INNER JOIN Semester sem ON r.SemesterID = sem.SemesterID;
+```
+
+### Student Result Report
+```sql
+SELECT
+    s.Name,
+    c.CourseName,
+    r.LetterGrade
+FROM Result r
+INNER JOIN Student s ON r.StudentID = s.StudentID
+INNER JOIN Course c  ON r.CourseID  = c.CourseID;
+```
+
+### Total Courses Completed
+```sql
+SELECT COUNT(*) AS TotalCourses
+FROM Result
+WHERE StudentID = 2210001;
+```
+
+### Students with CGPA Above 3.50
+```sql
+SELECT *
+FROM StudentCGPA
+WHERE CGPA > 3.50;
+```
+
+### Highest CGPA
+```sql
+SELECT TOP 1 *
+FROM StudentCGPA
+ORDER BY CGPA DESC;
+```
+
+---
 ---
 
 </details>
