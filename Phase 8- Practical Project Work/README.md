@@ -1035,6 +1035,33 @@ INSERT INTO Result VALUES
 ```
 
 ---
+## 🧮 GPA & CGPA Calculation
+
+### GPA Formula
+
+$$GPA = \frac{\sum(GradePoint \times Credit)}{\sum Credit}$$
+
+### GPA Example
+
+| Course | Credit | Grade Point | Credit × GP |
+|---|:---:|:---:|:---:|
+| Database Systems | 3 | 4.00 | 12.00 |
+| Operating Systems | 3 | 3.75 | 11.25 |
+| Computer Networks | 3 | 3.50 | 10.50 |
+| **Total** | **9** | — | **33.75** |
+
+```
+GPA = 33.75 / 9 = 3.75
+```
+
+### Difference: GPA vs CGPA
+
+| | GPA | CGPA |
+|---|---|---|
+| Scope | One semester | All semesters combined |
+| Formula | Same weighted average | Same, but across all results |
+
+---
 ---
 
 </details>
