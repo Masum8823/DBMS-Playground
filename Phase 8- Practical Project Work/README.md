@@ -1179,6 +1179,28 @@ This schema is normalized up to **3rd Normal Form (3NF)**:
 ```
 
 ---
+## ❓ Viva Q&A
+
+**Q: GPA এবং CGPA-এর মধ্যে পার্থক্য কী?**
+> GPA = One Semester Result | CGPA = Overall Academic Result across all semesters
+
+**Q: GPA কীভাবে calculate করা হয়?**
+> `(Grade Point × Credit)` এর weighted average — `SUM(GP × Credit) / SUM(Credit)`
+
+**Q: Result table-এর purpose কী?**
+> Student-এর semester-wise grade information store করা; এটি Student, Course এবং Semester-এর junction table
+
+**Q: Course credit কেন দরকার?**
+> Weighted GPA/CGPA calculation-এর জন্য — বেশি credit-এর course বেশি impact রাখে
+
+**Q: Transcript কী?**
+> Student-এর complete academic result report — সব semester, course, grade একসাথে
+
+**Q: Result table-এ কতটি Foreign Key আছে?**
+> তিনটি — StudentID, CourseID, SemesterID
+
+---
+
 ---
 
 </details>
