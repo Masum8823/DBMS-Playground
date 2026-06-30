@@ -974,6 +974,67 @@ Semester
 | Semester → Result | One Semester has Many Results | One-to-Many |
 
 ---
+## ⚙️ Setup & Usage
+
+### Step 1 — Create & Use Database
+```sql
+CREATE DATABASE CGPACalculatorDB;
+USE CGPACalculatorDB;
+```
+
+### Step 2 — Create Tables
+```sql
+CREATE TABLE Student (
+    StudentID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Department VARCHAR(50),
+    Batch VARCHAR(20)
+);
+
+CREATE TABLE Semester (
+    SemesterID INT PRIMARY KEY,
+    SemesterName VARCHAR(50)
+);
+
+CREATE TABLE Course (
+    CourseID INT PRIMARY KEY,
+    CourseName VARCHAR(100),
+    Credit DECIMAL(3,1)
+);
+
+CREATE TABLE Result (
+    ResultID INT PRIMARY KEY,
+    StudentID INT,
+    CourseID INT,
+    SemesterID INT,
+    LetterGrade VARCHAR(5),
+    GradePoint DECIMAL(3,2),
+    FOREIGN KEY (StudentID) REFERENCES Student(StudentID),
+    FOREIGN KEY (CourseID) REFERENCES Course(CourseID),
+    FOREIGN KEY (SemesterID) REFERENCES Semester(SemesterID)
+);
+```
+
+### Step 3 — Insert Sample Data
+```sql
+INSERT INTO Student VALUES
+(2210001, 'Rahim', 'CSE', '57th');
+
+INSERT INTO Semester VALUES
+(1, 'Spring 2026');
+
+INSERT INTO Course VALUES
+(401, 'Database Systems', 3.0),
+(402, 'Operating Systems', 3.0),
+(403, 'Computer Networks', 3.0);
+
+INSERT INTO Result VALUES
+(1, 2210001, 401, 1, 'A+', 4.00),
+(2, 2210001, 402, 1, 'A',  3.75),
+(3, 2210001, 403, 1, 'A-', 3.50);
+```
+
+---
 ---
 
 </details>
