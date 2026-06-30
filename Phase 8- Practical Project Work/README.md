@@ -887,7 +887,21 @@ This system manages complete academic records for university students:
 - 🏆 CGPA calculation across all semesters
 - 📄 Full academic transcript generation
 
+---
 
+## ✨ Features
+
+| Feature | Description |
+|---|---|
+| Student Registration | Register students with department & batch |
+| Course Management | Manage courses with credit hours |
+| Semester Management | Track results semester-wise |
+| Grade Entry | Store letter grades and grade points |
+| GPA Calculation | Weighted average GPA per semester |
+| CGPA Calculation | Overall CGPA across all semesters |
+| Transcript Generation | Complete academic result report |
+
+---
 ---
 
 </details>
