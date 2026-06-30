@@ -941,6 +941,39 @@ Result(ResultID PK, StudentID FK, CourseID FK, SemesterID FK, LetterGrade, Grade
 ```
 
 ---
+## 📊 ER Diagram
+
+```
+Student  (1) ───── (M) Result
+Course   (1) ───── (M) Result
+Semester (1) ───── (M) Result
+```
+
+```
+Student
+   |
+   | 1
+   |
+   | M
+Result ────── M ────── Course
+   |
+   | M
+   |
+   | 1
+Semester
+```
+
+---
+
+## 🔗 Relationships
+
+| Entities | Relationship | Type |
+|---|---|---|
+| Student → Result | One Student has Many Results | One-to-Many |
+| Course → Result | One Course has Many Results | One-to-Many |
+| Semester → Result | One Semester has Many Results | One-to-Many |
+
+---
 ---
 
 </details>
