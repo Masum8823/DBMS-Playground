@@ -1150,6 +1150,17 @@ SELECT * FROM StudentCGPA;
 ```
 
 ---
+## 📐 Normalization
+
+This schema is normalized up to **3rd Normal Form (3NF)**:
+
+| Normal Form | Rule Applied |
+|---|---|
+| **1NF** | All attributes contain atomic (indivisible) values |
+| **2NF** | No partial dependencies on composite keys |
+| **3NF** | No transitive dependencies between non-key attributes |
+
+---
 ---
 
 </details>
