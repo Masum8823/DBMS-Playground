@@ -1332,6 +1332,29 @@ This system handles authentication and authorization for any modern application:
 | ExpireTime | DATETIME | Token expiry (1 hour) |
 
 ---
+## 📊 ER Diagram
+
+```
+Role (1) ───────────── (M) Users
+                              │
+                 ┌────────────┴────────────┐
+                 │                         │
+              (M) │                      (M) │
+                  ▼                         ▼
+           LoginHistory             PasswordReset
+```
+
+---
+
+## 🔗 Relationships
+
+| Entities | Relationship | Type |
+|---|---|---|
+| Role → Users | One Role assigned to Many Users | One-to-Many |
+| Users → LoginHistory | One User has Many Login Records | One-to-Many |
+| Users → PasswordReset | One User can have Many Reset Requests | One-to-Many |
+
+---
 ---
 
 </details>
