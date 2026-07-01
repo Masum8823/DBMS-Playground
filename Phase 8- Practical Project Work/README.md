@@ -1401,6 +1401,39 @@ CREATE TABLE PasswordReset (
 ```
 
 ---
+### Step 3 — Insert Sample Roles
+```sql
+INSERT INTO Role VALUES
+(1, 'Admin'),
+(2, 'Teacher'),
+(3, 'Student'),
+(4, 'Customer');
+```
+
+---
+
+## 🔄 Core Flows
+
+### 📝 Registration Flow
+```
+User Fills Form (Username, Email, Password)
+           ↓
+   Input Validation
+           ↓
+   Password Hashing
+           ↓
+   Save to Database
+           ↓
+  Registration Success
+```
+
+```sql
+-- Step: Store registered user
+INSERT INTO Users (Username, Email, PasswordHash, RoleID)
+VALUES ('rahim', 'rahim@gmail.com', 'hashed_password_here', 3);
+```
+
+---
 
 </details>
 
