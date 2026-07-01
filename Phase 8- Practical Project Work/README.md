@@ -1295,6 +1295,43 @@ This system handles authentication and authorization for any modern application:
 | Session Management | Create and destroy sessions |
 
 ---
+## 🗄️ Database Schema
+
+### `Role`
+| Field | Type | Description |
+|---|---|---|
+| RoleID | INT | Primary Key |
+| RoleName | VARCHAR(50) | Admin / Teacher / Student / Customer |
+
+### `Users`
+| Field | Type | Description |
+|---|---|---|
+| UserID | INT | Primary Key (Auto Increment) |
+| Username | VARCHAR(50) | Unique, Not Null |
+| Email | VARCHAR(100) | Unique, Not Null |
+| PasswordHash | VARCHAR(255) | Hashed Password |
+| RoleID | INT | Foreign Key → Role |
+| Status | VARCHAR(20) | Default: `Active` |
+| CreatedAt | DATETIME | Default: `GETDATE()` |
+
+### `LoginHistory`
+| Field | Type | Description |
+|---|---|---|
+| LoginID | INT | Primary Key (Auto Increment) |
+| UserID | INT | Foreign Key → Users |
+| LoginTime | DATETIME | Default: `GETDATE()` |
+| LogoutTime | DATETIME | Updated on logout |
+| IPAddress | VARCHAR(50) | Client IP |
+
+### `PasswordReset`
+| Field | Type | Description |
+|---|---|---|
+| ResetID | INT | Primary Key (Auto Increment) |
+| UserID | INT | Foreign Key → Users |
+| Token | VARCHAR(255) | Unique reset token |
+| ExpireTime | DATETIME | Token expiry (1 hour) |
+
+---
 ---
 
 </details>
