@@ -1245,7 +1245,11 @@ This project is open-source and available for educational purposes.
 <details>
     <summary><b>Authentication System</b></summary>
 
+# 🔐 User Login & Registration System
 
+A complete **Authentication & Authorization Database** project built with SQL — covering user registration, login, password hashing, role-based access control (RBAC), login history, and password reset. Applicable to virtually every modern application.
+
+---
 ---
 
 </details>
