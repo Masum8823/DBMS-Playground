@@ -1434,6 +1434,42 @@ VALUES ('rahim', 'rahim@gmail.com', 'hashed_password_here', 3);
 ```
 
 ---
+### 🔑 Login Flow
+```
+User Enters Username + Password
+           ↓
+   Find User in DB
+           ↓
+   Hash Entered Password
+           ↓
+   Compare with Stored Hash
+           ↓
+   Match → Login Success    |    No Match → Login Failed
+           ↓
+   Record Login History
+```
+
+```sql
+-- Step 1: Find user
+SELECT * FROM Users WHERE Username = 'rahim';
+
+-- Step 2: Record login
+INSERT INTO LoginHistory (UserID, IPAddress)
+VALUES (1, '192.168.1.100');
+```
+
+---
+
+### 🚪 Logout Flow
+```sql
+-- Update logout time
+UPDATE LoginHistory
+SET LogoutTime = GETDATE()
+WHERE LoginID = 1;
+```
+
+---
+
 
 </details>
 
