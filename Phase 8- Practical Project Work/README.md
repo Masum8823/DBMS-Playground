@@ -1469,6 +1469,28 @@ WHERE LoginID = 1;
 ```
 
 ---
+### 🔁 Forgot Password Flow
+```
+User Clicks Forgot Password
+           ↓
+   Email Verification
+           ↓
+   Generate Reset Token
+           ↓
+   Store Token (expires in 1 hour)
+           ↓
+   Send Reset Email
+           ↓
+   User Resets Password
+```
+
+```sql
+-- Store reset token
+INSERT INTO PasswordReset (UserID, Token, ExpireTime)
+VALUES (1, 'ABCD1234TOKEN', DATEADD(HOUR, 1, GETDATE()));
+```
+
+---
 
 
 </details>
