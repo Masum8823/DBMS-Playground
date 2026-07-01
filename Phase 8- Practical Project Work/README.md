@@ -1250,6 +1250,23 @@ This project is open-source and available for educational purposes.
 A complete **Authentication & Authorization Database** project built with SQL — covering user registration, login, password hashing, role-based access control (RBAC), login history, and password reset. Applicable to virtually every modern application.
 
 ---
+## 📋 Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Database Schema](#database-schema)
+- [ER Diagram](#er-diagram)
+- [Relationships](#relationships)
+- [Setup & Usage](#setup--usage)
+- [Core Flows](#core-flows)
+- [Sample Queries](#sample-queries)
+- [Role-Based Access Control](#role-based-access-control-rbac)
+- [Security Best Practices](#security-best-practices)
+- [Normalization](#normalization)
+- [Project Modules](#project-modules)
+- [Viva Q&A](#viva-qa)
+
+---
 ---
 
 </details>
