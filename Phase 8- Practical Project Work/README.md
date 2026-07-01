@@ -1267,6 +1267,34 @@ A complete **Authentication & Authorization Database** project built with SQL �
 - [Viva Q&A](#viva-qa)
 
 ---
+## 🔍 Overview
+
+This system handles authentication and authorization for any modern application:
+
+| Use Case | Example |
+|---|---|
+| 🏫 University Portal | Student, Teacher, Admin login |
+| 🛒 E-commerce | Customer accounts |
+| 🏦 Banking System | Secure role-based access |
+| 📱 Mobile Apps | Session & token management |
+| 🏢 ERP Software | Multi-role enterprise access |
+
+---
+
+## ✨ Features
+
+| Feature | Description |
+|---|---|
+| User Registration | Create account with validation |
+| User Login | Verify credentials securely |
+| Password Hashing | Never store plain text passwords |
+| Role Management | Admin, Teacher, Student, Customer |
+| Account Status Control | Active / Inactive / Blocked |
+| Forgot Password | Token-based reset via email |
+| Login History | Track login/logout with IP address |
+| Session Management | Create and destroy sessions |
+
+---
 ---
 
 </details>
