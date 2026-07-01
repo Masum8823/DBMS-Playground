@@ -1355,6 +1355,51 @@ Role (1) ───────────── (M) Users
 | Users → PasswordReset | One User can have Many Reset Requests | One-to-Many |
 
 ---
+
+## ⚙️ Setup & Usage
+
+### Step 1 — Create & Use Database
+```sql
+CREATE DATABASE AuthenticationDB;
+USE AuthenticationDB;
+```
+
+### Step 2 — Create Tables
+```sql
+CREATE TABLE Role (
+    RoleID INT PRIMARY KEY,
+    RoleName VARCHAR(50) UNIQUE NOT NULL
+);
+
+CREATE TABLE Users (
+    UserID INT IDENTITY(1,1) PRIMARY KEY,
+    Username VARCHAR(50) UNIQUE NOT NULL,
+    Email VARCHAR(100) UNIQUE NOT NULL,
+    PasswordHash VARCHAR(255) NOT NULL,
+    RoleID INT NOT NULL,
+    Status VARCHAR(20) DEFAULT 'Active',
+    CreatedAt DATETIME DEFAULT GETDATE(),
+    FOREIGN KEY (RoleID) REFERENCES Role(RoleID)
+);
+
+CREATE TABLE LoginHistory (
+    LoginID INT IDENTITY(1,1) PRIMARY KEY,
+    UserID INT NOT NULL,
+    LoginTime DATETIME DEFAULT GETDATE(),
+    LogoutTime DATETIME,
+    IPAddress VARCHAR(50),
+    FOREIGN KEY (UserID) REFERENCES Users(UserID)
+);
+
+CREATE TABLE PasswordReset (
+    ResetID INT IDENTITY(1,1) PRIMARY KEY,
+    UserID INT NOT NULL,
+    Token VARCHAR(255) NOT NULL,
+    ExpireTime DATETIME NOT NULL,
+    FOREIGN KEY (UserID) REFERENCES Users(UserID)
+);
+```
+
 ---
 
 </details>
