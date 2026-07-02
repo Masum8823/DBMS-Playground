@@ -1531,6 +1531,16 @@ GROUP BY r.RoleName;
 ```
 
 ---
+## 🛡️ Role-Based Access Control (RBAC)
+
+| Role | Permissions |
+|---|---|
+| **Admin** | Manage Users, Manage Roles, View Reports, Block Accounts |
+| **Teacher** | View Students, Upload Marks, Manage Courses |
+| **Student** | View Profile, View Results, Change Password |
+| **Customer** | Browse, Purchase, View Order History |
+
+---
 
 </details>
 
