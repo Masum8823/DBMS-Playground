@@ -1653,6 +1653,37 @@ System Access Granted
 ```
 
 ---
+## 🛠️ Tech Stack
+
+![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-Database-orange?style=for-the-badge)
+![Security](https://img.shields.io/badge/Security-Password%20Hashing-green?style=for-the-badge)
+
+---
+
+## 📁 Project Structure
+
+```
+user-login-registration-db/
+ ┣ schema.sql          # All CREATE TABLE statements
+ ┣ sample_data.sql     # INSERT statements for testing
+ ┣ queries.sql         # Common SELECT, JOIN, GROUP BY queries
+ ┣ flows.sql           # Registration, login, logout, reset flows
+ ┗ README.md           # Project documentation
+```
+
+---
+
+## 📄 License
+
+This project is open-source and available for educational purposes.
+
+---
+
+> **Northern University Bangladesh — Authentication System Database Project**  
+> DBMS Course Project | SQL Server | Security | Role-Based Access Control
+
+---
 </details>
 
 
