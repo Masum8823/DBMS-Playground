@@ -404,7 +404,11 @@ FROM Attendance;
 <details>
     <summary><b>Library Management System DB</b></summary>
 
+# 📚 Library Management System (LMS)
 
+A complete **Library Management System** database project built with SQL — designed for **Northern University Bangladesh Central Library**. This project covers all major DBMS concepts including ER Diagram, Normalization, Joins, Views, and Reports.
+
+---
 ---
 
 </details>
