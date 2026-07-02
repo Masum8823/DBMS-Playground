@@ -1628,6 +1628,31 @@ This schema is normalized up to **3rd Normal Form (3NF)**:
 > Random token generate হয়, DB-তে expiry সহ store হয়, email-এ পাঠানো হয়; user link click করলে token validate করে password reset দেওয়া হয়
 
 ---
+## 🔄 Complete Authentication Flow
+
+```
+Registration
+     ↓
+Password Hashing
+     ↓
+Database Storage
+     ↓
+Login Request
+     ↓
+Password Verification
+     ↓
+Authentication Success
+     ↓
+Session Created
+     ↓
+Role Check
+     ↓
+Authorization
+     ↓
+System Access Granted
+```
+
+---
 </details>
 
 
