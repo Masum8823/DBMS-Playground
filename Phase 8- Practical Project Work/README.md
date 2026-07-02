@@ -1491,7 +1491,46 @@ VALUES (1, 'ABCD1234TOKEN', DATEADD(HOUR, 1, GETDATE()));
 ```
 
 ---
+## 🔎 Sample Queries
 
+### Show All Users
+```sql
+SELECT * FROM Users;
+```
+
+### Active Users Only
+```sql
+SELECT * FROM Users WHERE Status = 'Active';
+```
+
+### Blocked Users
+```sql
+SELECT * FROM Users WHERE Status = 'Blocked';
+```
+
+### Users with Role Name (JOIN)
+```sql
+SELECT u.Username, u.Email, r.RoleName
+FROM Users u
+INNER JOIN Role r ON u.RoleID = r.RoleID;
+```
+
+### Login History Report
+```sql
+SELECT u.Username, l.LoginTime, l.LogoutTime, l.IPAddress
+FROM LoginHistory l
+INNER JOIN Users u ON l.UserID = u.UserID;
+```
+
+### Total Users Per Role
+```sql
+SELECT r.RoleName, COUNT(*) AS TotalUsers
+FROM Users u
+INNER JOIN Role r ON u.RoleID = r.RoleID
+GROUP BY r.RoleName;
+```
+
+---
 
 </details>
 
