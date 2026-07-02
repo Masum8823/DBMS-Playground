@@ -1604,6 +1604,30 @@ This schema is normalized up to **3rd Normal Form (3NF)**:
 ```
 
 ---
+## ❓ Viva Q&A
+
+**Q: Password database-এ plain text আকারে store করা উচিত?**
+> না — সবসময় hash আকারে store করতে হবে (Bcrypt/SHA-256)
+
+**Q: Password hashing কেন প্রয়োজন?**
+> Database leak হলেও original password দেখা যাবে না; hash reverse করা computationally impossible
+
+**Q: LoginHistory table-এর কাজ কী?**
+> User-এর login/logout time এবং IP address track করা — security audit ও session management-এর জন্য
+
+**Q: Role table কেন আলাদা রাখা হয়?**
+> Role-Based Access Control (RBAC) implement করার জন্য; নতুন role add করা সহজ হয়
+
+**Q: Authentication এবং Authorization-এর পার্থক্য?**
+> Authentication = User কে verify করা (তুমি কে?) | Authorization = User কী করতে পারবে তা determine করা (তুমি কী করতে পারবে?)
+
+**Q: IDENTITY(1,1) মানে কী?**
+> Auto-increment — প্রথম value 1 থেকে শুরু, প্রতিবার 1 করে বাড়বে
+
+**Q: Token-based password reset কীভাবে কাজ করে?**
+> Random token generate হয়, DB-তে expiry সহ store হয়, email-এ পাঠানো হয়; user link click করলে token validate করে password reset দেওয়া হয়
+
+---
 </details>
 
 
