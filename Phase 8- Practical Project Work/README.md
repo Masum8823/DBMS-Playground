@@ -1581,6 +1581,29 @@ This schema is normalized up to **3rd Normal Form (3NF)**:
 | **3NF** | No transitive dependencies between non-key attributes |
 
 ---
+## 🧩 Project Modules
+
+```
+📦 Authentication System
+ ┣ 📝 Registration Module
+ ┃  ┣ Register User
+ ┃  ┣ Validate Email
+ ┃  ┗ Store Hashed Password
+ ┣ 🔑 Login Module
+ ┃  ┣ Verify User
+ ┃  ┣ Verify Password Hash
+ ┃  ┗ Create Session
+ ┣ 🔁 Password Module
+ ┃  ┣ Change Password
+ ┃  ┣ Forgot Password
+ ┃  ┗ Reset via Token
+ ┗ 🔐 Admin Module
+    ┣ View All Users
+    ┣ Block / Unblock Users
+    ┗ Assign Roles
+```
+
+---
 </details>
 
 
