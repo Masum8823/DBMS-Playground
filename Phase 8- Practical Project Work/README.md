@@ -1541,6 +1541,35 @@ GROUP BY r.RoleName;
 | **Customer** | Browse, Purchase, View Order History |
 
 ---
+## 🔒 Security Best Practices
+
+### ❌ Never Store Plain Text Passwords
+```
+Plain Text:   123456          ← WRONG
+Hashed:       $2b$10$KJHJK... ← CORRECT (Bcrypt)
+```
+
+### ✅ Enforce Unique Constraints
+```sql
+Email    VARCHAR(100) UNIQUE
+Username VARCHAR(50)  UNIQUE
+```
+
+### ✅ Strong Password Policy
+- Minimum 8 characters
+- At least one uppercase letter
+- At least one lowercase letter
+- At least one number
+- At least one special character
+
+### ✅ Account Status Management
+| Status | Meaning |
+|---|---|
+| `Active` | User can login normally |
+| `Inactive` | Account not yet verified |
+| `Blocked` | Admin has restricted access |
+
+---
 
 </details>
 
