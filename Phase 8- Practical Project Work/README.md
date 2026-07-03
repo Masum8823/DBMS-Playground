@@ -508,6 +508,71 @@ Issue    (1) ───── (1) Fine
 | Issue → Fine | One Issue has One Fine | One-to-One |
 
 ---
+## ⚙️ Setup & Usage
+
+### Step 1 — Create & Use Database
+```sql
+CREATE DATABASE LibraryManagementDB;
+USE LibraryManagementDB;
+```
+
+### Step 2 — Create Tables
+```sql
+CREATE TABLE Category (
+    CategoryID INT PRIMARY KEY,
+    CategoryName VARCHAR(50)
+);
+
+CREATE TABLE Book (
+    BookID INT PRIMARY KEY,
+    Title VARCHAR(100),
+    Author VARCHAR(100),
+    Publisher VARCHAR(100),
+    CategoryID INT,
+    CopiesAvailable INT,
+    FOREIGN KEY (CategoryID) REFERENCES Category(CategoryID)
+);
+
+CREATE TABLE Member (
+    MemberID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Email VARCHAR(100),
+    Phone VARCHAR(20),
+    Department VARCHAR(50)
+);
+
+CREATE TABLE Librarian (
+    LibrarianID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Email VARCHAR(100),
+    Phone VARCHAR(20)
+);
+
+CREATE TABLE Issue (
+    IssueID INT PRIMARY KEY,
+    BookID INT,
+    MemberID INT,
+    IssueDate DATE,
+    DueDate DATE,
+    FOREIGN KEY (BookID) REFERENCES Book(BookID),
+    FOREIGN KEY (MemberID) REFERENCES Member(MemberID)
+);
+
+CREATE TABLE ReturnBook (
+    ReturnID INT PRIMARY KEY,
+    IssueID INT UNIQUE,
+    ReturnDate DATE,
+    FOREIGN KEY (IssueID) REFERENCES Issue(IssueID)
+);
+
+CREATE TABLE Fine (
+    FineID INT PRIMARY KEY,
+    IssueID INT UNIQUE,
+    Amount DECIMAL(10,2),
+    FOREIGN KEY (IssueID) REFERENCES Issue(IssueID)
+);
+```
+
 ---
 
 </details>
