@@ -434,6 +434,20 @@ This project simulates a real-world library system where:
 - 🧑‍💼 Librarians are managed separately
 
 ---
+## ✨ Features
+
+| Feature | Description |
+|---|---|
+| Book Management | Add, update, and track books by category |
+| Member Registration | Register students/teachers as library members |
+| Book Issue | Issue books to members with due dates |
+| Book Return | Track return dates |
+| Fine Calculation | Auto fine for late returns (10 BDT/day) |
+| Librarian Management | Manage library admin accounts |
+| Reports | Borrowed books, total fines, member history |
+
+---
+
 ---
 
 </details>
