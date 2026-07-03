@@ -574,6 +574,27 @@ CREATE TABLE Fine (
 ```
 
 ---
+### Step 3 — Insert Sample Data
+```sql
+INSERT INTO Category VALUES
+(1, 'Programming'),
+(2, 'Database'),
+(3, 'Networking');
+
+INSERT INTO Book VALUES
+(101, 'Database System Concepts', 'Korth', 'McGraw Hill', 2, 10);
+
+INSERT INTO Member VALUES
+(1, 'Rahim', 'rahim@gmail.com', '01711111111', 'CSE');
+
+INSERT INTO Issue VALUES
+(1, 101, 1, '2026-01-01', '2026-01-15');
+
+-- Fine Example: Returned 5 days late → 5 × 10 = 50 BDT
+INSERT INTO Fine VALUES (1, 1, 50.00);
+```
+
+---
 
 </details>
 
