@@ -447,6 +447,44 @@ This project simulates a real-world library system where:
 | Reports | Borrowed books, total fines, member history |
 
 ---
+## 🗄️ Database Schema
+
+### `Category`
+```sql
+Category(CategoryID PK, CategoryName)
+```
+
+### `Book`
+```sql
+Book(BookID PK, Title, Author, Publisher, CategoryID FK, CopiesAvailable)
+```
+
+### `Member`
+```sql
+Member(MemberID PK, Name, Email, Phone, Department)
+```
+
+### `Librarian`
+```sql
+Librarian(LibrarianID PK, Name, Email, Phone)
+```
+
+### `Issue`
+```sql
+Issue(IssueID PK, BookID FK, MemberID FK, IssueDate, DueDate)
+```
+
+### `ReturnBook`
+```sql
+ReturnBook(ReturnID PK, IssueID FK UNIQUE, ReturnDate)
+```
+
+### `Fine`
+```sql
+Fine(FineID PK, IssueID FK UNIQUE, Amount)
+```
+
+---
 
 ---
 
