@@ -409,6 +409,20 @@ FROM Attendance;
 A complete **Library Management System** database project built with SQL — designed for **Northern University Bangladesh Central Library**. This project covers all major DBMS concepts including ER Diagram, Normalization, Joins, Views, and Reports.
 
 ---
+## 📋 Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Database Schema](#database-schema)
+- [ER Diagram](#er-diagram)
+- [Relationships](#relationships)
+- [Setup & Usage](#setup--usage)
+- [Sample Queries](#sample-queries)
+- [Normalization](#normalization)
+- [Project Modules](#project-modules)
+- [Viva Q&A](#viva-qa)
+
+---
 ---
 
 </details>
