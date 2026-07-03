@@ -595,6 +595,57 @@ INSERT INTO Fine VALUES (1, 1, 50.00);
 ```
 
 ---
+## 🔎 Sample Queries
+
+### Show All Books
+```sql
+SELECT * FROM Book;
+```
+
+### Show Available Books
+```sql
+SELECT * FROM Book WHERE CopiesAvailable > 0;
+```
+
+### Books by Category (JOIN)
+```sql
+SELECT b.Title, c.CategoryName
+FROM Book b
+INNER JOIN Category c ON b.CategoryID = c.CategoryID;
+```
+
+### Issued Books Report
+```sql
+SELECT m.Name, b.Title, i.IssueDate
+FROM Issue i
+INNER JOIN Member m ON i.MemberID = m.MemberID
+INNER JOIN Book b ON i.BookID = b.BookID;
+```
+
+### Members Who Borrowed Books
+```sql
+SELECT m.Name, b.Title
+FROM Issue i
+INNER JOIN Member m ON i.MemberID = m.MemberID
+INNER JOIN Book b ON i.BookID = b.BookID;
+```
+
+### Total Books
+```sql
+SELECT COUNT(*) AS TotalBooks FROM Book;
+```
+
+### Total Members
+```sql
+SELECT COUNT(*) AS TotalMembers FROM Member;
+```
+
+### Total Fine Collected
+```sql
+SELECT SUM(Amount) AS TotalFine FROM Fine;
+```
+
+---
 
 </details>
 
