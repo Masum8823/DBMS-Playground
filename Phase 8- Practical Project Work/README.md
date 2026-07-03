@@ -485,7 +485,29 @@ Fine(FineID PK, IssueID FK UNIQUE, Amount)
 ```
 
 ---
+## 📊 ER Diagram
 
+```
+Category (1) ───── (M) Book
+Book     (1) ───── (M) Issue
+Member   (1) ───── (M) Issue
+Issue    (1) ───── (1) ReturnBook
+Issue    (1) ───── (1) Fine
+```
+
+---
+
+## 🔗 Relationships
+
+| Entities | Relationship | Type |
+|---|---|---|
+| Category → Book | One Category has Many Books | One-to-Many |
+| Member → Issue | One Member has Many Issues | One-to-Many |
+| Book → Issue | One Book has Many Issues | One-to-Many |
+| Issue → ReturnBook | One Issue has One Return | One-to-One |
+| Issue → Fine | One Issue has One Fine | One-to-One |
+
+---
 ---
 
 </details>
