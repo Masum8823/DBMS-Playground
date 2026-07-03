@@ -423,6 +423,17 @@ A complete **Library Management System** database project built with SQL — des
 - [Viva Q&A](#viva-qa)
 
 ---
+## 🔍 Overview
+
+This project simulates a real-world library system where:
+
+- 📖 Books can be catalogued by category
+- 👤 Members (students/teachers) can be registered
+- 📤 Books can be issued and returned
+- 💰 Fines are calculated for late returns
+- 🧑‍💼 Librarians are managed separately
+
+---
 ---
 
 </details>
