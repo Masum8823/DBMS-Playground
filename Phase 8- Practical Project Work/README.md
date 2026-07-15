@@ -701,6 +701,45 @@ This schema is normalized up to **3rd Normal Form (3NF)**:
 
 ---
 
+## 🚀 Future Improvements (Advanced Version)
+
+- [ ] `Author` table — normalize author details
+- [ ] `Publisher` table — normalize publisher details
+- [ ] `BookCopies` table — track individual copy IDs
+- [ ] `Reservation` — reserve books before issuing
+- [ ] `Payment` — track fine payments
+- [ ] `UserLogin` — authentication for members/librarians
+- [ ] `BorrowHistory` — full audit trail
+
+---
+
+## 🛠️ Tech Stack
+
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-Database-orange?style=for-the-badge)
+
+---
+
+## 📁 Project Structure
+
+```
+library-management-system/
+ ┣ schema.sql          # All CREATE TABLE statements
+ ┣ sample_data.sql     # INSERT statements for testing
+ ┣ queries.sql         # Common SELECT & JOIN queries
+ ┗ README.md           # Project documentation
+```
+
+---
+
+## 📄 License
+
+This project is open-source and available for educational purposes.
+
+---
+
+> **Northern University Bangladesh — Central Library Database Project**  
+> DBMS Course Project | SQL | Relational Database Design
 </details>
 
 
