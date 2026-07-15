@@ -2076,7 +2076,25 @@ This project is a **Student Management Hub** with the following features:
 - 📊 Generate basic admin reports
 
 ---
+## 🗄️ Database Schema
 
+### `Student`
+
+| Field | Type | Constraint | Description |
+|---|---|---|---|
+| StudentID | INT | PRIMARY KEY | Unique Student ID |
+| Name | VARCHAR(100) | NOT NULL | Student Full Name |
+| Email | VARCHAR(100) | UNIQUE | Student Email |
+| Phone | VARCHAR(20) | — | Mobile Number |
+| Department | VARCHAR(50) | — | Department Name |
+| CGPA | DECIMAL(3,2) | — | Current CGPA |
+
+### Relational Schema
+```
+Student(StudentID PK, Name, Email, Phone, Department, CGPA)
+```
+
+---
 ---
 
 </details>
