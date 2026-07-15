@@ -2064,6 +2064,18 @@ CRUD হলো Database Application-এর সবচেয়ে গুরুত
 > প্রায় সব Software, Website এবং Mobile App CRUD Operation ব্যবহার করে।
 
 ---
+## 🔍 Overview
+
+This project is a **Student Management Hub** with the following features:
+
+- ➕ Add new students
+- 📋 View all or filtered students
+- ✏️ Update student information
+- ❌ Delete students
+- 🔍 Search by name, email, department, or CGPA
+- 📊 Generate basic admin reports
+
+---
 
 ---
 
