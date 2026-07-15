@@ -679,6 +679,27 @@ This schema is normalized up to **3rd Normal Form (3NF)**:
 
 ---
 
+## ❓ Viva Q&A
+
+**Q: Main entities of this system?**
+> `Book`, `Member`, `Librarian`, `Issue`, `ReturnBook`, `Fine`, `Category`
+
+**Q: Book and Category relationship?**
+> One-to-Many — one category contains many books
+
+**Q: Member and Issue relationship?**
+> One-to-Many — one member can borrow many books
+
+**Q: Issue and ReturnBook relationship?**
+> One-to-One — each issue has exactly one return record
+
+**Q: Why is the Fine table used?**
+> To store penalty amounts for late book returns
+
+**Q: Fine calculation formula?**
+> `Fine = (ReturnDate - DueDate) × 10 BDT`
+
+---
 
 </details>
 
