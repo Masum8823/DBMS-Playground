@@ -2023,6 +2023,14 @@ This project is open-source and available for educational purposes.
 <details>
     <summary><b>Full CRUD Project</b></summary>
 
+# 🎓 Student Management Hub — Full CRUD Project
+
+A complete **Student Management Hub** built with SQL demonstrating all four CRUD operations — Create, Read, Update, and Delete. A foundational project that mirrors how real-world applications (Facebook, YouTube, E-commerce) manage data.
+
+---
+
+
+
 
 ---
 
