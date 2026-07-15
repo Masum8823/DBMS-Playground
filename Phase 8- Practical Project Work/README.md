@@ -2095,6 +2095,36 @@ Student(StudentID PK, Name, Email, Phone, Department, CGPA)
 ```
 
 ---
+## ⚙️ Setup & Usage
+
+### Step 1 — Create & Use Database
+```sql
+CREATE DATABASE StudentCRUDDB;
+USE StudentCRUDDB;
+```
+
+### Step 2 — Create Table
+```sql
+CREATE TABLE Student (
+    StudentID  INT PRIMARY KEY,
+    Name       VARCHAR(100) NOT NULL,
+    Email      VARCHAR(100) UNIQUE,
+    Phone      VARCHAR(20),
+    Department VARCHAR(50),
+    CGPA       DECIMAL(3,2)
+);
+```
+
+### Step 3 — Insert Sample Data
+```sql
+INSERT INTO Student VALUES
+(101, 'Rahim', 'rahim@gmail.com', '01711111111', 'CSE', 3.85),
+(102, 'Karim', 'karim@gmail.com', '01822222222', 'EEE', 3.70),
+(103, 'Sakib', 'sakib@gmail.com', '01933333333', 'BBA', 3.50);
+```
+
+---
+
 ---
 
 </details>
