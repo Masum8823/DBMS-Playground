@@ -2031,6 +2031,25 @@ A complete **Student Management Hub** built with SQL demonstrating all four CRUD
 
 
 
+## 📋 Table of Contents
+
+- [What is CRUD?](#what-is-crud)
+- [Overview](#overview)
+- [Database Schema](#database-schema)
+- [Setup & Usage](#setup--usage)
+- [CRUD Operations](#crud-operations)
+  - [CREATE](#-create---insert)
+  - [READ](#-read---select)
+  - [UPDATE](#-update---update)
+  - [DELETE](#-delete---delete)
+- [Advanced Queries](#advanced-queries)
+- [Search Module](#search-module)
+- [Admin Dashboard Queries](#admin-dashboard-queries)
+- [Real Application Mapping](#real-application-mapping)
+- [Normalization](#normalization)
+- [Viva Q&A](#viva-qa)
+
+---
 
 ---
 
