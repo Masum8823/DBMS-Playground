@@ -2050,6 +2050,20 @@ A complete **Student Management Hub** built with SQL demonstrating all four CRUD
 - [Viva Q&A](#viva-qa)
 
 ---
+## 🔄 What is CRUD?
+
+CRUD হলো Database Application-এর সবচেয়ে গুরুত্বপূর্ণ 4টি Operation:
+
+| Letter | Meaning | SQL Command | Example |
+|:---:|---|---|---|
+| **C** | Create | `INSERT` | নতুন Student Add |
+| **R** | Read | `SELECT` | Student List দেখা |
+| **U** | Update | `UPDATE` | CGPA পরিবর্তন |
+| **D** | Delete | `DELETE` | Student Remove |
+
+> প্রায় সব Software, Website এবং Mobile App CRUD Operation ব্যবহার করে।
+
+---
 
 ---
 
