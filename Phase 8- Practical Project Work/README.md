@@ -658,6 +658,27 @@ This schema is normalized up to **3rd Normal Form (3NF)**:
 
 ---
 
+## 🧩 Project Modules
+
+```
+📦 Library Management System
+ ┣ 🔐 Admin Module
+ ┃  ┣ Add Books
+ ┃  ┣ Add Members
+ ┃  ┣ Manage Categories
+ ┃  ┗ Manage Librarians
+ ┣ 📋 Librarian Module
+ ┃  ┣ Issue Books
+ ┃  ┣ Return Books
+ ┃  ┗ Fine Management
+ ┗ 👤 Member Module
+    ┣ Search Books
+    ┣ View Borrow History
+    ┗ View Fine
+```
+
+---
+
 
 </details>
 
