@@ -2296,6 +2296,16 @@ SELECT TOP 1 * FROM Student ORDER BY CGPA DESC;
 
 ---
 
+## 🌍 Real Application Mapping
+
+| Application | Create | Read | Update | Delete |
+|---|---|---|---|---|
+| **Facebook** | Create Post | View Feed | Edit Post | Remove Post |
+| **YouTube** | Upload Video | Watch Video | Edit Title | Delete Video |
+| **This Project** | Add Student | View Students | Modify Info | Remove Student |
+| **E-commerce** | Add Product | Browse Products | Edit Price | Remove Listing |
+
+---
 </details>
 
 
