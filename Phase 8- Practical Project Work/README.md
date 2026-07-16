@@ -2366,6 +2366,36 @@ This schema is normalized up to **3rd Normal Form (3NF)**:
 
 ---
 
+## 🛠️ Tech Stack
+
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-CRUD-orange?style=for-the-badge)
+
+---
+
+## 📁 Project Structure
+
+```
+student-management-crud/
+ ┣ schema.sql      # CREATE TABLE statement
+ ┣ seed_data.sql   # Sample INSERT statements
+ ┣ crud.sql        # All CRUD operation queries
+ ┣ search.sql      # Search and filter queries
+ ┣ reports.sql     # Admin dashboard queries
+ ┗ README.md       # Project documentation
+```
+
+---
+
+## 📄 License
+
+This project is open-source and available for educational purposes.
+
+---
+
+> **Northern University Bangladesh — Student Management CRUD Project**  
+> DBMS Course Project | SQL | Full CRUD Operations
+
 </details>
 
 
