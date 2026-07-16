@@ -2124,6 +2124,30 @@ INSERT INTO Student VALUES
 ```
 
 ---
+## 🔧 CRUD Operations
+
+---
+
+### ➕ CREATE — INSERT
+
+**Insert a single student (all columns)**
+```sql
+INSERT INTO Student
+VALUES (104, 'Nafis', 'nafis@gmail.com', '01644444444', 'CSE', 3.90);
+```
+
+**Insert specific columns only**
+```sql
+INSERT INTO Student (StudentID, Name, Department)
+VALUES (105, 'Hasan', 'CSE');
+```
+
+**Verify insertion**
+```sql
+SELECT * FROM Student;
+```
+
+---
 
 ---
 
