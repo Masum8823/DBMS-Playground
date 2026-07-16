@@ -2186,6 +2186,35 @@ SELECT * FROM Student WHERE Name LIKE '%Rah%';
 ```
 
 ---
+### ✏️ UPDATE — UPDATE
+
+**Update student name**
+```sql
+UPDATE Student
+SET Name = 'Abdur Rahim'
+WHERE StudentID = 101;
+```
+
+**Update CGPA**
+```sql
+UPDATE Student
+SET CGPA = 4.00
+WHERE StudentID = 101;
+```
+
+**Update multiple columns at once**
+```sql
+UPDATE Student
+SET Department = 'CSE', CGPA = 3.95
+WHERE StudentID = 102;
+```
+
+**Verify update**
+```sql
+SELECT * FROM Student WHERE StudentID = 102;
+```
+
+---
 
 ---
 
