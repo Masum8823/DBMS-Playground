@@ -2148,6 +2148,44 @@ SELECT * FROM Student;
 ```
 
 ---
+### 📋 READ — SELECT
+
+**Show all students**
+```sql
+SELECT * FROM Student;
+```
+
+**Show specific columns only**
+```sql
+SELECT Name, Department FROM Student;
+```
+
+**Show one student by ID**
+```sql
+SELECT * FROM Student WHERE StudentID = 101;
+```
+
+**Show students from CSE department**
+```sql
+SELECT * FROM Student WHERE Department = 'CSE';
+```
+
+**Students with CGPA above 3.75**
+```sql
+SELECT * FROM Student WHERE CGPA > 3.75;
+```
+
+**Sort by CGPA (highest first)**
+```sql
+SELECT * FROM Student ORDER BY CGPA DESC;
+```
+
+**Search student by partial name**
+```sql
+SELECT * FROM Student WHERE Name LIKE '%Rah%';
+```
+
+---
 
 ---
 
