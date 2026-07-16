@@ -2215,7 +2215,24 @@ SELECT * FROM Student WHERE StudentID = 102;
 ```
 
 ---
+### ❌ DELETE — DELETE
 
+**Delete one student**
+```sql
+DELETE FROM Student WHERE StudentID = 103;
+```
+
+**Delete all students from a department**
+```sql
+DELETE FROM Student WHERE Department = 'BBA';
+```
+
+**Verify deletion**
+```sql
+SELECT * FROM Student;
+```
+
+---
 ---
 
 </details>
