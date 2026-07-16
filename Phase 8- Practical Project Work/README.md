@@ -2335,6 +2335,36 @@ This schema is normalized up to **3rd Normal Form (3NF)**:
 | **3NF** | No transitive dependencies between non-key attributes |
 
 ---
+## ❓ Viva Q&A
+
+**Q: CRUD-এর পূর্ণরূপ কী?**
+> Create, Read, Update, Delete
+
+**Q: Create operation-এর SQL command কী?**
+> `INSERT INTO`
+
+**Q: Read operation-এর SQL command কী?**
+> `SELECT`
+
+**Q: Update operation-এর SQL command কী?**
+> `UPDATE ... SET`
+
+**Q: Delete operation-এর SQL command কী?**
+> `DELETE FROM`
+
+**Q: CRUD কেন গুরুত্বপূর্ণ?**
+> প্রায় সব database application CRUD operation-এর উপর ভিত্তি করে কাজ করে — Facebook থেকে শুরু করে Banking System পর্যন্ত
+
+**Q: DELETE এবং TRUNCATE-এর পার্থক্য কী?**
+> `DELETE` — WHERE দিয়ে specific rows মুছে, rollback করা যায় | `TRUNCATE` — সব rows মুছে, rollback করা যায় না
+
+**Q: UPDATE-এ WHERE না দিলে কী হবে?**
+> Table-এর সব rows update হয়ে যাবে — এটি একটি common mistake
+
+**Q: PRIMARY KEY এবং UNIQUE-এর পার্থক্য?**
+> PRIMARY KEY — NULL হতে পারে না, প্রতি table-এ একটি | UNIQUE — NULL হতে পারে, একাধিক UNIQUE column থাকতে পারে
+
+---
 
 </details>
 
