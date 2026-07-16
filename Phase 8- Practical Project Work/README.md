@@ -2275,6 +2275,24 @@ SELECT * FROM Student WHERE CGPA BETWEEN 3.50 AND 4.00;
 ```
 
 ---
+## 🖥️ Admin Dashboard Queries
+
+**Total students**
+```sql
+SELECT COUNT(*) AS TotalStudents FROM Student;
+```
+
+**Students grouped by department**
+```sql
+SELECT Department, COUNT(*) AS TotalStudents
+FROM Student
+GROUP BY Department;
+```
+
+**Top student (highest CGPA)**
+```sql
+SELECT TOP 1 * FROM Student ORDER BY CGPA DESC;
+```
 
 ---
 
