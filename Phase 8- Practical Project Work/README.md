@@ -2306,6 +2306,24 @@ SELECT TOP 1 * FROM Student ORDER BY CGPA DESC;
 | **E-commerce** | Add Product | Browse Products | Edit Price | Remove Listing |
 
 ---
+## 🔄 Project Flow
+
+```
+Add Student (INSERT)
+       ↓
+Store in Database
+       ↓
+View Students (SELECT)
+       ↓
+Update Student (UPDATE)
+       ↓
+Delete Student (DELETE)
+       ↓
+Generate Reports (SELECT + Aggregates)
+```
+
+---
+
 </details>
 
 
