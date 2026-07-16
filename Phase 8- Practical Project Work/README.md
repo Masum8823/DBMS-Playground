@@ -2257,6 +2257,25 @@ SELECT MIN(CGPA) AS LowestCGPA FROM Student;
 
 ---
 
+## 🔍 Search Module
+
+**Search by email**
+```sql
+SELECT * FROM Student WHERE Email = 'rahim@gmail.com';
+```
+
+**Search by department**
+```sql
+SELECT * FROM Student WHERE Department = 'CSE';
+```
+
+**Search by CGPA range**
+```sql
+SELECT * FROM Student WHERE CGPA BETWEEN 3.50 AND 4.00;
+```
+
+---
+
 ---
 
 </details>
