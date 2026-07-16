@@ -2233,6 +2233,30 @@ SELECT * FROM Student;
 ```
 
 ---
+## 📊 Advanced Queries
+
+**Total number of students**
+```sql
+SELECT COUNT(*) AS TotalStudents FROM Student;
+```
+
+**Average CGPA**
+```sql
+SELECT AVG(CGPA) AS AverageCGPA FROM Student;
+```
+
+**Highest CGPA**
+```sql
+SELECT MAX(CGPA) AS HighestCGPA FROM Student;
+```
+
+**Lowest CGPA**
+```sql
+SELECT MIN(CGPA) AS LowestCGPA FROM Student;
+```
+
+---
+
 ---
 
 </details>
